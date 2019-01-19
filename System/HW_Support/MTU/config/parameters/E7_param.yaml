@@ -1,0 +1,6 @@
+global:
+
+# Service vlans
+  service_vlan: 777
+
+

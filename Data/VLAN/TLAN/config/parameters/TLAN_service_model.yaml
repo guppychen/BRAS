@@ -1,0 +1,54 @@
+#there need 3 onts, as I have only two, point2 and point 3 are the same, actually it's 3 different 801 onts, importantly, only 801 can be used, 811 ont have bugs, and cannot be used.
+
+global:
+  service_model:
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 333/g1
+      member:
+        interface1: 333/g1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        ont_id: 333
+        ont_profile_id: GPR3000X     # use ont-profile on cli
+        serial_number: 478BB8
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - 1/1/xp1
+
+
+
+
+    subscriber_point2:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 999/x1
+      member:
+        interface1: 999/x1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        ont_id: 999
+        ont_profile_id: GP1000X     # use ont-profile on cli
+        serial_number: 3D18C5
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - 1/1/xp1
+
+
+
+    subscriber_point3:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 999/g1
+      member:
+        interface1: 999/g1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        ont_id: 999
+        ont_profile_id: GPR3000X     # use ont-profile on cli
+        serial_number: 4783A7
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - 1/1/xp4

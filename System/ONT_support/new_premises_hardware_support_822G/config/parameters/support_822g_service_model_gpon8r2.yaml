@@ -1,0 +1,35 @@
+global:
+  service_model: 
+    subscriber_point1: 
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 822/g2
+      member:
+        interface1: 822/g2
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: 822
+        ont_status: 
+          vendor: CXNK
+          serial-number: 54F272
+          oper-state: present
+        ont_profile_id: 822G
+        serial_number: 54F272
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - CAFETOPO.connection.eutA.shelf1.slot1.downlinkport1 
+        ont_profile_name: local_822
+        pse: 'true'            # condition of check 'pse-mgmt-ownership' 
+        poe: 'true'            # condition of check 'poe-short-counter' 'poe-overload-counter'
+        voice: 'true'          # condition of check 'voice-policy-status' 'voice-policy-ownership'
+        port_info:
+          ge: 4
+          xe: 0
+          pots: 2
+          ua: 2
+          rf: 1
+          rg: 1
+          fb: 1
+          eth_role: rg
+          eth_alarm: ENABLED

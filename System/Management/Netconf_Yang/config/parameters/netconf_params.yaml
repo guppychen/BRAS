@@ -1,0 +1,211 @@
+global: 
+  #add for porting fron ngpon to gpon
+  speed:       10Gbs
+  ifconfig:    eth2
+  #add for porting fron ngpon to gpon
+
+  upgrade_server: 10.245.249.152
+  upgrade_usr: stautotest
+  upgrade_pwd: marino13
+  directory_n: Negative_Test
+  user1: adminr
+  password1: adminr
+  sys_server1: 10.245.249.70
+  sys_server2: 10.245.249.119
+  sys_server3: 10.245.249.37
+  filename1: sys_log_file1
+  dummy_sys_server: 1.1.1.1
+  default_hostname: NGPON2X4
+  new_hostname: MILAN
+  Default_Transport_Protocol: UDP
+  Secure_Transport_Protocol: TCP
+  Syslog_default_port: 514
+  Default_Log_Level: WARN
+  Default_Admin_State: ENABLED
+  filename: syslog_file
+  tacacs_server1: 10.245.249.153
+  tac_user: admin_tacacs
+  tac_pwd: admintacacs
+  tac_secret: test_tacacs_server
+  RadiusFileName: RadiusTCPDump
+  RadiusFileName1: RadiusTCPDump1
+  RadiusFileName2: RadiusTCPDump2
+  operator_usr: operator
+  operator_pwd: operator123
+  calixsupport_usr: calixsupport
+  tac_usr: tac
+  tac_role: admin
+  # IP where ecrack application is running
+  ecrack_ip: 10.1.0.8
+  device_prompt: E3-16F
+  # RADIUS TCs parameters
+  radius_server1: 10.245.249.151
+  radius_server2: 10.245.249.127
+  radius_server3: 10.245.249.152
+  radius_server4: 10.245.249.153
+  invalid_server: 10.245.249.119
+  secret: test_radius_server
+  invalid_secret: test_radius_server1
+  authentication: radius-then-local
+  invalid_port: 1645
+  default_port: 1812
+  default_timeout: 3
+  radius_timeout: 30
+  invalid_timeout: xyz
+  invalid_priority: xyz
+  invalid_range_port: 65536
+  invalid_range1_timeout: 0
+  invalid_range_timeout: 31
+  invalid_range_priority: 0
+  invalid_range_retry: 11
+  radius_admin_user: ar_ola
+  radius_admin_password: ar
+  radius_retry: 3
+  radius_retry1: 10
+  role: admin
+  interface: craft1
+  # Params for SNMP cases
+  admin_state: enable
+  trap_type: inform
+  retries: 6
+  timeout: 400
+  security_level: authPriv
+  user2: operr
+  password2: operr
+  oper_role: oper
+
+  netconf:
+    copycmd:   '<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"> 
+<copy-config>
+<target>
+<candidate/>
+</target>
+<source>
+<running/>
+</source>
+</copy-config>
+</rpc>'
+    nameserver10: '<config>
+<config xmlns="http://www.calix.com/ns/exa/base">
+<system>
+<ip>
+<name-server>
+<server-address>192.168.33.10</server-address>
+</name-server>
+</ip>
+</system>
+</config>
+</config>'
+    nameserver11: '<config>
+<config xmlns="http://www.calix.com/ns/exa/base">
+<system>
+<ip>
+<name-server nc:operation="merge" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"> <server-address>172.23.41.11</server-address>
+</name-server> 
+</ip>
+</system> 
+</config>
+</config>'
+    delete11: '<config>
+<config xmlns="http://www.calix.com/ns/exa/base">
+<system>
+<ip>
+<name-server nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"> 
+<server-address>172.23.41.11</server-address>
+</name-server>
+</ip>
+</system>
+</config>
+</config>'
+    replace11: '<config> 
+<config xmlns="http://www.calix.com/ns/exa/base">
+<system>
+<ip>
+<name-server nc:operation="replace" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"> 
+<server-address>172.23.41.11</server-address>
+</name-server> 
+</ip> 
+</system> 
+</config>'
+    removeboth: '<config>
+<config xmlns="http://www.calix.com/ns/exa/base">
+<system>
+<ip>
+<name-server nc:operation="remove" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+<server-address>192.168.33.10</server-address>
+</name-server>
+<name-server nc:operation="remove" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"> <server-address>172.23.41.11</server-address>
+</name-server>
+</ip>
+</system>
+</config>
+</config>'
+    deleteboth: '<config>
+<config xmlns="http://www.calix.com/ns/exa/base">
+<system>
+<ip>
+<name-server nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"> 
+<server-address>192.168.33.10</server-address>
+</name-server> 
+<name-server nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+<server-address>172.23.41.11</server-address>
+</name-server>
+</ip>
+</system> 
+</config>
+</config>'
+    create10: '<config>
+<config xmlns="http://www.calix.com/ns/exa/base">
+<system> 
+<ip> 
+<name-server nc:operation="create" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+<server-address>192.168.33.10</server-address> 
+</name-server>
+</ip>
+</system> 
+</config> 
+</config>'
+    get: '<?xml version="1.0" encoding="utf-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="161">
+<get/>
+</rpc>'
+    close_session: '<rpc message-id="101"
+xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<close-session/>
+</rpc>'
+    notification: '<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<create-subscription xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+<stream>exa-events</stream>
+</create-subscription>
+</rpc>'
+    capture_notification: '<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<get>
+<filter>
+<status xmlns="http://www.calix.com/ns/exa/base">
+<system>
+<instances>
+<event>
+<detail>
+</detail>
+</event>
+</instances>
+</system>
+</status>
+</filter>
+</get>
+</rpc>'
+    get_with_type: '<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="122">
+        <get-config>
+      <source>
+    <running/>
+  </source>
+  <filter type="subtree">
+    <config xmlns="http://www.calix.com/ns/exa/base">
+      <system>
+        <global-alarm-suppression/>
+      </system>
+    </config>
+  </filter>
+</get-config>
+</rpc>'

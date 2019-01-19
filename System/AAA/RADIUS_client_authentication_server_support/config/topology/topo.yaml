@@ -1,0 +1,20 @@
+connection:
+  eutB_root:
+    ip: 10.245.96.74                            # the same as before
+    user: root                            # the same as before
+    password: root                        # the same as before
+    timeout: 10
+    type: AXOS                             # the same as before
+    model: 10GE-12
+    protocol: ssh
+    prompt: "#"
+   
+  euta_radius:                      # exa_ssh session name must be all lowercase letters
+    ip: 10.245.96.74
+    type: AXOS
+    user_interface: CLI
+    protocol: exa_ssh
+    user: sysadmin
+    password: sysadmin
+    timeout: 30
+    prompt: "#"

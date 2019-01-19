@@ -1,0 +1,781 @@
+AXOS-GFAST-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+
+    DisplayString
+	    FROM SNMPv2-TC
+    ifIndex         FROM IF-MIB
+    axosModules
+        FROM CALIX-PRODUCT-MIB;
+
+    axosGfastModule MODULE-IDENTITY
+        LAST-UPDATED "201610100000Z"
+        ORGANIZATION "Calix"
+        CONTACT-INFO
+            "       Calix Networks, Inc.
+
+	    Postal: 1035 North McDowell Boulevard
+	            Petaluma, CA  94954-1173
+		    USA
+
+	     Phone: +1 707 766 3000
+	       Fax: +1 707 766 3100
+
+	    E-mail: mib-info@calix.com"
+        DESCRIPTION
+            "Describes G.Fast Calix MIB definitions used for
+            AXOS based products with G.fast interfaces"
+        REVISION "201610100000Z"
+        DESCRIPTION
+            "Initial revision"
+
+    ::= { axosModules 3 }
+
+    axosGfastScalars    OBJECT IDENTIFIER ::= {axosGfastModule 1}
+    axosGfastTables     OBJECT IDENTIFIER ::= {axosGfastModule 2}
+
+-- AXOS G.fast scalars are defined here
+
+
+-- AXOS G.Fast tables are defined here
+
+
+-- 1. Channel Status Monitoring Table
+axosGfastChannelStatusTable OBJECT-TYPE
+    SYNTAX      SEQUENCE OF AxosGfastChannelStatusEntry
+    MAX-ACCESS  not-accessible
+    STATUS      current
+    DESCRIPTION "Gfast line channel status monitoring table"
+    ::= { axosGfastTables 1 }
+     
+axosGfastChannelStatusEntry OBJECT-TYPE
+    SYNTAX      AxosGfastChannelStatusEntry
+    MAX-ACCESS  not-accessible
+    STATUS      current
+    DESCRIPTION "Gfast line channel status monitoring entry"
+    INDEX { ifIndex, axosGfastChannelDirection }
+    ::= { axosGfastChannelStatusTable 1 }
+
+AxosGfastChannelStatusEntry ::= SEQUENCE {
+    axosGfastChannelDirection             INTEGER,
+    axosGfastNetDataRate                  Integer32,
+    axosGfastExpectedThroughput           Integer32,
+    axosGfastGammaDataRate                Integer32,
+    axosGfastAttainableNetDataRate        Integer32,
+    axosGfastAttainableExpectedThroughput Integer32,
+    axosGfastAttainableGammaDataRate      Integer32,
+    axosGfastActualInpAgainstShine        INTEGER,
+    axosGfastActualInpAgainstRein         INTEGER,
+    axosGfastDtuFecCodewordLength         INTEGER,
+    axosGfastDtuFecRedundancy             INTEGER,
+    axosGfastFecCodewordsPerDtu           INTEGER
+    }
+ 
+axosGfastChannelDirection OBJECT-TYPE
+    SYNTAX      INTEGER {
+                    downstream(1),
+                    upstream(2)
+                 }
+    MAX-ACCESS   not-accessible
+    STATUS       current
+    DESCRIPTION
+           "Identifies whether the traffic is downstream or upstream."
+    ::= { axosGfastChannelStatusEntry 1 }
+
+axosGfastNetDataRate OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "NDR"
+    ::= { axosGfastChannelStatusEntry 2 }
+
+axosGfastExpectedThroughput OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "ETR"
+    ::= { axosGfastChannelStatusEntry 3 }
+
+axosGfastGammaDataRate OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "GDR"
+    ::= { axosGfastChannelStatusEntry 4 }
+
+axosGfastAttainableNetDataRate OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "ATTNDR"
+    ::= { axosGfastChannelStatusEntry 5 }
+
+axosGfastAttainableExpectedThroughput OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "ATTETR"
+    ::= { axosGfastChannelStatusEntry 6 }
+
+axosGfastAttainableGammaDataRate OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "ATTGDR"
+    ::= { axosGfastChannelStatusEntry 7 }
+
+axosGfastActualInpAgainstShine OBJECT-TYPE
+    SYNTAX      INTEGER 
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "ACTINP"
+    ::= { axosGfastChannelStatusEntry 8 }
+
+axosGfastActualInpAgainstRein OBJECT-TYPE
+    SYNTAX      INTEGER 
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "ACT_REIN"
+    ::= { axosGfastChannelStatusEntry 9 }
+
+axosGfastDtuFecCodewordLength OBJECT-TYPE
+    SYNTAX      INTEGER 
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "DTU_NFEC"
+    ::= { axosGfastChannelStatusEntry 10 }
+
+axosGfastDtuFecRedundancy OBJECT-TYPE
+    SYNTAX      INTEGER 
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "DTU_RFEC"
+    ::= { axosGfastChannelStatusEntry 11 }
+
+axosGfastFecCodewordsPerDtu OBJECT-TYPE
+    SYNTAX      INTEGER 
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "DTU_Q"
+    ::= { axosGfastChannelStatusEntry 12 }
+
+
+-- 2. Line Status FTU Monitoring Table
+axosGfastLineStatusFtuTable OBJECT-TYPE
+    SYNTAX      SEQUENCE OF AxosGfastLineStatusFtuEntry
+    MAX-ACCESS  not-accessible
+    STATUS      current
+    DESCRIPTION "Gfast line status FTU monitoring table"
+    ::= { axosGfastTables 2 }
+     
+axosGfastLineStatusFtuEntry OBJECT-TYPE
+    SYNTAX      AxosGfastLineStatusFtuEntry
+    MAX-ACCESS  not-accessible
+    STATUS      current
+    DESCRIPTION "Gfast line status FTU monitoring entry"
+    INDEX { ifIndex, axosGfastLineLocation}
+    ::= { axosGfastLineStatusFtuTable 1 }
+
+AxosGfastLineStatusFtuEntry ::= SEQUENCE {
+    axosGfastLineLocation            INTEGER,
+    axosGfastProfile                 DisplayString,
+    axosGfastLinkState               DisplayString,
+    axosGfastInitSuccessFailureCause DisplayString,
+    axosGfastLineFtuTestTimeStamp    DisplayString,
+    axosGfastLineLossOfSignal        DisplayString,
+    axosGfastLineLossOfRmc           DisplayString,
+    axosGfastLineLossOfMargin        DisplayString,
+    axosGfastLineLossOfPower         DisplayString
+    }
+ 
+axosGfastLineLocation OBJECT-TYPE
+    SYNTAX      INTEGER {
+                    ftu-o(1),
+                    ftu-r(2)
+                 }
+    MAX-ACCESS   not-accessible
+    STATUS       current
+    DESCRIPTION
+           "Identifies whether the FTU is near-end or far-end."
+    ::= { axosGfastLineStatusFtuEntry 1 }
+
+axosGfastProfile OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports for each profile whether operation according to
+         that profile is enabled or disabled. Only one profile can be
+         enabled."
+    ::= { axosGfastLineStatusFtuEntry 2 }
+
+axosGfastLinkState OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "The states for a G.fast transceiver"
+    ::= { axosGfastLineStatusFtuEntry 3 }
+
+axosGfastInitSuccessFailureCause OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports whether the last full or short initialization
+         procedure was successful. If the last initialization
+         procedure was not successful, this parameter provides
+         the reason."
+
+    ::= { axosGfastLineStatusFtuEntry 4 }
+
+axosGfastLineFtuTestTimeStamp OBJECT-TYPE
+    SYNTAX      DisplayString(SIZE (1..50))
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Timestamp associated with a FTU"
+    ::= { axosGfastLineStatusFtuEntry 5 }
+
+axosGfastLineLossOfSignal OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "A loss-of-signal (LOS) failure is declared when a
+         re-initialization is triggered by a persistent los defect at
+         the reporting FTU. A LOS failure is cleared immediately at
+         the start of showtime in the receiving direction."
+    ::= { axosGfastLineStatusFtuEntry 6 }
+
+axosGfastLineLossOfRmc OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "A Loss-of-RMC (LOR) failure is declared when a
+         re-initialization is triggered by a persistent LOR defect at
+         the reporting FTU and no LOS failure is present. A LOR
+         failure is cleared immediately at the start of showtime in
+         the receiving direction."
+    ::= { axosGfastLineStatusFtuEntry 7 }
+
+axosGfastLineLossOfMargin OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "A Loss-of-margin (LOM) failure is declared when a
+         re-initialization is triggered by a persistent LOM defect at
+         the reporting FTU and no LOS failure is present an no LOR
+         failure is present. A LOM failure is cleared immediately at
+         the start of showtime in the receiving direction."
+    ::= { axosGfastLineStatusFtuEntry 8 }
+
+axosGfastLineLossOfPower OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "A Loss-of-power (LPR) failure is declared after 2.5 +/- 0.5
+         seconds of contiguous lpr primitive presence at the
+         reporting FTU. An LPR failure is cleared after 10 +/- 0.5
+         seconds of no lpr primitive presence at the reporting FTU."
+    ::= { axosGfastLineStatusFtuEntry 9 }
+
+
+-- 3. Line Status Stream Monitoring Table
+axosGfastLineStatusStreamTable OBJECT-TYPE
+    SYNTAX      SEQUENCE OF AxosGfastLineStatusStreamEntry
+    MAX-ACCESS  not-accessible
+    STATUS      current
+    DESCRIPTION "Gfast line status upstream and downstream monitoring table"
+    ::= { axosGfastTables 3 }
+     
+axosGfastLineStatusStreamEntry OBJECT-TYPE
+    SYNTAX      AxosGfastLineStatusStreamEntry
+    MAX-ACCESS  not-accessible
+    STATUS      current
+    DESCRIPTION "Gfast line status upstream and downstream monitoring entry"
+    INDEX { ifIndex, axosGfastLineDirection }
+    ::= { axosGfastLineStatusStreamTable 1 }
+
+AxosGfastLineStatusStreamEntry ::= SEQUENCE {
+    axosGfastLineDirection                        INTEGER,
+    axosGfastLastTransmittedSignal                INTEGER,
+    axosGfastSnrMargin                            INTEGER,
+    axosGfastUpboElectricalLength                 INTEGER,
+    axosGfastActualAggTxPower                     INTEGER,
+    axosGfastSignalAttenuation                    INTEGER,
+    axosGfastRobustMgmtChannelSnrMargin           INTEGER,
+    axosGfastLastSuccessfulBitswapTimeStamp       DisplayString,
+    axosGfastLastSuccessfulAutonomousSraTimeStamp DisplayString,
+    axosGfastLastSuccessfulFraTimeStamp           DisplayString,
+    axosGfastLastSuccessfulRpaTimeStamp           DisplayString
+    }
+ 
+axosGfastLineDirection OBJECT-TYPE
+    SYNTAX      INTEGER {
+                    downstream(1),
+                    upstream(2)
+                 }
+    MAX-ACCESS   not-accessible
+    STATUS       current
+    DESCRIPTION
+           "Identifies whether the traffic is downstream or upstream."
+    ::= { axosGfastLineStatusStreamEntry 1 }
+
+axosGfastLastTransmittedSignal OBJECT-TYPE
+    SYNTAX      INTEGER 
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the downstream/upstream signal count of the last
+           transmitted initialization signal in the last full or
+           short initialization performed on the line.  The
+           downstream signal count is defined in clause 12.3.1/G.9701"
+    ::= { axosGfastLineStatusStreamEntry 2 }
+
+axosGfastSnrMargin OBJECT-TYPE
+    SYNTAX      INTEGER 
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the signal-to-noise ratio margin (as defined in
+         clause 9.8.3.2/G.9701 and 11.4.1.3/G.9701).
+         A special value, -512, indicates that the signal-to-noise
+         ratio margin is out of the range to be represented."
+    ::= { axosGfastLineStatusStreamEntry 3 }
+
+axosGfastUpboElectricalLength OBJECT-TYPE
+    SYNTAX      INTEGER (0..1280)
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the electrical length that would have been sent, if
+         the electrical length was not forced. If the electrical
+         length is not forced, then this object reports the final
+         electrical length, as determined by the FTU (see clause
+         7.3.1.4.2.1/G.9701) and conveyed in the O-UPDATE or R-MSG1
+         initialization message accordingly (see clause
+         12.3.3.2.4/G.9701)."
+    ::= { axosGfastLineStatusStreamEntry 4 }
+
+axosGfastActualAggTxPower OBJECT-TYPE
+    SYNTAX      INTEGER 
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the total amount of transmit power delivered by the
+         FTU at the U-O2 reference point, at the instant of measurement.
+         A special value, -512, indicates that the downstream actual
+         aggregate transmit power is out of the range to be represented."
+    ::= { axosGfastLineStatusStreamEntry 5 }
+
+axosGfastRobustMgmtChannelSnrMargin OBJECT-TYPE
+    SYNTAX      INTEGER 
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the signal-to-noise ratio margin (as defined in
+           clause 11.4.1.4/G.9701) for the RMC.
+           A special value, -512, indicates that the signal-to-noise
+           ratio margin for the RMC is out of the range to be represented."
+    ::= { axosGfastLineStatusStreamEntry 6 }
+
+axosGfastSignalAttenuation OBJECT-TYPE
+    SYNTAX      INTEGER (0..1023)
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the SATN. A special value (1023) indicates that the
+         value is out of the range to be represented. A second special
+         value (0) indicates that the parameter is not supported by the FTU."
+    ::= { axosGfastLineStatusStreamEntry 7 }
+
+axosGfastLastSuccessfulBitswapTimeStamp OBJECT-TYPE
+    SYNTAX      DisplayString(SIZE (1..50))
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the date/time of the last successful FTU initiated
+         Bit Swap execution that has modified the bits allocation."
+    ::= { axosGfastLineStatusStreamEntry 8 }
+
+axosGfastLastSuccessfulAutonomousSraTimeStamp OBJECT-TYPE
+    SYNTAX      DisplayString(SIZE (1..50))
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the date/time of the last successful FTU initiated
+         autonomous SRA execution (excluding SRAs in response to
+         TIGA) that has modified the bits allocation."
+    ::= { axosGfastLineStatusStreamEntry 9 }
+
+axosGfastLastSuccessfulFraTimeStamp OBJECT-TYPE
+    SYNTAX      DisplayString(SIZE (1..50))
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the date/time of the last successful FTU initiated
+         FRA execution that has modified the bits allocation."
+    ::= { axosGfastLineStatusStreamEntry 10 }
+
+axosGfastLastSuccessfulRpaTimeStamp OBJECT-TYPE
+    SYNTAX      DisplayString(SIZE (1..50))
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the date/time of the last successful FTU initiated
+         RPA execution that has modified the bits allocation for the RMC."
+    ::= { axosGfastLineStatusStreamEntry 11 }
+
+
+-- 4. Gfast Line Inventory Table
+
+axosGfastLineInventoryTable OBJECT-TYPE
+    SYNTAX      SEQUENCE OF AxosGfastLineInventoryEntry
+    MAX-ACCESS  not-accessible
+    STATUS      current
+    DESCRIPTION "Gfast line inventory table"
+    ::= { axosGfastTables 4 }
+     
+axosGfastLineInventoryEntry OBJECT-TYPE
+    SYNTAX      AxosGfastLineInventoryEntry
+    MAX-ACCESS  not-accessible
+    STATUS      current
+    DESCRIPTION "Gfast line inventory entry"
+    INDEX { ifIndex }
+    ::= { axosGfastLineInventoryTable 1 }
+
+AxosGfastLineInventoryEntry ::= SEQUENCE {
+    axosGfastFtuoVendorId          DisplayString,
+    axosGfastFtuoVendorNumber      DisplayString,
+    axosGfastFtuoSelfTestResult    DisplayString,
+    axosGfastFturVendorId          DisplayString,
+    axosGfastFturVendorNumber      DisplayString,
+    axosGfastFturSelfTestResult    DisplayString,
+    axosGfastDpuSystemVendorId     DisplayString,
+    axosGfastDpuSerialNumber       DisplayString,
+    axosGfastNtSystemVendorId      DisplayString,
+    axosGfastNtSerialNumber        DisplayString
+    }
+ 
+axosGfastFtuoVendorId OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the ITU-T G.994.1 vendor ID as inserted by the
+         FTU-O in the ITU-T G.994.1 CL message and as
+         defined in clause 9.3.3.1/G.994.1."
+    ::= { axosGfastLineInventoryEntry 1 }
+
+axosGfastFtuoVendorNumber OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the version number as inserted by the FTU-O
+         in the embedded operations channel (see clause
+         11.2.2.10/G.9701). It is for version control and is vendor
+         specific information."
+    ::= { axosGfastLineInventoryEntry 2 }
+
+axosGfastFtuoSelfTestResult OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the results from the most recent self-test
+         procedure, initiated at power-up (see clause 12.1.2/G.9701)
+         The first octet of the self-test result is 00hex if the
+         self-test passed and 01hex if the self-test failed. The
+         interpretation of the other octets is vendor discretionary
+         and can be interpreted in combination with the FTU-O
+         ITU-T G.994.1 vendor ID and DPU/NT system vendor ID."
+    ::= { axosGfastLineInventoryEntry 3 }
+
+axosGfastFturVendorId OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the ITU-T G.994.1 vendor ID as inserted by the
+         FTU-R in the ITU-T G.994.1 CL message and as
+         defined in clause 9.3.3.1/G.994.1."
+    ::= { axosGfastLineInventoryEntry 4 }
+
+axosGfastFturVendorNumber OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the version number as inserted by the FTU-R
+         in the embedded operations channel (see clause
+         11.2.2.10/G.9701). It is for version control and is vendor
+         specific information."
+    ::= { axosGfastLineInventoryEntry 5 }
+
+axosGfastFturSelfTestResult OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the results from the most recent self-test
+         procedure, initiated at power-up (see clause 12.1.2/G.9701)
+         The first octet of the self-test result is 00hex if the
+         self-test passed and 01hex if the self-test failed. The
+         interpretation of the other octets is vendor discretionary
+         and can be interpreted in combination with the FTU-R
+         ITU-T G.994.1 vendor ID and DPU/NT system vendor ID."
+    ::= { axosGfastLineInventoryEntry 6 }
+
+axosGfastDpuSystemVendorId OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the DPU system vendor ID as inserted by the
+         FTU-O/FTU-R in the embedded operations channel (see clause
+         11.2.2.10/G.9701) and as defined in clause 9.3.3.1/G.994.1."
+    ::= { axosGfastLineInventoryEntry 7 }
+
+axosGfastDpuSerialNumber OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the DPU serial number as inserted by the
+         FTU-O/FTU-R in the embedded operations channel (see clause
+         11.2.2.10/G.9701). It is vendor specific information. The
+         combination of system vendor ID and system serial number
+         creates a unique number for each DPU."
+    ::= { axosGfastLineInventoryEntry 8 }
+
+axosGfastNtSystemVendorId OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the NT system vendor ID as inserted by the
+         FTU-O/FTU-R in the embedded operations channel (see clause
+         11.2.2.10/G.9701) and as defined in clause 9.3.3.1/G.994.1."
+    ::= { axosGfastLineInventoryEntry 9 }
+
+axosGfastNtSerialNumber OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the NT serial number as inserted by the
+         FTU-O/FTU-R in the embedded operations channel (see clause
+         11.2.2.10/G.9701). It is vendor specific information. The
+         combination of system vendor ID and system serial number
+         creates a unique number for each NT."
+    ::= { axosGfastLineInventoryEntry 10 }
+
+-- 5. Gfast Test Diagnostic Table
+
+axosGfastLineDiagnosticTable OBJECT-TYPE
+    SYNTAX      SEQUENCE OF AxosGfastLineDiagnosticEntry
+    MAX-ACCESS  not-accessible
+    STATUS      current
+    DESCRIPTION "Gfast line test diagnostic group table"
+    ::= { axosGfastTables 5 }
+     
+axosGfastLineDiagnosticEntry OBJECT-TYPE
+    SYNTAX      AxosGfastLineDiagnosticEntry
+    MAX-ACCESS  not-accessible
+    STATUS      current
+    DESCRIPTION "Gfast line test diagnostic group entry"
+    INDEX { ifIndex, axosGfastTrafficDirection}
+    ::= { axosGfastLineDiagnosticTable 1 }
+
+AxosGfastLineDiagnosticEntry ::= SEQUENCE {
+    axosGfastTrafficDirection         INTEGER,
+    axosGfastHlogMeasurementTime      INTEGER,
+    axosGfastHlogSubCarrierGroupSize  INTEGER,
+    axosGfastHlogps                   DisplayString,
+    axosGfastAlnMeasurementTime       INTEGER,
+    axosGfastAlnSubCarrierGroupSize   INTEGER,
+    axosGfastAlnps                    DisplayString,
+    axosGfastActualTxPsd              DisplayString,
+    axosGfastSnrPsdMeasurementTime    Integer32,
+    axosGfastSnrSubCarrierGroupSize   INTEGER,
+    axosGfastSnrps                    DisplayString,
+    axosGfastBitsAllocation           DisplayString,
+    axosGfastSubCarrierBitsAllocation DisplayString,
+    axosGfastQlnMeasurementTime       Integer32,
+    axosGfastQlnSubCarrierGroupSize   INTEGER,
+    axosGfastQlnps                    DisplayString
+    }
+ 
+axosGfastTrafficDirection OBJECT-TYPE
+    SYNTAX      INTEGER {
+                    downstream(1),
+                    upstream(2)
+                 }
+    MAX-ACCESS   not-accessible
+    STATUS       current
+    DESCRIPTION
+           "Identifies whether the traffic is downstream or upstream."
+    ::= { axosGfastLineDiagnosticEntry 1 }
+
+axosGfastHlogMeasurementTime OBJECT-TYPE
+    SYNTAX      INTEGER
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION 
+           "Reports the number of symbols used to measure Hlog(f) values."
+    ::= { axosGfastLineDiagnosticEntry 2 }
+
+axosGfastHlogSubCarrierGroupSize OBJECT-TYPE
+    SYNTAX      INTEGER
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the number of sub-carriers in any one sub-carrier
+           group used to represent the Hlog(f) values."
+    ::= { axosGfastLineDiagnosticEntry 3 }
+
+axosGfastHlogps OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Reports the downstream/upstream Hlog(f) as one value
+            per sub-carrier group,
+           in a tabular format: sc-index value is obtained by adding the 
+	   row and column-head, the corresponding cell provides the 
+	   downstream/upstream value.
+           A first special value (1023) indicates that the
+           Hlog(f) for this sub-carrier group is undetermined. A second
+           special value (1022) indicates that no measurement could be
+           done for this sub carrier group because it is out of the
+           MEDLEY set. A third special value (0) indicates that the
+           Hlog(f) for this sub-carrier group is greater than or equal
+           to +6.0 dB. A fourth special value (1020) indicates that the
+           Hlog(f) for this sub-carrier group is less than or equal to
+           -96.0 dB. The object is updated only in L0 link state."
+    ::= { axosGfastLineDiagnosticEntry 4 }
+
+axosGfastAlnMeasurementTime OBJECT-TYPE
+    SYNTAX      INTEGER
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION 
+           "Reports the number of symbols used to measure ALN(f) values."
+    ::= { axosGfastLineDiagnosticEntry 5 }
+
+axosGfastAlnSubCarrierGroupSize OBJECT-TYPE
+    SYNTAX      INTEGER
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION 
+           "Reports the number of sub-carriers in any one sub-carrier
+            group used to represent the ALN(f) values."
+    ::= { axosGfastLineDiagnosticEntry 6 }
+
+axosGfastAlnps OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION 
+           "Reports the ALN(f), in tabular format: 
+            sc-index value is obtained by adding the
+            row and column-head, the corresponding cell provides the
+            downstream/upstream value
+            A first special value (255) indicates
+            that the ALN(f) for this sub-carrier is undetermined. A
+            second special value (254) indicates that no measurement
+            could be done for this sub carrier because it is out of the
+            downstream/upstream MEDLEY set. A third special value (0) indicates
+            that the ALN(f) for this sub-carrier is greater than or equal
+            to -35dBm/Hz. A fourth special value (251) indicates that the
+            ALN(f) for this sub-carrier is less than or equal to -160.5
+            dBm/Hz. The object is updated only in L0 link state."
+    ::= { axosGfastLineDiagnosticEntry 7 }
+
+axosGfastActualTxPsd OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION 
+           "Reports the transmit PSD per sub-carrier delivered by the
+            FTU at the U reference point as calculated by the VCE
+            from the appropriate ACTPSDREF-ps, in tabular format:
+            sc-index value is obtained by adding the
+            row and column-head, the corresponding cell provides the
+            downstream/upstream value.
+            A special value, 255, indicates that no transmit PSD value is 
+            available the sub-carrier, or its transmit power is zero, or is out of
+            the range to be represented."
+    ::= { axosGfastLineDiagnosticEntry 8 }
+
+axosGfastSnrPsdMeasurementTime OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION 
+           "Reports the number of symbols used to measure the SNR(f) values."
+    ::= { axosGfastLineDiagnosticEntry 9 }
+
+axosGfastSnrSubCarrierGroupSize OBJECT-TYPE
+    SYNTAX      INTEGER 
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION 
+           "Reports the number of sub-carriers in any one sub-carrier
+            group used to represent the SNR(f) values."
+    ::= { axosGfastLineDiagnosticEntry 10 }
+
+axosGfastSnrps OBJECT-TYPE
+    SYNTAX      DisplayString 
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION 
+           "Reports the downstream/upstream SNR(f) values, 
+            in tabular format: sc-index value is obtained by adding the
+            row and column-head, the corresponding cell provides the
+            downstream/upstream value.
+            A special value, 255, indicates that no measurement could
+            be done for this sub-carrier group because it is out of
+            the MEDLEY set or its transmit power is zero."
+    ::= { axosGfastLineDiagnosticEntry 11 }
+
+axosGfastBitsAllocation OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION 
+           "Reports the bit allocation values on data symbols in the
+            normal operation interval (NOI),
+            in a tabular format: sc-index value is obtained by adding the
+            row and column-head, the corresponding cell provides the
+            downstream/upstream value"
+    ::= { axosGfastLineDiagnosticEntry 12 }
+
+axosGfastSubCarrierBitsAllocation OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION 
+           "Reports the bit allocation values on RMC sub-carriers in RMC symbols,
+            in a tabular format: sc-index value is obtained by adding the
+            row and column-head, the corresponding cell provides the
+            downstream/upstream value"
+    ::= { axosGfastLineDiagnosticEntry 13 }
+
+axosGfastQlnMeasurementTime OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION 
+           "Reports the number of symbols used to measure the
+            downstream/upstream QLN(f) values."
+    ::= { axosGfastLineDiagnosticEntry 14 }
+
+axosGfastQlnSubCarrierGroupSize OBJECT-TYPE
+    SYNTAX      INTEGER
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION 
+           "Reports the number of symbols used to measure the
+            downstream/upstream QLN(f) values."
+    ::= { axosGfastLineDiagnosticEntry 15 }
+
+axosGfastQlnps OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION 
+           "Reports the downstream/upstream QLN(f) as one value per sub-carrier group,
+            in format:sc-index value is obtained by adding the
+            row and column-head, the corresponding cell provides the
+            downstream/upstream value. 
+            A first special value (255) indicates that the QLN(f)
+            for this sub-carrier group is undetermined. A second special
+            value (254) indicates that no measurement could be done for
+            this sub carrier group because it is out of the downstream/upstream
+            MEDLEY set. A third special value (0) indicates that the
+            QLN(f) for this sub-carrier group is greater than or equal to
+            -35dBm/Hz. A fourth special value (251) indicates that the
+            QLN(f) for this sub-carrier group is less than or equal to
+            -160.5 dBm/Hz. The object is updated only in L0 link state."
+    ::= { axosGfastLineDiagnosticEntry 16 }
+
+
+
+
+END

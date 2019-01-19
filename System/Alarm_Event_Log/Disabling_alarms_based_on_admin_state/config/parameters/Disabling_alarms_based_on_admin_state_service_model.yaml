@@ -1,0 +1,39 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: eutA
+      type: eth                  # service_point type {eth|lag|g8032|erps}
+      name: 1/1/x2
+      member:
+        interface1: 1/1/x2
+      attribute:
+        interface_role: inni
+        interface_type: ethernet 
+        
+    service_point2:
+      device: eutA
+      type: lag                              # service_point type {eth|lag|g8032|erps}
+      name: la8                              # for axos system use instance id {la{1-4}}
+      member:
+        interface1: 1/1/x3
+        interface2: 1/1/x4
+      attribute:                             # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: lag
+ 
+    subscriber_point1: 
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 1/g2
+      member:
+        interface1: 1/g2
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: 1
+        ont_profile_id: 844GE_ARF       # use ont-profile on cli
+        serial_number: 3E4018
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - 1/1/gp1

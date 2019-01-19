@@ -1,0 +1,44 @@
+connection:
+  n1:
+    ip: 10.245.74.71
+    password: sysadmin
+    user: sysadmin
+    timeout: 30
+    prompt: "#"
+    type: AXOS
+    protocol: ssh
+    ports:
+      p1:
+        port: x1
+        type: eth
+      p2:
+       port: x2
+       type: eth
+  n1_sh:
+    ip: 10.245.74.71
+    password: root
+    user: root
+    type: exa
+    protocol: ssh
+  n1_netconf:
+    ip: 10.245.74.71
+    type: axos
+    timeout: 60
+    protocol: netconf_ssh
+    user: sysadmin
+    password: sysadmin
+
+  n1_local_pc:
+    ip: 10.245.249.162
+    password: marino13
+    user: stautotest
+    type: linux
+    protocol: ssh
+  h1:
+    ip: localhost
+    type: linux
+    protocol: ssh
+    user: cafetest
+    password: cafetest
+device_links:
+  link1: {n1: p1, n2: p1}

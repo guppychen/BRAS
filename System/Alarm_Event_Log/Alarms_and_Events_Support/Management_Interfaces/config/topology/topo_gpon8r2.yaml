@@ -1,0 +1,100 @@
+connection:
+  h1:
+    ip: 10.245.249.151
+    type: linux
+    protocol: ssh
+    user: cafetest
+    password: cafetest
+    timeout: 11
+    promtp: ['$']
+
+  n1_session1:
+    ip: 10.245.74.72
+    type: exa
+    user_interface: CLI
+    protocol: exa_ssh
+    user: sysadmin
+    password: sysadmin
+    timeout: 11
+    ports:
+      service_p1:
+        port: 1/1/x1
+        type: ethernet
+      service_p2:
+        port: 1/1/x2    #x4 got some issue cant trigger loss of single alarm, so change to x2
+        type: ethernet
+      subscriber_p1:
+        port: 1/g1
+        type: ont-ethernet
+      subscriber_p2:
+        port: 1/1/gp1
+        type: pon
+      subscriber_p3:
+        port: 1/1/gp3
+        type: pon
+
+  n1_session2:
+    ip: 10.245.74.72
+    type: linux
+    user_interface: CLI
+    protocol: ssh
+    user: root
+    password: root
+    timeout: 11
+    ports:
+      service_p1:
+        port: 1/1/x1
+        type: ethernet
+      service_p2:
+        port: 1/1/x2
+        type: ethernet
+      subscriber_p1:
+        port: 1/g1
+        type: ont-ethernet
+      subscriber_p2:
+        port: 1/1/gp2
+        type: pon
+      subscriber_p3:
+        port: 1/1/gp4
+        type: pon
+
+  n1_session3:
+    ip: 10.245.74.72
+    type: exa
+    user_interface: NETCONF
+    protocol: netconf_ssh
+    user: sysadmin
+    password: sysadmin
+    timeout: 30
+    port: 830
+    ports:
+      service_p1:
+        port: 1/1/x1
+        type: ethernet
+      service_p2:
+        port: 1/1/x2
+        type: ethernet
+      subscriber_p1:
+        port: 1/g1
+        type: ont-ethernet
+      subscriber_p2:
+        port: 1/1/gp1
+        type: pon
+      subscriber_p3:
+        port: 1/1/gp4
+        type: pon
+
+  web:
+    type: web
+    browser: 
+    execute_speed: 0.5
+    default_element_wait: 30
+
+  n_snmp_v2:
+    ip: 10.245.74.72
+    port: 161
+    redirect: 1620
+    protocol: snmp
+    version: 2c
+    community: shesha
+    timeout: 30

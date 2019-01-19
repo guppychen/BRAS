@@ -1,0 +1,26 @@
+global:
+
+  craft1:    1
+  craft2:     2
+  craft2_ip:  10.245.96.71
+  craft2_mask:     255.255.255.0
+  craft2_gateway:    10.245.96.1
+  craft2_ip_mask:    10.245.96.71/24
+  baudrate:    '115200'
+  databits:    '8'
+  parity:     none
+  stopbits:    '1'
+  flowcontrl:    none
+  craft1_ip:   192.168.1.100
+  craft1_mask:    255.255.255.0
+  craft1_gateway:    192.168.1.1
+  craft1_ip_mask:    192.168.1.100/24
+  craft_serial:   serial
+
+
+
+
+
+
+
+

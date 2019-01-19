@@ -1,0 +1,51 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+      - service_point2
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x1
+      attribute:
+        interface_role: inni
+    service_point2:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x4
+      attribute:
+        interface_role: inni
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port
+      name: 11/x1
+      member:
+        interface1: 11/x1
+      attribute:
+        interface_role: uni
+        ont_id: 11
+        ont_profile_id: GP1000X
+        serial_number: 3D18C5
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/xp1
+
+    subscriber_point2:
+      device: eutA
+      type: ont_port
+      name: 8/x1
+      member:
+        interface1: 8/x1
+      attribute:
+        interface_role: uni
+        ont_id: 8
+        ont_profile_id: 811NG
+        serial_number: 2E2AE1
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/xp1
+
+

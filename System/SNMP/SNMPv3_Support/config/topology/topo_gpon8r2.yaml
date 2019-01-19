@@ -1,0 +1,95 @@
+connection:
+  h1:
+    ip: localhost
+    type: linux
+    protocol: ssh
+    user: stautotest
+    password: marino13
+    timeout: 11
+
+  eutA:
+    ip: 10.245.74.71
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: MILAN
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+
+  n_snmp_v2:
+    ip: 10.245.74.71
+    port: 161
+    protocol: snmp
+    version: 2c
+    community: public
+
+  n_snmp_v3:
+    ip: 10.245.74.71
+    port: 161
+    protocol: snmp
+    version: 3
+    username: auto_v3
+
+  n_snmp_v3_auth_1:
+    ip: 10.245.74.71
+    port: 161
+    protocol: snmp
+    version: 3
+    username: auto_v3_auth_1
+    authentication_protocol: MD5
+    password: testpwd_a
+
+  n_snmp_v3_auth_2:
+    ip: 10.245.74.71
+    port: 161
+    protocol: snmp
+    version: 3
+    username: auto_v3_auth_2
+    authentication_protocol: SHA
+    password: testpwd_a
+
+  n_snmp_v3_auth_priv_3:
+    ip: 10.245.74.71
+    port: 161
+    protocol: snmp
+    version: 3
+    username: auto_v3_auth_priv_3
+    authentication_protocol: MD5
+    password: testpwd_a
+    encryption_protocol: AES128
+    encryption_password: testpwd_e
+
+  n_snmp_v3_auth_priv_4:
+    ip: 10.245.74.71
+    port: 161
+    protocol: snmp
+    version: 3
+    username: auto_v3_auth_priv_4
+    authentication_protocol: MD5
+    password: testpwd_a
+    encryption_protocol: DES
+    encryption_password: testpwd_e
+
+  n_snmp_v3_auth_priv_5:
+    ip: 10.245.74.71
+    port: 161
+    protocol: snmp
+    version: 3
+    username: auto_v3_auth_priv_5
+    authentication_protocol: SHA
+    password: testpwd_a
+    encryption_protocol: AES128
+    encryption_password: testpwd_e
+
+  n_snmp_v3_auth_priv_6:
+    ip: 10.245.74.71
+    port: 161
+    protocol: snmp
+    version: 3
+    username: auto_v3_auth_priv_6
+    authentication_protocol: SHA
+    password: testpwd_a
+    encryption_protocol: DES
+    encryption_password: testpwd_e

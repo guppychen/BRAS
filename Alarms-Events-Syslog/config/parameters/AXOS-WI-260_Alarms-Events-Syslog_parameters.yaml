@@ -1,0 +1,30 @@
+global:
+    ip_address_1: 100.1.1.1    #interface IP address for device1 port1
+    prefix_length: 24
+    port1: x1
+    port2: x2
+    add_config: <config><config xmlns="http://www.calix.com/ns/exa/base"><system><contact>Ero34</contact></system></config></config>
+    remove_config: <config><config xmlns="http://www.calix.com/ns/exa/base"><system><contact>no contact</contact></system></config></config>
+    copy_run_to_start: <?xml version="1.0" encoding="utf-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="9"><copy-running-startup xmlns="http://www.calix.com/ns/exa/base"></copy-running-startup></rpc>]]>]]>
+    showing_alarm: <?xml version="1.0" encoding="utf-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="9"><show-alarm-instances-active-subscope xmlns="http://www.calix.com/ns/exa/base"><id>702</id></show-alarm-instances-active-subscope></rpc>]]>]]>
+    show_ack_alarm: <?xml version="1.0" encoding="utf-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="9"><get><filter xmlns:t="http://www.calix.com/ns/exa/base" type="xpath" select="/status/system/alarm/acknowledged"/></get></rpc>]]>]]>
+    show_inventory: <rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><get><filter xmlns="http://www.calix.com/ns/exa/base"><status><system><inventory/></system></status></filter></get></rpc>]]>]]>
+    show_alarm_active_rmon: <?xml version="1.0" encoding="utf-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="9"><show-alarm-instances-active-subscope xmlns="http://www.calix.com/ns/exa/base"><name>ethernet-rmon-session-stopped</name></show-alarm-instances-active-subscope></rpc>]]>]]>
+    prompt: NGPON2X4#
+    hostname: E7-2 NGPON2-4
+netconf:
+        showevent:   '<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> <get> <filter> <status xmlns="http://www.calix.com/ns/exa/base"> <system> <instances> <event> <detail> </detail> </event> </instances> </system> </status> </filter> </get> </rpc>'
+        closesession: '<rpc message-id="215" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> <close-session/> </rpc>'
+        subscription: '<?xml version="1.0" encoding="utf-8"?> <rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> <create-subscription xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0"> <stream>exa-events</stream> </create-subscription> </rpc>'
+
+
+bamboo:
+        denali: "ftp://log_store:log_store@10.245.250.136/DPU_MDU/IB_ROLT/Patch/FullRelease_denali_IB-ROLT_20170307185541_builder.run"
+        eolus: "ftp://log_store:log_store@10.245.250.136/DPU_MDU/IB_ROLT/Patch/FullRelease_eolus_IB-ROLT_20170223224054_builder.run"
+        eoluswrong: "http://bamboo.calix.local/browse/EEXA4902-CI1-838/artifact/shared/FullRelease.run/FullRelease_eolus_IB-ROLT_20169223219_builder.run"
+        patch: "ftp://log_store:log_store@10.245.250.136/DPU_MDU/IB_ROLT/Patch/PatchRelease_eolus_IB-ROLT_20170221191954_builder.run"
+        patch1: "http://bamboo.calix.local/browse/EEXA4902-CI1-841/artifact/BLD/PatchRelease.run/PatchRelease_eolus_IB-ROLT_20161130033723_builder.run"
+
+serverIp:
+         v4_addr: "10.245.249.119"
+         vm_addr: "10.245.249.70"

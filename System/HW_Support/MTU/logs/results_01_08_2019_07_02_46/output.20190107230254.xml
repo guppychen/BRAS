@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20190107 23:02:52.253" generator="Robot 3.0.4 (Python 2.7.14 on linux2)">
+<suite source="/home/guchen/workspace/AXOS" id="s1" name="AXOS">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation" id="s1-s1" name="AXOS-automation">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan" id="s1-s1-s1" name="Milan">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases" id="s1-s1-s1-s1" name="ST Test Cases">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System" id="s1-s1-s1-s1-s1" name="System">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support" id="s1-s1-s1-s1-s1-s1" name="HW Support">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU" id="s1-s1-s1-s1-s1-s1-s1" name="MTU">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/testcase" id="s1-s1-s1-s1-s1-s1-s1-s1" name="Testcase">
+<kw type="setup" name="test_setup">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>Enter setup</arg>
+</arguments>
+<msg timestamp="20190107 23:02:53.428" level="INFO">Enter setup</msg>
+<status status="PASS" endtime="20190107 23:02:53.429" starttime="20190107 23:02:53.428"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>service_point_provision for uplink side</arg>
+</arguments>
+<msg timestamp="20190107 23:02:53.430" level="INFO">service_point_provision for uplink side</msg>
+<status status="PASS" endtime="20190107 23:02:53.430" starttime="20190107 23:02:53.430"></status>
+</kw>
+<kw name="service_point_prov" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: provision for service_point</doc>
+<arguments>
+<arg>service_point_list1</arg>
+</arguments>
+<kw type="for" name="${service_point} IN [ @{service_model.${service_point_list}} ]">
+<kw type="foritem" name="${service_point} = service_point1">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.device}</arg>
+</arguments>
+<assign>
+<var>${device}</var>
+</assign>
+<msg timestamp="20190107 23:02:53.435" level="FAIL">Resolving variable '${service_model.service_point1.device}' failed: ParamAttributeError: Param __getattr__ No such attribute: service_point1</msg>
+<status status="FAIL" endtime="20190107 23:02:53.435" starttime="20190107 23:02:53.434"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:02:53.435" starttime="20190107 23:02:53.433"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:02:53.436" starttime="20190107 23:02:53.432"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:02:53.436" starttime="20190107 23:02:53.431"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:02:53.437" starttime="20190107 23:02:53.426"></status>
+</kw>
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/testcase/tc_9k_INNI_port_to_INNI_port.robot" id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="tc 9k INNI port to INNI port">
+<test id="s1-s1-s1-s1-s1-s1-s1-s1-s1-t1" name="tc_tc_9k_INNI_port_to_INNI_port.robot">
+<doc>The purpose of this test is to Check card's ethernet mtu 9000
+1.set ethernet mtu 9000
+2.check ethernet mtu 9000</doc>
+<tags>
+<tag>@author=pzhang</tag>
+<tag>@eut=10GE-12</tag>
+<tag>@eut=GPON-8r2</tag>
+<tag>@feature=HW_Support</tag>
+<tag>@globalid=2533451</tag>
+<tag>@subfeature=MTU_size_of_9k</tag>
+<tag>@tcid=AXOS_E72_PARENT-TC-4716</tag>
+<tag>@user_interface=CLI</tag>
+</tags>
+<status status="FAIL" endtime="20190107 23:02:53.620" critical="yes" starttime="20190107 23:02:53.530">Parent suite setup failed:
+Resolving variable '${service_model.service_point1.device}' failed: ParamAttributeError: Param __getattr__ No such attribute: service_point1</status>
+</test>
+<doc>The purpose of this test is to Check card's ethernet mtu 9000
+1.set ethernet mtu 9000
+2.check ethernet mtu 9000
+</doc>
+<status status="FAIL" endtime="20190107 23:02:53.812" starttime="20190107 23:02:53.437">Parent suite setup failed:
+Resolving variable '${service_model.service_point1.device}' failed: ParamAttributeError: Param __getattr__ No such attribute: service_point1</status>
+</suite>
+<kw type="teardown" name="test_teardown">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>Enter teardown</arg>
+</arguments>
+<msg timestamp="20190107 23:02:53.852" level="INFO">Enter teardown</msg>
+<status status="PASS" endtime="20190107 23:02:53.852" starttime="20190107 23:02:53.851"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>service_point remove_svc and deprovision</arg>
+</arguments>
+<msg timestamp="20190107 23:02:53.853" level="INFO">service_point remove_svc and deprovision</msg>
+<status status="PASS" endtime="20190107 23:02:53.854" starttime="20190107 23:02:53.853"></status>
+</kw>
+<kw name="service_point_remove_vlan" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: remove vlan for service_point</doc>
+<arguments>
+<arg>service_point_list1</arg>
+<arg>${service_vlan}</arg>
+</arguments>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${vlan_list}</arg>
+</arguments>
+<assign>
+<var>${vlan_list_str}</var>
+</assign>
+<msg timestamp="20190107 23:02:53.856" level="DEBUG">Argument types are:
+&lt;type 'int'&gt;</msg>
+<msg timestamp="20190107 23:02:53.856" level="INFO">${vlan_list_str} = 777</msg>
+<status status="PASS" endtime="20190107 23:02:53.857" starttime="20190107 23:02:53.855"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${vlan_list_str}</arg>
+<arg>,</arg>
+<arg>_</arg>
+</arguments>
+<assign>
+<var>${vlan_list_str}</var>
+</assign>
+<msg timestamp="20190107 23:02:53.858" level="INFO">${vlan_list_str} = 777</msg>
+<status status="PASS" endtime="20190107 23:02:53.858" starttime="20190107 23:02:53.857"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${cfg_prefix}_TransVlan_${vlan_list_str}</arg>
+</arguments>
+<assign>
+<var>${transport_prf}</var>
+</assign>
+<msg timestamp="20190107 23:02:53.860" level="INFO">${transport_prf} = auto_TransVlan_777</msg>
+<status status="PASS" endtime="20190107 23:02:53.860" starttime="20190107 23:02:53.859"></status>
+</kw>
+<kw type="for" name="${service_point} IN [ @{service_model.${service_point_list}} ]">
+<kw type="foritem" name="${service_point} = service_point1">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.device}</arg>
+</arguments>
+<assign>
+<var>${device}</var>
+</assign>
+<msg timestamp="20190107 23:02:53.863" level="INFO">${device} = None</msg>
+<msg timestamp="20190107 23:02:53.863" level="FAIL">Resolving variable '${service_model.service_point1.device}' failed: ParamAttributeError: Param __getattr__ No such attribute: service_point1</msg>
+<status status="FAIL" endtime="20190107 23:02:53.863" starttime="20190107 23:02:53.862"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** uplink service remove vlan ${vlan_list} for ${device} ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:02:53.865" level="INFO">****** uplink service remove vlan 777 for None service_point1 ******</msg>
+<status status="PASS" endtime="20190107 23:02:53.865" starttime="20190107 23:02:53.864"></status>
+</kw>
+<kw name="service_point_remove_transport_profile" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: remove transport_profile for service_point interface (This keyword is only internal use, CANNOT be used in TCs)</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="Run Keyword And Return If" library="BuiltIn">
+<doc>Runs the specified keyword and returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>'lag'=='${service_model.${service_point}.type}'</arg>
+<arg>dprov_interface</arg>
+<arg>${device}</arg>
+<arg>lag</arg>
+<arg>${service_model.${service_point}.name}</arg>
+<arg>transport-service-profile=${transport_prf}</arg>
+</arguments>
+<msg timestamp="20190107 23:02:53.869" level="FAIL">Resolving variable '${service_model.service_point1.type}' failed: ParamAttributeError: Param __getattr__ No such attribute: service_point1</msg>
+<status status="FAIL" endtime="20190107 23:02:53.869" starttime="20190107 23:02:53.867"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>remove transport-service-profile from interface</arg>
+</arguments>
+<msg timestamp="20190107 23:02:53.871" level="INFO">remove transport-service-profile from interface</msg>
+<status status="PASS" endtime="20190107 23:02:53.871" starttime="20190107 23:02:53.870"></status>
+</kw>
+<kw type="for" name="${port_key} IN [ @{service_model.${service_point}.member} ]">
+<msg timestamp="20190107 23:02:53.872" level="FAIL">Resolving variable '@{service_model.service_point1.member}' failed: ParamAttributeError: Param __getattr__ No such attribute: service_point1</msg>
+<status status="FAIL" endtime="20190107 23:02:53.872" starttime="20190107 23:02:53.871"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:02:53.873" starttime="20190107 23:02:53.866"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>delete_config_object</arg>
+<arg>${device}</arg>
+<arg>transport-service-profile</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="delete_config_object" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>Delete service profile in config view</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>transport-service-profile</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<msg timestamp="20190107 23:02:53.886" level="FAIL">TypeError: expected string or buffer</msg>
+<msg timestamp="20190107 23:02:53.886" level="DEBUG">Traceback (most recent call last):
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 210, in run_keyword
+    return self._keywords_adapter_map[name].run_keyword(name, args, kwargs)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 83, in run_keyword
+    return self._KEYWORDS_WRAPPERS[name](*args, **kwargs)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 139, in _wrap_cli
+    device = get_cli_device(connection_name)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 36, in get_cli_device
+    conn_name = get_valid_name(conn_name)
+  File "/etc/barista/packages/caferobot/util/forward.py", line 45, in get_valid_name
+    return re.sub(r'[ -]', '_', name)
+  File "/opt/Cpython/lib/python2.7/re.py", line 155, in sub
+    return _compile(pattern, flags).sub(repl, string, count)</msg>
+<status status="FAIL" endtime="20190107 23:02:53.887" starttime="20190107 23:02:53.876"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>no ${obj_type} ${obj_name}</arg>
+</arguments>
+<msg timestamp="20190107 23:02:53.889" level="FAIL">Resolving argument default values failed: Resolving variable '${devices.None.timeout}' failed: ParamAttributeError: Param __getattr__ No such attribute: None</msg>
+<status status="FAIL" endtime="20190107 23:02:53.889" starttime="20190107 23:02:53.887"></status>
+</kw>
+<kw type="teardown" name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<msg timestamp="20190107 23:02:53.891" level="FAIL">TypeError: expected string or buffer</msg>
+<msg timestamp="20190107 23:02:53.891" level="DEBUG">Traceback (most recent call last):
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 210, in run_keyword
+    return self._keywords_adapter_map[name].run_keyword(name, args, kwargs)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 83, in run_keyword
+    return self._KEYWORDS_WRAPPERS[name](*args, **kwargs)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 139, in _wrap_cli
+    device = get_cli_device(connection_name)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 36, in get_cli_device
+    conn_name = get_valid_name(conn_name)
+  File "/etc/barista/packages/caferobot/util/forward.py", line 45, in get_valid_name
+    return re.sub(r'[ -]', '_', name)
+  File "/opt/Cpython/lib/python2.7/re.py", line 155, in sub
+    return _compile(pattern, flags).sub(repl, string, count)</msg>
+<status status="FAIL" endtime="20190107 23:02:53.891" starttime="20190107 23:02:53.890">TypeError: expected string or buffer</status>
+</kw>
+<status status="FAIL" endtime="20190107 23:02:53.892" starttime="20190107 23:02:53.875"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:02:53.892" starttime="20190107 23:02:53.874"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:02:53.893" starttime="20190107 23:02:53.861"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:02:53.893" starttime="20190107 23:02:53.860"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:02:53.893" starttime="20190107 23:02:53.854"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:02:53.894" starttime="20190107 23:02:53.850">Several failures occurred:
+
+1) Resolving variable '${service_model.service_point1.device}' failed: ParamAttributeError: Param __getattr__ No such attribute: service_point1
+
+2) Resolving variable '${service_model.service_point1.type}' failed: ParamAttributeError: Param __getattr__ No such attribute: service_point1
+
+3) Resolving variable '@{service_model.service_point1.member}' failed: ParamAttributeError: Param __getattr__ No such attribute: service_point1
+
+4) Several failures occurred:
+
+1) TypeError: expected string or buffer
+
+2) Resolving argument default values failed: Resolving variable '${devices.None.timeout}' failed: ParamAttributeError: Param __getattr__ No such attribute: None
+
+Also keyword teardown failed:
+TypeError: expected string or buffer</status>
+</kw>
+<doc>Initialization file test suites
+It is for putting suite level setup and teardown procedures
+And setting the forced tags for all the test cases in folder and subfolder</doc>
+<status status="FAIL" endtime="20190107 23:02:53.894" starttime="20190107 23:02:52.729">Suite setup failed:
+Resolving variable '${service_model.service_point1.device}' failed: ParamAttributeError: Param __getattr__ No such attribute: service_point1
+
+Also suite teardown failed:
+Several failures occurred:
+
+1) Resolving variable '${service_model.service_point1.device}' failed: ParamAttributeError: Param __getattr__ No such attribute: service_point1
+
+2) Resolving variable '${service_model.service_point1.type}' failed: ParamAttributeError: Param __getattr__ No such attribute: service_point1
+
+3) Resolving variable '@{service_model.service_point1.member}' failed: ParamAttributeError: Param __getattr__ No such attribute: service_point1
+
+4) Several failures occurred:
+
+1) TypeError: expected string or buffer
+
+2) Resolving argument default values failed: Resolving variable '${devices.None.timeout}' failed: ParamAttributeError: Param __getattr__ No such attribute: None
+
+Also keyword teardown failed:
+TypeError: expected string or buffer</status>
+</suite>
+<status status="FAIL" endtime="20190107 23:02:53.900" starttime="20190107 23:02:52.727"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:02:53.902" starttime="20190107 23:02:52.723"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:02:53.903" starttime="20190107 23:02:52.720"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:02:53.905" starttime="20190107 23:02:52.717"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:02:53.906" starttime="20190107 23:02:52.714"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:02:53.908" starttime="20190107 23:02:52.709"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:02:53.909" starttime="20190107 23:02:52.554"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">@author=pzhang</stat>
+<stat fail="1" pass="0">@eut=10GE-12</stat>
+<stat fail="1" pass="0">@eut=GPON-8r2</stat>
+<stat fail="1" pass="0">@feature=HW_Support</stat>
+<stat fail="1" pass="0">@globalid=2533451</stat>
+<stat fail="1" pass="0">@subfeature=MTU_size_of_9k</stat>
+<stat fail="1" pass="0">@tcid=AXOS_E72_PARENT-TC-4716</stat>
+<stat fail="1" pass="0">@user_interface=CLI</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="AXOS" pass="0">AXOS</stat>
+<stat fail="1" id="s1-s1" name="AXOS-automation" pass="0">AXOS.AXOS-automation</stat>
+<stat fail="1" id="s1-s1-s1" name="Milan" pass="0">AXOS.AXOS-automation.Milan</stat>
+<stat fail="1" id="s1-s1-s1-s1" name="ST Test Cases" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases</stat>
+<stat fail="1" id="s1-s1-s1-s1-s1" name="System" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System</stat>
+<stat fail="1" id="s1-s1-s1-s1-s1-s1" name="HW Support" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support</stat>
+<stat fail="1" id="s1-s1-s1-s1-s1-s1-s1" name="MTU" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support.MTU</stat>
+<stat fail="1" id="s1-s1-s1-s1-s1-s1-s1-s1" name="Testcase" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support.MTU.Testcase</stat>
+<stat fail="1" id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="tc 9k INNI port to INNI port" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support.MTU.Testcase.tc 9k INNI port to INNI port</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

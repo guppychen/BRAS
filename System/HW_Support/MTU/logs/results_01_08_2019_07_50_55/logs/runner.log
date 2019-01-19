@@ -1,0 +1,1479 @@
+[2019-01-07 23:50:55.649] - cafe                 - WARNING: File 'cafepath' not found in this project's directory tree. Cafe Path  References (such as 'project://') will not function correctly.
+[2019-01-07 23:50:55.658] - cafe                 - DEBUG: Loaded parameter file '/home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/config/parameters/E7_param.yaml'
+[2019-01-07 23:50:55.682] - cafe                 - DEBUG: Loaded parameter file '/home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/config/parameters/E7_service_model.yaml'
+[2019-01-07 23:50:55.700] - cafe.core.utils      - INFO: Configuration details:
+    git: {
+        test_case_repo: ,
+        test_case_branch: 
+    },
+    session_server: {
+        kill_if_exist_timeout: 300,
+        python_exe: python2,
+        filename: /home/guchen/repo/calix/src/cafe/sessions/session_srv.py,
+        host: localhost,
+        policy: SIMPLE,
+        kill_if_exist: False,
+        port: 18890
+    },
+    cafebot: {
+        enable_repeat_test_case: True,
+        write_results_to_db: True,
+        name: ,
+        topo_specific_init: True,
+        reset_tg_sessions: False,
+        enable_duplicated_keyword_check: True,
+        write_results_one_suite_name: Default Test Suite,
+        session_log_markup_level: [u'ALL'],
+        test_case_repeat_times: -1,
+        reset_sessions: False,
+        pause_on_specified_exception: None,
+        duplicated_keyword_check_level: WARNING,
+        rerun: 1,
+        enable_log_collection: False,
+        dryrun: False,
+        exit_on_specified_exception: None,
+        write_results_suite_mode: one_to_one,
+        write_results_ignore_empty_suites: True,
+        auto_save_tg_config_file_on_failed_cases: False
+    },
+    parameters: {
+        files: ['/home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/config/parameters/E7_param.yaml', '/home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/config/parameters/E7_service_model.yaml'],
+        random_state: ,
+        random_seed: -1
+    },
+    tempfile: {
+        cleanup_temp_files: True
+    },
+    snmp: {
+        force_build_mib_sessions: ,
+        base_mib_path: /usr/share/snmp/mibs/*.txt,
+        mib_paths: None,
+        v3_security_engine_id: 8000000001020304,
+        backup_mib_sources: [u'http://mibs.snmplabs.com/asn1/@mib@'],
+        dest_dir: None
+    },
+    traffic_gen: {
+        ixia_version_file: /opt/ixia/version.txt,
+        tcl_session_timeout_relaunch: False,
+        auto_adapt_tg_arguments: False,
+        trex_client_hltapi_path: /opt/trex_client/stl
+    },
+    diagnostic_hooks: {
+        test_step_failure_kw: ,
+        log_message_patterns: None,
+        log_message_on_fail_only: False,
+        timer_kw: ,
+        enabled: False,
+        test_case_end_kw_before_teardown: ,
+        test_case_end_kw: ,
+        test_step_end_kw: ,
+        test_suite_end_kw: ,
+        test_suite_start_kw: ,
+        test_step_start_kw: ,
+        test_case_start_kw: ,
+        log_message_kw: ,
+        timer_kw_interval: 0,
+        resources: None
+    },
+    webgui: {
+        log_level: ERROR
+    },
+    random_delay: {
+        max_delay_seconds: -1
+    },
+    bugfile: {
+        path: None
+    },
+    timeout: {
+        webgui_timeout: -1,
+        cli_timeout: -1,
+        default_global_timeout: -1,
+        netconf_timeout: -1,
+        restful_timeout: -1,
+        snmp_timeout: -1,
+        trafficgen_timeout: -1
+    },
+    test_suite: {
+        parameter_files: None,
+        topology_file: None,
+        abort_on_failure: False
+    },
+    _default_report: {
+        __type__: console_report
+    },
+    disk_monitor: {
+        error_limit: 95,
+        directories: None,
+        enabled: False,
+        warning_limit: 80
+    },
+    logger: {
+        show_sessions: ['tg1'],
+        console: False,
+        level: DEBUG
+    },
+    cafe_runner: {
+        enable_cafe_tracker: False,
+        log_path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_50_55/logs,
+        enable_xunit_editor: False,
+        variables: {},
+        tracker_comm_type: ASYNC,
+        renderer: <class 'cafe.runner.renderers.cliprinter.TextRenderer'>,
+        path: /home/guchen/workspace/AXOS,
+        device_monitor_host: http://cdc-cafecmdr.calix.local,
+        tc_include_list: None,
+        test_result_path_postfix: ,
+        collect_tc_id: False,
+        exclude_tags: None,
+        tc_exclude_list: None,
+        db_path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_50_55/db,
+        db_echo: False,
+        tcl_interpreter: /opt/active_tcl/bin/tclsh,
+        enable_device_monitor: False,
+        enforce_documentation: False,
+        tc_exec_order: <function in_order at 0x7f6b16b83320>,
+        test_result_path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_50_55,
+        include_tags: None,
+        db_type: sqlite,
+        reports: [u'_default_report'],
+        show_print_statements: True,
+        exit_on_error_cafe_tracker: False,
+        enable_cafe_vm_register: True,
+        runner_log_name: runner.log
+    },
+    runner_state: {
+        executing_in_runner: False,
+        timestamp: {
+            raw: 1546933855.01,
+            path_safe: 01_08_2019_07_50_55
+        },
+        path_reference_file: /cafepath,
+        callbacks: <cafe.runner.renderers.cliprinter.TextRenderer object at 0x7f6b11fd3d10>,
+        user: {
+            available_log_dir: .
+        },
+        path_reference: {},
+        logger: <cafe.core.logger.CLogger object at 0x7f6b18d26a90>
+    },
+    topology: {
+        force_eut_tag: False,
+        user_interface: ,
+        logical_query: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/config/topology/E7_topo.yaml,
+        eut_ua_injector_on: True,
+        session_initiation: DO_NOTHING,
+        dut_release_branch: ,
+        force_user_interface_tag: False,
+        dut_version: ,
+        file: None,
+        eut: ,
+        raise_validation_error: False,
+        aliases: {}
+    }
+[2019-01-07 23:50:55.828] - cafe.core.utils      - INFO: Configuration details:
+    connection: {
+        eutA: {
+            cli_response_error_check: {
+                regex: ,
+                enable: False
+            },
+            user_interface: CLI,
+            prompt: #,
+            ip: 10.245.96.74,
+            meta: {
+                driver: cafe.app.driver.ssh.SSHDriver
+            },
+            user: sysadmin,
+            timeout: 30,
+            protocol: ssh,
+            model: MILAN,
+            password: sysadmin,
+            type: AXOS,
+            port: 22,
+            crlf: 
+
+        }
+    }
+[2019-01-07 23:50:55.835] - cafe.sessions.session_manager - DEBUG: session policy class chosen (<class 'cafe.sessions.session_manager.SimpleLocalOnlyPolicy'>)
+[2019-01-07 23:50:55.836] - cafe.sessions.session_srv - INFO: session server connected!!!
+[2019-01-07 23:50:55.837] - cafe.sessions.session_manager - DEBUG: create_session: eutA, ssh, AXOS, {'cli_response_error_check': <cafe.core.utils.Param object at 0x7f6b11df4190>, 'user_interface': 'CLI', 'prompt': '#', 'ip': '10.245.96.74', 'host': '10.245.96.74', 'meta': <cafe.core.utils.Param object at 0x7f6b11df42d0>, 'user': 'sysadmin', 'timeout': 30, 'protocol': 'ssh', 'model': 'MILAN', 'password': 'sysadmin', 'type': 'AXOS', 'port': 22, 'crlf': '\n'}
+[2019-01-07 23:50:55.838] - cafe.sessions.session_srv - INFO: create_session: euta, ssh, axos, {'cli_response_error_check': <cafe.core.utils.Param object at 0x7f6b11df4190>, 'user_interface': 'CLI', 'prompt': '#', 'ip': '10.245.96.74', 'host': '10.245.96.74', 'meta': <cafe.core.utils.Param object at 0x7f6b11df42d0>, 'user': 'sysadmin', 'timeout': 30, 'protocol': 'ssh', 'model': 'MILAN', 'password': 'sysadmin', 'type': 'AXOS', 'port': 22, 'crlf': '\n'}
+[2019-01-07 23:50:55.840] - cafe.sessions.session_srv.euta - DEBUG: session log level is: DEBUG
+[2019-01-07 23:50:55.840] - cafe.sessions.session_srv.euta - DEBUG: default prompt for this session is #
+[2019-01-07 23:50:55.841] - cafe.sessions.session_srv.euta - INFO: create folder for /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_50_55/logs/euta.log successful
+[2019-01-07 23:50:55.846] - cafe                 - DEBUG: driver created: eutA
+[2019-01-07 23:50:55.854] - cafe                 - DEBUG: session initiation is DO_NOTHING
+[2019-01-07 23:50:55.870] - cafe                 - INFO: Register dynamic listener <caferobot.listener.keyword_duplicated_check.KeywordDuplicatedCheckListener object at 0x7f6b11e980d0>, version 2
+[2019-01-07 23:50:55.871] - cafe                 - INFO: Register dynamic listener <caferobot.listener.session_listener.SessionListener object at 0x7f6b11e98110>, version 2
+[2019-01-07 23:50:55.873] - cafe                 - INFO: Register dynamic listener <caferobot.listener.log_listener.LogListener object at 0x7f6b11e98190>, version 2
+[2019-01-07 23:50:55.874] - cafe                 - INFO: Register dynamic listener <caferobot.listener.cafe_db_writer.CafeDBWriter object at 0x7f6b11e981d0>, version 2
+[2019-01-07 23:50:55.875] - cafe                 - INFO: Register dynamic listener <caferobot.listener.eut_ua_injector.EUTUAInjector object at 0x7f6b11e98210>, version 2
+[2019-01-07 23:50:55.875] - cafe                 - INFO: Register dynamic listener <class 'caferobot.listener.enforce_documentation.EnforceDocumentationListener'>, version 3
+[2019-01-07 23:50:55.876] - cafe                 - INFO: Register dynamic listener <caferobot.listener.scope_listener.ScopeListener object at 0x7f6b11e98290>, version 2
+[2019-01-07 23:50:55.877] - cafe                 - INFO: Register dynamic listener <caferobot.listener.randomstate_listener.RandomStateListener object at 0x7f6b11e982d0>, version 3
+[2019-01-07 23:50:55.878] - cafe                 - INFO: App() session has built
+[2019-01-07 23:50:55.879] - cafe                 - INFO: Register Cafe Virtual Machine Information
+[2019-01-07 23:50:56.206] - cafe.core.device     - WARNING: Exception ignored: No JSON object could be decoded
+[2019-01-07 23:50:56.207] - cafe                 - INFO: Cafe Tracker Is Disabled
+[2019-01-07 23:50:59.427] - cafe.core.db         - DEBUG: db (sqlite:////home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_50_55/db/20190107/20190107235059.idb) create success
+[2019-01-07 23:51:00.199] - cafe.app.driver.ssh  - INFO: open ssh handle
+[2019-01-07 23:51:00.200] - cafe.sessions.session_srv.euta - INFO: Connection has not built
+[2019-01-07 23:51:00.201] - cafe.sessions.session_srv.euta - INFO: Try login to 10.245.96.74:22 with username=sysadmin, password=sysadmin
+[2019-01-07 23:51:05.211] - cafe.sessions.ssh    - ERROR: code: 1012 - ssh login failed - sid=euta, host=10.245.96.74
+Traceback (most recent call last):
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 162, in _login
+    timeout=self.connect_timeout)
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/util.py", line 278, in retry_on_signal
+    return function()
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+timeout: timed out
+[2019-01-07 23:51:05.213] - cafe.sessions.session_srv.euta - DEBUG: ssh session login retry (sid=euta,host=10.245.96.74, retry=0)
+[2019-01-07 23:51:13.225] - cafe.sessions.ssh    - ERROR: code: 1012 - ssh login failed - sid=euta, host=10.245.96.74
+Traceback (most recent call last):
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 162, in _login
+    timeout=self.connect_timeout)
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/util.py", line 278, in retry_on_signal
+    return function()
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+timeout: timed out
+[2019-01-07 23:51:13.226] - cafe.sessions.session_srv.euta - DEBUG: ssh session login retry (sid=euta,host=10.245.96.74, retry=1)
+[2019-01-07 23:51:21.237] - cafe.sessions.ssh    - ERROR: code: 1012 - ssh login failed - sid=euta, host=10.245.96.74
+Traceback (most recent call last):
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 162, in _login
+    timeout=self.connect_timeout)
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/util.py", line 278, in retry_on_signal
+    return function()
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+timeout: timed out
+[2019-01-07 23:51:21.237] - cafe.sessions.session_srv.euta - DEBUG: ssh session login retry (sid=euta,host=10.245.96.74, retry=2)
+[2019-01-07 23:51:24.239] - cafe.sessions.ssh    - ERROR: code: 1012 - ssh login failed - sid=euta, host=10.245.96.74 connect failed
+Traceback (most recent call last):
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 146, in login
+    self._login()
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 168, in _login
+    raise SSHLoginException("sid=%s, host=%s" % (self.sid, self.host))
+SSHLoginException
+[2019-01-07 23:51:24.242] - caferobot.command.device.shell - INFO: Destroy ShellDevice(eutA)
+[2019-01-07 23:51:24.243] - cafe.app.driver.ssh  - INFO: close ssh handle
+[2019-01-07 23:51:24.250] - cafe.app.driver.ssh  - INFO: open ssh handle
+[2019-01-07 23:51:24.251] - cafe.sessions.session_srv.euta - INFO: Connection has not built
+[2019-01-07 23:51:24.252] - cafe.sessions.session_srv.euta - INFO: Try login to 10.245.96.74:22 with username=sysadmin, password=sysadmin
+[2019-01-07 23:51:29.256] - cafe.sessions.ssh    - ERROR: code: 1012 - ssh login failed - sid=euta, host=10.245.96.74
+Traceback (most recent call last):
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 162, in _login
+    timeout=self.connect_timeout)
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/util.py", line 278, in retry_on_signal
+    return function()
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+timeout: timed out
+[2019-01-07 23:51:29.256] - cafe.sessions.session_srv.euta - DEBUG: ssh session login retry (sid=euta,host=10.245.96.74, retry=0)
+[2019-01-07 23:51:37.267] - cafe.sessions.ssh    - ERROR: code: 1012 - ssh login failed - sid=euta, host=10.245.96.74
+Traceback (most recent call last):
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 162, in _login
+    timeout=self.connect_timeout)
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/util.py", line 278, in retry_on_signal
+    return function()
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+timeout: timed out
+[2019-01-07 23:51:37.270] - cafe.sessions.session_srv.euta - DEBUG: ssh session login retry (sid=euta,host=10.245.96.74, retry=1)
+[2019-01-07 23:51:45.299] - cafe.sessions.ssh    - ERROR: code: 1012 - ssh login failed - sid=euta, host=10.245.96.74
+Traceback (most recent call last):
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 162, in _login
+    timeout=self.connect_timeout)
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/util.py", line 278, in retry_on_signal
+    return function()
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+timeout: timed out
+[2019-01-07 23:51:45.300] - cafe.sessions.session_srv.euta - DEBUG: ssh session login retry (sid=euta,host=10.245.96.74, retry=2)
+[2019-01-07 23:51:48.305] - cafe.sessions.ssh    - ERROR: code: 1012 - ssh login failed - sid=euta, host=10.245.96.74 connect failed
+Traceback (most recent call last):
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 146, in login
+    self._login()
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 168, in _login
+    raise SSHLoginException("sid=%s, host=%s" % (self.sid, self.host))
+SSHLoginException
+[2019-01-07 23:51:48.311] - caferobot.command.device.shell - INFO: Destroy ShellDevice(eutA)
+[2019-01-07 23:51:48.312] - cafe.app.driver.ssh  - INFO: close ssh handle
+[2019-01-07 23:51:48.561] - caferobot.session.control.status - INFO: Reset flag_of_reset_session from True to False
+[2019-01-07 23:51:48.733] - cafe.util.generators.accessor - WARNING: Invalid random seed. use fractional second instead.
+[2019-01-07 23:51:48.744] - cafe.util.generators.accessor - WARNING: Invalid random state. use default state instead.
+[2019-01-07 23:51:48.746] - caferobot.listener.session_listener - INFO: Do not reset all sessions
+[2019-01-07 23:51:49.242] - caferobot.session.control.status - INFO: Reset flag_of_reset_session from False to False
+[2019-01-07 23:51:49.386] - caferobot.listener.session_listener - INFO: Do not reset all sessions
+[2019-01-07 23:51:49.704] - cafe.app.driver.ssh  - INFO: open ssh handle
+[2019-01-07 23:51:49.711] - cafe.sessions.session_srv.euta - INFO: Connection has not built
+[2019-01-07 23:51:49.719] - cafe.sessions.session_srv.euta - INFO: Try login to 10.245.96.74:22 with username=sysadmin, password=sysadmin
+[2019-01-07 23:51:54.733] - cafe.sessions.ssh    - ERROR: code: 1012 - ssh login failed - sid=euta, host=10.245.96.74
+Traceback (most recent call last):
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 162, in _login
+    timeout=self.connect_timeout)
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/util.py", line 278, in retry_on_signal
+    return function()
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+timeout: timed out
+[2019-01-07 23:51:54.734] - cafe.sessions.session_srv.euta - DEBUG: ssh session login retry (sid=euta,host=10.245.96.74, retry=0)
+[2019-01-07 23:52:02.747] - cafe.sessions.ssh    - ERROR: code: 1012 - ssh login failed - sid=euta, host=10.245.96.74
+Traceback (most recent call last):
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 162, in _login
+    timeout=self.connect_timeout)
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/util.py", line 278, in retry_on_signal
+    return function()
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+timeout: timed out
+[2019-01-07 23:52:02.748] - cafe.sessions.session_srv.euta - DEBUG: ssh session login retry (sid=euta,host=10.245.96.74, retry=1)
+[2019-01-07 23:52:10.768] - cafe.sessions.ssh    - ERROR: code: 1012 - ssh login failed - sid=euta, host=10.245.96.74
+Traceback (most recent call last):
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 162, in _login
+    timeout=self.connect_timeout)
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/util.py", line 278, in retry_on_signal
+    return function()
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+timeout: timed out
+[2019-01-07 23:52:10.769] - cafe.sessions.session_srv.euta - DEBUG: ssh session login retry (sid=euta,host=10.245.96.74, retry=2)
+[2019-01-07 23:52:13.783] - cafe.sessions.ssh    - ERROR: code: 1012 - ssh login failed - sid=euta, host=10.245.96.74 connect failed
+Traceback (most recent call last):
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 146, in login
+    self._login()
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 168, in _login
+    raise SSHLoginException("sid=%s, host=%s" % (self.sid, self.host))
+SSHLoginException
+[2019-01-07 23:52:13.792] - cafe.app.driver.ssh  - INFO: open ssh handle
+[2019-01-07 23:52:13.794] - cafe.sessions.session_srv.euta - INFO: Connection has not built
+[2019-01-07 23:52:13.795] - cafe.sessions.session_srv.euta - INFO: Try login to 10.245.96.74:22 with username=sysadmin, password=sysadmin
+[2019-01-07 23:52:18.804] - cafe.sessions.ssh    - ERROR: code: 1012 - ssh login failed - sid=euta, host=10.245.96.74
+Traceback (most recent call last):
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 162, in _login
+    timeout=self.connect_timeout)
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/util.py", line 278, in retry_on_signal
+    return function()
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+timeout: timed out
+[2019-01-07 23:52:18.805] - cafe.sessions.session_srv.euta - DEBUG: ssh session login retry (sid=euta,host=10.245.96.74, retry=0)
+[2019-01-07 23:52:26.815] - cafe.sessions.ssh    - ERROR: code: 1012 - ssh login failed - sid=euta, host=10.245.96.74
+Traceback (most recent call last):
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 162, in _login
+    timeout=self.connect_timeout)
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/util.py", line 278, in retry_on_signal
+    return function()
+  File "/opt/Cpython/lib/python2.7/site-packages/paramiko/client.py", line 251, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/opt/Cpython/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+timeout: timed out
+[2019-01-07 23:52:26.816] - cafe.sessions.session_srv.euta - DEBUG: ssh session login retry (sid=euta,host=10.245.96.74, retry=1)
+[2019-01-07 23:52:31.557] - cafe.sessions.session_srv.euta - INFO: ssh session login complete (sid=euta,host=10.245.96.74)
+[2019-01-07 23:52:31.557] - cafe.sessions.ssh    - INFO: [SSH]create a channel to 10.245.96.74:22, username=sysadmin, password=sysadmin
+[2019-01-07 23:52:33.703] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: '**** ACTIVE NGPON2-4 CARD  ****
+Welcome to CLI
+sysadmin connected from 10.200.201.26 using ssh on NGPON2X4
+[?7hNGPON2X4# ', match: '#'
+[2019-01-07 23:52:33.705] - caferobot.command.device.shell - INFO: Created ShellDevice(eutA)
+[2019-01-07 23:52:33.707] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:33.857] - cafe.console_logger  - INFO: 
+[2019-01-07 23:52:33.868] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:33.868] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:33.870] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:33.871] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:52:33.872] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:33.872] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:33.873] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:34.158] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'configure
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4# ', match: '#'
+[2019-01-07 23:52:34.159] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:52:34.160] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4
+[2019-01-07 23:52:34.171] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=interface ethernet 1/1/x3, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:34.176] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:34.177] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:34.179] - cafe.app.driver.proto.shell - DEBUG: command is interface ethernet 1/1/x3, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:34.180] - cafe.sessions.session_srv.euta - DEBUG: send command: interface ethernet 1/1/x3
+[2019-01-07 23:52:34.180] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:34.181] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:34.182] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:34.388] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'interface ethernet 1/1/x3
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4# ', match: '#'
+[2019-01-07 23:52:34.389] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:52:34.389] - caferobot.command.device.shell.eutA - INFO: session_command result=interface ethernet 1/1/x3
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4
+[2019-01-07 23:52:34.401] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=no transport-service-profile, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:34.405] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:34.406] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:34.407] - cafe.app.driver.proto.shell - DEBUG: command is no transport-service-profile, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:34.408] - cafe.sessions.session_srv.euta - DEBUG: send command: no transport-service-profile
+[2019-01-07 23:52:34.409] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:34.410] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:34.410] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:34.601] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'no transport-service-profile
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4# ', match: '#'
+[2019-01-07 23:52:34.601] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:52:34.602] - caferobot.command.device.shell.eutA - INFO: session_command result=no transport-service-profile
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4
+[2019-01-07 23:52:34.614] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:34.619] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:34.622] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:34.624] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:34.627] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:52:34.628] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:34.629] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:34.629] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:34.839] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'end
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4# ', match: '#'
+[2019-01-07 23:52:34.840] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:52:34.841] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4
+[2019-01-07 23:52:34.849] - caferobot.command.device.shell - INFO: Destroy ShellDevice(eutA)
+[2019-01-07 23:52:34.850] - cafe.app.driver.ssh  - INFO: close ssh handle
+[2019-01-07 23:52:34.869] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:34.876] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:34.877] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:34.878] - cafe.app.driver.ssh  - INFO: open ssh handle
+[2019-01-07 23:52:34.878] - cafe.sessions.ssh    - INFO: [SSH]create a channel to 10.245.96.74:22, username=sysadmin, password=sysadmin
+[2019-01-07 23:52:37.975] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'Last login: Mon Jan  7 23:35:11 2019 from 10.200.201.26
+**** ACTIVE NGPON2-4 CARD  ****
+Welcome to CLI
+sysadmin connected from 10.200.201.26 using ssh on NGPON2X4
+[?7hNGPON2X4# ', match: '#'
+[2019-01-07 23:52:37.991] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:37.993] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:52:37.994] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:37.994] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:37.995] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:38.357] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:52:38.358] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-07 23:52:38.358] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)
+[2019-01-07 23:52:38.365] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=no transport-service-profile auto_TransVlan_777, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:38.369] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:38.371] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:38.374] - cafe.app.driver.proto.shell - DEBUG: command is no transport-service-profile auto_TransVlan_777, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:38.378] - cafe.sessions.session_srv.euta - DEBUG: send command: no transport-service-profile auto_TransVlan_777
+[2019-01-07 23:52:38.379] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:38.380] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:38.383] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:39.837] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:52:39.838] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:52:39.839] - caferobot.command.device.shell.eutA - INFO: session_command result=no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)
+[2019-01-07 23:52:39.848] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:39.853] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:39.854] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:39.856] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:39.857] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:52:39.858] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:39.859] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:39.859] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:40.249] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:52:40.250] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-07 23:52:40.251] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:52:40.274] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show running-config interface ethernet 1/1/x4, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:40.278] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:40.279] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:40.281] - cafe.app.driver.proto.shell - DEBUG: command is show running-config interface ethernet 1/1/x4, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:40.283] - cafe.sessions.session_srv.euta - DEBUG: send command: show running-config interface ethernet 1/1/x4
+[2019-01-07 23:52:40.284] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:40.285] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:40.286] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:50.986] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show running-config interface ethernet 1/1/x4
+interface ethernet 1/1/x4
+ no shutdown
+ role                      inni
+ transport-service-profile auto_TransVlan_777
+ erps-ring 2
+  role secondary
+ !
+!
+NGPON2X4# ', match: '#'
+[2019-01-07 23:52:50.986] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-07 23:52:50.987] - caferobot.command.device.shell.eutA - INFO: session_command result=show running-config interface ethernet 1/1/x4
+interface ethernet 1/1/x4
+ no shutdown
+ role                      inni
+ transport-service-profile auto_TransVlan_777
+ erps-ring 2
+  role secondary
+ !
+!
+NGPON2X4
+[2019-01-07 23:52:50.994] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:50.999] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:51.0] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:51.7] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:51.8] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:52:51.11] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:51.12] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:51.13] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:51.252] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:52:51.254] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:52:51.255] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)
+[2019-01-07 23:52:51.265] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=interface ethernet 1/1/x4, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:51.269] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:51.270] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:51.272] - cafe.app.driver.proto.shell - DEBUG: command is interface ethernet 1/1/x4, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:51.273] - cafe.sessions.session_srv.euta - DEBUG: send command: interface ethernet 1/1/x4
+[2019-01-07 23:52:51.274] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:51.275] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:51.275] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:51.508] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'interface ethernet 1/1/x4
+NGPON2X4(config-ethernet-1/1/x4)# ', match: '#'
+[2019-01-07 23:52:51.509] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:52:51.511] - caferobot.command.device.shell.eutA - INFO: session_command result=interface ethernet 1/1/x4
+NGPON2X4(config-ethernet-1/1/x4)
+[2019-01-07 23:52:51.524] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=no transport-service-profile, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:51.537] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:51.544] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:51.547] - cafe.app.driver.proto.shell - DEBUG: command is no transport-service-profile, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:51.547] - cafe.sessions.session_srv.euta - DEBUG: send command: no transport-service-profile
+[2019-01-07 23:52:51.548] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:51.549] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:51.550] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:53.896] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'no transport-service-profile
+NGPON2X4(config-ethernet-1/1/x4)# ', match: '#'
+[2019-01-07 23:52:53.896] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:52:53.897] - caferobot.command.device.shell.eutA - INFO: session_command result=no transport-service-profile
+NGPON2X4(config-ethernet-1/1/x4)
+[2019-01-07 23:52:53.913] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:53.917] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:53.918] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:53.920] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:53.920] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:52:53.921] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:53.921] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:53.922] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:54.154] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:52:54.154] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:52:54.155] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:52:54.171] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:54.175] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:54.176] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:54.177] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:54.178] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:52:54.179] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:54.179] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:54.180] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:54.483] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:52:54.484] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-07 23:52:54.484] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)
+[2019-01-07 23:52:54.490] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=no transport-service-profile auto_TransVlan_777, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:54.494] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:54.495] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:54.498] - cafe.app.driver.proto.shell - DEBUG: command is no transport-service-profile auto_TransVlan_777, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:54.498] - cafe.sessions.session_srv.euta - DEBUG: send command: no transport-service-profile auto_TransVlan_777
+[2019-01-07 23:52:54.499] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:54.499] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:54.500] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:55.441] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:52:55.442] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:52:55.443] - caferobot.command.device.shell.eutA - INFO: session_command result=no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)
+[2019-01-07 23:52:55.452] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:55.456] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:55.457] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:55.459] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:55.460] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:52:55.461] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:55.461] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:55.462] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:52:55.746] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:52:55.762] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-07 23:52:55.764] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:52:55.788] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show running-config interface ethernet 1/2/x11, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:52:55.792] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:52:55.793] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:52:55.795] - cafe.app.driver.proto.shell - DEBUG: command is show running-config interface ethernet 1/2/x11, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:52:55.796] - cafe.sessions.session_srv.euta - DEBUG: send command: show running-config interface ethernet 1/2/x11
+[2019-01-07 23:52:55.796] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:52:55.797] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:52:55.798] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:06.0] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show running-config interface ethernet 1/2/x11
+interface ethernet 1/2/x11
+!
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:06.2] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-07 23:53:06.5] - caferobot.command.device.shell.eutA - INFO: session_command result=show running-config interface ethernet 1/2/x11
+interface ethernet 1/2/x11
+!
+NGPON2X4
+[2019-01-07 23:53:06.24] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:06.37] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:06.42] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:06.46] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:06.48] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:53:06.50] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:06.52] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:06.53] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:06.348] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:06.350] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:06.351] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)
+[2019-01-07 23:53:06.361] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=interface ethernet 1/2/x11, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:06.365] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:06.366] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:06.368] - cafe.app.driver.proto.shell - DEBUG: command is interface ethernet 1/2/x11, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:06.369] - cafe.sessions.session_srv.euta - DEBUG: send command: interface ethernet 1/2/x11
+[2019-01-07 23:53:06.370] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:06.370] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:06.371] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:06.632] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'interface ethernet 1/2/x11
+NGPON2X4(config-ethernet-1/2/x11)# ', match: '#'
+[2019-01-07 23:53:06.633] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:06.634] - caferobot.command.device.shell.eutA - INFO: session_command result=interface ethernet 1/2/x11
+NGPON2X4(config-ethernet-1/2/x11)
+[2019-01-07 23:53:06.647] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=no transport-service-profile, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:06.651] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:06.652] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:06.655] - cafe.app.driver.proto.shell - DEBUG: command is no transport-service-profile, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:06.656] - cafe.sessions.session_srv.euta - DEBUG: send command: no transport-service-profile
+[2019-01-07 23:53:06.656] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:06.657] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:06.658] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:06.961] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'no transport-service-profile
+---------------------------------------------------------------^
+syntax error: incomplete path
+NGPON2X4(config-ethernet-1/2/x11)# ', match: '#'
+[2019-01-07 23:53:06.962] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:06.963] - caferobot.command.device.shell.eutA - INFO: session_command result=no transport-service-profile
+---------------------------------------------------------------^
+syntax error: incomplete path
+NGPON2X4(config-ethernet-1/2/x11)
+[2019-01-07 23:53:06.976] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:06.980] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:06.981] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:06.982] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:06.983] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:53:06.984] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:06.984] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:06.985] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:07.489] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:07.490] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:07.491] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:53:07.506] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:07.510] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:07.511] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:07.513] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:07.514] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:53:07.515] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:07.516] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:07.516] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:08.134] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:08.136] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-07 23:53:08.137] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)
+[2019-01-07 23:53:08.145] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=no transport-service-profile auto_TransVlan_777, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:08.150] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:08.151] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:08.153] - cafe.app.driver.proto.shell - DEBUG: command is no transport-service-profile auto_TransVlan_777, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:08.154] - cafe.sessions.session_srv.euta - DEBUG: send command: no transport-service-profile auto_TransVlan_777
+[2019-01-07 23:53:08.154] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:08.155] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:08.156] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:09.191] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:09.191] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:09.192] - caferobot.command.device.shell.eutA - INFO: session_command result=no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)
+[2019-01-07 23:53:09.200] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:09.204] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:09.205] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:09.206] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:09.207] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:53:09.208] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:09.208] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:09.209] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:09.440] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:09.441] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-07 23:53:09.441] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:53:09.467] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show running-config interface ethernet 1/2/x12, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:09.471] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:09.472] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:09.474] - cafe.app.driver.proto.shell - DEBUG: command is show running-config interface ethernet 1/2/x12, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:09.475] - cafe.sessions.session_srv.euta - DEBUG: send command: show running-config interface ethernet 1/2/x12
+[2019-01-07 23:53:09.476] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:09.477] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:09.478] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:20.332] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show running-config interface ethernet 1/2/x12
+interface ethernet 1/2/x12
+!
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:20.333] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-07 23:53:20.334] - caferobot.command.device.shell.eutA - INFO: session_command result=show running-config interface ethernet 1/2/x12
+interface ethernet 1/2/x12
+!
+NGPON2X4
+[2019-01-07 23:53:20.342] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:20.346] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:20.347] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:20.349] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:20.350] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:53:20.350] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:20.351] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:20.352] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:20.638] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:20.639] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:20.640] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)
+[2019-01-07 23:53:20.655] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=interface ethernet 1/2/x12, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:20.661] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:20.663] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:20.665] - cafe.app.driver.proto.shell - DEBUG: command is interface ethernet 1/2/x12, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:20.666] - cafe.sessions.session_srv.euta - DEBUG: send command: interface ethernet 1/2/x12
+[2019-01-07 23:53:20.667] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:20.667] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:20.668] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:20.901] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'interface ethernet 1/2/x12
+NGPON2X4(config-ethernet-1/2/x12)# ', match: '#'
+[2019-01-07 23:53:20.904] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:20.908] - caferobot.command.device.shell.eutA - INFO: session_command result=interface ethernet 1/2/x12
+NGPON2X4(config-ethernet-1/2/x12)
+[2019-01-07 23:53:20.927] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=no transport-service-profile, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:20.934] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:20.939] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:20.944] - cafe.app.driver.proto.shell - DEBUG: command is no transport-service-profile, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:20.953] - cafe.sessions.session_srv.euta - DEBUG: send command: no transport-service-profile
+[2019-01-07 23:53:20.960] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:20.972] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:20.985] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:21.235] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'no transport-service-profile
+---------------------------------------------------------------^
+syntax error: incomplete path
+NGPON2X4(config-ethernet-1/2/x12)# ', match: '#'
+[2019-01-07 23:53:21.239] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:21.244] - caferobot.command.device.shell.eutA - INFO: session_command result=no transport-service-profile
+---------------------------------------------------------------^
+syntax error: incomplete path
+NGPON2X4(config-ethernet-1/2/x12)
+[2019-01-07 23:53:21.280] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:21.296] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:21.306] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:21.315] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:21.319] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:53:21.324] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:21.330] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:21.335] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:21.594] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:21.596] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:21.597] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:53:21.620] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:21.624] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:21.626] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:21.628] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:21.629] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:53:21.630] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:21.631] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:21.632] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:21.869] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:21.871] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-07 23:53:21.872] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)
+[2019-01-07 23:53:21.879] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=no transport-service-profile auto_TransVlan_777, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:21.883] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:21.884] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:21.886] - cafe.app.driver.proto.shell - DEBUG: command is no transport-service-profile auto_TransVlan_777, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:21.886] - cafe.sessions.session_srv.euta - DEBUG: send command: no transport-service-profile auto_TransVlan_777
+[2019-01-07 23:53:21.887] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:21.889] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:21.889] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:22.530] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:22.531] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:22.532] - caferobot.command.device.shell.eutA - INFO: session_command result=no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)
+[2019-01-07 23:53:22.551] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:22.560] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:22.562] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:22.564] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:22.565] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:53:22.565] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:22.566] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:22.567] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:22.813] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:22.820] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-07 23:53:22.821] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:53:22.835] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:22.840] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:22.842] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:22.844] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:22.844] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:53:22.845] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:22.846] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:22.847] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:23.86] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:23.101] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-07 23:53:23.103] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)
+[2019-01-07 23:53:23.108] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=vlan 777, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:23.111] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:23.112] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:23.113] - cafe.app.driver.proto.shell - DEBUG: command is vlan 777, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:23.114] - cafe.sessions.session_srv.euta - DEBUG: send command: vlan 777
+[2019-01-07 23:53:23.114] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:23.115] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:23.116] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:23.356] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'vlan 777
+NGPON2X4(config-vlan-777)# ', match: '#'
+[2019-01-07 23:53:23.357] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-07 23:53:23.357] - caferobot.command.device.shell.eutA - INFO: session_command result=vlan 777
+NGPON2X4(config-vlan-777)
+[2019-01-07 23:53:23.365] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:23.369] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:23.370] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:23.372] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:23.373] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:53:23.373] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:23.374] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:23.375] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:23.619] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:23.621] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-07 23:53:23.622] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:53:23.648] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:23.661] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:23.664] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:23.667] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:23.668] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:53:23.669] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:23.671] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:23.671] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:23.944] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:23.955] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:23.958] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)
+[2019-01-07 23:53:23.967] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=interface ethernet 1/1/x3, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:23.973] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:23.974] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:23.976] - cafe.app.driver.proto.shell - DEBUG: command is interface ethernet 1/1/x3, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:23.977] - cafe.sessions.session_srv.euta - DEBUG: send command: interface ethernet 1/1/x3
+[2019-01-07 23:53:23.978] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:23.978] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:23.979] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:24.263] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'interface ethernet 1/1/x3
+NGPON2X4(config-ethernet-1/1/x3)# ', match: '#'
+[2019-01-07 23:53:24.264] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:24.266] - caferobot.command.device.shell.eutA - INFO: session_command result=interface ethernet 1/1/x3
+NGPON2X4(config-ethernet-1/1/x3)
+[2019-01-07 23:53:24.276] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=no role, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:24.282] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:24.287] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:24.293] - cafe.app.driver.proto.shell - DEBUG: command is no role, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:24.305] - cafe.sessions.session_srv.euta - DEBUG: send command: no role
+[2019-01-07 23:53:24.314] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:24.317] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:24.323] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:24.602] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'no role
+Error: element not found
+NGPON2X4(config-ethernet-1/1/x3)# ', match: '#'
+[2019-01-07 23:53:24.604] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:24.609] - caferobot.command.device.shell.eutA - INFO: session_command result=no role
+Error: element not found
+NGPON2X4(config-ethernet-1/1/x3)
+[2019-01-07 23:53:24.639] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:24.647] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:24.652] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:24.657] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:24.659] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:53:24.660] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:24.660] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:24.661] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:24.995] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:24.996] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:24.996] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:53:25.8] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:25.13] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:25.14] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:25.16] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:25.17] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:53:25.17] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:25.18] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:25.19] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:25.287] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:25.289] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:25.290] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)
+[2019-01-07 23:53:25.300] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=interface ethernet 1/1/x3, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:25.305] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:25.306] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:25.308] - cafe.app.driver.proto.shell - DEBUG: command is interface ethernet 1/1/x3, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:25.308] - cafe.sessions.session_srv.euta - DEBUG: send command: interface ethernet 1/1/x3
+[2019-01-07 23:53:25.309] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:25.309] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:25.310] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:25.544] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'interface ethernet 1/1/x3
+NGPON2X4(config-ethernet-1/1/x3)# ', match: '#'
+[2019-01-07 23:53:25.546] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:25.547] - caferobot.command.device.shell.eutA - INFO: session_command result=interface ethernet 1/1/x3
+NGPON2X4(config-ethernet-1/1/x3)
+[2019-01-07 23:53:25.581] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=shutdown, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:25.587] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:25.588] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:25.590] - cafe.app.driver.proto.shell - DEBUG: command is shutdown, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:25.591] - cafe.sessions.session_srv.euta - DEBUG: send command: shutdown
+[2019-01-07 23:53:25.592] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:25.592] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:25.593] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:25.801] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'shutdown
+NGPON2X4(config-ethernet-1/1/x3)# ', match: '#'
+[2019-01-07 23:53:25.802] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:25.803] - caferobot.command.device.shell.eutA - INFO: session_command result=shutdown
+NGPON2X4(config-ethernet-1/1/x3)
+[2019-01-07 23:53:25.813] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:25.819] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:25.822] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:25.826] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:25.828] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:53:25.832] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:25.834] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:25.836] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:26.122] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:26.123] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:26.124] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:53:26.157] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:26.162] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:26.164] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:26.166] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:26.167] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:53:26.167] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:26.168] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:26.169] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:26.408] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:26.413] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:26.413] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)
+[2019-01-07 23:53:26.428] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=interface ethernet 1/1/x4, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:26.433] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:26.435] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:26.437] - cafe.app.driver.proto.shell - DEBUG: command is interface ethernet 1/1/x4, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:26.438] - cafe.sessions.session_srv.euta - DEBUG: send command: interface ethernet 1/1/x4
+[2019-01-07 23:53:26.439] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:26.439] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:26.440] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:26.671] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'interface ethernet 1/1/x4
+NGPON2X4(config-ethernet-1/1/x4)# ', match: '#'
+[2019-01-07 23:53:26.672] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:26.673] - caferobot.command.device.shell.eutA - INFO: session_command result=interface ethernet 1/1/x4
+NGPON2X4(config-ethernet-1/1/x4)
+[2019-01-07 23:53:26.687] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=no role, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:26.692] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:26.693] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:26.696] - cafe.app.driver.proto.shell - DEBUG: command is no role, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:26.697] - cafe.sessions.session_srv.euta - DEBUG: send command: no role
+[2019-01-07 23:53:26.697] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:26.698] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:26.698] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:27.34] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'no role
+Aborted: Semantic check failure: Can't delete service role when erps ring is configured
+Error: failed to apply modifications
+NGPON2X4(config-ethernet-1/1/x4)# ', match: '#'
+[2019-01-07 23:53:27.35] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:27.35] - caferobot.command.device.shell.eutA - INFO: session_command result=no role
+Aborted: Semantic check failure: Can't delete service role when erps ring is configured
+Error: failed to apply modifications
+NGPON2X4(config-ethernet-1/1/x4)
+[2019-01-07 23:53:27.48] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:27.53] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:27.55] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:27.58] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:27.58] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:53:27.59] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:27.60] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:27.60] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:27.464] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:27.484] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:27.488] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:53:27.500] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:27.504] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:27.504] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:27.506] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:27.507] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:53:27.508] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:27.508] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:27.509] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:27.804] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:27.805] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:27.806] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)
+[2019-01-07 23:53:27.814] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=interface ethernet 1/1/x4, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:27.819] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:27.820] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:27.821] - cafe.app.driver.proto.shell - DEBUG: command is interface ethernet 1/1/x4, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:27.822] - cafe.sessions.session_srv.euta - DEBUG: send command: interface ethernet 1/1/x4
+[2019-01-07 23:53:27.822] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:27.823] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:27.824] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:28.57] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'interface ethernet 1/1/x4
+NGPON2X4(config-ethernet-1/1/x4)# ', match: '#'
+[2019-01-07 23:53:28.57] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:28.58] - caferobot.command.device.shell.eutA - INFO: session_command result=interface ethernet 1/1/x4
+NGPON2X4(config-ethernet-1/1/x4)
+[2019-01-07 23:53:28.68] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=shutdown, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:28.73] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:28.74] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:28.76] - cafe.app.driver.proto.shell - DEBUG: command is shutdown, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:28.77] - cafe.sessions.session_srv.euta - DEBUG: send command: shutdown
+[2019-01-07 23:53:28.77] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:28.78] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:28.79] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:34.235] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'shutdown
+NGPON2X4(config-ethernet-1/1/x4)# ', match: '#'
+[2019-01-07 23:53:34.236] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:34.237] - caferobot.command.device.shell.eutA - INFO: session_command result=shutdown
+NGPON2X4(config-ethernet-1/1/x4)
+[2019-01-07 23:53:34.246] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:34.251] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:34.252] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:34.253] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:34.254] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:53:34.254] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:34.255] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:34.255] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:34.687] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:34.688] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:34.689] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:53:34.725] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:34.731] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:34.732] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:34.734] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:34.735] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:53:34.736] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:34.736] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:34.737] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:35.149] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:35.150] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:35.151] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)
+[2019-01-07 23:53:35.160] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=interface ethernet 1/2/x11, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:35.164] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:35.165] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:35.167] - cafe.app.driver.proto.shell - DEBUG: command is interface ethernet 1/2/x11, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:35.168] - cafe.sessions.session_srv.euta - DEBUG: send command: interface ethernet 1/2/x11
+[2019-01-07 23:53:35.168] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:35.169] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:35.169] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:35.489] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'interface ethernet 1/2/x11
+NGPON2X4(config-ethernet-1/2/x11)# ', match: '#'
+[2019-01-07 23:53:35.490] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:35.491] - caferobot.command.device.shell.eutA - INFO: session_command result=interface ethernet 1/2/x11
+NGPON2X4(config-ethernet-1/2/x11)
+[2019-01-07 23:53:35.505] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=no role, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:35.510] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:35.511] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:35.513] - cafe.app.driver.proto.shell - DEBUG: command is no role, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:35.517] - cafe.sessions.session_srv.euta - DEBUG: send command: no role
+[2019-01-07 23:53:35.519] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:35.521] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:35.528] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:35.931] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'no role
+Error: element not found
+NGPON2X4(config-ethernet-1/2/x11)# ', match: '#'
+[2019-01-07 23:53:35.932] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:35.932] - caferobot.command.device.shell.eutA - INFO: session_command result=no role
+Error: element not found
+NGPON2X4(config-ethernet-1/2/x11)
+[2019-01-07 23:53:35.945] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:35.950] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:35.951] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:35.956] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:35.957] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:53:35.958] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:35.958] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:35.959] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:36.500] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:36.501] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:36.502] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:53:36.516] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:36.521] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:36.522] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:36.524] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:36.525] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:53:36.525] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:36.526] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:36.527] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:36.900] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:36.901] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:36.901] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)
+[2019-01-07 23:53:36.910] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=interface ethernet 1/2/x11, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:36.918] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:36.920] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:36.922] - cafe.app.driver.proto.shell - DEBUG: command is interface ethernet 1/2/x11, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:36.923] - cafe.sessions.session_srv.euta - DEBUG: send command: interface ethernet 1/2/x11
+[2019-01-07 23:53:36.924] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:36.924] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:36.925] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:37.281] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'interface ethernet 1/2/x11
+NGPON2X4(config-ethernet-1/2/x11)# ', match: '#'
+[2019-01-07 23:53:37.282] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:37.283] - caferobot.command.device.shell.eutA - INFO: session_command result=interface ethernet 1/2/x11
+NGPON2X4(config-ethernet-1/2/x11)
+[2019-01-07 23:53:37.292] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=shutdown, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:37.310] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:37.311] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:37.312] - cafe.app.driver.proto.shell - DEBUG: command is shutdown, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:37.313] - cafe.sessions.session_srv.euta - DEBUG: send command: shutdown
+[2019-01-07 23:53:37.314] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:37.315] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:37.315] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:37.753] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'shutdown
+NGPON2X4(config-ethernet-1/2/x11)# ', match: '#'
+[2019-01-07 23:53:37.764] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:37.784] - caferobot.command.device.shell.eutA - INFO: session_command result=shutdown
+NGPON2X4(config-ethernet-1/2/x11)
+[2019-01-07 23:53:37.797] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:37.803] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:37.804] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:37.806] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:37.807] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:53:37.815] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:37.822] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:37.829] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:38.310] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:38.311] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:38.312] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:53:38.345] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:38.350] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:38.351] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:38.360] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:38.361] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:53:38.362] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:38.363] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:38.364] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:38.808] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:38.809] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:38.810] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)
+[2019-01-07 23:53:38.820] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=interface ethernet 1/2/x12, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:38.825] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:38.826] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:38.829] - cafe.app.driver.proto.shell - DEBUG: command is interface ethernet 1/2/x12, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:38.831] - cafe.sessions.session_srv.euta - DEBUG: send command: interface ethernet 1/2/x12
+[2019-01-07 23:53:38.831] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:38.832] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:38.833] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:39.54] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'interface ethernet 1/2/x12
+NGPON2X4(config-ethernet-1/2/x12)# ', match: '#'
+[2019-01-07 23:53:39.63] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:39.65] - caferobot.command.device.shell.eutA - INFO: session_command result=interface ethernet 1/2/x12
+NGPON2X4(config-ethernet-1/2/x12)
+[2019-01-07 23:53:39.81] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=no role, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:39.91] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:39.98] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:39.100] - cafe.app.driver.proto.shell - DEBUG: command is no role, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:39.101] - cafe.sessions.session_srv.euta - DEBUG: send command: no role
+[2019-01-07 23:53:39.115] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:39.126] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:39.129] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:39.366] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'no role
+Error: element not found
+NGPON2X4(config-ethernet-1/2/x12)# ', match: '#'
+[2019-01-07 23:53:39.373] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:39.375] - caferobot.command.device.shell.eutA - INFO: session_command result=no role
+Error: element not found
+NGPON2X4(config-ethernet-1/2/x12)
+[2019-01-07 23:53:39.396] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:39.403] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:39.408] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:39.411] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:39.412] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:53:39.413] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:39.426] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:39.437] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:39.664] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:39.677] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:39.686] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:53:39.701] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:39.718] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:39.724] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:39.729] - cafe.app.driver.proto.shell - DEBUG: command is configure, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:39.731] - cafe.sessions.session_srv.euta - DEBUG: send command: configure
+[2019-01-07 23:53:39.732] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:39.734] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:39.735] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:40.95] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)# ', match: '#'
+[2019-01-07 23:53:40.96] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:40.97] - caferobot.command.device.shell.eutA - INFO: session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)
+[2019-01-07 23:53:40.108] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=interface ethernet 1/2/x12, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:40.112] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:40.127] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:40.142] - cafe.app.driver.proto.shell - DEBUG: command is interface ethernet 1/2/x12, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:40.142] - cafe.sessions.session_srv.euta - DEBUG: send command: interface ethernet 1/2/x12
+[2019-01-07 23:53:40.143] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:40.144] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:40.144] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:40.365] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'interface ethernet 1/2/x12
+NGPON2X4(config-ethernet-1/2/x12)# ', match: '#'
+[2019-01-07 23:53:40.372] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:40.379] - caferobot.command.device.shell.eutA - INFO: session_command result=interface ethernet 1/2/x12
+NGPON2X4(config-ethernet-1/2/x12)
+[2019-01-07 23:53:40.412] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=shutdown, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:40.423] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:40.430] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:40.440] - cafe.app.driver.proto.shell - DEBUG: command is shutdown, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:40.447] - cafe.sessions.session_srv.euta - DEBUG: send command: shutdown
+[2019-01-07 23:53:40.456] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:40.463] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:40.471] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:40.706] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'shutdown
+NGPON2X4(config-ethernet-1/2/x12)# ', match: '#'
+[2019-01-07 23:53:40.713] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:40.717] - caferobot.command.device.shell.eutA - INFO: session_command result=shutdown
+NGPON2X4(config-ethernet-1/2/x12)
+[2019-01-07 23:53:40.728] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-07 23:53:40.733] - cafe.console_logger  - INFO:         @ 
+[2019-01-07 23:53:40.735] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-07 23:53:40.737] - cafe.app.driver.proto.shell - DEBUG: command is end, prompt is ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-07 23:53:40.738] - cafe.sessions.session_srv.euta - DEBUG: send command: end
+[2019-01-07 23:53:40.738] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-07 23:53:40.740] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-07 23:53:40.740] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-07 23:53:40.975] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '#', output is: 'end
+NGPON2X4# ', match: '#'
+[2019-01-07 23:53:40.976] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '#', action is 'None'
+[2019-01-07 23:53:40.980] - caferobot.command.device.shell.eutA - INFO: session_command result=end
+NGPON2X4
+[2019-01-07 23:53:41.194] - cafe.util.tracer     - DEBUG: Enter reset_all_sessions
+[2019-01-07 23:53:41.261] - caferobot.command.device.shell - INFO: Destroy ShellDevice(eutA)
+[2019-01-07 23:53:41.262] - cafe.app.driver.ssh  - INFO: close ssh handle
+[2019-01-07 23:53:41.322] - caferobot.caseutil   - INFO: All of class <class 'caferobot.command.device.shell.ShellDevice'> instances are released
+[2019-01-07 23:53:41.323] - cafe.util.tracer     - DEBUG: Exit reset_all_sessions, takes 0.127166 secs.
+[2019-01-07 23:53:41.323] - cafe                 - INFO: App() destroy session: eutA
+[2019-01-07 23:53:41.448] - cafe.sessions.session_manager - DEBUG: closing server local_server
+[2019-01-07 23:53:41.448] - cafe.sessions.session_srv - INFO: session server (local_server) is closed
+[2019-01-07 23:53:41.493] - cafe.console_logger  - INFO:         @ *** test suite report (AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support.MTU.Testcase.tc 9k INNI port to INNI port) ***
+[2019-01-07 23:53:41.494] - cafe.core.db         - DEBUG: get testsuite report text (1)
+[2019-01-07 23:53:41.534] - cafe.console_logger  - INFO: +---------------------------------------+-------------------------+--------+----------+----------+----------------+--------------+------+------+------+------+-------+---------------+----------------+
+[2019-01-07 23:53:41.535] - cafe.console_logger  - INFO: | name                                  |        global_id        | status | assignee |   eut    | user_interface | teststep_cnt | pass | fail | info | warn | error | start_time    | elapsed_time   |
+[2019-01-07 23:53:41.535] - cafe.console_logger  - INFO: +---------------------------------------+-------------------------+--------+----------+----------+----------------+--------------+------+------+------+------+-------+---------------+----------------+
+[2019-01-07 23:53:41.536] - cafe.console_logger  - INFO: | tc_tc_9k_INNI_port_to_INNI_port.robot | AXOS_E72_PARENT-TC-4716 |  fail  |  pzhang  | GPON-8r2 |      CLI       |      0       |  0   |  0   |  0   |  0   |   0   | 1546933908.56 | 0.402592182159 |
+[2019-01-07 23:53:41.536] - cafe.console_logger  - INFO: +---------------------------------------+-------------------------+--------+----------+----------+----------------+--------------+------+------+------+------+-------+---------------+----------------+
+[2019-01-07 23:53:41.543] - cafe.console_logger  - INFO: *** test suite report (AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support.MTU.Testcase.tc Cross card INNI 9K MTU to INNI) ***
+[2019-01-07 23:53:41.544] - cafe.core.db         - DEBUG: get testsuite report text (2)
+[2019-01-07 23:53:41.556] - cafe.console_logger  - INFO: +-----------------------------------------+-------------------------+--------+----------+----------+----------------+--------------+------+------+------+------+-------+---------------+----------------+
+[2019-01-07 23:53:41.556] - cafe.console_logger  - INFO: | name                                    |        global_id        | status | assignee |   eut    | user_interface | teststep_cnt | pass | fail | info | warn | error | start_time    | elapsed_time   |
+[2019-01-07 23:53:41.557] - cafe.console_logger  - INFO: +-----------------------------------------+-------------------------+--------+----------+----------+----------------+--------------+------+------+------+------+-------+---------------+----------------+
+[2019-01-07 23:53:41.557] - cafe.console_logger  - INFO: | tc_Cross_card_INNI_9K_MTU_to_INNI.robot | AXOS_E72_PARENT-TC-4715 |  fail  |  pzhang  | GPON-8r2 |      CLI       |      0       |  0   |  0   |  0   |  0   |   0   | 1546933909.24 | 0.288815975189 |
+[2019-01-07 23:53:41.558] - cafe.console_logger  - INFO: +-----------------------------------------+-------------------------+--------+----------+----------+----------------+--------------+------+------+------+------+-------+---------------+----------------+
+[2019-01-07 23:53:41.570] - cafe.console_logger  - INFO: 
+[2019-01-07 23:53:41.572] - cafe.console_logger  - INFO: Result Path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_50_55
+[2019-01-07 23:53:41.572] - cafe.console_logger  - INFO: Log Path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_50_55/logs
+[2019-01-07 23:53:41.573] - cafe.console_logger  - INFO: 
+[2019-01-07 23:53:41.574] - cafe.console_logger  - INFO: Total: 2 test cases in 2 test suites.
+[2019-01-07 23:53:41.575] - cafe.console_logger  - INFO: 0 passed, 2 failed, 0 indeterminate.

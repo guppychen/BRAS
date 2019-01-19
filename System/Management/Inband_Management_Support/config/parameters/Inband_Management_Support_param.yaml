@@ -1,0 +1,19 @@
+global:
+  vlan_id: 704
+  vlan_id2: 100
+  ip_address: 10.245.96.77
+  ip_address2: 10.245.96.224
+  prefix: 24
+  ping_id_same_segment: 10.245.96.1
+  # AT-5088
+  ping_id_differ_segment: 10.245.243.89
+  next_hop_ip_address:  10.245.96.1
+  ssh_ip: 10.245.96.71
+  gateway: 10.245.96.1
+  craft: 2
+  server_name: server
+  server_mac: 00:00:00:aa:bb:cc
+  dhcp_lease_start: 10.245.96.251
+  dhcp_server_ip: 10.245.96.1
+  wait_until_session_logout: 20s
+  wait_until_dhcp_session_up: 5min

@@ -1,0 +1,3943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20190107 23:50:59.230" generator="Robot 3.0.4 (Python 2.7.14 on linux2)">
+<suite source="/home/guchen/workspace/AXOS" id="s1" name="AXOS">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation" id="s1-s1" name="AXOS-automation">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan" id="s1-s1-s1" name="Milan">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases" id="s1-s1-s1-s1" name="ST Test Cases">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System" id="s1-s1-s1-s1-s1" name="System">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support" id="s1-s1-s1-s1-s1-s1" name="HW Support">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU" id="s1-s1-s1-s1-s1-s1-s1" name="MTU">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/testcase" id="s1-s1-s1-s1-s1-s1-s1-s1" name="Testcase">
+<kw type="setup" name="test_setup">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>Enter setup</arg>
+</arguments>
+<msg timestamp="20190107 23:51:00.159" level="INFO">Enter setup</msg>
+<status status="PASS" endtime="20190107 23:51:00.159" starttime="20190107 23:51:00.158"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>service_point_provision for uplink side</arg>
+</arguments>
+<msg timestamp="20190107 23:51:00.161" level="INFO">service_point_provision for uplink side</msg>
+<status status="PASS" endtime="20190107 23:51:00.161" starttime="20190107 23:51:00.160"></status>
+</kw>
+<kw name="service_point_prov" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: provision for service_point</doc>
+<arguments>
+<arg>service_point_list1</arg>
+</arguments>
+<kw type="for" name="${service_point} IN [ @{service_model.${service_point_list}} ]">
+<kw type="foritem" name="${service_point} = service_point1">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.device}</arg>
+</arguments>
+<assign>
+<var>${device}</var>
+</assign>
+<msg timestamp="20190107 23:51:00.166" level="INFO">${device} = eutA</msg>
+<status status="PASS" endtime="20190107 23:51:00.166" starttime="20190107 23:51:00.165"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** uplink service provision for ${device} ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:51:00.169" level="INFO">****** uplink service provision for eutA service_point1 ******</msg>
+<status status="PASS" endtime="20190107 23:51:00.170" starttime="20190107 23:51:00.167"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>service_point_${service_model.${service_point}.type}_prov</arg>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+</arguments>
+<kw name="service_point_eth_prov" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: provision for eth type service point (This keyword is only internal use, CANNOT be used in TCs)</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** [${device}] ethernet port basic provision for ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:51:00.175" level="INFO">****** [eutA] ethernet port basic provision for service_point1 ******</msg>
+<status status="PASS" endtime="20190107 23:51:00.176" starttime="20190107 23:51:00.174"></status>
+</kw>
+<kw type="for" name="${port_key} IN [ @{service_model.${service_point}.member} ]">
+<kw type="foritem" name="${port_key} = interface1">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.member.${port_key}}</arg>
+</arguments>
+<assign>
+<var>${port}</var>
+</assign>
+<msg timestamp="20190107 23:51:00.183" level="INFO">${port} = 1/1/x3</msg>
+<status status="PASS" endtime="20190107 23:51:00.183" starttime="20190107 23:51:00.180"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** provision port ${port} role and parameter ******</arg>
+</arguments>
+<msg timestamp="20190107 23:51:00.186" level="INFO">****** provision port 1/1/x3 role and parameter ******</msg>
+<status status="PASS" endtime="20190107 23:51:00.187" starttime="20190107 23:51:00.184"></status>
+</kw>
+<kw name="prov_interface_ethernet" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>configure on interface</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${port}</arg>
+<arg>${service_model.${service_point}.attribute.interface_role}</arg>
+<arg>ENABLED</arg>
+</arguments>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:51:24.241" level="FAIL">SSHLoginException</msg>
+<msg timestamp="20190107 23:51:24.242" level="DEBUG">Traceback (most recent call last):
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 210, in run_keyword
+    return self._keywords_adapter_map[name].run_keyword(name, args, kwargs)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 83, in run_keyword
+    return self._KEYWORDS_WRAPPERS[name](*args, **kwargs)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 139, in _wrap_cli
+    device = get_cli_device(connection_name)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 48, in get_cli_device
+    return ShellDevice(conn_name)
+  File "/etc/barista/packages/cafe/util/flyweight.py", line 57, in __call__
+    instance = super(FlyweightMeta, cls).__call__(*args, **kwargs)
+  File "/etc/barista/packages/caferobot/command/device/shell.py", line 38, in __init__
+    self._driver.open_handle()
+  File "/etc/barista/packages/cafe/app/driver/ssh.py", line 54, in open_handle
+    self._open_handle()
+  File "/etc/barista/packages/cafe/app/driver/ssh.py", line 62, in _open_handle
+    self._session.open_entity()
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 70, in wrapper
+    self.login()
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 154, in login
+    raise SSHLoginException("sid=%s, host=%s connect failed" % (self.sid, self.host))</msg>
+<status status="FAIL" endtime="20190107 23:51:24.242" starttime="20190107 23:51:00.196"></status>
+</kw>
+<msg timestamp="20190107 23:51:24.243" level="INFO">Destroy ShellDevice(eutA)</msg>
+<status status="FAIL" endtime="20190107 23:51:24.244" starttime="20190107 23:51:00.193"></status>
+</kw>
+<kw type="teardown" name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:51:48.307" level="INFO">${res} = None</msg>
+<msg timestamp="20190107 23:51:48.308" level="FAIL">SSHLoginException</msg>
+<msg timestamp="20190107 23:51:48.308" level="DEBUG">Traceback (most recent call last):
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 210, in run_keyword
+    return self._keywords_adapter_map[name].run_keyword(name, args, kwargs)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 83, in run_keyword
+    return self._KEYWORDS_WRAPPERS[name](*args, **kwargs)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 139, in _wrap_cli
+    device = get_cli_device(connection_name)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 48, in get_cli_device
+    return ShellDevice(conn_name)
+  File "/etc/barista/packages/cafe/util/flyweight.py", line 57, in __call__
+    instance = super(FlyweightMeta, cls).__call__(*args, **kwargs)
+  File "/etc/barista/packages/caferobot/command/device/shell.py", line 38, in __init__
+    self._driver.open_handle()
+  File "/etc/barista/packages/cafe/app/driver/ssh.py", line 54, in open_handle
+    self._open_handle()
+  File "/etc/barista/packages/cafe/app/driver/ssh.py", line 62, in _open_handle
+    self._session.open_entity()
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 70, in wrapper
+    self.login()
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 154, in login
+    raise SSHLoginException("sid=%s, host=%s connect failed" % (self.sid, self.host))</msg>
+<status status="FAIL" endtime="20190107 23:51:48.308" starttime="20190107 23:51:24.249"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:51:48.310" level="FAIL">TypeError: argument of type 'NoneType' is not iterable</msg>
+<msg timestamp="20190107 23:51:48.311" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:51:48.311" starttime="20190107 23:51:48.309"></status>
+</kw>
+<msg timestamp="20190107 23:51:48.312" level="INFO">Destroy ShellDevice(eutA)</msg>
+<status status="FAIL" endtime="20190107 23:51:48.314" starttime="20190107 23:51:24.245">Several failures occurred:
+
+1) SSHLoginException
+
+2) TypeError: argument of type 'NoneType' is not iterable</status>
+</kw>
+<status status="FAIL" endtime="20190107 23:51:48.314" starttime="20190107 23:51:00.188"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:51:48.315" starttime="20190107 23:51:00.178"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:51:48.315" starttime="20190107 23:51:00.176"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:51:48.316" starttime="20190107 23:51:00.172"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:51:48.316" starttime="20190107 23:51:00.171"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:51:48.317" starttime="20190107 23:51:00.164"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:51:48.317" starttime="20190107 23:51:00.163"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:51:48.318" starttime="20190107 23:51:00.162"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:51:48.318" starttime="20190107 23:51:00.155"></status>
+</kw>
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/testcase/tc_9k_INNI_port_to_INNI_port.robot" id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="tc 9k INNI port to INNI port">
+<test id="s1-s1-s1-s1-s1-s1-s1-s1-s1-t1" name="tc_tc_9k_INNI_port_to_INNI_port.robot">
+<doc>The purpose of this test is to Check card's ethernet mtu 9000
+1.set ethernet mtu 9000
+2.check ethernet mtu 9000</doc>
+<tags>
+<tag>@author=pzhang</tag>
+<tag>@eut=10GE-12</tag>
+<tag>@eut=GPON-8r2</tag>
+<tag>@feature=HW_Support</tag>
+<tag>@globalid=2533451</tag>
+<tag>@subfeature=MTU_size_of_9k</tag>
+<tag>@tcid=AXOS_E72_PARENT-TC-4716</tag>
+<tag>@user_interface=CLI</tag>
+</tags>
+<status status="FAIL" endtime="20190107 23:51:48.746" critical="yes" starttime="20190107 23:51:48.560">Parent suite setup failed:
+SSHLoginException
+
+Also keyword teardown failed:
+Several failures occurred:
+
+1) SSHLoginException
+
+2) TypeError: argument of type 'NoneType' is not iterable</status>
+</test>
+<doc>The purpose of this test is to Check card's ethernet mtu 9000
+1.set ethernet mtu 9000
+2.check ethernet mtu 9000
+</doc>
+<status status="FAIL" endtime="20190107 23:51:49.016" starttime="20190107 23:51:48.319">Parent suite setup failed:
+SSHLoginException
+
+Also keyword teardown failed:
+Several failures occurred:
+
+1) SSHLoginException
+
+2) TypeError: argument of type 'NoneType' is not iterable</status>
+</suite>
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/testcase/tc_Cross_card_INNI_9K_MTU_to_INNI.robot" id="s1-s1-s1-s1-s1-s1-s1-s1-s2" name="tc Cross card INNI 9K MTU to INNI">
+<test id="s1-s1-s1-s1-s1-s1-s1-s1-s2-t1" name="tc_Cross_card_INNI_9K_MTU_to_INNI.robot">
+<doc>The purpose of this test is to Check cross card's ethernet mtu 9000
+1.set cross cards ethernet mtu 9000
+2.check cross cards ethernet mtu 9000</doc>
+<tags>
+<tag>@author=pzhang</tag>
+<tag>@eut=10GE-12</tag>
+<tag>@eut=GPON-8r2</tag>
+<tag>@feature=HW_Support</tag>
+<tag>@globalid=2533450</tag>
+<tag>@subfeature=MTU_size_of_9k</tag>
+<tag>@tcid=AXOS_E72_PARENT-TC-4715</tag>
+<tag>@user_interface=CLI</tag>
+</tags>
+<status status="FAIL" endtime="20190107 23:51:49.386" critical="yes" starttime="20190107 23:51:49.241">Parent suite setup failed:
+SSHLoginException
+
+Also keyword teardown failed:
+Several failures occurred:
+
+1) SSHLoginException
+
+2) TypeError: argument of type 'NoneType' is not iterable</status>
+</test>
+<doc>The purpose of this test is to Check cross card's ethernet mtu 9000
+1.set cross card ethernet mtu 9000
+2.check cross card ethernet mtu 9000
+</doc>
+<status status="FAIL" endtime="20190107 23:51:49.615" starttime="20190107 23:51:49.071">Parent suite setup failed:
+SSHLoginException
+
+Also keyword teardown failed:
+Several failures occurred:
+
+1) SSHLoginException
+
+2) TypeError: argument of type 'NoneType' is not iterable</status>
+</suite>
+<kw type="teardown" name="test_teardown">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>Enter teardown</arg>
+</arguments>
+<msg timestamp="20190107 23:51:49.667" level="INFO">Enter teardown</msg>
+<status status="PASS" endtime="20190107 23:51:49.668" starttime="20190107 23:51:49.666"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>service_point remove_svc and deprovision</arg>
+</arguments>
+<msg timestamp="20190107 23:51:49.669" level="INFO">service_point remove_svc and deprovision</msg>
+<status status="PASS" endtime="20190107 23:51:49.670" starttime="20190107 23:51:49.668"></status>
+</kw>
+<kw name="service_point_remove_vlan" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: remove vlan for service_point</doc>
+<arguments>
+<arg>service_point_list1</arg>
+<arg>${service_vlan}</arg>
+</arguments>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${vlan_list}</arg>
+</arguments>
+<assign>
+<var>${vlan_list_str}</var>
+</assign>
+<msg timestamp="20190107 23:51:49.674" level="DEBUG">Argument types are:
+&lt;type 'int'&gt;</msg>
+<msg timestamp="20190107 23:51:49.674" level="INFO">${vlan_list_str} = 777</msg>
+<status status="PASS" endtime="20190107 23:51:49.674" starttime="20190107 23:51:49.673"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${vlan_list_str}</arg>
+<arg>,</arg>
+<arg>_</arg>
+</arguments>
+<assign>
+<var>${vlan_list_str}</var>
+</assign>
+<msg timestamp="20190107 23:51:49.677" level="INFO">${vlan_list_str} = 777</msg>
+<status status="PASS" endtime="20190107 23:51:49.677" starttime="20190107 23:51:49.675"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${cfg_prefix}_TransVlan_${vlan_list_str}</arg>
+</arguments>
+<assign>
+<var>${transport_prf}</var>
+</assign>
+<msg timestamp="20190107 23:51:49.679" level="INFO">${transport_prf} = auto_TransVlan_777</msg>
+<status status="PASS" endtime="20190107 23:51:49.679" starttime="20190107 23:51:49.678"></status>
+</kw>
+<kw type="for" name="${service_point} IN [ @{service_model.${service_point_list}} ]">
+<kw type="foritem" name="${service_point} = service_point1">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.device}</arg>
+</arguments>
+<assign>
+<var>${device}</var>
+</assign>
+<msg timestamp="20190107 23:51:49.684" level="INFO">${device} = eutA</msg>
+<status status="PASS" endtime="20190107 23:51:49.684" starttime="20190107 23:51:49.683"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** uplink service remove vlan ${vlan_list} for ${device} ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:51:49.687" level="INFO">****** uplink service remove vlan 777 for eutA service_point1 ******</msg>
+<status status="PASS" endtime="20190107 23:51:49.687" starttime="20190107 23:51:49.685"></status>
+</kw>
+<kw name="service_point_remove_transport_profile" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: remove transport_profile for service_point interface (This keyword is only internal use, CANNOT be used in TCs)</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="Run Keyword And Return If" library="BuiltIn">
+<doc>Runs the specified keyword and returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>'lag'=='${service_model.${service_point}.type}'</arg>
+<arg>dprov_interface</arg>
+<arg>${device}</arg>
+<arg>lag</arg>
+<arg>${service_model.${service_point}.name}</arg>
+<arg>transport-service-profile=${transport_prf}</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:51:49.692" starttime="20190107 23:51:49.690"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>remove transport-service-profile from interface</arg>
+</arguments>
+<msg timestamp="20190107 23:51:49.694" level="INFO">remove transport-service-profile from interface</msg>
+<status status="PASS" endtime="20190107 23:51:49.694" starttime="20190107 23:51:49.693"></status>
+</kw>
+<kw type="for" name="${port_key} IN [ @{service_model.${service_point}.member} ]">
+<kw type="foritem" name="${port_key} = interface1">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.member.${port_key}}</arg>
+</arguments>
+<assign>
+<var>${port}</var>
+</assign>
+<msg timestamp="20190107 23:51:49.699" level="INFO">${port} = 1/1/x3</msg>
+<status status="PASS" endtime="20190107 23:51:49.699" starttime="20190107 23:51:49.697"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** deprovision port ${port} transport-service-profile******</arg>
+</arguments>
+<msg timestamp="20190107 23:51:49.701" level="INFO">****** deprovision port 1/1/x3 transport-service-profile******</msg>
+<status status="PASS" endtime="20190107 23:51:49.701" starttime="20190107 23:51:49.700"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show running-config interface ethernet ${port}</arg>
+</arguments>
+<msg timestamp="20190107 23:52:13.785" level="FAIL">SSHLoginException</msg>
+<msg timestamp="20190107 23:52:13.786" level="DEBUG">Traceback (most recent call last):
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 210, in run_keyword
+    return self._keywords_adapter_map[name].run_keyword(name, args, kwargs)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 83, in run_keyword
+    return self._KEYWORDS_WRAPPERS[name](*args, **kwargs)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 139, in _wrap_cli
+    device = get_cli_device(connection_name)
+  File "/etc/barista/packages/caferobot/command/adapter.py", line 48, in get_cli_device
+    return ShellDevice(conn_name)
+  File "/etc/barista/packages/cafe/util/flyweight.py", line 57, in __call__
+    instance = super(FlyweightMeta, cls).__call__(*args, **kwargs)
+  File "/etc/barista/packages/caferobot/command/device/shell.py", line 38, in __init__
+    self._driver.open_handle()
+  File "/etc/barista/packages/cafe/app/driver/ssh.py", line 54, in open_handle
+    self._open_handle()
+  File "/etc/barista/packages/cafe/app/driver/ssh.py", line 62, in _open_handle
+    self._session.open_entity()
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 70, in wrapper
+    self.login()
+  File "/etc/barista/packages/cafe/sessions/ssh.py", line 154, in login
+    raise SSHLoginException("sid=%s, host=%s connect failed" % (self.sid, self.host))</msg>
+<status status="FAIL" endtime="20190107 23:52:13.786" starttime="20190107 23:51:49.702"></status>
+</kw>
+<kw name="dprov_interface_ethernet" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>configure on interface</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${port}</arg>
+<arg>transport-service-profile</arg>
+</arguments>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:52:33.707" level="INFO">Created ShellDevice(eutA)</msg>
+<msg timestamp="20190107 23:52:33.710" level="INFO">send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:34.161" level="INFO">session_command result=configure
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4</msg>
+<msg timestamp="20190107 23:52:34.162" level="INFO">${res} = configure
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NG...</msg>
+<status status="PASS" endtime="20190107 23:52:34.162" starttime="20190107 23:52:13.791"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:52:34.166" level="FAIL">'configure
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</msg>
+<msg timestamp="20190107 23:52:34.166" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:52:34.166" starttime="20190107 23:52:34.164"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:52:34.167" starttime="20190107 23:52:13.789"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>interface ethernet ${interface}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:52:34.173" level="INFO">send session_command, cmd=interface ethernet 1/1/x3, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:34.391" level="INFO">session_command result=interface ethernet 1/1/x3
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4</msg>
+<msg timestamp="20190107 23:52:34.391" level="INFO">${res} = interface ethernet 1/1/x3
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current s...</msg>
+<status status="PASS" endtime="20190107 23:52:34.392" starttime="20190107 23:52:34.170"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:52:34.395" level="FAIL">'interface ethernet 1/1/x3
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</msg>
+<msg timestamp="20190107 23:52:34.395" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:52:34.395" starttime="20190107 23:52:34.393"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:52:34.396" starttime="20190107 23:52:34.169"></status>
+</kw>
+<kw type="for" name="${element} IN [ @{list_cmd} ]">
+<kw type="foritem" name="${element} = transport-service-profile">
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>no ${element}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:52:34.402" level="INFO">send session_command, cmd=no transport-service-profile, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:34.603" level="INFO">session_command result=no transport-service-profile
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4</msg>
+<msg timestamp="20190107 23:52:34.604" level="INFO">${res} = no transport-service-profile
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show curren...</msg>
+<status status="PASS" endtime="20190107 23:52:34.604" starttime="20190107 23:52:34.400"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:52:34.607" level="FAIL">'no transport-service-profile
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</msg>
+<msg timestamp="20190107 23:52:34.607" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:52:34.607" starttime="20190107 23:52:34.605"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:52:34.608" starttime="20190107 23:52:34.398"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:52:34.609" starttime="20190107 23:52:34.398"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:52:34.610" starttime="20190107 23:52:34.397"></status>
+</kw>
+<kw type="teardown" name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:52:34.615" level="INFO">send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:34.842" level="INFO">session_command result=end
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4</msg>
+<msg timestamp="20190107 23:52:34.843" level="INFO">${res} = end
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:52:34.843" starttime="20190107 23:52:34.613"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:52:34.846" level="FAIL">'end
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</msg>
+<msg timestamp="20190107 23:52:34.846" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:52:34.846" starttime="20190107 23:52:34.844"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:52:34.847" starttime="20190107 23:52:34.612">'end
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</status>
+</kw>
+<status status="FAIL" endtime="20190107 23:52:34.848" starttime="20190107 23:52:13.787"></status>
+</kw>
+<msg timestamp="20190107 23:52:34.850" level="INFO">Destroy ShellDevice(eutA)</msg>
+<status status="FAIL" endtime="20190107 23:52:34.852" starttime="20190107 23:51:49.696"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:52:34.854" starttime="20190107 23:51:49.695"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:52:34.863" starttime="20190107 23:51:49.688"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>delete_config_object</arg>
+<arg>${device}</arg>
+<arg>transport-service-profile</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="delete_config_object" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>Delete service profile in config view</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>transport-service-profile</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<msg timestamp="20190107 23:52:34.871" level="INFO">send session_command, cmd=configure, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:38.360" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:52:38.360" starttime="20190107 23:52:34.868"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>no ${obj_type} ${obj_name}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:52:38.366" level="INFO">send session_command, cmd=no transport-service-profile auto_TransVlan_777, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:39.840" level="INFO">session_command result=no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:52:39.841" level="INFO">${res} = no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:52:39.841" starttime="20190107 23:52:38.364"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:52:39.844" level="FAIL">'no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</msg>
+<msg timestamp="20190107 23:52:39.844" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:52:39.845" starttime="20190107 23:52:39.843"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:52:39.845" starttime="20190107 23:52:38.362"></status>
+</kw>
+<kw type="teardown" name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<msg timestamp="20190107 23:52:39.850" level="INFO">send session_command, cmd=end, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:40.252" level="INFO">session_command result=end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:52:40.252" starttime="20190107 23:52:39.847"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:52:40.254" starttime="20190107 23:52:34.867"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:52:40.255" starttime="20190107 23:52:34.865"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:52:40.257" starttime="20190107 23:51:49.681"></status>
+</kw>
+<kw type="foritem" name="${service_point} = service_point2">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.device}</arg>
+</arguments>
+<assign>
+<var>${device}</var>
+</assign>
+<msg timestamp="20190107 23:52:40.261" level="INFO">${device} = eutA</msg>
+<status status="PASS" endtime="20190107 23:52:40.262" starttime="20190107 23:52:40.260"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** uplink service remove vlan ${vlan_list} for ${device} ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:52:40.263" level="INFO">****** uplink service remove vlan 777 for eutA service_point2 ******</msg>
+<status status="PASS" endtime="20190107 23:52:40.264" starttime="20190107 23:52:40.262"></status>
+</kw>
+<kw name="service_point_remove_transport_profile" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: remove transport_profile for service_point interface (This keyword is only internal use, CANNOT be used in TCs)</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="Run Keyword And Return If" library="BuiltIn">
+<doc>Runs the specified keyword and returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>'lag'=='${service_model.${service_point}.type}'</arg>
+<arg>dprov_interface</arg>
+<arg>${device}</arg>
+<arg>lag</arg>
+<arg>${service_model.${service_point}.name}</arg>
+<arg>transport-service-profile=${transport_prf}</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:52:40.267" starttime="20190107 23:52:40.266"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>remove transport-service-profile from interface</arg>
+</arguments>
+<msg timestamp="20190107 23:52:40.269" level="INFO">remove transport-service-profile from interface</msg>
+<status status="PASS" endtime="20190107 23:52:40.269" starttime="20190107 23:52:40.268"></status>
+</kw>
+<kw type="for" name="${port_key} IN [ @{service_model.${service_point}.member} ]">
+<kw type="foritem" name="${port_key} = interface1">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.member.${port_key}}</arg>
+</arguments>
+<assign>
+<var>${port}</var>
+</assign>
+<msg timestamp="20190107 23:52:40.272" level="INFO">${port} = 1/1/x4</msg>
+<status status="PASS" endtime="20190107 23:52:40.272" starttime="20190107 23:52:40.271"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** deprovision port ${port} transport-service-profile******</arg>
+</arguments>
+<msg timestamp="20190107 23:52:40.273" level="INFO">****** deprovision port 1/1/x4 transport-service-profile******</msg>
+<status status="PASS" endtime="20190107 23:52:40.273" starttime="20190107 23:52:40.272"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show running-config interface ethernet ${port}</arg>
+</arguments>
+<msg timestamp="20190107 23:52:40.276" level="INFO">send session_command, cmd=show running-config interface ethernet 1/1/x4, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:50.988" level="INFO">session_command result=show running-config interface ethernet 1/1/x4
+interface ethernet 1/1/x4
+ no shutdown
+ role                      inni
+ transport-service-profile auto_TransVlan_777
+ erps-ring 2
+  role secondary
+ !
+!
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:52:50.989" starttime="20190107 23:52:40.274"></status>
+</kw>
+<kw name="dprov_interface_ethernet" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>configure on interface</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${port}</arg>
+<arg>transport-service-profile</arg>
+</arguments>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:52:50.996" level="INFO">send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:51.257" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:52:51.257" level="INFO">${res} = configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config...</msg>
+<status status="PASS" endtime="20190107 23:52:51.257" starttime="20190107 23:52:50.994"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:52:51.260" starttime="20190107 23:52:51.259"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:52:51.261" starttime="20190107 23:52:50.992"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>interface ethernet ${interface}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:52:51.266" level="INFO">send session_command, cmd=interface ethernet 1/1/x4, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:51.512" level="INFO">session_command result=interface ethernet 1/1/x4
+NGPON2X4(config-ethernet-1/1/x4)</msg>
+<msg timestamp="20190107 23:52:51.513" level="INFO">${res} = interface ethernet 1/1/x4
+NGPON2X4(config-ethernet-1/1/x4)</msg>
+<status status="PASS" endtime="20190107 23:52:51.513" starttime="20190107 23:52:51.264"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:52:51.516" starttime="20190107 23:52:51.515"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:52:51.517" starttime="20190107 23:52:51.262"></status>
+</kw>
+<kw type="for" name="${element} IN [ @{list_cmd} ]">
+<kw type="foritem" name="${element} = transport-service-profile">
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>no ${element}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:52:51.533" level="INFO">send session_command, cmd=no transport-service-profile, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:53.899" level="INFO">session_command result=no transport-service-profile
+NGPON2X4(config-ethernet-1/1/x4)</msg>
+<msg timestamp="20190107 23:52:53.900" level="INFO">${res} = no transport-service-profile
+NGPON2X4(config-ethernet-1/1/x4)</msg>
+<status status="PASS" endtime="20190107 23:52:53.900" starttime="20190107 23:52:51.522"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:52:53.904" starttime="20190107 23:52:53.902"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:52:53.905" starttime="20190107 23:52:51.521"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:52:53.906" starttime="20190107 23:52:51.520"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:52:53.907" starttime="20190107 23:52:51.519"></status>
+</kw>
+<kw type="teardown" name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:52:53.914" level="INFO">send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:54.157" level="INFO">session_command result=end
+NGPON2X4</msg>
+<msg timestamp="20190107 23:52:54.158" level="INFO">${res} = end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:52:54.158" starttime="20190107 23:52:53.911"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:52:54.161" starttime="20190107 23:52:54.160"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:52:54.161" starttime="20190107 23:52:53.909"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:52:54.163" starttime="20190107 23:52:50.990"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:52:54.164" starttime="20190107 23:52:40.270"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:52:54.165" starttime="20190107 23:52:40.269"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:52:54.166" starttime="20190107 23:52:40.265"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>delete_config_object</arg>
+<arg>${device}</arg>
+<arg>transport-service-profile</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="delete_config_object" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>Delete service profile in config view</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>transport-service-profile</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<msg timestamp="20190107 23:52:54.172" level="INFO">send session_command, cmd=configure, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:54.486" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:52:54.486" starttime="20190107 23:52:54.170"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>no ${obj_type} ${obj_name}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:52:54.491" level="INFO">send session_command, cmd=no transport-service-profile auto_TransVlan_777, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:55.444" level="INFO">session_command result=no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:52:55.445" level="INFO">${res} = no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:52:55.445" starttime="20190107 23:52:54.490"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:52:55.449" level="FAIL">'no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</msg>
+<msg timestamp="20190107 23:52:55.449" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:52:55.449" starttime="20190107 23:52:55.448"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:52:55.450" starttime="20190107 23:52:54.488"></status>
+</kw>
+<kw type="teardown" name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<msg timestamp="20190107 23:52:55.453" level="INFO">send session_command, cmd=end, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:52:55.766" level="INFO">session_command result=end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:52:55.766" starttime="20190107 23:52:55.451"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:52:55.768" starttime="20190107 23:52:54.169"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:52:55.769" starttime="20190107 23:52:54.168"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:52:55.770" starttime="20190107 23:52:40.258"></status>
+</kw>
+<kw type="foritem" name="${service_point} = service_point3">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.device}</arg>
+</arguments>
+<assign>
+<var>${device}</var>
+</assign>
+<msg timestamp="20190107 23:52:55.774" level="INFO">${device} = eutA</msg>
+<status status="PASS" endtime="20190107 23:52:55.774" starttime="20190107 23:52:55.772"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** uplink service remove vlan ${vlan_list} for ${device} ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:52:55.776" level="INFO">****** uplink service remove vlan 777 for eutA service_point3 ******</msg>
+<status status="PASS" endtime="20190107 23:52:55.776" starttime="20190107 23:52:55.775"></status>
+</kw>
+<kw name="service_point_remove_transport_profile" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: remove transport_profile for service_point interface (This keyword is only internal use, CANNOT be used in TCs)</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="Run Keyword And Return If" library="BuiltIn">
+<doc>Runs the specified keyword and returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>'lag'=='${service_model.${service_point}.type}'</arg>
+<arg>dprov_interface</arg>
+<arg>${device}</arg>
+<arg>lag</arg>
+<arg>${service_model.${service_point}.name}</arg>
+<arg>transport-service-profile=${transport_prf}</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:52:55.780" starttime="20190107 23:52:55.778"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>remove transport-service-profile from interface</arg>
+</arguments>
+<msg timestamp="20190107 23:52:55.781" level="INFO">remove transport-service-profile from interface</msg>
+<status status="PASS" endtime="20190107 23:52:55.781" starttime="20190107 23:52:55.780"></status>
+</kw>
+<kw type="for" name="${port_key} IN [ @{service_model.${service_point}.member} ]">
+<kw type="foritem" name="${port_key} = interface1">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.member.${port_key}}</arg>
+</arguments>
+<assign>
+<var>${port}</var>
+</assign>
+<msg timestamp="20190107 23:52:55.785" level="INFO">${port} = 1/2/x11</msg>
+<status status="PASS" endtime="20190107 23:52:55.785" starttime="20190107 23:52:55.784"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** deprovision port ${port} transport-service-profile******</arg>
+</arguments>
+<msg timestamp="20190107 23:52:55.787" level="INFO">****** deprovision port 1/2/x11 transport-service-profile******</msg>
+<status status="PASS" endtime="20190107 23:52:55.787" starttime="20190107 23:52:55.786"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show running-config interface ethernet ${port}</arg>
+</arguments>
+<msg timestamp="20190107 23:52:55.790" level="INFO">send session_command, cmd=show running-config interface ethernet 1/2/x11, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:06.009" level="INFO">session_command result=show running-config interface ethernet 1/2/x11
+interface ethernet 1/2/x11
+!
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:06.010" starttime="20190107 23:52:55.788"></status>
+</kw>
+<kw name="dprov_interface_ethernet" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>configure on interface</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${port}</arg>
+<arg>transport-service-profile</arg>
+</arguments>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:06.034" level="INFO">send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:06.353" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:53:06.354" level="INFO">${res} = configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:53:06.354" starttime="20190107 23:53:06.024"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:06.356" starttime="20190107 23:53:06.355"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:06.357" starttime="20190107 23:53:06.022"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>interface ethernet ${interface}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:06.362" level="INFO">send session_command, cmd=interface ethernet 1/2/x11, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:06.636" level="INFO">session_command result=interface ethernet 1/2/x11
+NGPON2X4(config-ethernet-1/2/x11)</msg>
+<msg timestamp="20190107 23:53:06.637" level="INFO">${res} = interface ethernet 1/2/x11
+NGPON2X4(config-ethernet-1/2/x11)</msg>
+<status status="PASS" endtime="20190107 23:53:06.637" starttime="20190107 23:53:06.360"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:06.640" starttime="20190107 23:53:06.639"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:06.641" starttime="20190107 23:53:06.358"></status>
+</kw>
+<kw type="for" name="${element} IN [ @{list_cmd} ]">
+<kw type="foritem" name="${element} = transport-service-profile">
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>no ${element}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:06.648" level="INFO">send session_command, cmd=no transport-service-profile, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:06.964" level="INFO">session_command result=no transport-service-profile
+---------------------------------------------------------------^
+syntax error: incomplete path
+NGPON2X4(config-ethernet-1/2/x11)</msg>
+<msg timestamp="20190107 23:53:06.965" level="INFO">${res} = no transport-service-profile
+---------------------------------------------------------------^
+syntax error: incomplete path
+NGPON2X4(config-ethernet-1/2/x11)</msg>
+<status status="PASS" endtime="20190107 23:53:06.965" starttime="20190107 23:53:06.646"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:53:06.968" level="FAIL">'no transport-service-profile
+---------------------------------------------------------------^
+syntax error: incomplete path
+NGPON2X4(config-ethernet-1/2/x11)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</msg>
+<msg timestamp="20190107 23:53:06.968" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:53:06.968" starttime="20190107 23:53:06.967"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:06.969" starttime="20190107 23:53:06.645"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:06.970" starttime="20190107 23:53:06.644"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:06.971" starttime="20190107 23:53:06.643"></status>
+</kw>
+<kw type="teardown" name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:06.977" level="INFO">send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:07.492" level="INFO">session_command result=end
+NGPON2X4</msg>
+<msg timestamp="20190107 23:53:07.493" level="INFO">${res} = end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:07.493" starttime="20190107 23:53:06.975"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:07.495" starttime="20190107 23:53:07.494"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:07.496" starttime="20190107 23:53:06.973"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:07.497" starttime="20190107 23:53:06.013"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:07.499" starttime="20190107 23:52:55.783"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:07.500" starttime="20190107 23:52:55.782"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:07.501" starttime="20190107 23:52:55.777"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>delete_config_object</arg>
+<arg>${device}</arg>
+<arg>transport-service-profile</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="delete_config_object" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>Delete service profile in config view</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>transport-service-profile</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<msg timestamp="20190107 23:53:07.507" level="INFO">send session_command, cmd=configure, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:08.138" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:53:08.139" starttime="20190107 23:53:07.505"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>no ${obj_type} ${obj_name}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:08.147" level="INFO">send session_command, cmd=no transport-service-profile auto_TransVlan_777, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:09.193" level="INFO">session_command result=no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:53:09.194" level="INFO">${res} = no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:53:09.195" starttime="20190107 23:53:08.144"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:53:09.198" level="FAIL">'no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</msg>
+<msg timestamp="20190107 23:53:09.198" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:53:09.198" starttime="20190107 23:53:09.196"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:09.198" starttime="20190107 23:53:08.141"></status>
+</kw>
+<kw type="teardown" name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<msg timestamp="20190107 23:53:09.201" level="INFO">send session_command, cmd=end, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:09.443" level="INFO">session_command result=end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:09.443" starttime="20190107 23:53:09.200"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:09.445" starttime="20190107 23:53:07.504"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:09.446" starttime="20190107 23:53:07.503"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:09.447" starttime="20190107 23:52:55.771"></status>
+</kw>
+<kw type="foritem" name="${service_point} = service_point4">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.device}</arg>
+</arguments>
+<assign>
+<var>${device}</var>
+</assign>
+<msg timestamp="20190107 23:53:09.454" level="INFO">${device} = eutA</msg>
+<status status="PASS" endtime="20190107 23:53:09.454" starttime="20190107 23:53:09.452"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** uplink service remove vlan ${vlan_list} for ${device} ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:53:09.455" level="INFO">****** uplink service remove vlan 777 for eutA service_point4 ******</msg>
+<status status="PASS" endtime="20190107 23:53:09.456" starttime="20190107 23:53:09.455"></status>
+</kw>
+<kw name="service_point_remove_transport_profile" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: remove transport_profile for service_point interface (This keyword is only internal use, CANNOT be used in TCs)</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="Run Keyword And Return If" library="BuiltIn">
+<doc>Runs the specified keyword and returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>'lag'=='${service_model.${service_point}.type}'</arg>
+<arg>dprov_interface</arg>
+<arg>${device}</arg>
+<arg>lag</arg>
+<arg>${service_model.${service_point}.name}</arg>
+<arg>transport-service-profile=${transport_prf}</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:09.459" starttime="20190107 23:53:09.458"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>remove transport-service-profile from interface</arg>
+</arguments>
+<msg timestamp="20190107 23:53:09.460" level="INFO">remove transport-service-profile from interface</msg>
+<status status="PASS" endtime="20190107 23:53:09.460" starttime="20190107 23:53:09.460"></status>
+</kw>
+<kw type="for" name="${port_key} IN [ @{service_model.${service_point}.member} ]">
+<kw type="foritem" name="${port_key} = interface1">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.member.${port_key}}</arg>
+</arguments>
+<assign>
+<var>${port}</var>
+</assign>
+<msg timestamp="20190107 23:53:09.464" level="INFO">${port} = 1/2/x12</msg>
+<status status="PASS" endtime="20190107 23:53:09.464" starttime="20190107 23:53:09.463"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** deprovision port ${port} transport-service-profile******</arg>
+</arguments>
+<msg timestamp="20190107 23:53:09.466" level="INFO">****** deprovision port 1/2/x12 transport-service-profile******</msg>
+<status status="PASS" endtime="20190107 23:53:09.466" starttime="20190107 23:53:09.465"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show running-config interface ethernet ${port}</arg>
+</arguments>
+<msg timestamp="20190107 23:53:09.468" level="INFO">send session_command, cmd=show running-config interface ethernet 1/2/x12, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:20.335" level="INFO">session_command result=show running-config interface ethernet 1/2/x12
+interface ethernet 1/2/x12
+!
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:20.336" starttime="20190107 23:53:09.466"></status>
+</kw>
+<kw name="dprov_interface_ethernet" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>configure on interface</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${port}</arg>
+<arg>transport-service-profile</arg>
+</arguments>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:20.343" level="INFO">send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:20.641" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:53:20.642" level="INFO">${res} = configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:53:20.642" starttime="20190107 23:53:20.341"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:20.646" starttime="20190107 23:53:20.645"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:20.647" starttime="20190107 23:53:20.339"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>interface ethernet ${interface}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:20.657" level="INFO">send session_command, cmd=interface ethernet 1/2/x12, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:20.912" level="INFO">session_command result=interface ethernet 1/2/x12
+NGPON2X4(config-ethernet-1/2/x12)</msg>
+<msg timestamp="20190107 23:53:20.913" level="INFO">${res} = interface ethernet 1/2/x12
+NGPON2X4(config-ethernet-1/2/x12)</msg>
+<status status="PASS" endtime="20190107 23:53:20.913" starttime="20190107 23:53:20.653"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:20.918" starttime="20190107 23:53:20.917"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:20.918" starttime="20190107 23:53:20.650"></status>
+</kw>
+<kw type="for" name="${element} IN [ @{list_cmd} ]">
+<kw type="foritem" name="${element} = transport-service-profile">
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>no ${element}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:20.931" level="INFO">send session_command, cmd=no transport-service-profile, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:21.258" level="INFO">session_command result=no transport-service-profile
+---------------------------------------------------------------^
+syntax error: incomplete path
+NGPON2X4(config-ethernet-1/2/x12)</msg>
+<msg timestamp="20190107 23:53:21.258" level="INFO">${res} = no transport-service-profile
+---------------------------------------------------------------^
+syntax error: incomplete path
+NGPON2X4(config-ethernet-1/2/x12)</msg>
+<status status="PASS" endtime="20190107 23:53:21.259" starttime="20190107 23:53:20.926"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:53:21.262" level="FAIL">'no transport-service-profile
+---------------------------------------------------------------^
+syntax error: incomplete path
+NGPON2X4(config-ethernet-1/2/x12)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</msg>
+<msg timestamp="20190107 23:53:21.262" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:53:21.262" starttime="20190107 23:53:21.261"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:21.263" starttime="20190107 23:53:20.925"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:21.271" starttime="20190107 23:53:20.924"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:21.275" starttime="20190107 23:53:20.923"></status>
+</kw>
+<kw type="teardown" name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:21.293" level="INFO">send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:21.599" level="INFO">session_command result=end
+NGPON2X4</msg>
+<msg timestamp="20190107 23:53:21.599" level="INFO">${res} = end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:21.599" starttime="20190107 23:53:21.280"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:21.604" starttime="20190107 23:53:21.603"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:21.605" starttime="20190107 23:53:21.278"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:21.607" starttime="20190107 23:53:20.337"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:21.608" starttime="20190107 23:53:09.462"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:21.611" starttime="20190107 23:53:09.461"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:21.614" starttime="20190107 23:53:09.457"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>delete_config_object</arg>
+<arg>${device}</arg>
+<arg>transport-service-profile</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="delete_config_object" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>Delete service profile in config view</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>transport-service-profile</arg>
+<arg>${transport_prf}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<msg timestamp="20190107 23:53:21.622" level="INFO">send session_command, cmd=configure, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:21.874" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:53:21.875" starttime="20190107 23:53:21.619"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>no ${obj_type} ${obj_name}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:21.880" level="INFO">send session_command, cmd=no transport-service-profile auto_TransVlan_777, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:22.534" level="INFO">session_command result=no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:53:22.535" level="INFO">${res} = no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:53:22.535" starttime="20190107 23:53:21.878"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:53:22.543" level="FAIL">'no transport-service-profile auto_TransVlan_777
+Aborted: illegal reference 'interface ethernet 1/1/x1 transport-service-profile'
+Error: failed to apply modifications
+NGPON2X4(config)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</msg>
+<msg timestamp="20190107 23:53:22.544" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:53:22.544" starttime="20190107 23:53:22.538"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:22.545" starttime="20190107 23:53:21.876"></status>
+</kw>
+<kw type="teardown" name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<msg timestamp="20190107 23:53:22.553" level="INFO">send session_command, cmd=end, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:22.823" level="INFO">session_command result=end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:22.823" starttime="20190107 23:53:22.549"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:22.824" starttime="20190107 23:53:21.618"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:22.826" starttime="20190107 23:53:21.617"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:22.827" starttime="20190107 23:53:09.451"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:22.828" starttime="20190107 23:51:49.680"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:22.830" starttime="20190107 23:51:49.671"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>delete vlan</arg>
+</arguments>
+<msg timestamp="20190107 23:53:22.832" level="INFO">delete vlan</msg>
+<status status="PASS" endtime="20190107 23:53:22.833" starttime="20190107 23:53:22.831"></status>
+</kw>
+<kw name="dprov_vlan" library="keyword_command">
+<tags>
+<tag>@author=AnneLi</tag>
+</tags>
+<doc>deprovision vlan</doc>
+<arguments>
+<arg>eutA</arg>
+<arg>${service_vlan}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<msg timestamp="20190107 23:53:22.838" level="INFO">send session_command, cmd=configure, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:23.104" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:53:23.104" starttime="20190107 23:53:22.835"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>vlan ${vlan}</arg>
+</arguments>
+<msg timestamp="20190107 23:53:23.109" level="INFO">send session_command, cmd=vlan 777, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:23.359" level="INFO">session_command result=vlan 777
+NGPON2X4(config-vlan-777)</msg>
+<status status="PASS" endtime="20190107 23:53:23.359" starttime="20190107 23:53:23.107"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${EMPTY}</arg>
+</arguments>
+<assign>
+<var>${cmd_string}</var>
+</assign>
+<msg timestamp="20190107 23:53:23.362" level="INFO">${cmd_string} = </msg>
+<status status="PASS" endtime="20190107 23:53:23.362" starttime="20190107 23:53:23.361"></status>
+</kw>
+<kw type="for" name="${element} IN [ @{cmd_list} ]">
+<status status="PASS" endtime="20190107 23:53:23.363" starttime="20190107 23:53:23.363"></status>
+</kw>
+<kw type="teardown" name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<msg timestamp="20190107 23:53:23.366" level="INFO">send session_command, cmd=end, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:23.623" level="INFO">session_command result=end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:23.624" starttime="20190107 23:53:23.364"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:23.625" starttime="20190107 23:53:22.834"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>service_point deprovision</arg>
+</arguments>
+<msg timestamp="20190107 23:53:23.627" level="INFO">service_point deprovision</msg>
+<status status="PASS" endtime="20190107 23:53:23.628" starttime="20190107 23:53:23.627"></status>
+</kw>
+<kw name="service_point_dprov" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: deprovision for service_point</doc>
+<arguments>
+<arg>service_point_list1</arg>
+</arguments>
+<kw type="for" name="${service_point} IN [ @{service_model.${service_point_list}} ]">
+<kw type="foritem" name="${service_point} = service_point1">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.device}</arg>
+</arguments>
+<assign>
+<var>${device}</var>
+</assign>
+<msg timestamp="20190107 23:53:23.632" level="INFO">${device} = eutA</msg>
+<status status="PASS" endtime="20190107 23:53:23.633" starttime="20190107 23:53:23.631"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** uplink service deprovision for ${device} ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:53:23.634" level="INFO">****** uplink service deprovision for eutA service_point1 ******</msg>
+<status status="PASS" endtime="20190107 23:53:23.634" starttime="20190107 23:53:23.633"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>service_point_${service_model.${service_point}.type}_dprov</arg>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+</arguments>
+<kw name="service_point_eth_dprov" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: deprovision for eth type service point (This keyword is only internal use, CANNOT be used in TCs)</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** [${device}] ethernet port basic deprovision for ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:53:23.638" level="INFO">****** [eutA] ethernet port basic deprovision for service_point1 ******</msg>
+<status status="PASS" endtime="20190107 23:53:23.638" starttime="20190107 23:53:23.637"></status>
+</kw>
+<kw type="for" name="${port_key} IN [ @{service_model.${service_point}.member} ]">
+<kw type="foritem" name="${port_key} = interface1">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.member.${port_key}}</arg>
+</arguments>
+<assign>
+<var>${port}</var>
+</assign>
+<msg timestamp="20190107 23:53:23.642" level="INFO">${port} = 1/1/x3</msg>
+<status status="PASS" endtime="20190107 23:53:23.643" starttime="20190107 23:53:23.641"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** provision port ${port} role and parameter ******</arg>
+</arguments>
+<msg timestamp="20190107 23:53:23.644" level="INFO">****** provision port 1/1/x3 role and parameter ******</msg>
+<status status="PASS" endtime="20190107 23:53:23.644" starttime="20190107 23:53:23.643"></status>
+</kw>
+<kw name="dprov_interface_ethernet" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>configure on interface</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${port}</arg>
+<arg>role</arg>
+</arguments>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:23.658" level="INFO">send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:23.959" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:53:23.960" level="INFO">${res} = configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config...</msg>
+<status status="PASS" endtime="20190107 23:53:23.960" starttime="20190107 23:53:23.647"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:23.963" starttime="20190107 23:53:23.962"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:23.964" starttime="20190107 23:53:23.646"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>interface ethernet ${interface}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:23.970" level="INFO">send session_command, cmd=interface ethernet 1/1/x3, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:24.267" level="INFO">session_command result=interface ethernet 1/1/x3
+NGPON2X4(config-ethernet-1/1/x3)</msg>
+<msg timestamp="20190107 23:53:24.268" level="INFO">${res} = interface ethernet 1/1/x3
+NGPON2X4(config-ethernet-1/1/x3)</msg>
+<status status="PASS" endtime="20190107 23:53:24.268" starttime="20190107 23:53:23.967"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:24.271" starttime="20190107 23:53:24.270"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:24.271" starttime="20190107 23:53:23.965"></status>
+</kw>
+<kw type="for" name="${element} IN [ @{list_cmd} ]">
+<kw type="foritem" name="${element} = role">
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>no ${element}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:24.278" level="INFO">send session_command, cmd=no role, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:24.611" level="INFO">session_command result=no role
+Error: element not found
+NGPON2X4(config-ethernet-1/1/x3)</msg>
+<msg timestamp="20190107 23:53:24.612" level="INFO">${res} = no role
+Error: element not found
+NGPON2X4(config-ethernet-1/1/x3)</msg>
+<status status="PASS" endtime="20190107 23:53:24.612" starttime="20190107 23:53:24.275"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:53:24.621" level="FAIL">'no role
+Error: element not found
+NGPON2X4(config-ethernet-1/1/x3)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</msg>
+<msg timestamp="20190107 23:53:24.621" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:53:24.621" starttime="20190107 23:53:24.619"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:24.622" starttime="20190107 23:53:24.274"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:24.629" starttime="20190107 23:53:24.273"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:24.633" starttime="20190107 23:53:24.272"></status>
+</kw>
+<kw type="teardown" name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:24.642" level="INFO">send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:24.998" level="INFO">session_command result=end
+NGPON2X4</msg>
+<msg timestamp="20190107 23:53:24.998" level="INFO">${res} = end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:24.998" starttime="20190107 23:53:24.638"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:25.001" starttime="20190107 23:53:25.000"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:25.002" starttime="20190107 23:53:24.637"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:25.003" starttime="20190107 23:53:23.645"></status>
+</kw>
+<kw name="shutdown_port" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>Puts an interface in shutdown mode</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>ethernet</arg>
+<arg>${port}</arg>
+</arguments>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:25.010" level="INFO">send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:25.291" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:53:25.292" level="INFO">${res} = configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config...</msg>
+<status status="PASS" endtime="20190107 23:53:25.292" starttime="20190107 23:53:25.007"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:25.296" starttime="20190107 23:53:25.295"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:25.297" starttime="20190107 23:53:25.006"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>interface ${port-type} ${port}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:25.302" level="INFO">send session_command, cmd=interface ethernet 1/1/x3, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:25.557" level="INFO">session_command result=interface ethernet 1/1/x3
+NGPON2X4(config-ethernet-1/1/x3)</msg>
+<msg timestamp="20190107 23:53:25.557" level="INFO">${res} = interface ethernet 1/1/x3
+NGPON2X4(config-ethernet-1/1/x3)</msg>
+<status status="PASS" endtime="20190107 23:53:25.558" starttime="20190107 23:53:25.300"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:25.563" starttime="20190107 23:53:25.561"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:25.563" starttime="20190107 23:53:25.298"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>shutdown</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:25.583" level="INFO">send session_command, cmd=shutdown, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:25.804" level="INFO">session_command result=shutdown
+NGPON2X4(config-ethernet-1/1/x3)</msg>
+<msg timestamp="20190107 23:53:25.805" level="INFO">${res} = shutdown
+NGPON2X4(config-ethernet-1/1/x3)</msg>
+<status status="PASS" endtime="20190107 23:53:25.805" starttime="20190107 23:53:25.580"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:25.809" starttime="20190107 23:53:25.807"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:25.809" starttime="20190107 23:53:25.578"></status>
+</kw>
+<kw type="teardown" name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:25.815" level="INFO">send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:26.125" level="INFO">session_command result=end
+NGPON2X4</msg>
+<msg timestamp="20190107 23:53:26.126" level="INFO">${res} = end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:26.126" starttime="20190107 23:53:25.813"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:26.128" starttime="20190107 23:53:26.127"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:26.129" starttime="20190107 23:53:25.811"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:26.130" starttime="20190107 23:53:25.004"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:26.132" starttime="20190107 23:53:23.640"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:26.133" starttime="20190107 23:53:23.639"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:26.134" starttime="20190107 23:53:23.636"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:26.135" starttime="20190107 23:53:23.635"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:26.136" starttime="20190107 23:53:23.630"></status>
+</kw>
+<kw type="foritem" name="${service_point} = service_point2">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.device}</arg>
+</arguments>
+<assign>
+<var>${device}</var>
+</assign>
+<msg timestamp="20190107 23:53:26.140" level="INFO">${device} = eutA</msg>
+<status status="PASS" endtime="20190107 23:53:26.140" starttime="20190107 23:53:26.139"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** uplink service deprovision for ${device} ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:53:26.141" level="INFO">****** uplink service deprovision for eutA service_point2 ******</msg>
+<status status="PASS" endtime="20190107 23:53:26.142" starttime="20190107 23:53:26.140"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>service_point_${service_model.${service_point}.type}_dprov</arg>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+</arguments>
+<kw name="service_point_eth_dprov" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: deprovision for eth type service point (This keyword is only internal use, CANNOT be used in TCs)</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** [${device}] ethernet port basic deprovision for ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:53:26.146" level="INFO">****** [eutA] ethernet port basic deprovision for service_point2 ******</msg>
+<status status="PASS" endtime="20190107 23:53:26.146" starttime="20190107 23:53:26.145"></status>
+</kw>
+<kw type="for" name="${port_key} IN [ @{service_model.${service_point}.member} ]">
+<kw type="foritem" name="${port_key} = interface1">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.member.${port_key}}</arg>
+</arguments>
+<assign>
+<var>${port}</var>
+</assign>
+<msg timestamp="20190107 23:53:26.150" level="INFO">${port} = 1/1/x4</msg>
+<status status="PASS" endtime="20190107 23:53:26.150" starttime="20190107 23:53:26.149"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** provision port ${port} role and parameter ******</arg>
+</arguments>
+<msg timestamp="20190107 23:53:26.152" level="INFO">****** provision port 1/1/x4 role and parameter ******</msg>
+<status status="PASS" endtime="20190107 23:53:26.152" starttime="20190107 23:53:26.151"></status>
+</kw>
+<kw name="dprov_interface_ethernet" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>configure on interface</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${port}</arg>
+<arg>role</arg>
+</arguments>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:26.159" level="INFO">send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:26.415" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:53:26.415" level="INFO">${res} = configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config...</msg>
+<status status="PASS" endtime="20190107 23:53:26.415" starttime="20190107 23:53:26.155"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:26.422" starttime="20190107 23:53:26.420"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:26.422" starttime="20190107 23:53:26.154"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>interface ethernet ${interface}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:26.430" level="INFO">send session_command, cmd=interface ethernet 1/1/x4, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:26.674" level="INFO">session_command result=interface ethernet 1/1/x4
+NGPON2X4(config-ethernet-1/1/x4)</msg>
+<msg timestamp="20190107 23:53:26.674" level="INFO">${res} = interface ethernet 1/1/x4
+NGPON2X4(config-ethernet-1/1/x4)</msg>
+<status status="PASS" endtime="20190107 23:53:26.675" starttime="20190107 23:53:26.427"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:26.680" starttime="20190107 23:53:26.676"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:26.681" starttime="20190107 23:53:26.426"></status>
+</kw>
+<kw type="for" name="${element} IN [ @{list_cmd} ]">
+<kw type="foritem" name="${element} = role">
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>no ${element}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:26.688" level="INFO">send session_command, cmd=no role, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:27.037" level="INFO">session_command result=no role
+Aborted: Semantic check failure: Can't delete service role when erps ring is configured
+Error: failed to apply modifications
+NGPON2X4(config-ethernet-1/1/x4)</msg>
+<msg timestamp="20190107 23:53:27.037" level="INFO">${res} = no role
+Aborted: Semantic check failure: Can't delete service role when erps ring is configured
+Error: failed to apply modifications
+NGPON2X4(config-ethernet-1/1/x4)</msg>
+<status status="PASS" endtime="20190107 23:53:27.037" starttime="20190107 23:53:26.686"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:53:27.041" level="FAIL">'no role
+Aborted: Semantic check failure: Can't delete service role when erps ring is configured
+Error: failed to apply modifications
+NGPON2X4(config-ethernet-1/1/x4)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</msg>
+<msg timestamp="20190107 23:53:27.041" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:53:27.041" starttime="20190107 23:53:27.039"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:27.041" starttime="20190107 23:53:26.684"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:27.043" starttime="20190107 23:53:26.683"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:27.044" starttime="20190107 23:53:26.682"></status>
+</kw>
+<kw type="teardown" name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:27.050" level="INFO">send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:27.489" level="INFO">session_command result=end
+NGPON2X4</msg>
+<msg timestamp="20190107 23:53:27.490" level="INFO">${res} = end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:27.490" starttime="20190107 23:53:27.048"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:27.493" starttime="20190107 23:53:27.492"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:27.493" starttime="20190107 23:53:27.046"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:27.494" starttime="20190107 23:53:26.153"></status>
+</kw>
+<kw name="shutdown_port" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>Puts an interface in shutdown mode</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>ethernet</arg>
+<arg>${port}</arg>
+</arguments>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:27.501" level="INFO">send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:27.807" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:53:27.807" level="INFO">${res} = configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config...</msg>
+<status status="PASS" endtime="20190107 23:53:27.807" starttime="20190107 23:53:27.498"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:27.810" starttime="20190107 23:53:27.809"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:27.811" starttime="20190107 23:53:27.497"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>interface ${port-type} ${port}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:27.815" level="INFO">send session_command, cmd=interface ethernet 1/1/x4, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:28.060" level="INFO">session_command result=interface ethernet 1/1/x4
+NGPON2X4(config-ethernet-1/1/x4)</msg>
+<msg timestamp="20190107 23:53:28.060" level="INFO">${res} = interface ethernet 1/1/x4
+NGPON2X4(config-ethernet-1/1/x4)</msg>
+<status status="PASS" endtime="20190107 23:53:28.060" starttime="20190107 23:53:27.813"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:28.063" starttime="20190107 23:53:28.062"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:28.064" starttime="20190107 23:53:27.812"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>shutdown</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:28.070" level="INFO">send session_command, cmd=shutdown, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:34.238" level="INFO">session_command result=shutdown
+NGPON2X4(config-ethernet-1/1/x4)</msg>
+<msg timestamp="20190107 23:53:34.239" level="INFO">${res} = shutdown
+NGPON2X4(config-ethernet-1/1/x4)</msg>
+<status status="PASS" endtime="20190107 23:53:34.239" starttime="20190107 23:53:28.067"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:34.242" starttime="20190107 23:53:34.241"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:34.242" starttime="20190107 23:53:28.066"></status>
+</kw>
+<kw type="teardown" name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:34.247" level="INFO">send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:34.690" level="INFO">session_command result=end
+NGPON2X4</msg>
+<msg timestamp="20190107 23:53:34.691" level="INFO">${res} = end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:34.691" starttime="20190107 23:53:34.245"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:34.694" starttime="20190107 23:53:34.692"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:34.694" starttime="20190107 23:53:34.244"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:34.695" starttime="20190107 23:53:27.496"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:34.697" starttime="20190107 23:53:26.148"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:34.698" starttime="20190107 23:53:26.146"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:34.699" starttime="20190107 23:53:26.143"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:34.701" starttime="20190107 23:53:26.142"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:34.702" starttime="20190107 23:53:26.138"></status>
+</kw>
+<kw type="foritem" name="${service_point} = service_point3">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.device}</arg>
+</arguments>
+<assign>
+<var>${device}</var>
+</assign>
+<msg timestamp="20190107 23:53:34.705" level="INFO">${device} = eutA</msg>
+<status status="PASS" endtime="20190107 23:53:34.706" starttime="20190107 23:53:34.704"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** uplink service deprovision for ${device} ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:53:34.707" level="INFO">****** uplink service deprovision for eutA service_point3 ******</msg>
+<status status="PASS" endtime="20190107 23:53:34.707" starttime="20190107 23:53:34.706"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>service_point_${service_model.${service_point}.type}_dprov</arg>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+</arguments>
+<kw name="service_point_eth_dprov" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: deprovision for eth type service point (This keyword is only internal use, CANNOT be used in TCs)</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** [${device}] ethernet port basic deprovision for ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:53:34.712" level="INFO">****** [eutA] ethernet port basic deprovision for service_point3 ******</msg>
+<status status="PASS" endtime="20190107 23:53:34.712" starttime="20190107 23:53:34.711"></status>
+</kw>
+<kw type="for" name="${port_key} IN [ @{service_model.${service_point}.member} ]">
+<kw type="foritem" name="${port_key} = interface1">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.member.${port_key}}</arg>
+</arguments>
+<assign>
+<var>${port}</var>
+</assign>
+<msg timestamp="20190107 23:53:34.716" level="INFO">${port} = 1/2/x11</msg>
+<status status="PASS" endtime="20190107 23:53:34.716" starttime="20190107 23:53:34.715"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** provision port ${port} role and parameter ******</arg>
+</arguments>
+<msg timestamp="20190107 23:53:34.719" level="INFO">****** provision port 1/2/x11 role and parameter ******</msg>
+<status status="PASS" endtime="20190107 23:53:34.719" starttime="20190107 23:53:34.717"></status>
+</kw>
+<kw name="dprov_interface_ethernet" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>configure on interface</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${port}</arg>
+<arg>role</arg>
+</arguments>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:34.727" level="INFO">send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:35.152" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:53:35.153" level="INFO">${res} = configure
+Enter configuration commands, one per line. End with CNTL/Z.
+Current configuration users:
+sysadmin ssh (cli from 10.200.201.26) on since 2019-01-07 23:35:23 terminal mode
+NGPON2X4(config...</msg>
+<status status="PASS" endtime="20190107 23:53:35.153" starttime="20190107 23:53:34.724"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:35.155" starttime="20190107 23:53:35.154"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:35.156" starttime="20190107 23:53:34.722"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>interface ethernet ${interface}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:35.161" level="INFO">send session_command, cmd=interface ethernet 1/2/x11, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:35.492" level="INFO">session_command result=interface ethernet 1/2/x11
+NGPON2X4(config-ethernet-1/2/x11)</msg>
+<msg timestamp="20190107 23:53:35.493" level="INFO">${res} = interface ethernet 1/2/x11
+NGPON2X4(config-ethernet-1/2/x11)</msg>
+<status status="PASS" endtime="20190107 23:53:35.493" starttime="20190107 23:53:35.159"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:35.498" starttime="20190107 23:53:35.496"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:35.498" starttime="20190107 23:53:35.157"></status>
+</kw>
+<kw type="for" name="${element} IN [ @{list_cmd} ]">
+<kw type="foritem" name="${element} = role">
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>no ${element}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:35.506" level="INFO">send session_command, cmd=no role, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:35.934" level="INFO">session_command result=no role
+Error: element not found
+NGPON2X4(config-ethernet-1/2/x11)</msg>
+<msg timestamp="20190107 23:53:35.934" level="INFO">${res} = no role
+Error: element not found
+NGPON2X4(config-ethernet-1/2/x11)</msg>
+<status status="PASS" endtime="20190107 23:53:35.935" starttime="20190107 23:53:35.504"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:53:35.937" level="FAIL">'no role
+Error: element not found
+NGPON2X4(config-ethernet-1/2/x11)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</msg>
+<msg timestamp="20190107 23:53:35.937" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:53:35.938" starttime="20190107 23:53:35.936"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:35.938" starttime="20190107 23:53:35.502"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:35.939" starttime="20190107 23:53:35.501"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:35.941" starttime="20190107 23:53:35.501"></status>
+</kw>
+<kw type="teardown" name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:35.946" level="INFO">send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:36.504" level="INFO">session_command result=end
+NGPON2X4</msg>
+<msg timestamp="20190107 23:53:36.505" level="INFO">${res} = end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:36.505" starttime="20190107 23:53:35.944"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:36.509" starttime="20190107 23:53:36.508"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:36.510" starttime="20190107 23:53:35.942"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:36.511" starttime="20190107 23:53:34.720"></status>
+</kw>
+<kw name="shutdown_port" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>Puts an interface in shutdown mode</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>ethernet</arg>
+<arg>${port}</arg>
+</arguments>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:36.518" level="INFO">send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:36.902" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:53:36.903" level="INFO">${res} = configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:53:36.903" starttime="20190107 23:53:36.515"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:36.905" starttime="20190107 23:53:36.904"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:36.906" starttime="20190107 23:53:36.514"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>interface ${port-type} ${port}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:36.915" level="INFO">send session_command, cmd=interface ethernet 1/2/x11, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:37.284" level="INFO">session_command result=interface ethernet 1/2/x11
+NGPON2X4(config-ethernet-1/2/x11)</msg>
+<msg timestamp="20190107 23:53:37.284" level="INFO">${res} = interface ethernet 1/2/x11
+NGPON2X4(config-ethernet-1/2/x11)</msg>
+<status status="PASS" endtime="20190107 23:53:37.285" starttime="20190107 23:53:36.909"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:37.288" starttime="20190107 23:53:37.287"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:37.289" starttime="20190107 23:53:36.907"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>shutdown</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:37.306" level="INFO">send session_command, cmd=shutdown, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:37.788" level="INFO">session_command result=shutdown
+NGPON2X4(config-ethernet-1/2/x11)</msg>
+<msg timestamp="20190107 23:53:37.789" level="INFO">${res} = shutdown
+NGPON2X4(config-ethernet-1/2/x11)</msg>
+<status status="PASS" endtime="20190107 23:53:37.789" starttime="20190107 23:53:37.291"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:37.793" starttime="20190107 23:53:37.791"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:37.793" starttime="20190107 23:53:37.290"></status>
+</kw>
+<kw type="teardown" name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:37.799" level="INFO">send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:38.313" level="INFO">session_command result=end
+NGPON2X4</msg>
+<msg timestamp="20190107 23:53:38.314" level="INFO">${res} = end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:38.314" starttime="20190107 23:53:37.796"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:38.316" starttime="20190107 23:53:38.315"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:38.316" starttime="20190107 23:53:37.795"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:38.318" starttime="20190107 23:53:36.513"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:38.320" starttime="20190107 23:53:34.714"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:38.322" starttime="20190107 23:53:34.713"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:38.324" starttime="20190107 23:53:34.709"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:38.325" starttime="20190107 23:53:34.708"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:38.326" starttime="20190107 23:53:34.703"></status>
+</kw>
+<kw type="foritem" name="${service_point} = service_point4">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.device}</arg>
+</arguments>
+<assign>
+<var>${device}</var>
+</assign>
+<msg timestamp="20190107 23:53:38.330" level="INFO">${device} = eutA</msg>
+<status status="PASS" endtime="20190107 23:53:38.330" starttime="20190107 23:53:38.328"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** uplink service deprovision for ${device} ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:53:38.331" level="INFO">****** uplink service deprovision for eutA service_point4 ******</msg>
+<status status="PASS" endtime="20190107 23:53:38.331" starttime="20190107 23:53:38.330"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>service_point_${service_model.${service_point}.type}_dprov</arg>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+</arguments>
+<kw name="service_point_eth_dprov" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: deprovision for eth type service point (This keyword is only internal use, CANNOT be used in TCs)</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${service_point}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** [${device}] ethernet port basic deprovision for ${service_point} ******</arg>
+</arguments>
+<msg timestamp="20190107 23:53:38.336" level="INFO">****** [eutA] ethernet port basic deprovision for service_point4 ******</msg>
+<status status="PASS" endtime="20190107 23:53:38.336" starttime="20190107 23:53:38.335"></status>
+</kw>
+<kw type="for" name="${port_key} IN [ @{service_model.${service_point}.member} ]">
+<kw type="foritem" name="${port_key} = interface1">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${service_model.${service_point}.member.${port_key}}</arg>
+</arguments>
+<assign>
+<var>${port}</var>
+</assign>
+<msg timestamp="20190107 23:53:38.339" level="INFO">${port} = 1/2/x12</msg>
+<status status="PASS" endtime="20190107 23:53:38.340" starttime="20190107 23:53:38.338"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>****** provision port ${port} role and parameter ******</arg>
+</arguments>
+<msg timestamp="20190107 23:53:38.341" level="INFO">****** provision port 1/2/x12 role and parameter ******</msg>
+<status status="PASS" endtime="20190107 23:53:38.341" starttime="20190107 23:53:38.340"></status>
+</kw>
+<kw name="dprov_interface_ethernet" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>configure on interface</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${port}</arg>
+<arg>role</arg>
+</arguments>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:38.347" level="INFO">send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:38.812" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:53:38.813" level="INFO">${res} = configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:53:38.813" starttime="20190107 23:53:38.344"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:38.816" starttime="20190107 23:53:38.815"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:38.817" starttime="20190107 23:53:38.343"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>interface ethernet ${interface}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:38.822" level="INFO">send session_command, cmd=interface ethernet 1/2/x12, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:39.067" level="INFO">session_command result=interface ethernet 1/2/x12
+NGPON2X4(config-ethernet-1/2/x12)</msg>
+<msg timestamp="20190107 23:53:39.067" level="INFO">${res} = interface ethernet 1/2/x12
+NGPON2X4(config-ethernet-1/2/x12)</msg>
+<status status="PASS" endtime="20190107 23:53:39.068" starttime="20190107 23:53:38.820"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:39.074" starttime="20190107 23:53:39.073"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:39.075" starttime="20190107 23:53:38.818"></status>
+</kw>
+<kw type="for" name="${element} IN [ @{list_cmd} ]">
+<kw type="foritem" name="${element} = role">
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>no ${element}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:39.087" level="INFO">send session_command, cmd=no role, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:39.377" level="INFO">session_command result=no role
+Error: element not found
+NGPON2X4(config-ethernet-1/2/x12)</msg>
+<msg timestamp="20190107 23:53:39.377" level="INFO">${res} = no role
+Error: element not found
+NGPON2X4(config-ethernet-1/2/x12)</msg>
+<status status="PASS" endtime="20190107 23:53:39.377" starttime="20190107 23:53:39.081"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<msg timestamp="20190107 23:53:39.380" level="FAIL">'no role
+Error: element not found
+NGPON2X4(config-ethernet-1/2/x12)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</msg>
+<msg timestamp="20190107 23:53:39.381" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190107 23:53:39.381" starttime="20190107 23:53:39.379"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:39.381" starttime="20190107 23:53:39.079"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:39.386" starttime="20190107 23:53:39.078"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:39.388" starttime="20190107 23:53:39.078"></status>
+</kw>
+<kw type="teardown" name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:39.399" level="INFO">send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:39.687" level="INFO">session_command result=end
+NGPON2X4</msg>
+<msg timestamp="20190107 23:53:39.688" level="INFO">${res} = end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:39.688" starttime="20190107 23:53:39.395"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:39.691" starttime="20190107 23:53:39.690"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:39.692" starttime="20190107 23:53:39.393"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:39.694" starttime="20190107 23:53:38.342"></status>
+</kw>
+<kw name="shutdown_port" library="keyword_command">
+<tags>
+<tag>@author=BlairWang</tag>
+</tags>
+<doc>Puts an interface in shutdown mode</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>ethernet</arg>
+<arg>${port}</arg>
+</arguments>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:39.714" level="INFO">send session_command, cmd=configure, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:40.098" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)</msg>
+<msg timestamp="20190107 23:53:40.099" level="INFO">${res} = configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:53:40.099" starttime="20190107 23:53:39.699"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:40.102" starttime="20190107 23:53:40.101"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:40.103" starttime="20190107 23:53:39.698"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>interface ${port-type} ${port}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:40.109" level="INFO">send session_command, cmd=interface ethernet 1/2/x12, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:40.387" level="INFO">session_command result=interface ethernet 1/2/x12
+NGPON2X4(config-ethernet-1/2/x12)</msg>
+<msg timestamp="20190107 23:53:40.387" level="INFO">${res} = interface ethernet 1/2/x12
+NGPON2X4(config-ethernet-1/2/x12)</msg>
+<status status="PASS" endtime="20190107 23:53:40.388" starttime="20190107 23:53:40.107"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:40.402" starttime="20190107 23:53:40.400"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:40.403" starttime="20190107 23:53:40.106"></status>
+</kw>
+<kw name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>shutdown</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:40.420" level="INFO">send session_command, cmd=shutdown, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:40.718" level="INFO">session_command result=shutdown
+NGPON2X4(config-ethernet-1/2/x12)</msg>
+<msg timestamp="20190107 23:53:40.719" level="INFO">${res} = shutdown
+NGPON2X4(config-ethernet-1/2/x12)</msg>
+<status status="PASS" endtime="20190107 23:53:40.719" starttime="20190107 23:53:40.411"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:40.724" starttime="20190107 23:53:40.723"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:40.724" starttime="20190107 23:53:40.410"></status>
+</kw>
+<kw type="teardown" name="Axos Cli With Error Check" library="keyword_common">
+<tags>
+<tag>@author=dfarwell</tag>
+</tags>
+<doc>Sends a CLI command to DUT and confirms response has no errors, if there is no prompt in your topo file this may need to be adjusted</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${DUT}</arg>
+<arg>${CMD}</arg>
+<arg>prompt=${devices.${DUT}.prompt}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190107 23:53:40.730" level="INFO">send session_command, cmd=end, prompt={'#': None}, timeout=30, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:53:40.981" level="INFO">session_command result=end
+NGPON2X4</msg>
+<msg timestamp="20190107 23:53:40.981" level="INFO">${res} = end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:53:40.982" starttime="20190107 23:53:40.728"></status>
+</kw>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>Invalid</arg>
+<arg>syntax error</arg>
+<arg>Aborted:</arg>
+<arg>Error:</arg>
+</arguments>
+<status status="PASS" endtime="20190107 23:53:40.985" starttime="20190107 23:53:40.983"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:40.985" starttime="20190107 23:53:40.726"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:53:40.986" starttime="20190107 23:53:39.696"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:40.987" starttime="20190107 23:53:38.337"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:40.988" starttime="20190107 23:53:38.336"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:40.990" starttime="20190107 23:53:38.333"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:40.991" starttime="20190107 23:53:38.332"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:40.992" starttime="20190107 23:53:38.327"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:40.993" starttime="20190107 23:53:23.629"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:40.994" starttime="20190107 23:53:23.628"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:53:40.996" starttime="20190107 23:51:49.665">Several failures occurred:
+
+1) SSHLoginException
+
+2) Several failures occurred:
+
+1) 'configure
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'
+
+2) 'interface ethernet 1/1/x3
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+    [ Message content over the limit has been removed. ]
+Error: element not found
+NGPON2X4(config-ethernet-1/1/x3)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'
+
+6) 'no role
+Aborted: Semantic check failure: Can't delete service role when erps ring is configured
+Error: failed to apply modifications
+NGPON2X4(config-ethernet-1/1/x4)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'
+
+7) 'no role
+Error: element not found
+NGPON2X4(config-ethernet-1/2/x11)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'
+
+8) 'no role
+Error: element not found
+NGPON2X4(config-ethernet-1/2/x12)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</status>
+</kw>
+<doc>Initialization file test suites
+It is for putting suite level setup and teardown procedures
+And setting the forced tags for all the test cases in folder and subfolder</doc>
+<status status="FAIL" endtime="20190107 23:53:40.998" starttime="20190107 23:50:59.446">Suite setup failed:
+SSHLoginException
+
+Also keyword teardown failed:
+Several failures occurred:
+
+1) SSHLoginException
+
+2) TypeError: argument of type 'NoneType' is not iterable
+
+Also suite teardown failed:
+Several failures occurred:
+
+1) SSHLoginException
+
+2) Several failures occurred:
+
+1) 'configure
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+  show-system-status - Show current system status
+NGPON2X4' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'
+
+2) 'interface ethernet 1/1/x3
+----------^
+syntax error: expecting 
+  enable             - Enable EXEC commands
+  exit               - Exit the management session
+    [ Message content over the limit has been removed. ]
+Error: element not found
+NGPON2X4(config-ethernet-1/1/x3)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'
+
+6) 'no role
+Aborted: Semantic check failure: Can't delete service role when erps ring is configured
+Error: failed to apply modifications
+NGPON2X4(config-ethernet-1/1/x4)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'
+
+7) 'no role
+Error: element not found
+NGPON2X4(config-ethernet-1/2/x11)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'
+
+8) 'no role
+Error: element not found
+NGPON2X4(config-ethernet-1/2/x12)' contains one or more of 'Invalid', 'syntax error', 'Aborted:' or 'Error:'</status>
+</suite>
+<status status="FAIL" endtime="20190107 23:53:41.001" starttime="20190107 23:50:59.443"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:53:41.004" starttime="20190107 23:50:59.440"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:53:41.007" starttime="20190107 23:50:59.437"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:53:41.009" starttime="20190107 23:50:59.434"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:53:41.012" starttime="20190107 23:50:59.431"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:53:41.015" starttime="20190107 23:50:59.428"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:53:41.017" starttime="20190107 23:50:59.305"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="0">Critical Tests</stat>
+<stat fail="2" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="2" pass="0">@author=pzhang</stat>
+<stat fail="2" pass="0">@eut=10GE-12</stat>
+<stat fail="2" pass="0">@eut=GPON-8r2</stat>
+<stat fail="2" pass="0">@feature=HW_Support</stat>
+<stat fail="1" pass="0">@globalid=2533450</stat>
+<stat fail="1" pass="0">@globalid=2533451</stat>
+<stat fail="2" pass="0">@subfeature=MTU_size_of_9k</stat>
+<stat fail="1" pass="0">@tcid=AXOS_E72_PARENT-TC-4715</stat>
+<stat fail="1" pass="0">@tcid=AXOS_E72_PARENT-TC-4716</stat>
+<stat fail="2" pass="0">@user_interface=CLI</stat>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="AXOS" pass="0">AXOS</stat>
+<stat fail="2" id="s1-s1" name="AXOS-automation" pass="0">AXOS.AXOS-automation</stat>
+<stat fail="2" id="s1-s1-s1" name="Milan" pass="0">AXOS.AXOS-automation.Milan</stat>
+<stat fail="2" id="s1-s1-s1-s1" name="ST Test Cases" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases</stat>
+<stat fail="2" id="s1-s1-s1-s1-s1" name="System" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System</stat>
+<stat fail="2" id="s1-s1-s1-s1-s1-s1" name="HW Support" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support</stat>
+<stat fail="2" id="s1-s1-s1-s1-s1-s1-s1" name="MTU" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support.MTU</stat>
+<stat fail="2" id="s1-s1-s1-s1-s1-s1-s1-s1" name="Testcase" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support.MTU.Testcase</stat>
+<stat fail="1" id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="tc 9k INNI port to INNI port" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support.MTU.Testcase.tc 9k INNI port to INNI port</stat>
+<stat fail="1" id="s1-s1-s1-s1-s1-s1-s1-s1-s2" name="tc Cross card INNI 9K MTU to INNI" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support.MTU.Testcase.tc Cross card INNI 9K MTU to INNI</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

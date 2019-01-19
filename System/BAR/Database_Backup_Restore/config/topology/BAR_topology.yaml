@@ -1,0 +1,78 @@
+connection:
+  h1:
+    ip: localhost
+    type: linux
+    protocol: ssh
+    user: cafetest
+    password: cafetest
+    timeout: 11
+  n1:
+    ip: 10.245.96.73
+    password: sysadmin
+    user: sysadmin
+    type: axos
+    protocol: ssh
+    timeout: 30
+    prompt: "#"
+    ports:
+      p1:
+        port: 1/1/x1
+        type: eth
+      p2:
+        port: 1/1/xp1
+        type: pon
+  n1_sh:
+    ip: 10.245.96.73
+    password: root
+    user: root
+    type: exa
+    protocol: ssh
+  n1_serial:
+    ip: 10.245.96.10
+    port: 10006
+    ip2: 10.245.96.73
+    cidr: 22
+    gw: 10.245.96.1
+    password: sysadmin
+    user: sysadmin
+    type: exa
+    protocol: telnet
+    timeout: 30
+    prompt: "#"
+  tg1:
+    ip: 10.245.252.60 #10.206.10.102
+    type: stc
+    protocol: stc
+    ports:
+      p1:
+         port: 11/3
+         medium: fiber
+         speed: ether10000
+      p2:
+         port: 11/13
+         medium: fiber
+         speed: ether10000
+  apc1:
+    ip: 10.245.96.20
+    type: apc
+    user: apc
+    password: apc
+    protocol: telnet
+    timeout: 11
+    prompt: ['>']
+    login_prompt: 'User Name :'
+    password_prompt: 'Password  :'
+
+#  ff:
+#    type: web
+#    browser: FIREFOX
+#    execute_speed: 0.5
+#    default_element_wait: 30
+#    username: admin
+#    password: 1234
+    
+device_links:
+  link1: {n1: p1, tg1: p1}
+  link2: {n1: p2, tg1: p2}
+
+

@@ -1,0 +1,31 @@
+global:
+  p_match_vlan_: 3008
+  p_service_vlan: 3002
+  p_match_vlan_2: 3009
+  p_service_vlan_2: 3003
+
+  p_dhcp_server:
+    mac: 00:00:00:10:00:01
+    ip: 192.168.1.254
+    startup_ip: 192.168.1.10
+    
+  p_dhcp_client:
+    mac: 00:00:00:10:00:02
+    ip: 192.168.1.10
+
+  p_dhcp_server_2:
+    mac: 00:00:00:20:00:01
+    ip: 192.168.2.254
+    startup_ip: 192.168.2.10
+
+  p_dhcp_client_2:
+    mac: 00:00:00:20:00:02
+    ip: 192.168.2.10
+
+  p_lease_negociate_time:  60
+  p_rate_mbps: 5
+  p_pkt_rate: 10     # send packet rate, unit mbps
+  p_traffic_run_time: 30           # run traffic for 10s
+  p_traffic_time_to_learn_mac: 5
+  p_stc_traffic_stop: 5
+  p_traffic_loss_rate: 0.05        # traffic loss rate

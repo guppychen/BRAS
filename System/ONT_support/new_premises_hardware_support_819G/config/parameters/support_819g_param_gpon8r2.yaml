@@ -1,0 +1,55 @@
+global: 
+  misc_poe_table:
+    start_line: 6    ######## start line for table in cli response, start from index 1 #######
+    row:
+      - poe_enable    ###### list row key in sequence #######
+      - classify
+      - priority
+      - det_status
+      - over_current
+      - invd_cnt
+      - pwrd_cnt
+      - ovl_cnt
+      - udl_cnt
+      - msc_cnt
+      - mps_abs_cnt
+    column:
+      - title    ###### list column key in sequence #######
+      - uni0
+      - uni1
+      - uni2
+      - uni3  
+  status_disabled: DISABLED
+  status_ensabled: ENABLED
+  voice_policy_profile_id: vppro_test
+  voice_policy_profile_user: 
+   vlan: 1
+   priority: 1
+   dscp: 1
+  service_vlan: 800          # Service vlan provisioned for uplink.
+  match_vlan: untagged       # UNI service vlan match.
+  mismatch_ont_profile: 714G
+  user_ont_profile: 819G_test
+  pse_max_power: 60           # User define PSE Max Power Budget, 0-90
+  poe_priority_high: high     # poe-priority display as high, medium, low on E7 side
+  poe_priority_highnum: 1     # poe-priority display as 1, 2, 3 on ont side
+  
+  ###########################parameter for ont support template###########################
+  default_voice:              # default voice-policy-profile on E7 side
+   vlan: 4094
+   priority: 6
+   dscp: EF
+  default_ont_voice:          # default voice-policy-profile on ont side
+   vlan: 4094
+   priority: 1
+   dscp: 46
+   ###########################parameter for ont support template###########################
+   
+  # the port connecting ONT in service model.yaml: g2 
+  ont_uni_port: uni1          # the port on E7 and ONT side
+  ont_port: 1                 # | E7  |          ont side      |
+                              # |     | lldp status | misc poe |
+                              # | g1  |      0      |   uni0   |
+                              # | g2  |      1      |   uni1   |
+                              # | g3  |      2      |   uni2   |
+                              # | g4  |      3      |   uni3   |

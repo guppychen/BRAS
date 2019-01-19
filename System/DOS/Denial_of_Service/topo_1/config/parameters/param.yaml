@@ -1,0 +1,23 @@
+global:
+  service_vlan: 4001
+  service_vlan_1: 4001
+  service_vlan_2: 4002
+  mac1: 00:00:01:00:00:01
+  mac2: 00:00:02:00:00:02
+  mac3: 00:00:03:00:00:03
+  mac4: 00:00:04:00:00:04
+  broadcast_mac: ff:ff:ff:ff:ff:ff
+  multicast_mac: 01:00:5e:00:00:01
+  rate_pps: 2000
+  storm_control_rate: 1000
+  limit_rate: 0.6
+  limit_rate_low: 0.4
+  interface_type1: ethernet
+  ip1: 192.168.10.3
+  ip2: 192.168.10.2
+  udp_port1: 63
+  udp_port2: 64
+  udp_port3: 50
+  udp_port4: 51
+  send_traffic_time: 5
+  stop_traffic_time: 3

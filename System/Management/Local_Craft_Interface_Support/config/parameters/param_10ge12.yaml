@@ -1,0 +1,14 @@
+global:
+  p_check_switchover_status: 5min
+  retry_time: 5min
+  retry_interval: 30s
+
+
+
+
+
+
+
+
+
+

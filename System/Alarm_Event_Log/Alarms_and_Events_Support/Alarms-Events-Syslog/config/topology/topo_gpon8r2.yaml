@@ -1,0 +1,81 @@
+connection:
+  n1:
+    ip: 10.245.74.71
+    password: sysadmin
+    user: sysadmin
+    type: AXOS
+    protocol: ssh
+    prompt: "#"
+    timeout: 120
+    ports:
+      p1:
+        port: 1/1/x1
+        type: eth
+      p2:
+       port: 1/1/x2
+       type: eth
+      p3:
+       port: 1/1/x3
+       type: eth
+      p4:
+       port: 1/1/x4
+       type: eth
+  n1_sh:
+    ip: 10.245.74.71
+    password: root
+    user: root
+    type: axos
+#    prompt: ['NGPON2X4#']
+    protocol: ssh
+    timeout: 120
+  n1_netconf:
+    ip: 10.245.74.71
+    type: axos
+    protocol: netconf_ssh
+    user: sysadmin
+    password: sysadmin
+    port: 830
+    timeout: 120
+#  n1_telnet:
+#    ip: 10.245.96.10
+#    port: 10001
+#    password: root
+#    user: root
+#    type: AXOS
+#    protocol: telnet
+  n1_local_pc:
+    ip: 10.245.249.151
+    ip_trap: 10.245.249.187
+    password: marino13
+    user: stautotest
+    type: linux
+    protocol: ssh
+    timeout: 120 
+  n1_snmp_v2:
+    ip: 10.245.74.71
+    port: 161
+    redirect: 1620
+    protocol: snmp
+    version: 2c
+    community: nms
+    timeout: 120 
+#  n2_cisco:
+#    ip: 10.2.231.1
+#    user: root
+#    password: root
+#    enable_password: root
+#    protocol: telnet
+#    type: cisco
+#    prompt: Username
+#    timeout: 120
+#    ports:
+#      p1:
+#        port: TenGigabitEthernet0/0/0
+#        type: eth
+#      p2:
+#        port: TenGigabitEthernet0/1/0
+#        type: eth
+
+device_links:
+  link1: {n1: p3, n2_cisco: p1}
+  link2: {n1: p4, n2_cisco: p2}

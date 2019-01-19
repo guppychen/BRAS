@@ -1,0 +1,28 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x1
+      attribute:
+        interface_role: inni
+
+ 
+    subscriber_point1: 
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 801/x1
+      member:
+        interface1: 801/x1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        ont_id: 801
+        ont_profile_id: GP1000X       # use ont-profile on cli
+        serial_number: 3D15BA
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/xp1
+

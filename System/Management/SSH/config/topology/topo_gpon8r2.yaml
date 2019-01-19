@@ -1,0 +1,22 @@
+connection:
+    n1:
+        ip: 10.245.74.71
+        password: root
+        user: root
+        timeout: 30
+        type: exa
+        protocol: ssh
+    h1:
+        ip: localhost
+        type: linux
+        protocol: ssh
+        user: cafetest
+        password: cafetest
+
+  
+
+   
+
+
+
+

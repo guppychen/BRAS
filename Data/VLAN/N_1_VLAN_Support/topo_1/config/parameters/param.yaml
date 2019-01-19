@@ -1,0 +1,24 @@
+global:
+  service_vlan: 4001
+  service_vlan_2: 3001
+  c_vlan: 100
+  native_vlan1: 1
+  send_traffic_time: 5
+  stop_traffic_time: 3
+  error_rate: 0.005
+  interface_type1: ethernet
+  mac1: 00:00:01:00:00:01
+  mac2: 00:00:02:00:00:02
+  ip1: 192.168.10.3
+  ip2: 192.168.10.2
+  udp_port1: 63
+  udp_port2: 64
+  rate_bps: 1000000
+  tx_counter: 1001
+  rx_counter1: 1000
+  rx_counter2: 1001
+
+
+
+
+

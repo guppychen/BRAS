@@ -1,0 +1,44 @@
+connection:
+  eutA:
+    ip: 10.245.96.73
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: MILAN
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+
+            
+  tg1:
+    ip: 10.245.252.60
+    type: stc
+    protocol: stc
+    ports:
+      service_p1:
+        port: 11/3
+        medium: fiber
+        speed: ether10000
+      subscriber_p1:
+        port: 11/13
+        medium: fiber
+        speed: ether10000
+
+
+  ontA:
+    ip: 10.245.97.110
+    sn: le0isbad
+    timeout: '5'
+    protocol: telnet
+    type: ont
+    port: 10011
+
+  ontB:
+    ip: 10.245.97.110
+    port: 10011
+    type: linux
+    crlf: "\r"
+    login_prompt: '> '
+    password_prompt: '> '
+    protocol: telnet

@@ -1,0 +1,4 @@
+global:
+    val1: "100"
+    val2: "200"
+    timezonediff: -8

@@ -1,0 +1,54 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x3
+      attribute:
+        interface_role: inni
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port
+      name: 844/g4
+      member:
+        interface1: 844/g4
+      attribute:
+        interface_role: uni
+        ont_id: 844
+        ont_profile_id: 854G_ARF
+        serial_number: 2D5640
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - 1/1/gp1
+#    subscriber_point1:
+#      device: eutA
+#      type: ont_port
+#      name: 836/g1
+#      member:
+#        interface1: 836/g1
+#      attribute:
+#        interface_role: uni
+#        ont_id: 836
+#        ont_profile_id: 836GE_ARF
+#        serial_number: 1325BB
+#        vendor_id: CXNK
+#        pon_port:       # use list for FFP
+#          - 1/1/gp1
+    subscriber_point2:
+      device: eutA
+      type: ont_port
+      name: 3/g1
+      member:
+        interface1: 3/g1
+      attribute:
+        interface_role: uni
+        ont_id: 3
+        ont_profile_id: 844G_ARF
+        serial_number: 3E4020
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/gp8

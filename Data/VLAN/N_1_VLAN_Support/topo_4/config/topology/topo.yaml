@@ -1,0 +1,42 @@
+connection:
+  eutA:
+    ip: 10.245.96.72
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: MILAN
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+  tg1:
+    ip: 10.245.252.60
+    type: stc
+    protocol: stc
+    ports:
+      p1:
+        port: 11/4               # connect to service point1
+        medium: fiber
+        speed: ether10000
+      p2:
+        port: 10/13              # connect to subscriber_point1
+        medium: copper
+        speed: ether1000
+      p3:                        # connect to subscriber_point2
+        port: 8/12
+        medium: copper
+        speed: ether1000
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+[2019-01-13 22:56:05.367] - cafe.sessions.session_srv.tg1.session_log - INFO: Last login: Sun Jan 13 22:47:31 2019 from localhost
+[2019-01-13 22:56:05.367] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:05.615] - cafe.sessions.session_srv.tg1.session_log - INFO: [cafetest@petcafe2-wiweeks ~]$ bash
+[2019-01-13 22:56:05.736] - cafe.sessions.session_srv.tg1.session_log - INFO: [cafetest@petcafe2-wiweeks ~]$ export TCLLIBPATH=
+[2019-01-13 22:56:05.746] - cafe.sessions.session_srv.tg1.session_log - INFO: [cafetest@petcafe2-wiweeks ~]$ mkdir -p ~/traffic/working
+[2019-01-13 22:56:05.754] - cafe.sessions.session_srv.tg1.session_log - INFO: [cafetest@petcafe2-wiweeks ~]$ cd ~/traffic/working
+[2019-01-13 22:56:05.759] - cafe.sessions.session_srv.tg1.session_log - INFO: [cafetest@petcafe2-wiweeks working]$ /opt/active_tcl/bin/tclsh
+[2019-01-13 22:56:05.781] - cafe.sessions.session_srv.tg1.session_log - INFO: % 
+[2019-01-13 22:56:10.793] - cafe.sessions.session_srv.tg1.session_log - INFO: % set tcl_interactive 1
+[2019-01-13 22:56:10.794] - cafe.sessions.session_srv.tg1.session_log - INFO: 1
+[2019-01-13 22:56:10.795] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:10.812] - cafe.sessions.session_srv.tg1.session_log - INFO: % source /tmp/hltapi_stcZtHzzw.tcl
+[2019-01-13 22:56:10.827] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:10.834] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:10.840] - cafe.sessions.session_srv.tg1.session_log - INFO: OS: Linux, 3.10.0-693.21.1.el7.x86_64, unix; Tcl version: 8.5.18
+[2019-01-13 22:56:10.841] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:10.842] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:10.842] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:34.696] - cafe.sessions.session_srv.tg1.session_log - INFO: 22:56:34.666 WARN  - Only 8.5.9 and 8.5.14 Tcl versions are officially supported from the 8.5 series.
+[2019-01-13 22:56:34.890] - cafe.sessions.session_srv.tg1.session_log - INFO: SpirentTestCenter Automation Version: 4.67.9046.0000
+[2019-01-13 22:56:34.903] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:34.910] - cafe.sessions.session_srv.tg1.session_log - INFO: Hlt Api (Ver. 4.77) was successfully loaded and initialized
+[2019-01-13 22:56:34.917] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:34.918] - cafe.sessions.session_srv.tg1.session_log - INFO: Internal Version: 4.77GA.0312
+[2019-01-13 22:56:34.919] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:34.920] - cafe.sessions.session_srv.tg1.session_log - INFO: Spirent STC HLTAPI has been loaded!
+[2019-01-13 22:56:34.921] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:34.938] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::logOn /tmp
+[2019-01-13 22:56:34.941] - cafe.sessions.session_srv.tg1.session_log - INFO: log enabled!
+[2019-01-13 22:56:34.942] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:34.943] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 22:56:34.944] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:34.944] - cafe.sessions.session_srv.tg1.session_log - INFO: ====>January_13_22_56_34
+[2019-01-13 22:56:34.945] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:34.946] - cafe.sessions.session_srv.tg1.session_log - INFO: hltlog enabled!
+[2019-01-13 22:56:34.946] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:34.947] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 22:56:34.948] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 22:56:34.955] - cafe.sessions.session_srv.tg1.session_log - INFO: % package req SpirentHltApi
+[2019-01-13 22:56:34.956] - cafe.sessions.session_srv.tg1.session_log - INFO: 4.77
+[2019-01-13 22:56:34.957] - cafe.sessions.session_srv.tg1.session_log - INFO: 

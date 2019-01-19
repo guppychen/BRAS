@@ -1,0 +1,20 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/g1
+      attribute:
+        interface_role: inni
+
+    subscriber_point1:
+      device: eutA
+      type: dsl
+      name: 1/1/v1
+      member:
+        interface1: 1/1/v1
+      attribute:
+        interface_role: uni

@@ -1,0 +1,23 @@
+global:
+  match_vlan: 4008
+  cvlan: 1000
+  service_vlan: 4002
+  translate_cvlan:  4009
+  flow_index: 1
+  rule_index: 1
+  class_map: auto_class_map
+  policy_map: auto_policy_map
+  class_map_type:  ethernet   
+  
+  tg_server:
+    mac: 00:00:00:67:00:01
+    ip: 10.1.67.100
+  tg_client: 
+    mac: 00:00:00:11:11:11
+    ip: 10.1.67.10
+  
+  pkt_rate: 10     # send packet rate, unit mbps
+  traffic_run_time: 10           # run traffic for 10s
+  stc_wait_time: 5
+  traffic_loss_rate: 0.005        # traffic loss rate  
+  tg_store_file_path: /tmp

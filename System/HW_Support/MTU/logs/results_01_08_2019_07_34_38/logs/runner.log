@@ -1,0 +1,6 @@
+[2019-01-07 23:34:39.367] - cafe                 - WARNING: File 'cafepath' not found in this project's directory tree. Cafe Path  References (such as 'project://') will not function correctly.
+[2019-01-07 23:34:39.375] - cafe                 - DEBUG: Loaded parameter file '/home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/config/parameters/E7_param.yaml'
+[2019-01-07 23:34:39.384] - cafe.core.utils      - ERROR: code: 0101 - code exception raised - There are duplicate keys in /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/config/parameters/E7_service_model.yaml: 
+Line 11: syntax error: expected <block end>, but found '<block mapping start>'
+None
+[2019-01-07 23:34:39.526] - cafe.core.db         - DEBUG: db (sqlite:////home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_34_38/db/20190107/20190107233439.idb) create success

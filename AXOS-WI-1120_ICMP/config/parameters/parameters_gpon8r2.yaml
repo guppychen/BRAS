@@ -1,0 +1,20 @@
+global:
+    ipv4_localhost: 127.0.0.1
+    ipv6_localhost: ::1
+#    ipv4_destination: 10.245.96.71
+#    ipv6_destination: 2002:0ace:0901:0:0:0:0:0
+    ipaddr: 10.245.74.71
+    mask: 255.255.255.0
+    gateway: 10.245.74.1
+    craft_port: 2
+    ping_count: 5
+#    ping_version: 20121221
+    packetsize: 1500
+    deadline: 10 #seconds
+    interval: 5 #seconds
+    flood_count: 7000 #pings
+    ntp_server: 10.245.249.37
+    hex_pattern: ffff
+    preload_size: 20
+    
+    

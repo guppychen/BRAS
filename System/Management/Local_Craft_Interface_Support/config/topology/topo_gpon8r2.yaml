@@ -1,0 +1,21 @@
+connection:
+  eutA:
+    ip: 10.245.74.71
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: MILAN
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+  eutB:                                    # eut name: it could be any EUT name you want to use, e.g.: n1, node1
+    ip: 10.245.96.10                            # the same as before
+    port: 10018
+    user: sysadmin                            # the same as before
+    password: sysadmin                        # the same as before
+    timeout: 30
+    type: AXOS                             # the same as before
+    model: MILAN                           # the same as before
+    protocol: telnet                       # the same as before
+    prompt: "#"

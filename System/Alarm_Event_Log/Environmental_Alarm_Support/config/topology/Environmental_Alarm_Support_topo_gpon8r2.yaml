@@ -1,0 +1,30 @@
+connection:
+
+  n1_console:
+    ip: 10.245.96.10
+    port: 10018
+    type: linux
+    user: sysadmin
+    password: sysadmin
+    device_type: AXOS
+    model: MILAN
+    protocol: telnet
+    user_interface: CLI
+    prompt: ["#",'login:','Password:']
+    login_prompt: 'login:'
+    password_prompt: 'Password:'
+    timeout: 300
+
+  eutA:
+    ip: 10.245.74.71
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: MILAN
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+
+
+

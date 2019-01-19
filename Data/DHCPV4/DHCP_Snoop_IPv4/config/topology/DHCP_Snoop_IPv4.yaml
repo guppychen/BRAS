@@ -1,0 +1,33 @@
+connection:
+  h1:
+    ip: localhost
+    type: linux
+    protocol: ssh
+    user: cafetest
+    password: cafetest
+    timeout: 11
+  
+  eutA:
+    ip: 10.245.96.73
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: MILAN
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+
+  tg1:
+    ip: 10.245.252.60
+    type: stc
+    protocol: stc
+    ports:
+      service_p1:
+        port: 11/3
+        medium: fiber
+        speed: ether10000
+      subscriber_p1:
+        port: 11/13
+        medium: fiber
+        speed: ether10000

@@ -1,0 +1,12 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: n1_console
+      type: eth
+      member:
+        interface1: 1/1/x2
+      attribute:
+        interface_role: inni
+

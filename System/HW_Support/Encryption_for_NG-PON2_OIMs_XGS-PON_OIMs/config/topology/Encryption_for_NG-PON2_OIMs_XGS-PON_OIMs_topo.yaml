@@ -1,0 +1,11 @@
+connection:
+  eutA:
+    ip: 10.245.96.73
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: MILAN
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30

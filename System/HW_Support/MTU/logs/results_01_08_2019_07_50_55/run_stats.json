@@ -1,0 +1,13 @@
+{
+    "additional_data": {
+        "cafe_flavor": "CAFE_RF",
+        "num_tests": "2",
+        "run_from": "CLI"
+    },
+    "end_time": 1546934021.617789,
+    "host": "10.200.201.26",
+    "package_name": "cafe",
+    "package_version": "v1.25",
+    "start_time": 1546933855.006276,
+    "user": "guchen"
+}

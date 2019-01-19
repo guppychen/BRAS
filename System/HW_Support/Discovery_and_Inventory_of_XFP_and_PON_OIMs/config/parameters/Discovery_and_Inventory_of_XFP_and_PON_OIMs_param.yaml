@@ -1,0 +1,13 @@
+global:
+  service_vlan: 3002
+  subscriber_vlan: 3001
+  rate_mbps1: 10
+  sleep_time: 10s
+  traffic_run_time: 30s
+  wait_time: 5s
+  loss_rate: 0.1
+
+  sip: 10.10.10.2
+  dip: 20.20.20.2
+  smac: 00:00:00:11:22:44
+  dmac: 00:00:00:33:55:66

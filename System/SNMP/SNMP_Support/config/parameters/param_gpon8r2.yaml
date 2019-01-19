@@ -1,0 +1,68 @@
+global:
+  mac1: 00:00:01:00:00:11
+  mac2: 00:00:02:00:00:12
+  mac3: 01:00:5e:01:01:02
+  mac4: ff:ff:ff:ff:ff:ff
+  ip1: 192.168.100.3
+  ip2: 192.168.100.2
+  ip3: 225.1.1.2
+  udp_port1: 63
+  udp_port2: 64
+  rate_bps: 10000000
+  port_x3: x3
+  vm_ip: 10.245.249.8  (VM ip address need change to ARF VM ip)
+  eth_port_1: 1/1/x2
+  eth_port_3: 1/1/x3
+  # modified by llin AT-3826
+  port_1_oid: 110010103      #for port x1
+  port_2_oid: 110010102       #for port x2
+  port_3_oid: 110010101       #for port x3
+  port_4_oid: 110010104       #for port x4
+  # modified by llin AT-3826
+  admin_status: up
+  service_vlan: 400
+  send_traffic_time: 2
+  stop_traffic_time: 2
+  interface_type1: eth
+  i: 1s
+  re_ifLastChange: '0'
+  re_ifOutQLen: '0'
+  # modified by llin
+  re_PhysAddress: 00:02:5d
+  expect_if_number: '20'
+  expect_if_number_dual_card: '40'
+  sysdesc: GPON-8 r2
+  sysname: GPON-8R2
+  # modified by llin
+  re_ifSpecific: 'zeroDotZero'
+  re_speed: '4294967295'
+  re_default_mtu: '2000'
+  re_default_eth_type: ethernetCsmacd
+  community: public
+  community_1: sean
+  community_2: sean1
+  community_3: sean2
+  community_4: sean3
+  community_5: sean4
+  community_6: sean5
+  community_7: sean6
+  host_1: 10.245.46.201
+  host_2: 10.245.46.202
+  host_3: 10.245.46.203
+  host_4: 10.245.46.204
+  host_5: 10.245.46.205
+  host_6: 10.245.46.206
+  host_7: 10.245.46.207
+  host_8: 10.245.46.208
+
+
+
+
+
+
+
+
+
+
+
+

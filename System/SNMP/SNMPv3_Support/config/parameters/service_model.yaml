@@ -1,0 +1,61 @@
+global:
+  service_model:
+#    service_point_list1:
+#      - service_point1
+#    service_point1:
+#      device: eutA
+#      type: eth                  # service_point type {eth|lag|g8032|erps}
+#      member:
+#        interface1: 1/1/x4
+#      attribute:
+#        interface_role: inni
+#    service_point2:
+#      device: eutA
+#      type: lag                              # service_point type {eth|lag|g8032|erps}
+#      name: la4                              # for axos system use instance id {la{1-4}}
+#      member:
+#        interface1: 1/1/x3
+#        interface2: 1/1/x4
+#      attribute:                             # all mandatory parameter should set to "" if you don't want to use it
+#        interface_role: lag
+#    service_point3:
+#      device: eutA
+#      type: g8032                  # service_point type {eth|lag|g8032|erps}
+#      name: 1
+#      member:
+#        interface1: 1/1/x1
+#        interface2: 1/1/x4
+#      attribute:
+#        interface_role: inni
+#        control_vlan: 33
+#        interface1_rpl_mode: owner
+#        interface2_rpl_mode: none
+#    service_point4:
+#      device: eutA
+#      type: erps                 # service_point type {eth|lag|g8032|erps}
+#      name: 2
+#      member:
+#        interface1: 1/1/x1
+#        interface2: 1/1/x4
+#      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+#        interface_role: inni
+#        control_vlan: 44
+#        erps_role: master             # ring domain node role {master|transit}
+#        interface1_erps_role: primary
+#        interface2_erps_role: secondary
+#
+#    subscriber_point1:
+#      device: eutA
+#      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+#      name: 33/x1
+#      member:
+#        interface1: 33/x1
+#      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+#        interface_role: uni
+#        ont_id: 33
+#        ont_profile_id: 811NG       # use ont-profile on cli
+#        serial_number: 233333
+#        vendor_id: CXNK
+#        pon_port:       # use list for FFP
+#          - 1/1/xp3
+#          - 1/1/xp4

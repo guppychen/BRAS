@@ -1,0 +1,40 @@
+global:
+    user_id: stautotest
+    scp_serverip: 10.245.249.176
+    user_password: marino13
+    platform: E7-2 NGPON2-4
+    ont_num: 1
+    ont_port: x1 #g1
+    prof_id: GP1000X #882NG #
+    serial_num: 3D15BA #3D15AD #38E873
+    ont_desc: Ont_1
+    Cmaptype: IP
+    Cmaptype_1: ethernet
+    Cmapname: cm-L3-in
+    Cmapname_1: CM1
+    Pmapname: pm-L3
+    Pmapname_1: PM1
+    service_vlan_1: 3002
+    service_vlan_2: 3001
+    vlan_user_priority: 0
+    vlan_outer_user_priority: 0
+    mac_src1: 00:00:01:00:00:01
+    mac_dst1: 00:10:00:00:00:01
+    mac_src2: 00:10:00:00:00:02 
+    mac_dst2: 00:00:01:00:00:02
+    rate_bps: 100000000
+    frame_size: 128
+    length_mode: fixed
+    ipaddr: 10.10.10.1
+    traffic_time: 30 #seconds
+    location_l2: /tmp/
+    location_l3: /tmp/config_file/
+    threshold: 2000
+    apc_line: 1
+    craft_port:    2
+#PowerOutlet:
+#        uname: admin
+#        pword: 1234
+#        browser: ff
+#        url: http://10.206.10.101/
+#        port: 1

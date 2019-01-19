@@ -1,0 +1,74 @@
+global:
+  801_ont-profile: GP1000X
+
+  p_data_vlan1: 200
+  p_data_vlan2: 201
+  p_data_vlan3: 202
+
+  #vlan used for ce match vlan
+  p_match_vlan1: 3001
+  p_match_vlan2: 3002
+  p_match_vlan3: 3003
+  p_match_remove: 3000
+
+  #vlan used for translate-cevlan-tag action
+  p_ce_add_vlan1: 401
+  p_ce_add_vlan2: 402
+  p_ce_add_vlan3: 3003
+
+  #vlan used for add-tag ctag action
+  p_data_cvlan1: 3001
+  p_data_cvlan2: 0
+  p_data_cvlan3: 3003
+
+  #mac used for client and server ctag action
+  subscriber_mac1: 00:00:02:aa:bb:cc
+  subscriber_mac2: 00:00:03:aa:bb:cc
+  subscriber_mac3: 00:00:04:aa:bb:cc
+
+  subscriber_oui1: 00:00:02
+  subscriber_oui2: 00:00:03
+
+  service_mac: 00:00:01:aa:bb:dd
+
+  #ip used for client and server
+  sip: 11.1.1.1
+  cip: 12.1.1.1
+
+  #udp port used for stream
+  udp_dst_port: 6000
+  udp_src_port: 6000
+
+  #pcp value used for different stream
+  stag_pcp:   2   #5   change with AT-4392
+  ctag_pcp:   6
+  cetag_pcp:  7
+  cevlan_pcp:  1
+  match_pcp: 3
+  unmatch_pcp: 4
+
+  #STC wait time and traiffic lost rate
+  rate_pps1: 1
+  learn_arp_time: 10s
+  run_traffic_time:    30s
+  wait_stop_time:    5s
+
+  frame_num: 10
+  loss_rate: 0.1
+  loss_rate_ppp: 0.1
+
+  #class map name and match rule
+  class_map_name_priority: match_pri
+  class_map_name_ethertype: match_eth
+  class_map_name_check: match_check
+  policy_map_name: add_single_svlan
+  rule_ethertype_ipv4: IPv4
+  rule_ethertype_pppdisc: PPPoE-Disc
+  rule_ethertype_pppsesion: PPPoE-Session
+  traffic_ether_type_pppdisc: 8863
+  traffic_ether_type_pppsession:  8864
+
+  #cli error message
+  cli_error_msg_eth: Already matching on this ethertype criteria
+  cli_error_msg_mac: Already matching on this mac criteria
+  cli_error_msg_oui:  Already matching on this oui criteria

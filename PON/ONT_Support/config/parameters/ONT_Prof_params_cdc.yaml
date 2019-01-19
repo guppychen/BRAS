@@ -1,0 +1,51 @@
+global:
+    val1: "100"
+    val2: "200"
+
+    #Predefined ont Profile
+    preontProfile: GP1000X
+    preontProfile1: 844G_ARF
+    usrdefontProfName: UserdefinedONTprofile
+
+    #params for configuring services on ont interface
+    serVlan: 199
+    classmapName: cTest
+    policyName: pTest
+    ontEtherInt: g1
+    ontPotsInt: p1
+
+ONT:
+    ontNum: '1'
+    ontProfile: GP1000X
+    ontSerNum: !!str 3D18C5
+    ontPort: xp1
+
+ONT1:
+    ontNum: '99'
+    ontProfile: 801G
+    ontSerNum: !!str 20B076
+    ontPort: gp2
+
+    #Services and Interfaces
+PORT:
+      gponport: 1/1/xp1
+      porttype: pon
+
+#Paramaters for ONT Profile change cases with same, more and less ports ONT-Profiles
+
+ONTSamePort:
+      ontProfile: 882NG
+
+ONTMorePort:
+      ontProfile: 882NG
+
+ONTLessPort:
+      ontProfile: 801G
+
+
+
+
+
+
+
+

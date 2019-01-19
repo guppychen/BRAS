@@ -1,0 +1,140 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+      - service_point2
+    service_point_list2:
+      - service_point3
+      - service_point4
+    service_point_list3:
+      - service_point5
+    service_point_list4:
+      - service_point6
+      - service_point7
+    service_point_list5:
+      - service_point8
+      - service_point9
+    service_point1:
+      device: eutA
+      type: erps
+      name: 6
+      member:
+        interface1: 1/1/x4
+        interface2: 1/1/x2
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        control_vlan: 10
+        erps_role: master             # ring domain node role {master|transit}
+        interface1_erps_role: primary
+        interface2_erps_role: secondary
+    service_point2:
+      device: eutC
+      type: erps
+      name: 6
+      member:
+        interface1: 1/1/x3
+        interface2: 1/1/x2
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        control_vlan: 10
+        erps_role: transit
+        interface1_erps_role: primary
+        interface2_erps_role: secondary
+    service_point3:
+      device: eutC
+      type: erps
+      name: 2
+      member:
+        interface1: 1/1/x1
+        interface2: 1/1/x4
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        control_vlan: 11
+        erps_role: master
+        interface1_erps_role: primary
+        interface2_erps_role: secondary
+    service_point4:
+      device: eutB
+      type: erps
+      name: 2
+      member:
+        interface1: 1/1/x2
+        interface2: 1/1/x4
+      attribute:
+        interface_role: inni
+        control_vlan: 11
+        erps_role: transit
+        interface1_erps_role: primary
+        interface2_erps_role: secondary
+    service_point5:
+      device: eutB
+      type: eth
+      member:
+        interface1: 1/1/x1
+      attribute:
+        interface_role: inni
+    
+    service_point6:
+      device: eutC
+      type: lag
+      name: la1
+      member:
+        interface1: 1/1/x1
+        interface2: 1/1/x4
+      attribute:
+        interface_role: lag
+
+    service_point7:
+      device: eutB
+      type: lag
+      name: la1
+      member:
+        interface1: 1/1/x2
+        interface2: 1/1/x4
+      attribute:
+        interface_role: lag
+        
+    service_point8:
+      device: eutC
+      type: g8032
+      name: 1
+      member:
+        interface1: 1/1/x1
+        interface2: 1/1/x4
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        control_vlan: 33
+        erps_role: master
+        interface1_rpl_mode: owner
+        interface2_rpl_mode: none
+
+    service_point9:
+      device: eutB
+      type: g8032
+      name: 1
+      member:
+        interface1: 1/1/x2
+        interface2: 1/1/x4
+      attribute:
+        interface_role: inni
+        control_vlan: 33
+        erps_role: transit
+        interface1_rpl_mode: owner
+        interface2_rpl_mode: none
+
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: auto801/g1
+      member:
+        interface1: auto801/g1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        ont_id: auto801
+        ont_profile_id: GPR3000X     # use ont-profile on cli
+        serial_number: 4783A0
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/xp4
+          

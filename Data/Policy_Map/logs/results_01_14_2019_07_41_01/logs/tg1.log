@@ -1,0 +1,1488 @@
+[2019-01-13 23:41:02.537] - cafe.sessions.session_srv.tg1.session_log - INFO: Last login: Sun Jan 13 23:34:52 2019 from localhost
+[2019-01-13 23:41:02.538] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:02.770] - cafe.sessions.session_srv.tg1.session_log - INFO: [cafetest@petcafe2-wiweeks ~]$ bash
+[2019-01-13 23:41:02.965] - cafe.sessions.session_srv.tg1.session_log - INFO: [cafetest@petcafe2-wiweeks ~]$ export TCLLIBPATH=
+[2019-01-13 23:41:02.978] - cafe.sessions.session_srv.tg1.session_log - INFO: [cafetest@petcafe2-wiweeks ~]$ mkdir -p ~/traffic/working
+[2019-01-13 23:41:02.986] - cafe.sessions.session_srv.tg1.session_log - INFO: [cafetest@petcafe2-wiweeks ~]$ cd ~/traffic/working
+[2019-01-13 23:41:03.12] - cafe.sessions.session_srv.tg1.session_log - INFO: [cafetest@petcafe2-wiweeks working]$ /opt/active_tcl/bin/tclsh
+[2019-01-13 23:41:03.114] - cafe.sessions.session_srv.tg1.session_log - INFO: % 
+[2019-01-13 23:41:08.127] - cafe.sessions.session_srv.tg1.session_log - INFO: % set tcl_interactive 1
+[2019-01-13 23:41:08.128] - cafe.sessions.session_srv.tg1.session_log - INFO: 1
+[2019-01-13 23:41:08.128] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:08.148] - cafe.sessions.session_srv.tg1.session_log - INFO: % source /tmp/hltapi_stcxTs78l.tcl
+[2019-01-13 23:41:08.159] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:08.160] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:08.161] - cafe.sessions.session_srv.tg1.session_log - INFO: OS: Linux, 3.10.0-693.21.1.el7.x86_64, unix; Tcl version: 8.5.18
+[2019-01-13 23:41:08.161] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:08.162] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:08.163] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:34.763] - cafe.sessions.session_srv.tg1.session_log - INFO: 23:41:34.734 WARN  - Only 8.5.9 and 8.5.14 Tcl versions are officially supported from the 8.5 series.
+[2019-01-13 23:41:34.970] - cafe.sessions.session_srv.tg1.session_log - INFO: SpirentTestCenter Automation Version: 4.67.9046.0000
+[2019-01-13 23:41:34.971] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:34.973] - cafe.sessions.session_srv.tg1.session_log - INFO: Hlt Api (Ver. 4.77) was successfully loaded and initialized
+[2019-01-13 23:41:34.974] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:34.975] - cafe.sessions.session_srv.tg1.session_log - INFO: Internal Version: 4.77GA.0312
+[2019-01-13 23:41:34.975] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:34.977] - cafe.sessions.session_srv.tg1.session_log - INFO: Spirent STC HLTAPI has been loaded!
+[2019-01-13 23:41:34.978] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:35.29] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::logOn /tmp
+[2019-01-13 23:41:35.30] - cafe.sessions.session_srv.tg1.session_log - INFO: log enabled!
+[2019-01-13 23:41:35.33] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:35.34] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:41:35.34] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:35.35] - cafe.sessions.session_srv.tg1.session_log - INFO: ====>January_13_23_41_34
+[2019-01-13 23:41:35.35] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:35.36] - cafe.sessions.session_srv.tg1.session_log - INFO: hltlog enabled!
+[2019-01-13 23:41:35.36] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:35.37] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:41:35.37] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:41:35.43] - cafe.sessions.session_srv.tg1.session_log - INFO: % package req SpirentHltApi
+[2019-01-13 23:41:35.44] - cafe.sessions.session_srv.tg1.session_log - INFO: 4.77
+[2019-01-13 23:41:35.44] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:42:10.313] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >Enter Suite: AXOS
+[2019-01-13 23:42:10.417] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>Enter Suite: AXOS-automation
+[2019-01-13 23:42:10.420] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>Enter Suite: Milan
+[2019-01-13 23:42:10.423] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>Enter Suite: ST Test Cases
+[2019-01-13 23:42:10.426] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>Enter Suite: Data
+[2019-01-13 23:42:10.429] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>Enter Suite: Policy Map
+[2019-01-13 23:42:11.432] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>Enter Suite: Testcase
+[2019-01-13 23:42:29.315] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>Enter Suite: Tc Add Cevlan Tag
+[2019-01-13 23:42:29.492] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>Enter Case: tc_add_cevlan_tag
+[2019-01-13 23:42:41.709] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>Enter Keyword: template_bidirection_raw_traffic_and_check.template_bidirection_raw_traffic_and_check
+[2019-01-13 23:42:41.728] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.create_raw_traffic_udp
+[2019-01-13 23:42:41.740] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 23:42:41.742] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Create Untagged Stream On Port
+[2019-01-13 23:42:41.891] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::connect_to_chas 10.245.252.60 "11/9 11/8"
+[2019-01-13 23:42:41.893] - cafe.sessions.session_srv.tg1.session_log - INFO: Connecting to Chassis 10.245.252.60...
+[2019-01-13 23:42:41.893] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:42:46.540] - cafe.sessions.session_srv.tg1.session_log - INFO: res=============>{offline 0} {port_handle {{10 {{245 {{252 {{60 {{11/9 port1} {11/8 port2}}}}}}}}}}} {status 1}
+[2019-01-13 23:42:46.541] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:42:46.542] - cafe.sessions.session_srv.tg1.session_log - INFO: Connected to 10.245.252.60 and ports 11/9 11/8 were(was) reserved!
+[2019-01-13 23:42:46.543] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:42:46.543] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:42:46.545] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:42:46.546] - cafe.sessions.session_srv.tg1.session_log - INFO: port1 port2
+[2019-01-13 23:42:46.548] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:42:46.559] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:42:46.561] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:42:46.561] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:42:46.568] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:42:46.569] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:42:46.570] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:42:46.688] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::interface_conf 11/9 config { -speed ether10000 -phy_mode fiber -enable_ping_response 1}
+[2019-01-13 23:42:46.692] - cafe.sessions.session_srv.tg1.session_log - INFO: config interface 11/9 is in process...
+[2019-01-13 23:42:46.699] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:42:46.707] - cafe.sessions.session_srv.tg1.session_log - INFO: -mode config -port_handle port1  -speed ether10000 -phy_mode fiber -enable_ping_response 1
+[2019-01-13 23:42:46.718] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:02.432] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {arpnd_status 0} {arpnd_cache none} {arpnd_report none} {status 1} {handles host1}
+[2019-01-13 23:43:02.436] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:02.436] - cafe.sessions.session_srv.tg1.session_log - INFO: config interface 11/9 is done!
+[2019-01-13 23:43:02.437] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:02.437] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:43:02.438] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:02.444] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::interface_conf 11/8 config { -speed ether10000 -phy_mode fiber -enable_ping_response 1}
+[2019-01-13 23:43:02.451] - cafe.sessions.session_srv.tg1.session_log - INFO: config interface 11/8 is in process...
+[2019-01-13 23:43:02.452] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:02.454] - cafe.sessions.session_srv.tg1.session_log - INFO: -mode config -port_handle port2  -speed ether10000 -phy_mode fiber -enable_ping_response 1
+[2019-01-13 23:43:02.455] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:08.957] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {arpnd_status 0} {arpnd_cache none} {arpnd_report none} {status 1} {handles host2}
+[2019-01-13 23:43:08.958] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:08.959] - cafe.sessions.session_srv.tg1.session_log - INFO: config interface 11/8 is done!
+[2019-01-13 23:43:08.960] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:08.960] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:43:08.961] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:09.91] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_conf create 11/8 { -mac_src 00:00:00:11:11:11 -l4_protocol udp -name upstream -ip_dst_addr 10.1.67.100 -mac_dst 00:00:00:67:00:01 -udp_src_port 6000 -ip_src_addr 10.1.67.10 -length_mode fixed -rate_bps 10000000 -frame_size 512 -l3_protocol ipv4 -udp_dst_port 6000}
+[2019-01-13 23:43:09.112] - cafe.sessions.session_srv.tg1.session_log - INFO: create traffic is in process...
+[2019-01-13 23:43:09.114] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:10.266] - cafe.sessions.session_srv.tg1.session_log - INFO: create traffic is done!
+[2019-01-13 23:43:10.267] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:10.268] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:43:10.269] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:10.270] - cafe.sessions.session_srv.tg1.session_log - INFO: streamblock1
+[2019-01-13 23:43:10.273] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:10.402] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Create Untagged Stream On Port
+[2019-01-13 23:43:10.404] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 23:43:10.405] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.create_raw_traffic_udp
+[2019-01-13 23:43:10.429] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.create_raw_traffic_udp
+[2019-01-13 23:43:10.449] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 23:43:10.451] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Create Double Tagged Stream On Port
+[2019-01-13 23:43:10.490] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_conf create 11/9 { -vlan_user_priority 0 -vlan_id_outer 4002 -mac_dst 00:00:00:11:11:11 -ip_dst_addr 10.1.67.10 -ip_src_addr 10.1.67.100 -frame_size 512 -l2_encap ethernet_ii_vlan -l3_protocol ipv4 -vlan_outer_user_priority 0 -udp_dst_port 6000 -vlan_id 1000 -mac_src 00:00:00:67:00:01 -l4_protocol udp -name downstream -length_mode fixed -udp_src_port 6000 -rate_bps 10000000}
+[2019-01-13 23:43:10.490] - cafe.sessions.session_srv.tg1.session_log - INFO: create traffic is in process...
+[2019-01-13 23:43:10.491] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:11.724] - cafe.sessions.session_srv.tg1.session_log - INFO: create traffic is done!
+[2019-01-13 23:43:11.725] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:11.725] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:43:11.726] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:11.733] - cafe.sessions.session_srv.tg1.session_log - INFO: streamblock2
+[2019-01-13 23:43:11.740] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:11.827] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Create Double Tagged Stream On Port
+[2019-01-13 23:43:11.828] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 23:43:11.830] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.create_raw_traffic_udp
+[2019-01-13 23:43:11.834] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Clear Traffic Stats
+[2019-01-13 23:43:11.846] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_ctrl clear_stats 11/9 {}
+[2019-01-13 23:43:11.848] - cafe.sessions.session_srv.tg1.session_log - INFO: 11/9 clear_stats traffic is in process...
+[2019-01-13 23:43:11.849] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:11.850] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:43:11.850] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:12.385] - cafe.sessions.session_srv.tg1.session_log - INFO: clear_stats traffic is done!
+[2019-01-13 23:43:12.390] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:12.397] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:43:12.399] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:15.403] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_ctrl clear_stats 11/8 {}
+[2019-01-13 23:43:15.404] - cafe.sessions.session_srv.tg1.session_log - INFO: 11/8 clear_stats traffic is in process...
+[2019-01-13 23:43:15.404] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:15.405] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:43:15.405] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:15.923] - cafe.sessions.session_srv.tg1.session_log - INFO: clear_stats traffic is done!
+[2019-01-13 23:43:15.924] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:15.925] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:43:15.925] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:18.917] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Clear Traffic Stats
+[2019-01-13 23:43:18.919] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.start_capture
+[2019-01-13 23:43:18.921] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Config Packet Buffers
+[2019-01-13 23:43:18.935] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:43:18.936] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:43:18.937] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:18.949] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::packetConfigBuffers port1 stop {}
+[2019-01-13 23:43:18.950] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture buffer is in process...
+[2019-01-13 23:43:18.950] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:18.958] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:43:18.959] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:18.960] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture buffer is done!
+[2019-01-13 23:43:18.960] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:18.961] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:43:18.961] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:18.963] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Config Packet Buffers
+[2019-01-13 23:43:18.965] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:43:18.979] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port1} start
+[2019-01-13 23:43:18.980] - cafe.sessions.session_srv.tg1.session_log - INFO: start capture is in process...
+[2019-01-13 23:43:18.980] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:20.921] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:43:20.923] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:20.924] - cafe.sessions.session_srv.tg1.session_log - INFO: start capture is done!
+[2019-01-13 23:43:20.925] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:20.926] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:43:20.927] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:20.931] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:43:21.941] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.start_capture
+[2019-01-13 23:43:21.944] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.start_capture
+[2019-01-13 23:43:21.946] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Config Packet Buffers
+[2019-01-13 23:43:21.954] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:43:21.955] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:43:21.955] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:21.962] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::packetConfigBuffers port2 stop {}
+[2019-01-13 23:43:21.963] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture buffer is in process...
+[2019-01-13 23:43:21.963] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:21.977] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:43:21.977] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:21.978] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture buffer is done!
+[2019-01-13 23:43:21.979] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:21.979] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:43:21.980] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:21.983] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Config Packet Buffers
+[2019-01-13 23:43:21.985] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:43:22.0] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port2} start
+[2019-01-13 23:43:22.1] - cafe.sessions.session_srv.tg1.session_log - INFO: start capture is in process...
+[2019-01-13 23:43:22.2] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:23.837] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:43:23.843] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:23.844] - cafe.sessions.session_srv.tg1.session_log - INFO: start capture is done!
+[2019-01-13 23:43:23.845] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:23.845] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:43:23.846] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:23.849] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:43:24.856] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.start_capture
+[2019-01-13 23:43:24.858] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Start All Traffic
+[2019-01-13 23:43:24.864] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:43:24.865] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:43:24.866] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:24.888] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:43:24.891] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:43:24.891] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:24.897] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::start_all_traffic {port1 port2}
+[2019-01-13 23:43:24.902] - cafe.sessions.session_srv.tg1.session_log - INFO: start traffic is in process...
+[2019-01-13 23:43:24.907] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:31.738] - cafe.sessions.session_srv.tg1.session_log - INFO: start all traffic is done!
+[2019-01-13 23:43:31.739] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:34.734] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Start All Traffic
+[2019-01-13 23:43:44.739] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Stop All Traffic
+[2019-01-13 23:43:44.751] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:43:44.752] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:43:44.753] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:44.762] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:43:44.763] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:43:44.765] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:44.782] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::stop_all_traffic {port1 port2}
+[2019-01-13 23:43:44.786] - cafe.sessions.session_srv.tg1.session_log - INFO: stop traffic is in process...
+[2019-01-13 23:43:44.803] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:50.897] - cafe.sessions.session_srv.tg1.session_log - INFO: stop all traffic is done!
+[2019-01-13 23:43:50.900] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:43:53.945] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Stop All Traffic
+[2019-01-13 23:43:58.950] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.stop_capture
+[2019-01-13 23:43:58.952] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:43:58.970] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port1} stop
+[2019-01-13 23:43:58.975] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is in process...
+[2019-01-13 23:43:58.976] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:00.569] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:44:00.576] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:00.586] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is done!
+[2019-01-13 23:44:00.591] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:00.594] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:44:00.594] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:00.600] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:44:01.606] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.stop_capture
+[2019-01-13 23:44:01.609] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.stop_capture
+[2019-01-13 23:44:01.611] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:44:01.624] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port2} stop
+[2019-01-13 23:44:01.626] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is in process...
+[2019-01-13 23:44:01.627] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:03.706] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:44:03.708] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:03.709] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is done!
+[2019-01-13 23:44:03.709] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:03.713] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:44:03.718] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:03.728] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:44:04.736] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.stop_capture
+[2019-01-13 23:44:04.739] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Verify Traffic Loss Rate For All Streams Is Within
+[2019-01-13 23:44:04.764] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_stats streams 11/9 {}
+[2019-01-13 23:44:04.765] - cafe.sessions.session_srv.tg1.session_log - INFO: Retrieves streams traffic statistics is in process...
+[2019-01-13 23:44:04.766] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.840] - cafe.sessions.session_srv.tg1.session_log - INFO: {port1 {{stream {{streamblock2 {{rx {{misinserted_pkts 0} {total_pkt_bytes 15740928} {prbs_bit_errors 0} {ipv4_outer_present 0} {min_delay 5.24} {ipv6_outer_present 0} {rx_sig_count 31232} {max_delay 6.18} {avg_delay 5.829887535220287} {duplicate_pkts 0} {out_of_sequence_pkts 0} {total_pkts 31232} {rx_sig_rate 0} {dropped_pkts 95} {first_tstamp 0.0} {udp_present 1} {total_pkt_bit_rate 0} {ipv4_present 1} {min_pkt_length 0} {last_tstamp 0.0} {total_pkt_rate 0} {max_pkt_length 0} {ipv6_present 0} {rx_port {10.245.252.60-11-8 //11/8  10.245.252.60-11-8 //11/8 }} {tcp_present 0} {dropped_pkts_percent 0.3032527851374214}}} {tx {{total_pkt_bytes 16039424} {total_pkt_rate 0} {total_pkts 31327} {ipv4_outer_present 0} {udp_present 1} {ipv6_present 0} {total_pkt_bit_rate 0} {ipv6_outer_present 0} {tcp_present 0} {ipv4_present 1}}}}}}}}} {status 1}
+[2019-01-13 23:44:04.850] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.853] - cafe.sessions.session_srv.tg1.session_log - INFO: streams traffic stats is done!
+[2019-01-13 23:44:04.855] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.857] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:44:04.859] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.861] - cafe.sessions.session_srv.tg1.session_log - INFO: {port1 {{stream {{streamblock2 {{rx {{misinserted_pkts 0} {total_pkt_bytes 15740928} {prbs_bit_errors 0} {ipv4_outer_present 0} {min_delay 5.24} {ipv6_outer_present 0} {rx_sig_count 31232} {max_delay 6.18} {avg_delay 5.829887535220287} {duplicate_pkts 0} {out_of_sequence_pkts 0} {total_pkts 31232} {rx_sig_rate 0} {dropped_pkts 95} {first_tstamp 0.0} {udp_present 1} {total_pkt_bit_rate 0} {ipv4_present 1} {min_pkt_length 0} {last_tstamp 0.0} {total_pkt_rate 0} {max_pkt_length 0} {ipv6_present 0} {rx_port {10.245.252.60-11-8 //11/8  10.245.252.60-11-8 //11/8 }} {tcp_present 0} {dropped_pkts_percent 0.3032527851374214}}} {tx {{total_pkt_bytes 16039424} {total_pkt_rate 0} {total_pkts 31327} {ipv4_outer_present 0} {udp_present 1} {ipv6_present 0} {total_pkt_bit_rate 0} {ipv6_outer_present 0} {tcp_present 0} {ipv4_present 1}}}}}}}}} {status 1}
+[2019-01-13 23:44:04.862] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.887] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::print_stats 
+[2019-01-13 23:44:04.888] - cafe.sessions.session_srv.tg1.session_log - INFO: printing stats...
+[2019-01-13 23:44:04.889] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.893] - cafe.sessions.session_srv.tg1.session_log - INFO: #############################################
+[2019-01-13 23:44:04.894] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.895] - cafe.sessions.session_srv.tg1.session_log - INFO: port1:
+[2019-01-13 23:44:04.896] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.897] - cafe.sessions.session_srv.tg1.session_log - INFO:     stream:
+[2019-01-13 23:44:04.898] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.899] - cafe.sessions.session_srv.tg1.session_log - INFO:         streamblock2:
+[2019-01-13 23:44:04.899] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.900] - cafe.sessions.session_srv.tg1.session_log - INFO:             rx:
+[2019-01-13 23:44:04.901] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.901] - cafe.sessions.session_srv.tg1.session_log - INFO:                 misinserted_pkts: 0
+[2019-01-13 23:44:04.902] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.902] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bytes: 15740928
+[2019-01-13 23:44:04.903] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.906] - cafe.sessions.session_srv.tg1.session_log - INFO:                 prbs_bit_errors: 0
+[2019-01-13 23:44:04.907] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.908] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_outer_present: 0
+[2019-01-13 23:44:04.908] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.909] - cafe.sessions.session_srv.tg1.session_log - INFO:                 min_delay: 5.24
+[2019-01-13 23:44:04.910] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.910] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_outer_present: 0
+[2019-01-13 23:44:04.911] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.912] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_sig_count: 31232
+[2019-01-13 23:44:04.912] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.913] - cafe.sessions.session_srv.tg1.session_log - INFO:                 max_delay: 6.18
+[2019-01-13 23:44:04.914] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.914] - cafe.sessions.session_srv.tg1.session_log - INFO:                 avg_delay: 5.829887535220287
+[2019-01-13 23:44:04.915] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.916] - cafe.sessions.session_srv.tg1.session_log - INFO:                 duplicate_pkts: 0
+[2019-01-13 23:44:04.916] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.917] - cafe.sessions.session_srv.tg1.session_log - INFO:                 out_of_sequence_pkts: 0
+[2019-01-13 23:44:04.918] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.918] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkts: 31232
+[2019-01-13 23:44:04.919] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.919] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_sig_rate: 0
+[2019-01-13 23:44:04.920] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.920] - cafe.sessions.session_srv.tg1.session_log - INFO:                 dropped_pkts: 95
+[2019-01-13 23:44:04.921] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.922] - cafe.sessions.session_srv.tg1.session_log - INFO:                 first_tstamp: 0.0
+[2019-01-13 23:44:04.922] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.923] - cafe.sessions.session_srv.tg1.session_log - INFO:                 udp_present: 1
+[2019-01-13 23:44:04.924] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.925] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bit_rate: 0
+[2019-01-13 23:44:04.925] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.926] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_present: 1
+[2019-01-13 23:44:04.927] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.927] - cafe.sessions.session_srv.tg1.session_log - INFO:                 min_pkt_length: 0
+[2019-01-13 23:44:04.928] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.931] - cafe.sessions.session_srv.tg1.session_log - INFO:                 last_tstamp: 0.0
+[2019-01-13 23:44:04.939] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.951] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_rate: 0
+[2019-01-13 23:44:04.960] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.961] - cafe.sessions.session_srv.tg1.session_log - INFO:                 max_pkt_length: 0
+[2019-01-13 23:44:04.961] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.962] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_present: 0
+[2019-01-13 23:44:04.963] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.963] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_port: 10.245.252.60-11-8 //11/8  10.245.252.60-11-8 //11/8 
+[2019-01-13 23:44:04.964] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.965] - cafe.sessions.session_srv.tg1.session_log - INFO:                 tcp_present: 0
+[2019-01-13 23:44:04.965] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.966] - cafe.sessions.session_srv.tg1.session_log - INFO:                 dropped_pkts_percent: 0.3032527851374214
+[2019-01-13 23:44:04.967] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.968] - cafe.sessions.session_srv.tg1.session_log - INFO:             tx:
+[2019-01-13 23:44:04.972] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.974] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bytes: 16039424
+[2019-01-13 23:44:04.975] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.976] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_rate: 0
+[2019-01-13 23:44:04.985] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.989] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkts: 31327
+[2019-01-13 23:44:04.990] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.994] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_outer_present: 0
+[2019-01-13 23:44:04.995] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.996] - cafe.sessions.session_srv.tg1.session_log - INFO:                 udp_present: 1
+[2019-01-13 23:44:04.997] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.997] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_present: 0
+[2019-01-13 23:44:04.998] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:04.999] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bit_rate: 0
+[2019-01-13 23:44:04.999] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.0] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_outer_present: 0
+[2019-01-13 23:44:05.0] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.1] - cafe.sessions.session_srv.tg1.session_log - INFO:                 tcp_present: 0
+[2019-01-13 23:44:05.1] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.2] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_present: 1
+[2019-01-13 23:44:05.3] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.3] - cafe.sessions.session_srv.tg1.session_log - INFO: status: 1
+[2019-01-13 23:44:05.4] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.4] - cafe.sessions.session_srv.tg1.session_log - INFO: #############################################
+[2019-01-13 23:44:05.5] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.5] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:44:05.6] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.322] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_stats streams 11/8 {}
+[2019-01-13 23:44:05.334] - cafe.sessions.session_srv.tg1.session_log - INFO: Retrieves streams traffic statistics is in process...
+[2019-01-13 23:44:05.336] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.358] - cafe.sessions.session_srv.tg1.session_log - INFO: {port2 {{stream {{streamblock1 {{rx {{misinserted_pkts 0} {total_pkt_bytes 16302520} {prbs_bit_errors 0} {ipv4_outer_present 0} {min_delay 5.215} {ipv6_outer_present 0} {rx_sig_count 31351} {max_delay 6.0225} {avg_delay 5.740457959873688} {duplicate_pkts 0} {out_of_sequence_pkts 0} {total_pkts 31351} {rx_sig_rate 0} {dropped_pkts 0} {first_tstamp 0.0} {udp_present 1} {total_pkt_bit_rate 0} {ipv4_present 1} {min_pkt_length 0} {last_tstamp 0.0} {total_pkt_rate 0} {max_pkt_length 0} {ipv6_present 0} {rx_port {10.245.252.60-11-9 //11/9  10.245.252.60-11-9 //11/9 }} {tcp_present 0} {dropped_pkts_percent 0.0}}} {tx {{total_pkt_bytes 16051712} {total_pkt_rate 0} {total_pkts 31351} {ipv4_outer_present 0} {udp_present 1} {ipv6_present 0} {total_pkt_bit_rate 0} {ipv6_outer_present 0} {tcp_present 0} {ipv4_present 1}}}}}}}}} {status 1}
+[2019-01-13 23:44:05.366] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.373] - cafe.sessions.session_srv.tg1.session_log - INFO: streams traffic stats is done!
+[2019-01-13 23:44:05.374] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.375] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:44:05.375] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.376] - cafe.sessions.session_srv.tg1.session_log - INFO: {port2 {{stream {{streamblock1 {{rx {{misinserted_pkts 0} {total_pkt_bytes 16302520} {prbs_bit_errors 0} {ipv4_outer_present 0} {min_delay 5.215} {ipv6_outer_present 0} {rx_sig_count 31351} {max_delay 6.0225} {avg_delay 5.740457959873688} {duplicate_pkts 0} {out_of_sequence_pkts 0} {total_pkts 31351} {rx_sig_rate 0} {dropped_pkts 0} {first_tstamp 0.0} {udp_present 1} {total_pkt_bit_rate 0} {ipv4_present 1} {min_pkt_length 0} {last_tstamp 0.0} {total_pkt_rate 0} {max_pkt_length 0} {ipv6_present 0} {rx_port {10.245.252.60-11-9 //11/9  10.245.252.60-11-9 //11/9 }} {tcp_present 0} {dropped_pkts_percent 0.0}}} {tx {{total_pkt_bytes 16051712} {total_pkt_rate 0} {total_pkts 31351} {ipv4_outer_present 0} {udp_present 1} {ipv6_present 0} {total_pkt_bit_rate 0} {ipv6_outer_present 0} {tcp_present 0} {ipv4_present 1}}}}}}}}} {status 1}
+[2019-01-13 23:44:05.376] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.389] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::print_stats 
+[2019-01-13 23:44:05.390] - cafe.sessions.session_srv.tg1.session_log - INFO: printing stats...
+[2019-01-13 23:44:05.390] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.391] - cafe.sessions.session_srv.tg1.session_log - INFO: #############################################
+[2019-01-13 23:44:05.391] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.393] - cafe.sessions.session_srv.tg1.session_log - INFO: port2:
+[2019-01-13 23:44:05.393] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.394] - cafe.sessions.session_srv.tg1.session_log - INFO:     stream:
+[2019-01-13 23:44:05.395] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.395] - cafe.sessions.session_srv.tg1.session_log - INFO:         streamblock1:
+[2019-01-13 23:44:05.396] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.396] - cafe.sessions.session_srv.tg1.session_log - INFO:             rx:
+[2019-01-13 23:44:05.397] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.398] - cafe.sessions.session_srv.tg1.session_log - INFO:                 misinserted_pkts: 0
+[2019-01-13 23:44:05.398] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.399] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bytes: 16302520
+[2019-01-13 23:44:05.399] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.400] - cafe.sessions.session_srv.tg1.session_log - INFO:                 prbs_bit_errors: 0
+[2019-01-13 23:44:05.401] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.401] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_outer_present: 0
+[2019-01-13 23:44:05.402] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.402] - cafe.sessions.session_srv.tg1.session_log - INFO:                 min_delay: 5.215
+[2019-01-13 23:44:05.403] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.404] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_outer_present: 0
+[2019-01-13 23:44:05.404] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.405] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_sig_count: 31351
+[2019-01-13 23:44:05.406] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.406] - cafe.sessions.session_srv.tg1.session_log - INFO:                 max_delay: 6.0225
+[2019-01-13 23:44:05.407] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.407] - cafe.sessions.session_srv.tg1.session_log - INFO:                 avg_delay: 5.740457959873688
+[2019-01-13 23:44:05.408] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.409] - cafe.sessions.session_srv.tg1.session_log - INFO:                 duplicate_pkts: 0
+[2019-01-13 23:44:05.409] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.410] - cafe.sessions.session_srv.tg1.session_log - INFO:                 out_of_sequence_pkts: 0
+[2019-01-13 23:44:05.411] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.411] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkts: 31351
+[2019-01-13 23:44:05.412] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.412] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_sig_rate: 0
+[2019-01-13 23:44:05.413] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.414] - cafe.sessions.session_srv.tg1.session_log - INFO:                 dropped_pkts: 0
+[2019-01-13 23:44:05.414] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.415] - cafe.sessions.session_srv.tg1.session_log - INFO:                 first_tstamp: 0.0
+[2019-01-13 23:44:05.415] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.416] - cafe.sessions.session_srv.tg1.session_log - INFO:                 udp_present: 1
+[2019-01-13 23:44:05.417] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.417] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bit_rate: 0
+[2019-01-13 23:44:05.418] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.419] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_present: 1
+[2019-01-13 23:44:05.419] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.420] - cafe.sessions.session_srv.tg1.session_log - INFO:                 min_pkt_length: 0
+[2019-01-13 23:44:05.420] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.421] - cafe.sessions.session_srv.tg1.session_log - INFO:                 last_tstamp: 0.0
+[2019-01-13 23:44:05.421] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.422] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_rate: 0
+[2019-01-13 23:44:05.422] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.423] - cafe.sessions.session_srv.tg1.session_log - INFO:                 max_pkt_length: 0
+[2019-01-13 23:44:05.423] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.424] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_present: 0
+[2019-01-13 23:44:05.424] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.425] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_port: 10.245.252.60-11-9 //11/9  10.245.252.60-11-9 //11/9 
+[2019-01-13 23:44:05.426] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.426] - cafe.sessions.session_srv.tg1.session_log - INFO:                 tcp_present: 0
+[2019-01-13 23:44:05.427] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.427] - cafe.sessions.session_srv.tg1.session_log - INFO:                 dropped_pkts_percent: 0.0
+[2019-01-13 23:44:05.428] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.429] - cafe.sessions.session_srv.tg1.session_log - INFO:             tx:
+[2019-01-13 23:44:05.429] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.430] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bytes: 16051712
+[2019-01-13 23:44:05.430] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.431] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_rate: 0
+[2019-01-13 23:44:05.431] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.432] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkts: 31351
+[2019-01-13 23:44:05.433] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.433] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_outer_present: 0
+[2019-01-13 23:44:05.434] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.435] - cafe.sessions.session_srv.tg1.session_log - INFO:                 udp_present: 1
+[2019-01-13 23:44:05.436] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.437] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_present: 0
+[2019-01-13 23:44:05.438] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.438] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bit_rate: 0
+[2019-01-13 23:44:05.439] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.439] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_outer_present: 0
+[2019-01-13 23:44:05.440] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.441] - cafe.sessions.session_srv.tg1.session_log - INFO:                 tcp_present: 0
+[2019-01-13 23:44:05.441] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.442] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_present: 1
+[2019-01-13 23:44:05.442] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.443] - cafe.sessions.session_srv.tg1.session_log - INFO: status: 1
+[2019-01-13 23:44:05.443] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.444] - cafe.sessions.session_srv.tg1.session_log - INFO: #############################################
+[2019-01-13 23:44:05.444] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.445] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:44:05.445] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:05.725] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Verify Traffic Loss Rate For All Streams Is Within
+[2019-01-13 23:44:05.733] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Store Captured Packets
+[2019-01-13 23:44:05.751] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_stats port1 /tmp/tc_add_cevlan_tag_service_p1.pcap pcap {}
+[2019-01-13 23:44:05.752] - cafe.sessions.session_srv.tg1.session_log - INFO: get capture stats is in process...
+[2019-01-13 23:44:05.753] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:11.218] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:44:11.223] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:11.224] - cafe.sessions.session_srv.tg1.session_log - INFO: get capture stats is done!
+[2019-01-13 23:44:11.225] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:11.226] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:44:11.226] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:11.229] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Store Captured Packets
+[2019-01-13 23:44:11.231] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Store Captured Packets
+[2019-01-13 23:44:11.245] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_stats port2 /tmp/tc_add_cevlan_tag_subscriber_p1.pcap pcap {}
+[2019-01-13 23:44:11.250] - cafe.sessions.session_srv.tg1.session_log - INFO: get capture stats is in process...
+[2019-01-13 23:44:11.254] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:16.657] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:44:16.658] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:16.658] - cafe.sessions.session_srv.tg1.session_log - INFO: get capture stats is done!
+[2019-01-13 23:44:16.659] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:16.660] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:44:16.660] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:44:16.663] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Store Captured Packets
+[2019-01-13 23:45:42.683] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Teardown Keyword: template_bidirection_raw_traffic_and_check.traffic_teardown
+[2019-01-13 23:45:42.685] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:45:42.688] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_tg.stop_capture
+[2019-01-13 23:45:42.689] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:45:42.756] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port1} stop
+[2019-01-13 23:45:42.764] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is in process...
+[2019-01-13 23:45:42.766] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:45:44.30] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:45:44.37] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:45:44.45] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is done!
+[2019-01-13 23:45:44.59] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:45:44.60] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:45:44.62] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:45:44.65] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:45:45.71] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_tg.stop_capture
+[2019-01-13 23:45:45.78] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:45:45.80] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:45:45.81] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_tg.stop_capture
+[2019-01-13 23:45:45.83] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:45:45.99] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port2} stop
+[2019-01-13 23:45:45.100] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is in process...
+[2019-01-13 23:45:45.100] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:45:45.658] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:45:45.659] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:45:45.660] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is done!
+[2019-01-13 23:45:45.660] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:45:45.661] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:45:45.661] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:45:45.663] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:45:46.668] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_tg.stop_capture
+[2019-01-13 23:45:46.670] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:45:46.672] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:45:46.673] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Stop All Traffic
+[2019-01-13 23:45:46.685] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:45:46.686] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:45:46.686] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:45:46.692] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:45:46.692] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:45:46.693] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:45:46.702] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::stop_all_traffic {port1 port2}
+[2019-01-13 23:45:46.703] - cafe.sessions.session_srv.tg1.session_log - INFO: stop traffic is in process...
+[2019-01-13 23:45:46.704] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:45:51.938] - cafe.sessions.session_srv.tg1.session_log - INFO: stop all traffic is done!
+[2019-01-13 23:45:51.938] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:45:54.945] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Stop All Traffic
+[2019-01-13 23:45:54.946] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:45:54.948] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Delete All Traffic
+[2019-01-13 23:45:54.954] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:45:54.954] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:45:54.955] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:45:54.972] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:45:54.974] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:45:54.981] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:45:55.2] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::stop_all_traffic {port1 port2}
+[2019-01-13 23:45:55.12] - cafe.sessions.session_srv.tg1.session_log - INFO: stop traffic is in process...
+[2019-01-13 23:45:55.13] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:00.999] - cafe.sessions.session_srv.tg1.session_log - INFO: stop all traffic is done!
+[2019-01-13 23:46:01.11] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:08.20] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_conf reset None {}
+[2019-01-13 23:46:08.32] - cafe.sessions.session_srv.tg1.session_log - INFO: reset traffic is in process...
+[2019-01-13 23:46:08.42] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:10.533] - cafe.sessions.session_srv.tg1.session_log - INFO: reset traffic is done!
+[2019-01-13 23:46:10.543] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:10.555] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:46:10.556] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:10.667] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Delete All Traffic
+[2019-01-13 23:46:10.669] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Teardown Keyword: template_bidirection_raw_traffic_and_check.traffic_teardown
+[2019-01-13 23:46:10.672] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<Exit Keyword: template_bidirection_raw_traffic_and_check.template_bidirection_raw_traffic_and_check
+[2019-01-13 23:46:20.374] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<Exit Case: tc_add_cevlan_tag
+[2019-01-13 23:46:20.460] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<Exit Suite: Tc Add Cevlan Tag
+[2019-01-13 23:46:20.639] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>Enter Suite: Tc Remove Cevlan
+[2019-01-13 23:46:20.701] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>Enter Case: tc_remove_cevlan
+[2019-01-13 23:46:33.169] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>Enter Keyword: template_bidirection_raw_traffic_and_check.template_bidirection_raw_traffic_and_check
+[2019-01-13 23:46:33.191] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.create_raw_traffic_udp
+[2019-01-13 23:46:33.206] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 23:46:33.208] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Create Single Tagged Stream On Port
+[2019-01-13 23:46:33.409] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_conf create 11/8 { -vlan_user_priority 0 -mac_src 00:00:00:11:11:11 -l4_protocol udp -name upstream -ip_dst_addr 10.1.67.100 -mac_dst 00:00:00:67:00:01 -frame_size 512 -udp_src_port 6000 -ip_src_addr 10.1.67.10 -rate_bps 10000000 -length_mode fixed -l2_encap ethernet_ii_vlan -l3_protocol ipv4 -udp_dst_port 6000 -vlan_id 4008}
+[2019-01-13 23:46:33.410] - cafe.sessions.session_srv.tg1.session_log - INFO: create traffic is in process...
+[2019-01-13 23:46:33.412] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:34.233] - cafe.sessions.session_srv.tg1.session_log - INFO: create traffic is done!
+[2019-01-13 23:46:34.238] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:34.238] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:46:34.239] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:34.240] - cafe.sessions.session_srv.tg1.session_log - INFO: streamblock3
+[2019-01-13 23:46:34.240] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:34.296] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Create Single Tagged Stream On Port
+[2019-01-13 23:46:34.298] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 23:46:34.299] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.create_raw_traffic_udp
+[2019-01-13 23:46:34.319] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.create_raw_traffic_udp
+[2019-01-13 23:46:34.333] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 23:46:34.335] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Create Single Tagged Stream On Port
+[2019-01-13 23:46:34.394] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_conf create 11/9 { -vlan_user_priority 0 -mac_src 00:00:00:67:00:01 -l4_protocol udp -name downstream -ip_dst_addr 10.1.67.10 -mac_dst 00:00:00:11:11:11 -frame_size 512 -udp_src_port 6000 -ip_src_addr 10.1.67.100 -rate_bps 10000000 -length_mode fixed -l2_encap ethernet_ii_vlan -l3_protocol ipv4 -udp_dst_port 6000 -vlan_id 4002}
+[2019-01-13 23:46:34.405] - cafe.sessions.session_srv.tg1.session_log - INFO: create traffic is in process...
+[2019-01-13 23:46:34.418] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:35.472] - cafe.sessions.session_srv.tg1.session_log - INFO: create traffic is done!
+[2019-01-13 23:46:35.483] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:35.484] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:46:35.484] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:35.485] - cafe.sessions.session_srv.tg1.session_log - INFO: streamblock4
+[2019-01-13 23:46:35.486] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:35.534] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Create Single Tagged Stream On Port
+[2019-01-13 23:46:35.535] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 23:46:35.537] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.create_raw_traffic_udp
+[2019-01-13 23:46:35.541] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Clear Traffic Stats
+[2019-01-13 23:46:35.547] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_ctrl clear_stats 11/9 {}
+[2019-01-13 23:46:35.551] - cafe.sessions.session_srv.tg1.session_log - INFO: 11/9 clear_stats traffic is in process...
+[2019-01-13 23:46:35.554] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:35.559] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:46:35.560] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:36.79] - cafe.sessions.session_srv.tg1.session_log - INFO: clear_stats traffic is done!
+[2019-01-13 23:46:36.80] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:36.81] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:46:36.82] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:39.85] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_ctrl clear_stats 11/8 {}
+[2019-01-13 23:46:39.91] - cafe.sessions.session_srv.tg1.session_log - INFO: 11/8 clear_stats traffic is in process...
+[2019-01-13 23:46:39.92] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:39.93] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:46:39.94] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:39.613] - cafe.sessions.session_srv.tg1.session_log - INFO: clear_stats traffic is done!
+[2019-01-13 23:46:39.615] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:39.615] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:46:39.616] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:42.599] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Clear Traffic Stats
+[2019-01-13 23:46:42.601] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.start_capture
+[2019-01-13 23:46:42.603] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Config Packet Buffers
+[2019-01-13 23:46:42.611] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:46:42.611] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:46:42.612] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:42.619] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::packetConfigBuffers port1 stop {}
+[2019-01-13 23:46:42.634] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture buffer is in process...
+[2019-01-13 23:46:42.642] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:42.649] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:46:42.650] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:42.650] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture buffer is done!
+[2019-01-13 23:46:42.651] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:42.652] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:46:42.653] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:42.656] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Config Packet Buffers
+[2019-01-13 23:46:42.658] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:46:42.666] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port1} start
+[2019-01-13 23:46:42.666] - cafe.sessions.session_srv.tg1.session_log - INFO: start capture is in process...
+[2019-01-13 23:46:42.668] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:44.42] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:46:44.44] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:44.45] - cafe.sessions.session_srv.tg1.session_log - INFO: start capture is done!
+[2019-01-13 23:46:44.47] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:44.48] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:46:44.49] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:44.60] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:46:45.71] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.start_capture
+[2019-01-13 23:46:45.79] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.start_capture
+[2019-01-13 23:46:45.80] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Config Packet Buffers
+[2019-01-13 23:46:45.86] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:46:45.87] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:46:45.87] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:45.95] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::packetConfigBuffers port2 stop {}
+[2019-01-13 23:46:45.97] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture buffer is in process...
+[2019-01-13 23:46:45.101] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:45.109] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:46:45.109] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:45.110] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture buffer is done!
+[2019-01-13 23:46:45.111] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:45.111] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:46:45.112] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:45.115] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Config Packet Buffers
+[2019-01-13 23:46:45.117] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:46:45.125] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port2} start
+[2019-01-13 23:46:45.128] - cafe.sessions.session_srv.tg1.session_log - INFO: start capture is in process...
+[2019-01-13 23:46:45.129] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:47.164] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:46:47.165] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:47.166] - cafe.sessions.session_srv.tg1.session_log - INFO: start capture is done!
+[2019-01-13 23:46:47.166] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:47.167] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:46:47.167] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:47.170] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:46:48.176] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.start_capture
+[2019-01-13 23:46:48.179] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Start All Traffic
+[2019-01-13 23:46:48.184] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:46:48.185] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:46:48.186] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:48.192] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:46:48.192] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:46:48.193] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:48.209] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::start_all_traffic {port1 port2}
+[2019-01-13 23:46:48.212] - cafe.sessions.session_srv.tg1.session_log - INFO: start traffic is in process...
+[2019-01-13 23:46:48.213] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:55.623] - cafe.sessions.session_srv.tg1.session_log - INFO: start all traffic is done!
+[2019-01-13 23:46:55.624] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:46:58.611] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Start All Traffic
+[2019-01-13 23:47:08.617] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Stop All Traffic
+[2019-01-13 23:47:08.637] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:47:08.644] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:47:08.646] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:08.671] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:47:08.679] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:47:08.682] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:08.708] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::stop_all_traffic {port1 port2}
+[2019-01-13 23:47:08.713] - cafe.sessions.session_srv.tg1.session_log - INFO: stop traffic is in process...
+[2019-01-13 23:47:08.716] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:14.873] - cafe.sessions.session_srv.tg1.session_log - INFO: stop all traffic is done!
+[2019-01-13 23:47:14.874] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:17.836] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Stop All Traffic
+[2019-01-13 23:47:22.852] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.stop_capture
+[2019-01-13 23:47:22.853] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:47:22.864] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port1} stop
+[2019-01-13 23:47:22.865] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is in process...
+[2019-01-13 23:47:22.867] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:24.366] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:47:24.367] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:24.368] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is done!
+[2019-01-13 23:47:24.369] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:24.369] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:47:24.370] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:24.373] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:47:25.378] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.stop_capture
+[2019-01-13 23:47:25.393] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.stop_capture
+[2019-01-13 23:47:25.394] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:47:25.403] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port2} stop
+[2019-01-13 23:47:25.407] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is in process...
+[2019-01-13 23:47:25.414] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:27.613] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:47:27.614] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:27.622] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is done!
+[2019-01-13 23:47:27.634] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:27.649] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:47:27.660] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:27.688] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:47:28.709] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.stop_capture
+[2019-01-13 23:47:28.712] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Verify Traffic Loss Rate For All Streams Is Within
+[2019-01-13 23:47:28.728] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_stats streams 11/9 {}
+[2019-01-13 23:47:28.728] - cafe.sessions.session_srv.tg1.session_log - INFO: Retrieves streams traffic statistics is in process...
+[2019-01-13 23:47:28.729] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:28.857] - cafe.sessions.session_srv.tg1.session_log - INFO: {port1 {{stream {{streamblock4 {{rx {{misinserted_pkts 0} {total_pkt_bytes 16125952} {prbs_bit_errors 0} {ipv4_outer_present 0} {min_delay 5.1875} {ipv6_outer_present 0} {rx_sig_count 31496} {max_delay 6.18} {avg_delay 5.827983474091948} {duplicate_pkts 0} {out_of_sequence_pkts 0} {total_pkts 31496} {rx_sig_rate 0} {dropped_pkts 57} {first_tstamp 0.0} {udp_present 1} {total_pkt_bit_rate 0} {ipv4_present 1} {min_pkt_length 0} {last_tstamp 0.0} {total_pkt_rate 0} {max_pkt_length 0} {ipv6_present 0} {rx_port {10.245.252.60-11-8 //11/8  10.245.252.60-11-8 //11/8 }} {tcp_present 0} {dropped_pkts_percent 0.18064843279561374}}} {tx {{total_pkt_bytes 16155136} {total_pkt_rate 0} {total_pkts 31553} {ipv4_outer_present 0} {udp_present 1} {ipv6_present 0} {total_pkt_bit_rate 0} {ipv6_outer_present 0} {tcp_present 0} {ipv4_present 1}}}}}}}}} {status 1}
+[2019-01-13 23:47:28.858] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:28.859] - cafe.sessions.session_srv.tg1.session_log - INFO: streams traffic stats is done!
+[2019-01-13 23:47:28.860] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:28.860] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:47:28.861] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:28.862] - cafe.sessions.session_srv.tg1.session_log - INFO: {port1 {{stream {{streamblock4 {{rx {{misinserted_pkts 0} {total_pkt_bytes 16125952} {prbs_bit_errors 0} {ipv4_outer_present 0} {min_delay 5.1875} {ipv6_outer_present 0} {rx_sig_count 31496} {max_delay 6.18} {avg_delay 5.827983474091948} {duplicate_pkts 0} {out_of_sequence_pkts 0} {total_pkts 31496} {rx_sig_rate 0} {dropped_pkts 57} {first_tstamp 0.0} {udp_present 1} {total_pkt_bit_rate 0} {ipv4_present 1} {min_pkt_length 0} {last_tstamp 0.0} {total_pkt_rate 0} {max_pkt_length 0} {ipv6_present 0} {rx_port {10.245.252.60-11-8 //11/8  10.245.252.60-11-8 //11/8 }} {tcp_present 0} {dropped_pkts_percent 0.18064843279561374}}} {tx {{total_pkt_bytes 16155136} {total_pkt_rate 0} {total_pkts 31553} {ipv4_outer_present 0} {udp_present 1} {ipv6_present 0} {total_pkt_bit_rate 0} {ipv6_outer_present 0} {tcp_present 0} {ipv4_present 1}}}}}}}}} {status 1}
+[2019-01-13 23:47:28.863] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:28.895] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::print_stats 
+[2019-01-13 23:47:28.896] - cafe.sessions.session_srv.tg1.session_log - INFO: printing stats...
+[2019-01-13 23:47:28.908] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:28.910] - cafe.sessions.session_srv.tg1.session_log - INFO: #############################################
+[2019-01-13 23:47:28.913] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:28.913] - cafe.sessions.session_srv.tg1.session_log - INFO: port1:
+[2019-01-13 23:47:28.914] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:28.915] - cafe.sessions.session_srv.tg1.session_log - INFO:     stream:
+[2019-01-13 23:47:28.916] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:28.938] - cafe.sessions.session_srv.tg1.session_log - INFO:         streamblock4:
+[2019-01-13 23:47:28.957] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:28.979] - cafe.sessions.session_srv.tg1.session_log - INFO:             rx:
+[2019-01-13 23:47:28.983] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:28.986] - cafe.sessions.session_srv.tg1.session_log - INFO:                 misinserted_pkts: 0
+[2019-01-13 23:47:28.987] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:28.989] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bytes: 16125952
+[2019-01-13 23:47:28.993] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:28.995] - cafe.sessions.session_srv.tg1.session_log - INFO:                 prbs_bit_errors: 0
+[2019-01-13 23:47:28.997] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:28.998] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_outer_present: 0
+[2019-01-13 23:47:28.999] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.1] - cafe.sessions.session_srv.tg1.session_log - INFO:                 min_delay: 5.1875
+[2019-01-13 23:47:29.2] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.2] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_outer_present: 0
+[2019-01-13 23:47:29.3] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.4] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_sig_count: 31496
+[2019-01-13 23:47:29.4] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.5] - cafe.sessions.session_srv.tg1.session_log - INFO:                 max_delay: 6.18
+[2019-01-13 23:47:29.6] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.6] - cafe.sessions.session_srv.tg1.session_log - INFO:                 avg_delay: 5.827983474091948
+[2019-01-13 23:47:29.7] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.8] - cafe.sessions.session_srv.tg1.session_log - INFO:                 duplicate_pkts: 0
+[2019-01-13 23:47:29.9] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.10] - cafe.sessions.session_srv.tg1.session_log - INFO:                 out_of_sequence_pkts: 0
+[2019-01-13 23:47:29.11] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.11] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkts: 31496
+[2019-01-13 23:47:29.12] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.13] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_sig_rate: 0
+[2019-01-13 23:47:29.14] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.14] - cafe.sessions.session_srv.tg1.session_log - INFO:                 dropped_pkts: 57
+[2019-01-13 23:47:29.15] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.15] - cafe.sessions.session_srv.tg1.session_log - INFO:                 first_tstamp: 0.0
+[2019-01-13 23:47:29.16] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.17] - cafe.sessions.session_srv.tg1.session_log - INFO:                 udp_present: 1
+[2019-01-13 23:47:29.18] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.19] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bit_rate: 0
+[2019-01-13 23:47:29.28] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.32] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_present: 1
+[2019-01-13 23:47:29.33] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.35] - cafe.sessions.session_srv.tg1.session_log - INFO:                 min_pkt_length: 0
+[2019-01-13 23:47:29.35] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.37] - cafe.sessions.session_srv.tg1.session_log - INFO:                 last_tstamp: 0.0
+[2019-01-13 23:47:29.38] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.39] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_rate: 0
+[2019-01-13 23:47:29.40] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.41] - cafe.sessions.session_srv.tg1.session_log - INFO:                 max_pkt_length: 0
+[2019-01-13 23:47:29.42] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.42] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_present: 0
+[2019-01-13 23:47:29.43] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.44] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_port: 10.245.252.60-11-8 //11/8  10.245.252.60-11-8 //11/8 
+[2019-01-13 23:47:29.45] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.45] - cafe.sessions.session_srv.tg1.session_log - INFO:                 tcp_present: 0
+[2019-01-13 23:47:29.46] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.52] - cafe.sessions.session_srv.tg1.session_log - INFO:                 dropped_pkts_percent: 0.18064843279561374
+[2019-01-13 23:47:29.54] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.56] - cafe.sessions.session_srv.tg1.session_log - INFO:             tx:
+[2019-01-13 23:47:29.57] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.68] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bytes: 16155136
+[2019-01-13 23:47:29.70] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.72] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_rate: 0
+[2019-01-13 23:47:29.74] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.75] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkts: 31553
+[2019-01-13 23:47:29.86] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.88] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_outer_present: 0
+[2019-01-13 23:47:29.90] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.91] - cafe.sessions.session_srv.tg1.session_log - INFO:                 udp_present: 1
+[2019-01-13 23:47:29.92] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.94] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_present: 0
+[2019-01-13 23:47:29.95] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.96] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bit_rate: 0
+[2019-01-13 23:47:29.97] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.98] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_outer_present: 0
+[2019-01-13 23:47:29.99] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.100] - cafe.sessions.session_srv.tg1.session_log - INFO:                 tcp_present: 0
+[2019-01-13 23:47:29.101] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.102] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_present: 1
+[2019-01-13 23:47:29.102] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.103] - cafe.sessions.session_srv.tg1.session_log - INFO: status: 1
+[2019-01-13 23:47:29.104] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.105] - cafe.sessions.session_srv.tg1.session_log - INFO: #############################################
+[2019-01-13 23:47:29.106] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.106] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:47:29.107] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.855] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_stats streams 11/8 {}
+[2019-01-13 23:47:29.856] - cafe.sessions.session_srv.tg1.session_log - INFO: Retrieves streams traffic statistics is in process...
+[2019-01-13 23:47:29.856] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.910] - cafe.sessions.session_srv.tg1.session_log - INFO: {port2 {{stream {{streamblock3 {{rx {{misinserted_pkts 0} {total_pkt_bytes 16077312} {prbs_bit_errors 0} {ipv4_outer_present 0} {min_delay 5.2} {ipv6_outer_present 0} {rx_sig_count 31401} {max_delay 6.0125} {avg_delay 5.729402168720742} {duplicate_pkts 0} {out_of_sequence_pkts 0} {total_pkts 31401} {rx_sig_rate 0} {dropped_pkts 0} {first_tstamp 0.0} {udp_present 1} {total_pkt_bit_rate 0} {ipv4_present 1} {min_pkt_length 0} {last_tstamp 0.0} {total_pkt_rate 0} {max_pkt_length 0} {ipv6_present 0} {rx_port {10.245.252.60-11-9 //11/9  10.245.252.60-11-9 //11/9 }} {tcp_present 0} {dropped_pkts_percent 0.0}}} {tx {{total_pkt_bytes 16077312} {total_pkt_rate 0} {total_pkts 31401} {ipv4_outer_present 0} {udp_present 1} {ipv6_present 0} {total_pkt_bit_rate 0} {ipv6_outer_present 0} {tcp_present 0} {ipv4_present 1}}}}}}}}} {status 1}
+[2019-01-13 23:47:29.922] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.933] - cafe.sessions.session_srv.tg1.session_log - INFO: streams traffic stats is done!
+[2019-01-13 23:47:29.944] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.951] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:47:29.958] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:29.969] - cafe.sessions.session_srv.tg1.session_log - INFO: {port2 {{stream {{streamblock3 {{rx {{misinserted_pkts 0} {total_pkt_bytes 16077312} {prbs_bit_errors 0} {ipv4_outer_present 0} {min_delay 5.2} {ipv6_outer_present 0} {rx_sig_count 31401} {max_delay 6.0125} {avg_delay 5.729402168720742} {duplicate_pkts 0} {out_of_sequence_pkts 0} {total_pkts 31401} {rx_sig_rate 0} {dropped_pkts 0} {first_tstamp 0.0} {udp_present 1} {total_pkt_bit_rate 0} {ipv4_present 1} {min_pkt_length 0} {last_tstamp 0.0} {total_pkt_rate 0} {max_pkt_length 0} {ipv6_present 0} {rx_port {10.245.252.60-11-9 //11/9  10.245.252.60-11-9 //11/9 }} {tcp_present 0} {dropped_pkts_percent 0.0}}} {tx {{total_pkt_bytes 16077312} {total_pkt_rate 0} {total_pkts 31401} {ipv4_outer_present 0} {udp_present 1} {ipv6_present 0} {total_pkt_bit_rate 0} {ipv6_outer_present 0} {tcp_present 0} {ipv4_present 1}}}}}}}}} {status 1}
+[2019-01-13 23:47:29.976] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.87] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::print_stats 
+[2019-01-13 23:47:30.94] - cafe.sessions.session_srv.tg1.session_log - INFO: printing stats...
+[2019-01-13 23:47:30.105] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.112] - cafe.sessions.session_srv.tg1.session_log - INFO: #############################################
+[2019-01-13 23:47:30.123] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.125] - cafe.sessions.session_srv.tg1.session_log - INFO: port2:
+[2019-01-13 23:47:30.126] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.133] - cafe.sessions.session_srv.tg1.session_log - INFO:     stream:
+[2019-01-13 23:47:30.140] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.147] - cafe.sessions.session_srv.tg1.session_log - INFO:         streamblock3:
+[2019-01-13 23:47:30.158] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.165] - cafe.sessions.session_srv.tg1.session_log - INFO:             rx:
+[2019-01-13 23:47:30.176] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.183] - cafe.sessions.session_srv.tg1.session_log - INFO:                 misinserted_pkts: 0
+[2019-01-13 23:47:30.190] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.197] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bytes: 16077312
+[2019-01-13 23:47:30.202] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.203] - cafe.sessions.session_srv.tg1.session_log - INFO:                 prbs_bit_errors: 0
+[2019-01-13 23:47:30.203] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.203] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_outer_present: 0
+[2019-01-13 23:47:30.204] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.204] - cafe.sessions.session_srv.tg1.session_log - INFO:                 min_delay: 5.2
+[2019-01-13 23:47:30.205] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.205] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_outer_present: 0
+[2019-01-13 23:47:30.206] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.206] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_sig_count: 31401
+[2019-01-13 23:47:30.207] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.208] - cafe.sessions.session_srv.tg1.session_log - INFO:                 max_delay: 6.0125
+[2019-01-13 23:47:30.208] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.209] - cafe.sessions.session_srv.tg1.session_log - INFO:                 avg_delay: 5.729402168720742
+[2019-01-13 23:47:30.209] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.210] - cafe.sessions.session_srv.tg1.session_log - INFO:                 duplicate_pkts: 0
+[2019-01-13 23:47:30.211] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.211] - cafe.sessions.session_srv.tg1.session_log - INFO:                 out_of_sequence_pkts: 0
+[2019-01-13 23:47:30.212] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.212] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkts: 31401
+[2019-01-13 23:47:30.213] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.213] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_sig_rate: 0
+[2019-01-13 23:47:30.214] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.214] - cafe.sessions.session_srv.tg1.session_log - INFO:                 dropped_pkts: 0
+[2019-01-13 23:47:30.215] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.215] - cafe.sessions.session_srv.tg1.session_log - INFO:                 first_tstamp: 0.0
+[2019-01-13 23:47:30.216] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.227] - cafe.sessions.session_srv.tg1.session_log - INFO:                 udp_present: 1
+[2019-01-13 23:47:30.240] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.251] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bit_rate: 0
+[2019-01-13 23:47:30.262] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.269] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_present: 1
+[2019-01-13 23:47:30.276] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.288] - cafe.sessions.session_srv.tg1.session_log - INFO:                 min_pkt_length: 0
+[2019-01-13 23:47:30.296] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.307] - cafe.sessions.session_srv.tg1.session_log - INFO:                 last_tstamp: 0.0
+[2019-01-13 23:47:30.314] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.321] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_rate: 0
+[2019-01-13 23:47:30.328] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.335] - cafe.sessions.session_srv.tg1.session_log - INFO:                 max_pkt_length: 0
+[2019-01-13 23:47:30.342] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.349] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_present: 0
+[2019-01-13 23:47:30.360] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.372] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_port: 10.245.252.60-11-9 //11/9  10.245.252.60-11-9 //11/9 
+[2019-01-13 23:47:30.383] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.390] - cafe.sessions.session_srv.tg1.session_log - INFO:                 tcp_present: 0
+[2019-01-13 23:47:30.397] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.408] - cafe.sessions.session_srv.tg1.session_log - INFO:                 dropped_pkts_percent: 0.0
+[2019-01-13 23:47:30.416] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.425] - cafe.sessions.session_srv.tg1.session_log - INFO:             tx:
+[2019-01-13 23:47:30.442] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.450] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bytes: 16077312
+[2019-01-13 23:47:30.457] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.468] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_rate: 0
+[2019-01-13 23:47:30.474] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.474] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkts: 31401
+[2019-01-13 23:47:30.475] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.476] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_outer_present: 0
+[2019-01-13 23:47:30.476] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.477] - cafe.sessions.session_srv.tg1.session_log - INFO:                 udp_present: 1
+[2019-01-13 23:47:30.477] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.478] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_present: 0
+[2019-01-13 23:47:30.478] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.479] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bit_rate: 0
+[2019-01-13 23:47:30.480] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.491] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_outer_present: 0
+[2019-01-13 23:47:30.503] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.509] - cafe.sessions.session_srv.tg1.session_log - INFO:                 tcp_present: 0
+[2019-01-13 23:47:30.509] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.510] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_present: 1
+[2019-01-13 23:47:30.511] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.511] - cafe.sessions.session_srv.tg1.session_log - INFO: status: 1
+[2019-01-13 23:47:30.512] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.512] - cafe.sessions.session_srv.tg1.session_log - INFO: #############################################
+[2019-01-13 23:47:30.513] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:30.514] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:47:30.514] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:31.450] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Verify Traffic Loss Rate For All Streams Is Within
+[2019-01-13 23:47:31.456] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Store Captured Packets
+[2019-01-13 23:47:31.467] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_stats port1 /tmp/tc_remove_cevlan_service_p1.pcap pcap {}
+[2019-01-13 23:47:31.467] - cafe.sessions.session_srv.tg1.session_log - INFO: get capture stats is in process...
+[2019-01-13 23:47:31.468] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:37.417] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:47:37.439] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:37.450] - cafe.sessions.session_srv.tg1.session_log - INFO: get capture stats is done!
+[2019-01-13 23:47:37.472] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:37.491] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:47:37.502] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:37.536] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Store Captured Packets
+[2019-01-13 23:47:37.549] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Store Captured Packets
+[2019-01-13 23:47:37.654] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_stats port2 /tmp/tc_remove_cevlan_subscriber_p1.pcap pcap {}
+[2019-01-13 23:47:37.655] - cafe.sessions.session_srv.tg1.session_log - INFO: get capture stats is in process...
+[2019-01-13 23:47:37.669] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:43.533] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:47:43.545] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:43.556] - cafe.sessions.session_srv.tg1.session_log - INFO: get capture stats is done!
+[2019-01-13 23:47:43.568] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:43.580] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:47:43.592] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:47:43.628] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Store Captured Packets
+[2019-01-13 23:49:05.393] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Teardown Keyword: template_bidirection_raw_traffic_and_check.traffic_teardown
+[2019-01-13 23:49:05.395] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:49:05.396] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_tg.stop_capture
+[2019-01-13 23:49:05.397] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:49:05.412] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port1} stop
+[2019-01-13 23:49:05.412] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is in process...
+[2019-01-13 23:49:05.414] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:06.787] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:49:06.789] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:06.791] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is done!
+[2019-01-13 23:49:06.793] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:06.795] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:49:06.797] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:06.802] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:49:07.809] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_tg.stop_capture
+[2019-01-13 23:49:07.811] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:49:07.815] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:49:07.816] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_tg.stop_capture
+[2019-01-13 23:49:07.818] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:49:07.842] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port2} stop
+[2019-01-13 23:49:07.847] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is in process...
+[2019-01-13 23:49:07.848] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:08.372] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:49:08.379] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:08.389] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is done!
+[2019-01-13 23:49:08.389] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:08.390] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:49:08.391] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:08.416] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:49:09.424] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_tg.stop_capture
+[2019-01-13 23:49:09.426] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:49:09.428] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:49:09.429] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Stop All Traffic
+[2019-01-13 23:49:09.438] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:49:09.439] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:49:09.440] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:09.476] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:49:09.477] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:49:09.478] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:09.490] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::stop_all_traffic {port1 port2}
+[2019-01-13 23:49:09.491] - cafe.sessions.session_srv.tg1.session_log - INFO: stop traffic is in process...
+[2019-01-13 23:49:09.499] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:14.633] - cafe.sessions.session_srv.tg1.session_log - INFO: stop all traffic is done!
+[2019-01-13 23:49:14.641] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:17.678] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Stop All Traffic
+[2019-01-13 23:49:17.680] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:49:17.682] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Delete All Traffic
+[2019-01-13 23:49:17.699] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:49:17.700] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:49:17.701] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:17.710] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:49:17.711] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:49:17.712] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:17.742] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::stop_all_traffic {port1 port2}
+[2019-01-13 23:49:17.749] - cafe.sessions.session_srv.tg1.session_log - INFO: stop traffic is in process...
+[2019-01-13 23:49:17.750] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:22.703] - cafe.sessions.session_srv.tg1.session_log - INFO: stop all traffic is done!
+[2019-01-13 23:49:22.704] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:29.729] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_conf reset None {}
+[2019-01-13 23:49:29.737] - cafe.sessions.session_srv.tg1.session_log - INFO: reset traffic is in process...
+[2019-01-13 23:49:29.737] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:32.311] - cafe.sessions.session_srv.tg1.session_log - INFO: reset traffic is done!
+[2019-01-13 23:49:32.318] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:32.319] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:49:32.320] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:32.489] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Delete All Traffic
+[2019-01-13 23:49:32.490] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Teardown Keyword: template_bidirection_raw_traffic_and_check.traffic_teardown
+[2019-01-13 23:49:32.492] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<Exit Keyword: template_bidirection_raw_traffic_and_check.template_bidirection_raw_traffic_and_check
+[2019-01-13 23:49:42.278] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<Exit Case: tc_remove_cevlan
+[2019-01-13 23:49:42.336] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<Exit Suite: Tc Remove Cevlan
+[2019-01-13 23:49:42.542] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>Enter Suite: Tc Translate Cevlan Tag
+[2019-01-13 23:49:42.708] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>Enter Case: tc_translate_cevlan_tag
+[2019-01-13 23:49:55.673] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>Enter Keyword: template_bidirection_raw_traffic_and_check.template_bidirection_raw_traffic_and_check
+[2019-01-13 23:49:55.691] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.create_raw_traffic_udp
+[2019-01-13 23:49:55.704] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 23:49:55.705] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Create Single Tagged Stream On Port
+[2019-01-13 23:49:55.807] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_conf create 11/8 { -vlan_user_priority 0 -mac_src 00:00:00:11:11:11 -l4_protocol udp -name upstream -ip_dst_addr 10.1.67.100 -mac_dst 00:00:00:67:00:01 -frame_size 512 -udp_src_port 6000 -ip_src_addr 10.1.67.10 -rate_bps 10000000 -length_mode fixed -l2_encap ethernet_ii_vlan -l3_protocol ipv4 -udp_dst_port 6000 -vlan_id 4008}
+[2019-01-13 23:49:55.824] - cafe.sessions.session_srv.tg1.session_log - INFO: create traffic is in process...
+[2019-01-13 23:49:55.826] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:56.793] - cafe.sessions.session_srv.tg1.session_log - INFO: create traffic is done!
+[2019-01-13 23:49:56.800] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:56.809] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:49:56.810] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:56.811] - cafe.sessions.session_srv.tg1.session_log - INFO: streamblock5
+[2019-01-13 23:49:56.812] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:56.965] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Create Single Tagged Stream On Port
+[2019-01-13 23:49:56.966] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 23:49:56.967] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.create_raw_traffic_udp
+[2019-01-13 23:49:56.986] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.create_raw_traffic_udp
+[2019-01-13 23:49:57.0] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 23:49:57.1] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Create Double Tagged Stream On Port
+[2019-01-13 23:49:57.56] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_conf create 11/9 { -vlan_user_priority 0 -vlan_id_outer 4002 -mac_dst 00:00:00:11:11:11 -ip_dst_addr 10.1.67.10 -ip_src_addr 10.1.67.100 -frame_size 512 -l2_encap ethernet_ii_vlan -l3_protocol ipv4 -vlan_outer_user_priority 0 -udp_dst_port 6000 -vlan_id 4009 -mac_src 00:00:00:67:00:01 -l4_protocol udp -name downstream -length_mode fixed -udp_src_port 6000 -rate_bps 10000000}
+[2019-01-13 23:49:57.67] - cafe.sessions.session_srv.tg1.session_log - INFO: create traffic is in process...
+[2019-01-13 23:49:57.78] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:57.937] - cafe.sessions.session_srv.tg1.session_log - INFO: create traffic is done!
+[2019-01-13 23:49:57.951] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:57.953] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:49:57.953] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:57.954] - cafe.sessions.session_srv.tg1.session_log - INFO: streamblock6
+[2019-01-13 23:49:57.955] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:58.34] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Create Double Tagged Stream On Port
+[2019-01-13 23:49:58.35] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 23:49:58.36] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.create_raw_traffic_udp
+[2019-01-13 23:49:58.39] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Clear Traffic Stats
+[2019-01-13 23:49:58.47] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_ctrl clear_stats 11/9 {}
+[2019-01-13 23:49:58.47] - cafe.sessions.session_srv.tg1.session_log - INFO: 11/9 clear_stats traffic is in process...
+[2019-01-13 23:49:58.48] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:58.48] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:49:58.49] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:58.601] - cafe.sessions.session_srv.tg1.session_log - INFO: clear_stats traffic is done!
+[2019-01-13 23:49:58.602] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:49:58.603] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:49:58.603] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:01.623] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_ctrl clear_stats 11/8 {}
+[2019-01-13 23:50:01.627] - cafe.sessions.session_srv.tg1.session_log - INFO: 11/8 clear_stats traffic is in process...
+[2019-01-13 23:50:01.628] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:01.631] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:50:01.632] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:02.162] - cafe.sessions.session_srv.tg1.session_log - INFO: clear_stats traffic is done!
+[2019-01-13 23:50:02.165] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:02.166] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:50:02.167] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:05.135] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Clear Traffic Stats
+[2019-01-13 23:50:05.138] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.start_capture
+[2019-01-13 23:50:05.139] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Config Packet Buffers
+[2019-01-13 23:50:05.161] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:50:05.163] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:50:05.164] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:05.180] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::packetConfigBuffers port1 stop {}
+[2019-01-13 23:50:05.181] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture buffer is in process...
+[2019-01-13 23:50:05.184] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:05.186] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:50:05.187] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:05.188] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture buffer is done!
+[2019-01-13 23:50:05.189] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:05.190] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:50:05.190] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:05.193] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Config Packet Buffers
+[2019-01-13 23:50:05.195] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:50:05.208] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port1} start
+[2019-01-13 23:50:05.209] - cafe.sessions.session_srv.tg1.session_log - INFO: start capture is in process...
+[2019-01-13 23:50:05.209] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:06.134] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:50:06.135] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:06.136] - cafe.sessions.session_srv.tg1.session_log - INFO: start capture is done!
+[2019-01-13 23:50:06.136] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:06.137] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:50:06.142] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:06.145] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:50:07.152] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.start_capture
+[2019-01-13 23:50:07.154] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.start_capture
+[2019-01-13 23:50:07.155] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Config Packet Buffers
+[2019-01-13 23:50:07.164] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:50:07.165] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:50:07.166] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:07.191] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::packetConfigBuffers port2 stop {}
+[2019-01-13 23:50:07.192] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture buffer is in process...
+[2019-01-13 23:50:07.206] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:07.208] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:50:07.208] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:07.209] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture buffer is done!
+[2019-01-13 23:50:07.210] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:07.211] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:50:07.212] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:07.215] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Config Packet Buffers
+[2019-01-13 23:50:07.217] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:50:07.230] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port2} start
+[2019-01-13 23:50:07.232] - cafe.sessions.session_srv.tg1.session_log - INFO: start capture is in process...
+[2019-01-13 23:50:07.232] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:08.850] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:50:08.851] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:08.852] - cafe.sessions.session_srv.tg1.session_log - INFO: start capture is done!
+[2019-01-13 23:50:08.852] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:08.853] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:50:08.854] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:08.856] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:50:09.862] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.start_capture
+[2019-01-13 23:50:09.877] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Start All Traffic
+[2019-01-13 23:50:09.881] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:50:09.882] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:50:09.882] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:09.888] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:50:09.888] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:50:09.889] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:09.894] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::start_all_traffic {port1 port2}
+[2019-01-13 23:50:09.904] - cafe.sessions.session_srv.tg1.session_log - INFO: start traffic is in process...
+[2019-01-13 23:50:09.905] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:17.289] - cafe.sessions.session_srv.tg1.session_log - INFO: start all traffic is done!
+[2019-01-13 23:50:17.289] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:20.351] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Start All Traffic
+[2019-01-13 23:50:30.361] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Stop All Traffic
+[2019-01-13 23:50:30.368] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:50:30.368] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:50:30.369] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:30.385] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:50:30.385] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:50:30.386] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:30.400] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::stop_all_traffic {port1 port2}
+[2019-01-13 23:50:30.404] - cafe.sessions.session_srv.tg1.session_log - INFO: stop traffic is in process...
+[2019-01-13 23:50:30.406] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:35.900] - cafe.sessions.session_srv.tg1.session_log - INFO: stop all traffic is done!
+[2019-01-13 23:50:35.901] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:38.892] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Stop All Traffic
+[2019-01-13 23:50:43.897] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.stop_capture
+[2019-01-13 23:50:43.899] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:50:43.909] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port1} stop
+[2019-01-13 23:50:43.915] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is in process...
+[2019-01-13 23:50:43.921] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:45.415] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:50:45.416] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:45.418] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is done!
+[2019-01-13 23:50:45.418] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:45.419] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:50:45.420] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:45.423] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:50:46.431] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.stop_capture
+[2019-01-13 23:50:46.433] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_tg.stop_capture
+[2019-01-13 23:50:46.434] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:50:46.448] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port2} stop
+[2019-01-13 23:50:46.450] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is in process...
+[2019-01-13 23:50:46.450] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:48.652] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:50:48.653] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:48.654] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is done!
+[2019-01-13 23:50:48.654] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:48.655] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:50:48.656] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:48.658] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:50:49.664] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_tg.stop_capture
+[2019-01-13 23:50:49.667] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Verify Traffic Loss Rate For All Streams Is Within
+[2019-01-13 23:50:49.687] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_stats streams 11/9 {}
+[2019-01-13 23:50:49.688] - cafe.sessions.session_srv.tg1.session_log - INFO: Retrieves streams traffic statistics is in process...
+[2019-01-13 23:50:49.691] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.737] - cafe.sessions.session_srv.tg1.session_log - INFO: {port1 {{stream {{streamblock6 {{rx {{misinserted_pkts 0} {total_pkt_bytes 15881604} {prbs_bit_errors 0} {ipv4_outer_present 0} {min_delay 5.32} {ipv6_outer_present 0} {rx_sig_count 31263} {max_delay 6.185} {avg_delay 5.827901512970604} {duplicate_pkts 0} {out_of_sequence_pkts 0} {total_pkts 31263} {rx_sig_rate 0} {dropped_pkts 104} {first_tstamp 0.0} {udp_present 1} {total_pkt_bit_rate 0} {ipv4_present 1} {min_pkt_length 0} {last_tstamp 0.0} {total_pkt_rate 0} {max_pkt_length 0} {ipv6_present 0} {rx_port {10.245.252.60-11-8 //11/8  10.245.252.60-11-8 //11/8 }} {tcp_present 0} {dropped_pkts_percent 0.3315586444352345}}} {tx {{total_pkt_bytes 16059904} {total_pkt_rate 0} {total_pkts 31367} {ipv4_outer_present 0} {udp_present 1} {ipv6_present 0} {total_pkt_bit_rate 0} {ipv6_outer_present 0} {tcp_present 0} {ipv4_present 1}}}}}}}}} {status 1}
+[2019-01-13 23:50:49.738] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.739] - cafe.sessions.session_srv.tg1.session_log - INFO: streams traffic stats is done!
+[2019-01-13 23:50:49.739] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.740] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:50:49.740] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.741] - cafe.sessions.session_srv.tg1.session_log - INFO: {port1 {{stream {{streamblock6 {{rx {{misinserted_pkts 0} {total_pkt_bytes 15881604} {prbs_bit_errors 0} {ipv4_outer_present 0} {min_delay 5.32} {ipv6_outer_present 0} {rx_sig_count 31263} {max_delay 6.185} {avg_delay 5.827901512970604} {duplicate_pkts 0} {out_of_sequence_pkts 0} {total_pkts 31263} {rx_sig_rate 0} {dropped_pkts 104} {first_tstamp 0.0} {udp_present 1} {total_pkt_bit_rate 0} {ipv4_present 1} {min_pkt_length 0} {last_tstamp 0.0} {total_pkt_rate 0} {max_pkt_length 0} {ipv6_present 0} {rx_port {10.245.252.60-11-8 //11/8  10.245.252.60-11-8 //11/8 }} {tcp_present 0} {dropped_pkts_percent 0.3315586444352345}}} {tx {{total_pkt_bytes 16059904} {total_pkt_rate 0} {total_pkts 31367} {ipv4_outer_present 0} {udp_present 1} {ipv6_present 0} {total_pkt_bit_rate 0} {ipv6_outer_present 0} {tcp_present 0} {ipv4_present 1}}}}}}}}} {status 1}
+[2019-01-13 23:50:49.742] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.754] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::print_stats 
+[2019-01-13 23:50:49.754] - cafe.sessions.session_srv.tg1.session_log - INFO: printing stats...
+[2019-01-13 23:50:49.755] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.755] - cafe.sessions.session_srv.tg1.session_log - INFO: #############################################
+[2019-01-13 23:50:49.756] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.757] - cafe.sessions.session_srv.tg1.session_log - INFO: port1:
+[2019-01-13 23:50:49.758] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.758] - cafe.sessions.session_srv.tg1.session_log - INFO:     stream:
+[2019-01-13 23:50:49.759] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.760] - cafe.sessions.session_srv.tg1.session_log - INFO:         streamblock6:
+[2019-01-13 23:50:49.761] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.761] - cafe.sessions.session_srv.tg1.session_log - INFO:             rx:
+[2019-01-13 23:50:49.762] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.762] - cafe.sessions.session_srv.tg1.session_log - INFO:                 misinserted_pkts: 0
+[2019-01-13 23:50:49.763] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.763] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bytes: 15881604
+[2019-01-13 23:50:49.764] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.765] - cafe.sessions.session_srv.tg1.session_log - INFO:                 prbs_bit_errors: 0
+[2019-01-13 23:50:49.765] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.767] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_outer_present: 0
+[2019-01-13 23:50:49.768] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.768] - cafe.sessions.session_srv.tg1.session_log - INFO:                 min_delay: 5.32
+[2019-01-13 23:50:49.776] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.776] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_outer_present: 0
+[2019-01-13 23:50:49.777] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.777] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_sig_count: 31263
+[2019-01-13 23:50:49.777] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.778] - cafe.sessions.session_srv.tg1.session_log - INFO:                 max_delay: 6.185
+[2019-01-13 23:50:49.778] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.779] - cafe.sessions.session_srv.tg1.session_log - INFO:                 avg_delay: 5.827901512970604
+[2019-01-13 23:50:49.779] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.780] - cafe.sessions.session_srv.tg1.session_log - INFO:                 duplicate_pkts: 0
+[2019-01-13 23:50:49.781] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.782] - cafe.sessions.session_srv.tg1.session_log - INFO:                 out_of_sequence_pkts: 0
+[2019-01-13 23:50:49.782] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.783] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkts: 31263
+[2019-01-13 23:50:49.783] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.784] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_sig_rate: 0
+[2019-01-13 23:50:49.784] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.785] - cafe.sessions.session_srv.tg1.session_log - INFO:                 dropped_pkts: 104
+[2019-01-13 23:50:49.785] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.786] - cafe.sessions.session_srv.tg1.session_log - INFO:                 first_tstamp: 0.0
+[2019-01-13 23:50:49.787] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.787] - cafe.sessions.session_srv.tg1.session_log - INFO:                 udp_present: 1
+[2019-01-13 23:50:49.797] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.798] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bit_rate: 0
+[2019-01-13 23:50:49.798] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.799] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_present: 1
+[2019-01-13 23:50:49.815] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.825] - cafe.sessions.session_srv.tg1.session_log - INFO:                 min_pkt_length: 0
+[2019-01-13 23:50:49.827] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.828] - cafe.sessions.session_srv.tg1.session_log - INFO:                 last_tstamp: 0.0
+[2019-01-13 23:50:49.828] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.829] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_rate: 0
+[2019-01-13 23:50:49.830] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.830] - cafe.sessions.session_srv.tg1.session_log - INFO:                 max_pkt_length: 0
+[2019-01-13 23:50:49.831] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.831] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_present: 0
+[2019-01-13 23:50:49.833] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.833] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_port: 10.245.252.60-11-8 //11/8  10.245.252.60-11-8 //11/8 
+[2019-01-13 23:50:49.834] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.835] - cafe.sessions.session_srv.tg1.session_log - INFO:                 tcp_present: 0
+[2019-01-13 23:50:49.836] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.837] - cafe.sessions.session_srv.tg1.session_log - INFO:                 dropped_pkts_percent: 0.3315586444352345
+[2019-01-13 23:50:49.837] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.838] - cafe.sessions.session_srv.tg1.session_log - INFO:             tx:
+[2019-01-13 23:50:49.838] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.839] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bytes: 16059904
+[2019-01-13 23:50:49.839] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.840] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_rate: 0
+[2019-01-13 23:50:49.840] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.841] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkts: 31367
+[2019-01-13 23:50:49.841] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.842] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_outer_present: 0
+[2019-01-13 23:50:49.843] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.843] - cafe.sessions.session_srv.tg1.session_log - INFO:                 udp_present: 1
+[2019-01-13 23:50:49.844] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.844] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_present: 0
+[2019-01-13 23:50:49.845] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.845] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bit_rate: 0
+[2019-01-13 23:50:49.846] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.847] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_outer_present: 0
+[2019-01-13 23:50:49.848] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.848] - cafe.sessions.session_srv.tg1.session_log - INFO:                 tcp_present: 0
+[2019-01-13 23:50:49.849] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.849] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_present: 1
+[2019-01-13 23:50:49.850] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.850] - cafe.sessions.session_srv.tg1.session_log - INFO: status: 1
+[2019-01-13 23:50:49.851] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.852] - cafe.sessions.session_srv.tg1.session_log - INFO: #############################################
+[2019-01-13 23:50:49.853] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:49.854] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:50:49.854] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.158] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_stats streams 11/8 {}
+[2019-01-13 23:50:50.159] - cafe.sessions.session_srv.tg1.session_log - INFO: Retrieves streams traffic statistics is in process...
+[2019-01-13 23:50:50.159] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.211] - cafe.sessions.session_srv.tg1.session_log - INFO: {port2 {{stream {{streamblock5 {{rx {{misinserted_pkts 0} {total_pkt_bytes 16160604} {prbs_bit_errors 0} {ipv4_outer_present 0} {min_delay 5.36} {ipv6_outer_present 0} {rx_sig_count 31319} {max_delay 6.0225} {avg_delay 5.737854177975031} {duplicate_pkts 0} {out_of_sequence_pkts 0} {total_pkts 31319} {rx_sig_rate 0} {dropped_pkts 0} {first_tstamp 0.0} {udp_present 1} {total_pkt_bit_rate 0} {ipv4_present 1} {min_pkt_length 0} {last_tstamp 0.0} {total_pkt_rate 0} {max_pkt_length 0} {ipv6_present 0} {rx_port {10.245.252.60-11-9 //11/9  10.245.252.60-11-9 //11/9 }} {tcp_present 0} {dropped_pkts_percent 0.0}}} {tx {{total_pkt_bytes 16035328} {total_pkt_rate 0} {total_pkts 31319} {ipv4_outer_present 0} {udp_present 1} {ipv6_present 0} {total_pkt_bit_rate 0} {ipv6_outer_present 0} {tcp_present 0} {ipv4_present 1}}}}}}}}} {status 1}
+[2019-01-13 23:50:50.212] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.213] - cafe.sessions.session_srv.tg1.session_log - INFO: streams traffic stats is done!
+[2019-01-13 23:50:50.213] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.214] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:50:50.214] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.214] - cafe.sessions.session_srv.tg1.session_log - INFO: {port2 {{stream {{streamblock5 {{rx {{misinserted_pkts 0} {total_pkt_bytes 16160604} {prbs_bit_errors 0} {ipv4_outer_present 0} {min_delay 5.36} {ipv6_outer_present 0} {rx_sig_count 31319} {max_delay 6.0225} {avg_delay 5.737854177975031} {duplicate_pkts 0} {out_of_sequence_pkts 0} {total_pkts 31319} {rx_sig_rate 0} {dropped_pkts 0} {first_tstamp 0.0} {udp_present 1} {total_pkt_bit_rate 0} {ipv4_present 1} {min_pkt_length 0} {last_tstamp 0.0} {total_pkt_rate 0} {max_pkt_length 0} {ipv6_present 0} {rx_port {10.245.252.60-11-9 //11/9  10.245.252.60-11-9 //11/9 }} {tcp_present 0} {dropped_pkts_percent 0.0}}} {tx {{total_pkt_bytes 16035328} {total_pkt_rate 0} {total_pkts 31319} {ipv4_outer_present 0} {udp_present 1} {ipv6_present 0} {total_pkt_bit_rate 0} {ipv6_outer_present 0} {tcp_present 0} {ipv4_present 1}}}}}}}}} {status 1}
+[2019-01-13 23:50:50.215] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.228] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::print_stats 
+[2019-01-13 23:50:50.229] - cafe.sessions.session_srv.tg1.session_log - INFO: printing stats...
+[2019-01-13 23:50:50.229] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.230] - cafe.sessions.session_srv.tg1.session_log - INFO: #############################################
+[2019-01-13 23:50:50.230] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.231] - cafe.sessions.session_srv.tg1.session_log - INFO: port2:
+[2019-01-13 23:50:50.231] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.231] - cafe.sessions.session_srv.tg1.session_log - INFO:     stream:
+[2019-01-13 23:50:50.232] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.232] - cafe.sessions.session_srv.tg1.session_log - INFO:         streamblock5:
+[2019-01-13 23:50:50.233] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.234] - cafe.sessions.session_srv.tg1.session_log - INFO:             rx:
+[2019-01-13 23:50:50.234] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.235] - cafe.sessions.session_srv.tg1.session_log - INFO:                 misinserted_pkts: 0
+[2019-01-13 23:50:50.235] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.236] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bytes: 16160604
+[2019-01-13 23:50:50.236] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.237] - cafe.sessions.session_srv.tg1.session_log - INFO:                 prbs_bit_errors: 0
+[2019-01-13 23:50:50.237] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.238] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_outer_present: 0
+[2019-01-13 23:50:50.238] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.239] - cafe.sessions.session_srv.tg1.session_log - INFO:                 min_delay: 5.36
+[2019-01-13 23:50:50.239] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.240] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_outer_present: 0
+[2019-01-13 23:50:50.240] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.241] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_sig_count: 31319
+[2019-01-13 23:50:50.241] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.242] - cafe.sessions.session_srv.tg1.session_log - INFO:                 max_delay: 6.0225
+[2019-01-13 23:50:50.243] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.247] - cafe.sessions.session_srv.tg1.session_log - INFO:                 avg_delay: 5.737854177975031
+[2019-01-13 23:50:50.247] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.248] - cafe.sessions.session_srv.tg1.session_log - INFO:                 duplicate_pkts: 0
+[2019-01-13 23:50:50.248] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.249] - cafe.sessions.session_srv.tg1.session_log - INFO:                 out_of_sequence_pkts: 0
+[2019-01-13 23:50:50.249] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.250] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkts: 31319
+[2019-01-13 23:50:50.250] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.251] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_sig_rate: 0
+[2019-01-13 23:50:50.251] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.252] - cafe.sessions.session_srv.tg1.session_log - INFO:                 dropped_pkts: 0
+[2019-01-13 23:50:50.252] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.253] - cafe.sessions.session_srv.tg1.session_log - INFO:                 first_tstamp: 0.0
+[2019-01-13 23:50:50.253] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.254] - cafe.sessions.session_srv.tg1.session_log - INFO:                 udp_present: 1
+[2019-01-13 23:50:50.255] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.255] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bit_rate: 0
+[2019-01-13 23:50:50.256] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.256] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_present: 1
+[2019-01-13 23:50:50.257] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.258] - cafe.sessions.session_srv.tg1.session_log - INFO:                 min_pkt_length: 0
+[2019-01-13 23:50:50.258] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.259] - cafe.sessions.session_srv.tg1.session_log - INFO:                 last_tstamp: 0.0
+[2019-01-13 23:50:50.259] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.260] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_rate: 0
+[2019-01-13 23:50:50.260] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.261] - cafe.sessions.session_srv.tg1.session_log - INFO:                 max_pkt_length: 0
+[2019-01-13 23:50:50.262] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.262] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_present: 0
+[2019-01-13 23:50:50.263] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.263] - cafe.sessions.session_srv.tg1.session_log - INFO:                 rx_port: 10.245.252.60-11-9 //11/9  10.245.252.60-11-9 //11/9 
+[2019-01-13 23:50:50.264] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.264] - cafe.sessions.session_srv.tg1.session_log - INFO:                 tcp_present: 0
+[2019-01-13 23:50:50.265] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.265] - cafe.sessions.session_srv.tg1.session_log - INFO:                 dropped_pkts_percent: 0.0
+[2019-01-13 23:50:50.266] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.267] - cafe.sessions.session_srv.tg1.session_log - INFO:             tx:
+[2019-01-13 23:50:50.267] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.268] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bytes: 16035328
+[2019-01-13 23:50:50.268] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.269] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_rate: 0
+[2019-01-13 23:50:50.269] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.270] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkts: 31319
+[2019-01-13 23:50:50.270] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.271] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_outer_present: 0
+[2019-01-13 23:50:50.271] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.272] - cafe.sessions.session_srv.tg1.session_log - INFO:                 udp_present: 1
+[2019-01-13 23:50:50.272] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.273] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_present: 0
+[2019-01-13 23:50:50.273] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.274] - cafe.sessions.session_srv.tg1.session_log - INFO:                 total_pkt_bit_rate: 0
+[2019-01-13 23:50:50.274] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.275] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv6_outer_present: 0
+[2019-01-13 23:50:50.275] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.275] - cafe.sessions.session_srv.tg1.session_log - INFO:                 tcp_present: 0
+[2019-01-13 23:50:50.276] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.277] - cafe.sessions.session_srv.tg1.session_log - INFO:                 ipv4_present: 1
+[2019-01-13 23:50:50.277] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.278] - cafe.sessions.session_srv.tg1.session_log - INFO: status: 1
+[2019-01-13 23:50:50.278] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.279] - cafe.sessions.session_srv.tg1.session_log - INFO: #############################################
+[2019-01-13 23:50:50.279] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.280] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:50:50.280] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:50.541] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Verify Traffic Loss Rate For All Streams Is Within
+[2019-01-13 23:50:50.548] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Store Captured Packets
+[2019-01-13 23:50:50.566] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_stats port1 /tmp/tc_translate_cevlan_tag_service_p1.pcap pcap {}
+[2019-01-13 23:50:50.568] - cafe.sessions.session_srv.tg1.session_log - INFO: get capture stats is in process...
+[2019-01-13 23:50:50.570] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:56.497] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:50:56.498] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:56.499] - cafe.sessions.session_srv.tg1.session_log - INFO: get capture stats is done!
+[2019-01-13 23:50:56.500] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:56.501] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:50:56.501] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:50:56.506] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Store Captured Packets
+[2019-01-13 23:50:56.509] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Store Captured Packets
+[2019-01-13 23:50:56.525] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_stats port2 /tmp/tc_translate_cevlan_tag_subscriber_p1.pcap pcap {}
+[2019-01-13 23:50:56.529] - cafe.sessions.session_srv.tg1.session_log - INFO: get capture stats is in process...
+[2019-01-13 23:50:56.532] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:51:02.148] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:51:02.149] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:51:02.149] - cafe.sessions.session_srv.tg1.session_log - INFO: get capture stats is done!
+[2019-01-13 23:51:02.150] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:51:02.150] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:51:02.151] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:51:02.153] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Store Captured Packets
+[2019-01-13 23:52:22.208] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>Enter Teardown Keyword: template_bidirection_raw_traffic_and_check.traffic_teardown
+[2019-01-13 23:52:22.209] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:52:22.210] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_tg.stop_capture
+[2019-01-13 23:52:22.211] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:52:22.249] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port1} stop
+[2019-01-13 23:52:22.251] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is in process...
+[2019-01-13 23:52:22.252] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:23.627] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:52:23.629] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:23.630] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is done!
+[2019-01-13 23:52:23.631] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:23.632] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:52:23.633] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:23.637] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:52:24.642] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_tg.stop_capture
+[2019-01-13 23:52:24.654] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:52:24.668] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:52:24.670] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_tg.stop_capture
+[2019-01-13 23:52:24.672] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:52:24.696] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cap_conf_ctrl {port2} stop
+[2019-01-13 23:52:24.698] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is in process...
+[2019-01-13 23:52:24.700] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:25.237] - cafe.sessions.session_srv.tg1.session_log - INFO: response info: ====> {status 1}
+[2019-01-13 23:52:25.238] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:25.240] - cafe.sessions.session_srv.tg1.session_log - INFO: stop capture is done!
+[2019-01-13 23:52:25.241] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:25.242] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:52:25.243] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:25.258] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Packet Control
+[2019-01-13 23:52:26.274] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_tg.stop_capture
+[2019-01-13 23:52:26.276] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:52:26.277] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:52:26.279] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Stop All Traffic
+[2019-01-13 23:52:26.287] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:52:26.289] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:52:26.289] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:26.296] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:52:26.304] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:52:26.304] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:26.326] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::stop_all_traffic {port1 port2}
+[2019-01-13 23:52:26.328] - cafe.sessions.session_srv.tg1.session_log - INFO: stop traffic is in process...
+[2019-01-13 23:52:26.329] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:31.600] - cafe.sessions.session_srv.tg1.session_log - INFO: stop all traffic is done!
+[2019-01-13 23:52:31.601] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:34.602] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Stop All Traffic
+[2019-01-13 23:52:34.610] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 23:52:34.612] - cafe.sessions.session_srv.tg1.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Delete All Traffic
+[2019-01-13 23:52:34.619] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/9
+[2019-01-13 23:52:34.620] - cafe.sessions.session_srv.tg1.session_log - INFO: port1
+[2019-01-13 23:52:34.620] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:34.628] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::get_port_handle 11/8
+[2019-01-13 23:52:34.629] - cafe.sessions.session_srv.tg1.session_log - INFO: port2
+[2019-01-13 23:52:34.630] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:34.641] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::stop_all_traffic {port1 port2}
+[2019-01-13 23:52:34.643] - cafe.sessions.session_srv.tg1.session_log - INFO: stop traffic is in process...
+[2019-01-13 23:52:34.646] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:39.913] - cafe.sessions.session_srv.tg1.session_log - INFO: stop all traffic is done!
+[2019-01-13 23:52:39.913] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:46.955] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::traffic_conf reset None {}
+[2019-01-13 23:52:46.963] - cafe.sessions.session_srv.tg1.session_log - INFO: reset traffic is in process...
+[2019-01-13 23:52:46.971] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:49.485] - cafe.sessions.session_srv.tg1.session_log - INFO: reset traffic is done!
+[2019-01-13 23:52:49.486] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:49.487] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:52:49.488] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:52:49.748] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.trafficgen.trafficgen.TrafficGenerator.Tg Delete All Traffic
+[2019-01-13 23:52:49.763] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<<Exit Teardown Keyword: template_bidirection_raw_traffic_and_check.traffic_teardown
+[2019-01-13 23:52:49.766] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<<Exit Keyword: template_bidirection_raw_traffic_and_check.template_bidirection_raw_traffic_and_check
+[2019-01-13 23:53:01.492] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<<Exit Case: tc_translate_cevlan_tag
+[2019-01-13 23:53:01.587] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<<Exit Suite: Tc Translate Cevlan Tag
+[2019-01-13 23:53:14.963] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<<Exit Suite: Testcase
+[2019-01-13 23:53:14.970] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<<Exit Suite: Policy Map
+[2019-01-13 23:53:14.982] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<<Exit Suite: Data
+[2019-01-13 23:53:14.989] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<<Exit Suite: ST Test Cases
+[2019-01-13 23:53:14.997] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<<Exit Suite: Milan
+[2019-01-13 23:53:15.3] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <<Exit Suite: AXOS-automation
+[2019-01-13 23:53:15.9] - cafe.sessions.session_srv.tg1.session_log - DEBUG: <Exit Suite: AXOS
+[2019-01-13 23:53:17.168] - cafe.sessions.session_srv.tg1.session_log - INFO: % CsHLT::cleanup_session {11/9 11/8}
+[2019-01-13 23:53:17.180] - cafe.sessions.session_srv.tg1.session_log - INFO: cleanup session...
+[2019-01-13 23:53:17.191] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:53:17.192] - cafe.sessions.session_srv.tg1.session_log - INFO: 11/9 11/8
+[2019-01-13 23:53:17.194] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:53:18.122] - cafe.sessions.session_srv.tg1.session_log - INFO: SUCCESS
+[2019-01-13 23:53:18.123] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:53:18.124] - cafe.sessions.session_srv.tg1.session_log - INFO: Session is cleaned successfully!
+[2019-01-13 23:53:18.125] - cafe.sessions.session_srv.tg1.session_log - INFO: 
+[2019-01-13 23:53:19.148] - cafe.sessions.session_srv.tg1.session_log - INFO: IDLE
+[2019-01-13 23:53:19.156] - cafe.sessions.session_srv.tg1.session_log - INFO: 

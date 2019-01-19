@@ -1,0 +1,5 @@
+global: 
+  status_disabled: DISABLED
+  status_ensabled: ENABLED
+  mismatch_ont_profile: 714G
+  user_ont_profile: GH3200X_test

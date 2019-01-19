@@ -1,0 +1,1027 @@
+[2019-01-13 21:32:01.388] - cafe.sessions.session_srv.euta.session_log - DEBUG: >Enter Suite: AXOS
+[2019-01-13 21:32:01.465] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>Enter Suite: AXOS-automation
+[2019-01-13 21:32:01.468] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>Enter Suite: Milan
+[2019-01-13 21:32:01.471] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>Enter Suite: ST Test Cases
+[2019-01-13 21:32:01.474] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>Enter Suite: System
+[2019-01-13 21:32:01.476] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>Enter Suite: Management
+[2019-01-13 21:32:01.479] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>Enter Suite: Local Craft Interface Support
+[2019-01-13 21:32:01.483] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>Enter Suite: Test Cases
+[2019-01-13 21:32:02.252] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Suite: tc Verify craft connection after reboot the standby card
+[2019-01-13 21:32:02.483] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Case: tc_Verify_craft_connection_after_reboot_the_standby_card
+[2019-01-13 21:32:02.554] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: release_adapter.set_eut_version
+[2019-01-13 21:32:02.561] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter For Keyword: ${eut} IN [ @{keys} ]
+[2019-01-13 21:32:02.561] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter For Item Keyword: ${eut} = eutA
+[2019-01-13 21:32:02.566] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: release_adapter.get_eut_version
+[2019-01-13 21:32:02.567] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:04.951] - cafe.sessions.session_srv.euta.session_log - INFO: Last login: Sun Jan 13 21:08:40 2019 from 192.168.37.130
+[2019-01-13 21:32:04.952] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:05.525] - cafe.sessions.session_srv.euta.session_log - INFO: **** ACTIVE 10GE-12 CARD  ****
+[2019-01-13 21:32:06.547] - cafe.sessions.session_srv.euta.session_log - INFO: Welcome to CLI
+[2019-01-13 21:32:06.547] - cafe.sessions.session_srv.euta.session_log - INFO: sysadmin connected from 10.200.201.26 using ssh on NGPON2X4
+[2019-01-13 21:32:06.985] - cafe.sessions.session_srv.euta.session_log - INFO: [?7hNGPON2X4# cli
+[2019-01-13 21:32:07.251] - cafe.sessions.session_srv.euta.session_log - INFO: ----------^
+[2019-01-13 21:32:07.259] - cafe.sessions.session_srv.euta.session_log - INFO: syntax error: expecting 
+[2019-01-13 21:32:07.266] - cafe.sessions.session_srv.euta.session_log - INFO:   abort                 - 
+[2019-01-13 21:32:07.269] - cafe.sessions.session_srv.euta.session_log - INFO:   accept                - Accept config
+[2019-01-13 21:32:07.270] - cafe.sessions.session_srv.euta.session_log - INFO:   apply                 - 
+[2019-01-13 21:32:07.270] - cafe.sessions.session_srv.euta.session_log - INFO:   apply-dynamic-policy  - 
+[2019-01-13 21:32:07.271] - cafe.sessions.session_srv.euta.session_log - INFO:   bng-state-persistence - BNG state persistence control commands
+[2019-01-13 21:32:07.272] - cafe.sessions.session_srv.euta.session_log - INFO:   clear                 - Clear object data
+[2019-01-13 21:32:07.272] - cafe.sessions.session_srv.euta.session_log - INFO:   clock                 - Modify clock
+[2019-01-13 21:32:07.273] - cafe.sessions.session_srv.euta.session_log - INFO:   configure             - Manipulate software configuration information
+[2019-01-13 21:32:07.273] - cafe.sessions.session_srv.euta.session_log - INFO:   copy                  - Copy files
+[2019-01-13 21:32:07.274] - cafe.sessions.session_srv.euta.session_log - INFO:   cpe-upgrade:cpe       - CPE operation
+[2019-01-13 21:32:07.274] - cafe.sessions.session_srv.euta.session_log - INFO:   debug                 - 
+[2019-01-13 21:32:07.275] - cafe.sessions.session_srv.euta.session_log - INFO:   delete                - Delete files
+[2019-01-13 21:32:07.275] - cafe.sessions.session_srv.euta.session_log - INFO:   devtools              - Enable/disable development tools
+[2019-01-13 21:32:07.276] - cafe.sessions.session_srv.euta.session_log - INFO:   download              - Download files
+[2019-01-13 21:32:07.276] - cafe.sessions.session_srv.euta.session_log - INFO:   enable                - Enable EXEC commands
+[2019-01-13 21:32:07.277] - cafe.sessions.session_srv.euta.session_log - INFO:   exit                  - Exit the management session
+[2019-01-13 21:32:07.277] - cafe.sessions.session_srv.euta.session_log - INFO:   folder                - 
+[2019-01-13 21:32:07.278] - cafe.sessions.session_srv.euta.session_log - INFO:   generate              - Generate files
+[2019-01-13 21:32:07.278] - cafe.sessions.session_srv.euta.session_log - INFO:   idle-timeout          - Configure idle timeout
+[2019-01-13 21:32:07.279] - cafe.sessions.session_srv.euta.session_log - INFO:   install               - 
+[2019-01-13 21:32:07.279] - cafe.sessions.session_srv.euta.session_log - INFO:   lock                  - lock a datastore
+[2019-01-13 21:32:07.280] - cafe.sessions.session_srv.euta.session_log - INFO:   logout                - Logout a user
+[2019-01-13 21:32:07.280] - cafe.sessions.session_srv.euta.session_log - INFO:   manual                - Manual operation with alarms
+[2019-01-13 21:32:07.281] - cafe.sessions.session_srv.euta.session_log - INFO:   no                    - Negate a command or set its defaults
+[2019-01-13 21:32:07.281] - cafe.sessions.session_srv.euta.session_log - INFO:   ofa-connect           - Open Flow Connect
+[2019-01-13 21:32:07.282] - cafe.sessions.session_srv.euta.session_log - INFO:   ofa-listener          - Open Flow Listener
+[2019-01-13 21:32:07.282] - cafe.sessions.session_srv.euta.session_log - INFO:   ofa-port              - Open Flow port
+[2019-01-13 21:32:07.283] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-eth               - ONT-ETH efm-loopback-status mode
+[2019-01-13 21:32:07.284] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-firmware-upgrade  - Start software download
+[2019-01-13 21:32:07.284] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-simulation        - ONT simulation commands
+[2019-01-13 21:32:07.285] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-upgrade           - ONT upgrade commands
+[2019-01-13 21:32:07.285] - cafe.sessions.session_srv.euta.session_log - INFO:   paginate              - Paginate output from CLI commands
+[2019-01-13 21:32:07.286] - cafe.sessions.session_srv.euta.session_log - INFO:   perform               - Perform an operation
+[2019-01-13 21:32:07.286] - cafe.sessions.session_srv.euta.session_log - INFO:   ping                  - Ping IP address
+[2019-01-13 21:32:07.287] - cafe.sessions.session_srv.euta.session_log - INFO:   ping6                 - Ping IPv6 address
+[2019-01-13 21:32:07.288] - cafe.sessions.session_srv.euta.session_log - INFO:   quit                  - Exit the management session
+[2019-01-13 21:32:07.289] - cafe.sessions.session_srv.euta.session_log - INFO:   redundancy            - redundancy switchover commands
+[2019-01-13 21:32:07.289] - cafe.sessions.session_srv.euta.session_log - INFO:   reload                - Reboot the current card
+[2019-01-13 21:32:07.290] - cafe.sessions.session_srv.euta.session_log - INFO:   remove-dynamic-policy - 
+[2019-01-13 21:32:07.290] - cafe.sessions.session_srv.euta.session_log - INFO:   replay                - Replay card-config
+[2019-01-13 21:32:07.291] - cafe.sessions.session_srv.euta.session_log - INFO:   restart               - Restart Diameter daemon
+[2019-01-13 21:32:07.291] - cafe.sessions.session_srv.euta.session_log - INFO:   run                   - 
+[2019-01-13 21:32:07.292] - cafe.sessions.session_srv.euta.session_log - INFO:   send                  - Send message to terminal of one or all users
+[2019-01-13 21:32:07.293] - cafe.sessions.session_srv.euta.session_log - INFO:   session               - 
+[2019-01-13 21:32:07.293] - cafe.sessions.session_srv.euta.session_log - INFO:   show                  - Show information about the system
+[2019-01-13 21:32:07.294] - cafe.sessions.session_srv.euta.session_log - INFO:   ssh                   - ssh command
+[2019-01-13 21:32:07.294] - cafe.sessions.session_srv.euta.session_log - INFO:   start                 - Start an operation
+[2019-01-13 21:32:07.295] - cafe.sessions.session_srv.euta.session_log - INFO:   stop                  - Stop an operation
+[2019-01-13 21:32:07.295] - cafe.sessions.session_srv.euta.session_log - INFO:   switch                - Switch network clock
+[2019-01-13 21:32:07.296] - cafe.sessions.session_srv.euta.session_log - INFO:   tcpdump               - tcpdump command
+[2019-01-13 21:32:07.296] - cafe.sessions.session_srv.euta.session_log - INFO:   telnet                - telnet command
+[2019-01-13 21:32:07.297] - cafe.sessions.session_srv.euta.session_log - INFO:   templatize            - Find patterns in subtree.
+[2019-01-13 21:32:07.297] - cafe.sessions.session_srv.euta.session_log - INFO:   terminal              - Set terminal type
+[2019-01-13 21:32:07.298] - cafe.sessions.session_srv.euta.session_log - INFO:   timestamp             - Enable/disable the display of timestamp
+[2019-01-13 21:32:07.299] - cafe.sessions.session_srv.euta.session_log - INFO:   traceroute            - Traceroute IP address
+[2019-01-13 21:32:07.299] - cafe.sessions.session_srv.euta.session_log - INFO:   uninstall             - 
+[2019-01-13 21:32:07.299] - cafe.sessions.session_srv.euta.session_log - INFO:   unlock                - unlock a datastore
+[2019-01-13 21:32:07.300] - cafe.sessions.session_srv.euta.session_log - INFO:   upgrade               - Upgrade commands
+[2019-01-13 21:32:07.300] - cafe.sessions.session_srv.euta.session_log - INFO:   upload                - Upload files
+[2019-01-13 21:32:07.301] - cafe.sessions.session_srv.euta.session_log - INFO:   verify                - 
+[2019-01-13 21:32:07.359] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:07.361] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:07.553] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show version
+[2019-01-13 21:32:07.840] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/1
+[2019-01-13 21:32:07.840] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgy
+[2019-01-13 21:32:07.841] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:32:07.842] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:32:07.843] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:32:07.843] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:32:07.844] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:32:07.845] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:32:07.845] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:32:07.846] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:32:07.846] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:32:07.847] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/2
+[2019-01-13 21:32:07.847] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgx
+[2019-01-13 21:32:07.848] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:32:07.849] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:32:07.849] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:32:07.850] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:32:07.850] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:32:07.851] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:32:07.851] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:32:07.852] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:32:07.853] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:32:07.903] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:07.912] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: release_adapter.get_eut_version
+[2019-01-13 21:32:07.918] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: release_adapter.get_eut_distro
+[2019-01-13 21:32:07.920] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:08.132] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show version
+[2019-01-13 21:32:08.362] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/1
+[2019-01-13 21:32:08.363] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgy
+[2019-01-13 21:32:08.364] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:32:08.365] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:32:08.365] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:32:08.366] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:32:08.373] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:32:08.377] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:32:08.378] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:32:08.378] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:32:08.379] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:32:08.379] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/2
+[2019-01-13 21:32:08.380] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgx
+[2019-01-13 21:32:08.380] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:32:08.381] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:32:08.382] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:32:08.382] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:32:08.382] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:32:08.383] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:32:08.384] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:32:08.384] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:32:08.385] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:32:08.435] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:08.444] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: release_adapter.get_eut_distro
+[2019-01-13 21:32:08.573] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit For Item Keyword: ${eut} = eutA
+[2019-01-13 21:32:08.588] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit For Keyword: ${eut} IN [ @{keys} ]
+[2019-01-13 21:32:08.611] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: release_adapter.set_eut_version
+[2019-01-13 21:32:08.670] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_command.get_system_equipment_card_info
+[2019-01-13 21:32:08.671] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:08.870] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show system-equipment
+[2019-01-13 21:32:09.92] - cafe.sessions.session_srv.euta.session_log - INFO: system-equipment
+[2019-01-13 21:32:09.93] - cafe.sessions.session_srv.euta.session_log - INFO:  equipment-type     "Multi Card"
+[2019-01-13 21:32:09.94] - cafe.sessions.session_srv.euta.session_log - INFO:  active-controller  "card 1/2 (this card)"
+[2019-01-13 21:32:09.94] - cafe.sessions.session_srv.euta.session_log - INFO:  standby-controller "card 1/1 (mate card)"
+[2019-01-13 21:32:09.159] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:09.171] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_command.get_system_equipment_card_info
+[2019-01-13 21:32:09.306] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_command.reload_card
+[2019-01-13 21:32:09.307] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:09.555] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# reload 1/1
+[2019-01-13 21:32:09.758] - cafe.sessions.session_srv.euta.session_log - INFO: Warning! Reloading the device will impact services.
+[2019-01-13 21:32:09.759] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:09.760] - cafe.sessions.session_srv.euta.session_log - INFO: Running configuration has been changed
+[2019-01-13 21:32:09.760] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:09.761] - cafe.sessions.session_srv.euta.session_log - INFO: Use 'copy running-config startup-config' to save modified configuration
+[2019-01-13 21:32:09.761] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:09.793] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:09.797] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:10.49] - cafe.sessions.session_srv.euta.session_log - INFO: Proceed with reload? [y/N] y
+[2019-01-13 21:32:10.53] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:12.127] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:22.230] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:32:22.231] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:32:22.234] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:24.735] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# Last login: Sun Jan 13 21:14:17 2019 from 10.200.201.26
+[2019-01-13 21:32:24.748] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:25.265] - cafe.sessions.session_srv.euta.session_log - INFO: **** ACTIVE 10GE-12 CARD  ****
+[2019-01-13 21:32:26.263] - cafe.sessions.session_srv.euta.session_log - INFO: Welcome to CLI
+[2019-01-13 21:32:26.266] - cafe.sessions.session_srv.euta.session_log - INFO: sysadmin connected from 10.200.201.26 using ssh on NGPON2X4
+[2019-01-13 21:32:26.491] - cafe.sessions.session_srv.euta.session_log - INFO: [?7hNGPON2X4# show card
+[2019-01-13 21:32:26.744] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                 SOFTWARE  
+[2019-01-13 21:32:26.749] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:32:26.761] - cafe.sessions.session_srv.euta.session_log - INFO: ----------------------------------------------------------------------------------------------------------
+[2019-01-13 21:32:26.773] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:32:26.786] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:26.787] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:32:26.791] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:32:26.793] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:32:26.794] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:32:26.796] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:27.26] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:27.36] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:32:32.55] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:32:32.59] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:32.258] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:32:36.227] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                 SOFTWARE  
+[2019-01-13 21:32:36.227] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:32:36.228] - cafe.sessions.session_srv.euta.session_log - INFO: ----------------------------------------------------------------------------------------------------------
+[2019-01-13 21:32:36.230] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:32:36.231] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:36.264] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:32:36.270] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:32:36.277] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:32:36.278] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:32:36.279] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:36.387] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:36.397] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:32:41.402] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:32:41.406] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:41.585] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:32:41.863] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                              SERIAL  SOFTWARE  
+[2019-01-13 21:32:41.864] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+[2019-01-13 21:32:41.865] - cafe.sessions.session_srv.euta.session_log - INFO: -------------------------------------------------------------------------------
+[2019-01-13 21:32:41.866] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+[2019-01-13 21:32:41.866] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:41.883] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:32:41.890] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:32:41.891] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:32:41.902] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:32:41.903] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:42.52] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:42.61] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:32:47.77] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:32:47.81] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:47.266] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:32:47.552] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                              SERIAL  SOFTWARE  
+[2019-01-13 21:32:47.563] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+[2019-01-13 21:32:47.569] - cafe.sessions.session_srv.euta.session_log - INFO: -------------------------------------------------------------------------------
+[2019-01-13 21:32:47.570] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+[2019-01-13 21:32:47.570] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:47.571] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:32:47.571] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:32:47.572] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:32:47.572] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:32:47.573] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:47.620] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:47.626] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:32:52.630] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:32:52.633] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:52.828] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:32:53.101] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                              SERIAL  SOFTWARE  
+[2019-01-13 21:32:53.110] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+[2019-01-13 21:32:53.111] - cafe.sessions.session_srv.euta.session_log - INFO: -------------------------------------------------------------------------------
+[2019-01-13 21:32:53.111] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+[2019-01-13 21:32:53.112] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:53.113] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:32:53.114] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:32:53.114] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:32:53.115] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:32:53.115] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:53.175] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:53.183] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:32:58.186] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:32:58.191] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:58.369] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:32:58.642] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                              SERIAL  SOFTWARE  
+[2019-01-13 21:32:58.642] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+[2019-01-13 21:32:58.643] - cafe.sessions.session_srv.euta.session_log - INFO: -------------------------------------------------------------------------------
+[2019-01-13 21:32:58.643] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   Unequipped  Controller (Standby)  NGPON2-4  N/A     N/A       
+[2019-01-13 21:32:58.644] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:58.660] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:32:58.660] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:32:58.661] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:32:58.661] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:32:58.662] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:32:58.709] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:32:58.716] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:32:58.724] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:33:28.731] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:33:28.734] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:33:28.738] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:33:28.961] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:33:29.235] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                              SERIAL  SOFTWARE  
+[2019-01-13 21:33:29.244] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+[2019-01-13 21:33:29.261] - cafe.sessions.session_srv.euta.session_log - INFO: -------------------------------------------------------------------------------
+[2019-01-13 21:33:29.262] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   Unequipped  Controller (Standby)  NGPON2-4  N/A     N/A       
+[2019-01-13 21:33:29.263] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:33:29.263] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:33:29.264] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:33:29.265] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:33:29.265] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:33:29.266] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:33:29.364] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:33:29.371] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:33:59.376] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:33:59.380] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:33:59.584] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:33:59.851] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                              SERIAL  SOFTWARE  
+[2019-01-13 21:33:59.852] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+[2019-01-13 21:33:59.852] - cafe.sessions.session_srv.euta.session_log - INFO: -------------------------------------------------------------------------------
+[2019-01-13 21:33:59.853] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   Unequipped  Controller (Standby)  NGPON2-4  N/A     N/A       
+[2019-01-13 21:33:59.853] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:33:59.870] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:33:59.874] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:33:59.875] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:33:59.875] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:33:59.877] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:33:59.936] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:33:59.944] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:34:29.953] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:34:29.957] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:34:30.198] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:34:30.492] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION  CARD                                       SERIAL  SOFTWARE  
+[2019-01-13 21:34:30.493] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+[2019-01-13 21:34:30.493] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------
+[2019-01-13 21:34:30.494] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+[2019-01-13 21:34:30.494] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:34:30.504] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:34:30.505] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:34:30.505] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:34:30.506] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:34:30.506] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:34:30.707] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:34:30.717] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:35:00.731] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:35:00.734] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:35:01.32] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:35:01.297] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION  CARD                                       SERIAL  SOFTWARE  
+[2019-01-13 21:35:01.298] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+[2019-01-13 21:35:01.298] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------
+[2019-01-13 21:35:01.299] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+[2019-01-13 21:35:01.299] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:35:01.300] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:35:01.300] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:35:01.300] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:35:01.301] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:35:01.301] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:35:01.353] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:35:01.360] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:35:31.365] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:35:31.369] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:35:31.547] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:35:31.866] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION  CARD                                       SERIAL  SOFTWARE  
+[2019-01-13 21:35:31.871] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+[2019-01-13 21:35:31.873] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------
+[2019-01-13 21:35:31.875] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+[2019-01-13 21:35:31.878] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:35:31.879] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:35:31.880] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:35:31.881] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:35:31.882] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:35:31.882] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:35:32.80] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:35:32.96] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:36:02.99] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:36:02.102] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:02.403] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:36:02.619] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION  CARD                                       SERIAL  SOFTWARE  
+[2019-01-13 21:36:02.619] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+[2019-01-13 21:36:02.620] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------
+[2019-01-13 21:36:02.621] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+[2019-01-13 21:36:02.621] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:02.661] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:36:02.672] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:36:02.676] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:36:02.677] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:36:02.677] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:02.732] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:02.739] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:36:32.743] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:36:32.746] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:32.921] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:36:33.253] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                 SOFTWARE  
+[2019-01-13 21:36:33.254] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:36:33.262] - cafe.sessions.session_srv.euta.session_log - INFO: ----------------------------------------------------------------------------------------------------------
+[2019-01-13 21:36:33.263] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:36:33.263] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:33.264] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:36:33.264] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:36:33.265] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:36:33.265] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:36:33.266] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:33.324] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:33.333] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:36:33.334] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:36:33.335] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_command.reload_card
+[2019-01-13 21:36:33.445] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:36:33.447] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:36:33.450] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:33.637] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:36:33.914] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                 SOFTWARE  
+[2019-01-13 21:36:33.915] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:36:33.915] - cafe.sessions.session_srv.euta.session_log - INFO: ----------------------------------------------------------------------------------------------------------
+[2019-01-13 21:36:33.916] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:36:33.916] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:33.917] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:36:33.917] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:36:33.918] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:36:33.918] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:36:33.919] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:33.977] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:33.985] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:36:33.986] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:36:34.37] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:36:34.38] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:36:34.42] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:34.223] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:36:34.495] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                 SOFTWARE  
+[2019-01-13 21:36:34.496] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:36:34.496] - cafe.sessions.session_srv.euta.session_log - INFO: ----------------------------------------------------------------------------------------------------------
+[2019-01-13 21:36:34.497] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:36:34.497] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:34.498] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:36:34.498] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:36:34.498] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:36:34.499] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:36:34.499] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:34.540] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:34.547] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:36:34.549] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:36:34.569] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_command.check_system_equipment_info
+[2019-01-13 21:36:34.571] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:34.795] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show system-equipment
+[2019-01-13 21:36:35.10] - cafe.sessions.session_srv.euta.session_log - INFO: system-equipment
+[2019-01-13 21:36:35.21] - cafe.sessions.session_srv.euta.session_log - INFO:  equipment-type     "Multi Card"
+[2019-01-13 21:36:35.29] - cafe.sessions.session_srv.euta.session_log - INFO:  active-controller  "card 1/2 (this card)"
+[2019-01-13 21:36:35.30] - cafe.sessions.session_srv.euta.session_log - INFO:  standby-controller "card 1/1 (mate card)"
+[2019-01-13 21:36:35.62] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:35.99] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_command.check_system_equipment_info
+[2019-01-13 21:36:35.145] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_command.check_system_equipment_info
+[2019-01-13 21:36:35.147] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:35.328] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show system-equipment
+[2019-01-13 21:36:35.543] - cafe.sessions.session_srv.euta.session_log - INFO: system-equipment
+[2019-01-13 21:36:35.544] - cafe.sessions.session_srv.euta.session_log - INFO:  equipment-type     "Multi Card"
+[2019-01-13 21:36:35.544] - cafe.sessions.session_srv.euta.session_log - INFO:  active-controller  "card 1/2 (this card)"
+[2019-01-13 21:36:35.545] - cafe.sessions.session_srv.euta.session_log - INFO:  standby-controller "card 1/1 (mate card)"
+[2019-01-13 21:36:35.607] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:35.627] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_command.check_system_equipment_info
+[2019-01-13 21:36:35.645] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Teardown Keyword: case teardown
+[2019-01-13 21:36:35.650] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:36:35.652] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:36:35.656] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:35.842] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:36:36.110] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                 SOFTWARE  
+[2019-01-13 21:36:36.111] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:36:36.111] - cafe.sessions.session_srv.euta.session_log - INFO: ----------------------------------------------------------------------------------------------------------
+[2019-01-13 21:36:36.112] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:36:36.112] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:36.129] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:36:36.134] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:36:36.135] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:36:36.136] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:36:36.136] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:36.199] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:36.206] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:36:36.208] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:36:36.210] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:36:36.212] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:36:36.216] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:36.426] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:36:36.695] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                 SOFTWARE  
+[2019-01-13 21:36:36.696] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:36:36.696] - cafe.sessions.session_srv.euta.session_log - INFO: ----------------------------------------------------------------------------------------------------------
+[2019-01-13 21:36:36.697] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:36:36.697] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:36.698] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:36:36.698] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:36:36.699] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:36:36.699] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:36:36.700] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:36.758] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:36.770] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:36:36.771] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:36:36.774] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Teardown Keyword: case teardown
+[2019-01-13 21:36:36.824] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Case: tc_Verify_craft_connection_after_reboot_the_standby_card
+[2019-01-13 21:36:36.985] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Suite: tc Verify craft connection after reboot the standby card
+[2019-01-13 21:36:37.190] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Suite: tc Verify craft connection after reboot the system
+[2019-01-13 21:36:37.291] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Case: tc_Verify_craft_connection_after_reboot_the_system
+[2019-01-13 21:36:37.435] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: release_adapter.set_eut_version
+[2019-01-13 21:36:37.442] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter For Keyword: ${eut} IN [ @{keys} ]
+[2019-01-13 21:36:37.442] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter For Item Keyword: ${eut} = eutA
+[2019-01-13 21:36:37.447] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: release_adapter.get_eut_version
+[2019-01-13 21:36:37.448] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:37.633] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# cli
+[2019-01-13 21:36:37.852] - cafe.sessions.session_srv.euta.session_log - INFO: ----------^
+[2019-01-13 21:36:37.860] - cafe.sessions.session_srv.euta.session_log - INFO: syntax error: expecting 
+[2019-01-13 21:36:37.867] - cafe.sessions.session_srv.euta.session_log - INFO:   abort                 - 
+[2019-01-13 21:36:37.870] - cafe.sessions.session_srv.euta.session_log - INFO:   accept                - Accept config
+[2019-01-13 21:36:37.870] - cafe.sessions.session_srv.euta.session_log - INFO:   apply                 - 
+[2019-01-13 21:36:37.871] - cafe.sessions.session_srv.euta.session_log - INFO:   apply-dynamic-policy  - 
+[2019-01-13 21:36:37.871] - cafe.sessions.session_srv.euta.session_log - INFO:   bng-state-persistence - BNG state persistence control commands
+[2019-01-13 21:36:37.872] - cafe.sessions.session_srv.euta.session_log - INFO:   clear                 - Clear object data
+[2019-01-13 21:36:37.872] - cafe.sessions.session_srv.euta.session_log - INFO:   clock                 - Modify clock
+[2019-01-13 21:36:37.873] - cafe.sessions.session_srv.euta.session_log - INFO:   configure             - Manipulate software configuration information
+[2019-01-13 21:36:37.873] - cafe.sessions.session_srv.euta.session_log - INFO:   copy                  - Copy files
+[2019-01-13 21:36:37.874] - cafe.sessions.session_srv.euta.session_log - INFO:   cpe-upgrade:cpe       - CPE operation
+[2019-01-13 21:36:37.874] - cafe.sessions.session_srv.euta.session_log - INFO:   debug                 - 
+[2019-01-13 21:36:37.875] - cafe.sessions.session_srv.euta.session_log - INFO:   delete                - Delete files
+[2019-01-13 21:36:37.875] - cafe.sessions.session_srv.euta.session_log - INFO:   devtools              - Enable/disable development tools
+[2019-01-13 21:36:37.876] - cafe.sessions.session_srv.euta.session_log - INFO:   download              - Download files
+[2019-01-13 21:36:37.876] - cafe.sessions.session_srv.euta.session_log - INFO:   enable                - Enable EXEC commands
+[2019-01-13 21:36:37.877] - cafe.sessions.session_srv.euta.session_log - INFO:   exit                  - Exit the management session
+[2019-01-13 21:36:37.877] - cafe.sessions.session_srv.euta.session_log - INFO:   folder                - 
+[2019-01-13 21:36:37.878] - cafe.sessions.session_srv.euta.session_log - INFO:   generate              - Generate files
+[2019-01-13 21:36:37.878] - cafe.sessions.session_srv.euta.session_log - INFO:   idle-timeout          - Configure idle timeout
+[2019-01-13 21:36:37.879] - cafe.sessions.session_srv.euta.session_log - INFO:   install               - 
+[2019-01-13 21:36:37.879] - cafe.sessions.session_srv.euta.session_log - INFO:   lock                  - lock a datastore
+[2019-01-13 21:36:37.880] - cafe.sessions.session_srv.euta.session_log - INFO:   logout                - Logout a user
+[2019-01-13 21:36:37.880] - cafe.sessions.session_srv.euta.session_log - INFO:   manual                - Manual operation with alarms
+[2019-01-13 21:36:37.880] - cafe.sessions.session_srv.euta.session_log - INFO:   no                    - Negate a command or set its defaults
+[2019-01-13 21:36:37.881] - cafe.sessions.session_srv.euta.session_log - INFO:   ofa-connect           - Open Flow Connect
+[2019-01-13 21:36:37.881] - cafe.sessions.session_srv.euta.session_log - INFO:   ofa-listener          - Open Flow Listener
+[2019-01-13 21:36:37.882] - cafe.sessions.session_srv.euta.session_log - INFO:   ofa-port              - Open Flow port
+[2019-01-13 21:36:37.882] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-eth               - ONT-ETH efm-loopback-status mode
+[2019-01-13 21:36:37.883] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-firmware-upgrade  - Start software download
+[2019-01-13 21:36:37.884] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-simulation        - ONT simulation commands
+[2019-01-13 21:36:37.885] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-upgrade           - ONT upgrade commands
+[2019-01-13 21:36:37.885] - cafe.sessions.session_srv.euta.session_log - INFO:   paginate              - Paginate output from CLI commands
+[2019-01-13 21:36:37.886] - cafe.sessions.session_srv.euta.session_log - INFO:   perform               - Perform an operation
+[2019-01-13 21:36:37.886] - cafe.sessions.session_srv.euta.session_log - INFO:   ping                  - Ping IP address
+[2019-01-13 21:36:37.887] - cafe.sessions.session_srv.euta.session_log - INFO:   ping6                 - Ping IPv6 address
+[2019-01-13 21:36:37.887] - cafe.sessions.session_srv.euta.session_log - INFO:   quit                  - Exit the management session
+[2019-01-13 21:36:37.888] - cafe.sessions.session_srv.euta.session_log - INFO:   redundancy            - redundancy switchover commands
+[2019-01-13 21:36:37.888] - cafe.sessions.session_srv.euta.session_log - INFO:   reload                - Reboot the current card
+[2019-01-13 21:36:37.889] - cafe.sessions.session_srv.euta.session_log - INFO:   remove-dynamic-policy - 
+[2019-01-13 21:36:37.889] - cafe.sessions.session_srv.euta.session_log - INFO:   replay                - Replay card-config
+[2019-01-13 21:36:37.890] - cafe.sessions.session_srv.euta.session_log - INFO:   restart               - Restart Diameter daemon
+[2019-01-13 21:36:37.891] - cafe.sessions.session_srv.euta.session_log - INFO:   run                   - 
+[2019-01-13 21:36:37.891] - cafe.sessions.session_srv.euta.session_log - INFO:   send                  - Send message to terminal of one or all users
+[2019-01-13 21:36:37.891] - cafe.sessions.session_srv.euta.session_log - INFO:   session               - 
+[2019-01-13 21:36:37.892] - cafe.sessions.session_srv.euta.session_log - INFO:   show                  - Show information about the system
+[2019-01-13 21:36:37.892] - cafe.sessions.session_srv.euta.session_log - INFO:   ssh                   - ssh command
+[2019-01-13 21:36:37.893] - cafe.sessions.session_srv.euta.session_log - INFO:   start                 - Start an operation
+[2019-01-13 21:36:37.893] - cafe.sessions.session_srv.euta.session_log - INFO:   stop                  - Stop an operation
+[2019-01-13 21:36:37.894] - cafe.sessions.session_srv.euta.session_log - INFO:   switch                - Switch network clock
+[2019-01-13 21:36:37.894] - cafe.sessions.session_srv.euta.session_log - INFO:   tcpdump               - tcpdump command
+[2019-01-13 21:36:37.895] - cafe.sessions.session_srv.euta.session_log - INFO:   telnet                - telnet command
+[2019-01-13 21:36:37.895] - cafe.sessions.session_srv.euta.session_log - INFO:   templatize            - Find patterns in subtree.
+[2019-01-13 21:36:37.896] - cafe.sessions.session_srv.euta.session_log - INFO:   terminal              - Set terminal type
+[2019-01-13 21:36:37.896] - cafe.sessions.session_srv.euta.session_log - INFO:   timestamp             - Enable/disable the display of timestamp
+[2019-01-13 21:36:37.896] - cafe.sessions.session_srv.euta.session_log - INFO:   traceroute            - Traceroute IP address
+[2019-01-13 21:36:37.897] - cafe.sessions.session_srv.euta.session_log - INFO:   uninstall             - 
+[2019-01-13 21:36:37.897] - cafe.sessions.session_srv.euta.session_log - INFO:   unlock                - unlock a datastore
+[2019-01-13 21:36:37.898] - cafe.sessions.session_srv.euta.session_log - INFO:   upgrade               - Upgrade commands
+[2019-01-13 21:36:37.898] - cafe.sessions.session_srv.euta.session_log - INFO:   upload                - Upload files
+[2019-01-13 21:36:37.899] - cafe.sessions.session_srv.euta.session_log - INFO:   verify                - 
+[2019-01-13 21:36:37.948] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:37.950] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:38.182] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show version
+[2019-01-13 21:36:38.401] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/1
+[2019-01-13 21:36:38.402] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgy
+[2019-01-13 21:36:38.402] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:36:38.403] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:36:38.403] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:36:38.404] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:36:38.404] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:36:38.405] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:36:38.405] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:36:38.406] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:36:38.406] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:36:38.407] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/2
+[2019-01-13 21:36:38.407] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgx
+[2019-01-13 21:36:38.408] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:36:38.409] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:36:38.410] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:36:38.410] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:36:38.411] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:36:38.411] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:36:38.412] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:36:38.412] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:36:38.413] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:36:38.458] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:38.466] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: release_adapter.get_eut_version
+[2019-01-13 21:36:38.485] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: release_adapter.get_eut_distro
+[2019-01-13 21:36:38.486] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:38.689] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show version
+[2019-01-13 21:36:38.954] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/1
+[2019-01-13 21:36:38.955] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgy
+[2019-01-13 21:36:38.956] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:36:38.956] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:36:38.956] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:36:38.957] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:36:38.957] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:36:38.958] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:36:38.958] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:36:38.959] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:36:38.959] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:36:38.960] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/2
+[2019-01-13 21:36:38.960] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgx
+[2019-01-13 21:36:38.961] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:36:38.961] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:36:38.962] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:36:38.962] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:36:38.963] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:36:38.963] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:36:38.964] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:36:38.964] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:36:38.965] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:36:39.31] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:39.50] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: release_adapter.get_eut_distro
+[2019-01-13 21:36:39.239] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit For Item Keyword: ${eut} = eutA
+[2019-01-13 21:36:39.244] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit For Keyword: ${eut} IN [ @{keys} ]
+[2019-01-13 21:36:39.247] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: release_adapter.set_eut_version
+[2019-01-13 21:36:39.451] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_command.get_system_equipment_card_info
+[2019-01-13 21:36:39.452] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:39.652] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show system-equipment
+[2019-01-13 21:36:39.923] - cafe.sessions.session_srv.euta.session_log - INFO: system-equipment
+[2019-01-13 21:36:39.930] - cafe.sessions.session_srv.euta.session_log - INFO:  equipment-type     "Multi Card"
+[2019-01-13 21:36:39.932] - cafe.sessions.session_srv.euta.session_log - INFO:  active-controller  "card 1/2 (this card)"
+[2019-01-13 21:36:39.932] - cafe.sessions.session_srv.euta.session_log - INFO:  standby-controller "card 1/1 (mate card)"
+[2019-01-13 21:36:39.975] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:39.988] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_command.get_system_equipment_card_info
+[2019-01-13 21:36:40.199] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_command.reload
+[2019-01-13 21:36:40.234] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:40.438] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# reload all 
+[2019-01-13 21:36:40.653] - cafe.sessions.session_srv.euta.session_log - INFO: Warning! Reloading the device will impact services.
+[2019-01-13 21:36:40.656] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:40.658] - cafe.sessions.session_srv.euta.session_log - INFO: Running configuration has been changed
+[2019-01-13 21:36:40.659] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:40.660] - cafe.sessions.session_srv.euta.session_log - INFO: Use 'copy running-config startup-config' to save modified configuration
+[2019-01-13 21:36:40.662] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:40.796] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:42.803] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:36:43.63] - cafe.sessions.session_srv.euta.session_log - INFO: Proceed with reload? [y/N] y
+[2019-01-13 21:36:43.68] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:36:45.97] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:37:15.223] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:37:15.224] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Expect Error
+[2019-01-13 21:37:15.225] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:37:17.662] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# Last login: Sun Jan 13 21:14:37 2019 from 10.200.201.26
+[2019-01-13 21:37:17.663] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:37:18.29] - cafe.sessions.session_srv.euta.session_log - INFO: ssh to system rejected -- system rebooting....
+[2019-01-13 21:37:22.653] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:37:22.655] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Expect Error
+[2019-01-13 21:37:22.657] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:37:52.704] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:41:29.61] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_common.Verify Cmd Working After Reload
+[2019-01-13 21:41:29.67] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 21:41:29.69] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:41:31.974] - cafe.sessions.session_srv.euta.session_log - INFO: **** ACTIVE NGPON2-4 CARD  ****
+[2019-01-13 21:41:33.452] - cafe.sessions.session_srv.euta.session_log - INFO: Welcome to CLI
+[2019-01-13 21:41:33.463] - cafe.sessions.session_srv.euta.session_log - INFO: sysadmin connected from 10.200.201.26 using ssh on NGPON2X4
+[2019-01-13 21:41:34.149] - cafe.sessions.session_srv.euta.session_log - INFO: [?7hNGPON2X4# show version
+[2019-01-13 21:41:34.576] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/1
+[2019-01-13 21:41:34.577] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgy
+[2019-01-13 21:41:34.578] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:41:34.579] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:41:34.579] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:41:34.581] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:41:34.582] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:41:34.583] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:41:34.584] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:41:34.585] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:41:34.586] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:41:34.587] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/2
+[2019-01-13 21:41:34.588] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgx
+[2019-01-13 21:41:34.590] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:41:34.590] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:41:34.591] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:41:34.592] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:41:34.593] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:41:34.594] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:41:34.594] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:41:34.595] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:41:34.596] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:41:34.709] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:41:34.714] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 21:41:34.722] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_common.Verify Cmd Working After Reload
+[2019-01-13 21:41:34.724] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:41:34.725] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_command.reload
+[2019-01-13 21:41:34.878] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:41:34.880] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:41:34.885] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:41:35.99] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:41:35.415] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                SOFTWARE  
+[2019-01-13 21:41:35.416] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                 MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:41:35.417] - cafe.sessions.session_srv.euta.session_log - INFO: ---------------------------------------------------------------------------------------------------------
+[2019-01-13 21:41:35.417] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Active)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:41:35.418] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:41:35.483] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION  CARD                                                              SOFTWARE  
+[2019-01-13 21:41:35.484] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       STATE   CARD TYPE                          MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:41:35.485] - cafe.sessions.session_srv.euta.session_log - INFO: ---------------------------------------------------------------------------------------------
+[2019-01-13 21:41:35.486] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   None       Online  Controller 14 10G ports (Standby)  10GE-12  211804602067  N/A       
+[2019-01-13 21:41:35.486] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:41:35.525] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:41:35.533] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:41:45.536] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:41:45.539] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:41:45.742] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:41:47.913] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                SOFTWARE  
+[2019-01-13 21:41:47.914] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                 MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:41:47.915] - cafe.sessions.session_srv.euta.session_log - INFO: ---------------------------------------------------------------------------------------------------------
+[2019-01-13 21:41:47.916] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Active)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:41:47.926] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:41:47.937] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION  CARD                                                              SOFTWARE  
+[2019-01-13 21:41:47.942] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       STATE   CARD TYPE                          MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:41:47.955] - cafe.sessions.session_srv.euta.session_log - INFO: ---------------------------------------------------------------------------------------------
+[2019-01-13 21:41:47.962] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    Online  Controller 14 10G ports (Standby)  10GE-12  211804602067  N/A       
+[2019-01-13 21:41:47.964] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:41:48.117] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:41:48.125] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:41:58.130] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:41:58.134] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:41:58.320] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:41:58.609] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                SOFTWARE  
+[2019-01-13 21:41:58.617] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                 MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:41:58.618] - cafe.sessions.session_srv.euta.session_log - INFO: ---------------------------------------------------------------------------------------------------------
+[2019-01-13 21:41:58.619] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Active)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:41:58.622] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:41:58.625] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                        SOFTWARE  
+[2019-01-13 21:41:58.626] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                          MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:41:58.629] - cafe.sessions.session_srv.euta.session_log - INFO: -------------------------------------------------------------------------------------------------
+[2019-01-13 21:41:58.631] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Standby)  10GE-12  211804602067  N/A       
+[2019-01-13 21:41:58.632] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:41:58.785] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:41:58.794] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:41:58.796] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:41:58.890] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:41:58.892] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:41:58.897] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:41:59.128] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:41:59.357] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                SOFTWARE  
+[2019-01-13 21:41:59.362] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                 MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:41:59.365] - cafe.sessions.session_srv.euta.session_log - INFO: ---------------------------------------------------------------------------------------------------------
+[2019-01-13 21:41:59.366] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Active)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:41:59.366] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:41:59.399] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                        SOFTWARE  
+[2019-01-13 21:41:59.400] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                          MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:41:59.400] - cafe.sessions.session_srv.euta.session_log - INFO: -------------------------------------------------------------------------------------------------
+[2019-01-13 21:41:59.401] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Standby)  10GE-12  211804602067  N/A       
+[2019-01-13 21:41:59.412] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:41:59.519] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:41:59.526] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:41:59.528] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:41:59.592] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Teardown Keyword: case teardown
+[2019-01-13 21:41:59.594] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:41:59.596] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_common.Verify Cmd Working After Reload
+[2019-01-13 21:41:59.731] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 21:41:59.733] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:42:02.33] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# Last login: Sun Jan 13 21:23:43 2019 from 10.200.201.26
+[2019-01-13 21:42:02.34] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:42:02.604] - cafe.sessions.session_srv.euta.session_log - INFO: **** ACTIVE NGPON2-4 CARD  ****
+[2019-01-13 21:42:03.626] - cafe.sessions.session_srv.euta.session_log - INFO: Welcome to CLI
+[2019-01-13 21:42:03.626] - cafe.sessions.session_srv.euta.session_log - INFO: sysadmin connected from 10.200.201.26 using ssh on NGPON2X4
+[2019-01-13 21:42:03.917] - cafe.sessions.session_srv.euta.session_log - INFO: [?7hNGPON2X4# show version
+[2019-01-13 21:42:04.234] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/1
+[2019-01-13 21:42:04.235] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgy
+[2019-01-13 21:42:04.235] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:42:04.236] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:42:04.236] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:42:04.237] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:42:04.242] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:42:04.244] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:42:04.245] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:42:04.246] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:42:04.247] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:42:04.247] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/2
+[2019-01-13 21:42:04.248] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgx
+[2019-01-13 21:42:04.249] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:42:04.249] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:42:04.250] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:42:04.251] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:42:04.251] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:42:04.252] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:42:04.253] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:42:04.253] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:42:04.254] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:42:04.316] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:42:04.321] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 21:42:04.325] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_common.Verify Cmd Working After Reload
+[2019-01-13 21:42:04.326] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:42:04.328] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Teardown Keyword: case teardown
+[2019-01-13 21:42:04.392] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Case: tc_Verify_craft_connection_after_reboot_the_system
+[2019-01-13 21:42:04.648] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Suite: tc Verify craft connection after reboot the system
+[2019-01-13 21:42:04.774] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Suite: tc Verify craft connection after switchover through CLI dualcard
+[2019-01-13 21:42:04.949] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Case: tc_Verify_craft_connection_after_switchover_through_CLI_dualcard
+[2019-01-13 21:42:05.138] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: release_adapter.set_eut_version
+[2019-01-13 21:42:05.145] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter For Keyword: ${eut} IN [ @{keys} ]
+[2019-01-13 21:42:05.146] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter For Item Keyword: ${eut} = eutA
+[2019-01-13 21:42:05.163] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: release_adapter.get_eut_version
+[2019-01-13 21:42:05.164] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:42:05.370] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# cli
+[2019-01-13 21:42:05.635] - cafe.sessions.session_srv.euta.session_log - INFO: ----------^
+[2019-01-13 21:42:05.636] - cafe.sessions.session_srv.euta.session_log - INFO: syntax error: expecting 
+[2019-01-13 21:42:05.636] - cafe.sessions.session_srv.euta.session_log - INFO:   abort                 - 
+[2019-01-13 21:42:05.638] - cafe.sessions.session_srv.euta.session_log - INFO:   accept                - Accept config
+[2019-01-13 21:42:05.638] - cafe.sessions.session_srv.euta.session_log - INFO:   apply                 - 
+[2019-01-13 21:42:05.639] - cafe.sessions.session_srv.euta.session_log - INFO:   apply-dynamic-policy  - 
+[2019-01-13 21:42:05.639] - cafe.sessions.session_srv.euta.session_log - INFO:   bng-state-persistence - BNG state persistence control commands
+[2019-01-13 21:42:05.640] - cafe.sessions.session_srv.euta.session_log - INFO:   clear                 - Clear object data
+[2019-01-13 21:42:05.640] - cafe.sessions.session_srv.euta.session_log - INFO:   clock                 - Modify clock
+[2019-01-13 21:42:05.641] - cafe.sessions.session_srv.euta.session_log - INFO:   configure             - Manipulate software configuration information
+[2019-01-13 21:42:05.642] - cafe.sessions.session_srv.euta.session_log - INFO:   copy                  - Copy files
+[2019-01-13 21:42:05.642] - cafe.sessions.session_srv.euta.session_log - INFO:   cpe-upgrade:cpe       - CPE operation
+[2019-01-13 21:42:05.643] - cafe.sessions.session_srv.euta.session_log - INFO:   debug                 - 
+[2019-01-13 21:42:05.645] - cafe.sessions.session_srv.euta.session_log - INFO:   delete                - Delete files
+[2019-01-13 21:42:05.646] - cafe.sessions.session_srv.euta.session_log - INFO:   devtools              - Enable/disable development tools
+[2019-01-13 21:42:05.647] - cafe.sessions.session_srv.euta.session_log - INFO:   download              - Download files
+[2019-01-13 21:42:05.647] - cafe.sessions.session_srv.euta.session_log - INFO:   enable                - Enable EXEC commands
+[2019-01-13 21:42:05.648] - cafe.sessions.session_srv.euta.session_log - INFO:   exit                  - Exit the management session
+[2019-01-13 21:42:05.649] - cafe.sessions.session_srv.euta.session_log - INFO:   folder                - 
+[2019-01-13 21:42:05.650] - cafe.sessions.session_srv.euta.session_log - INFO:   generate              - Generate files
+[2019-01-13 21:42:05.651] - cafe.sessions.session_srv.euta.session_log - INFO:   idle-timeout          - Configure idle timeout
+[2019-01-13 21:42:05.652] - cafe.sessions.session_srv.euta.session_log - INFO:   install               - 
+[2019-01-13 21:42:05.652] - cafe.sessions.session_srv.euta.session_log - INFO:   lock                  - lock a datastore
+[2019-01-13 21:42:05.653] - cafe.sessions.session_srv.euta.session_log - INFO:   logout                - Logout a user
+[2019-01-13 21:42:05.654] - cafe.sessions.session_srv.euta.session_log - INFO:   manual                - Manual operation with alarms
+[2019-01-13 21:42:05.655] - cafe.sessions.session_srv.euta.session_log - INFO:   no                    - Negate a command or set its defaults
+[2019-01-13 21:42:05.655] - cafe.sessions.session_srv.euta.session_log - INFO:   ofa-connect           - Open Flow Connect
+[2019-01-13 21:42:05.656] - cafe.sessions.session_srv.euta.session_log - INFO:   ofa-listener          - Open Flow Listener
+[2019-01-13 21:42:05.657] - cafe.sessions.session_srv.euta.session_log - INFO:   ofa-port              - Open Flow port
+[2019-01-13 21:42:05.658] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-eth               - ONT-ETH efm-loopback-status mode
+[2019-01-13 21:42:05.658] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-firmware-upgrade  - Start software download
+[2019-01-13 21:42:05.659] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-simulation        - ONT simulation commands
+[2019-01-13 21:42:05.659] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-upgrade           - ONT upgrade commands
+[2019-01-13 21:42:05.660] - cafe.sessions.session_srv.euta.session_log - INFO:   paginate              - Paginate output from CLI commands
+[2019-01-13 21:42:05.660] - cafe.sessions.session_srv.euta.session_log - INFO:   perform               - Perform an operation
+[2019-01-13 21:42:05.661] - cafe.sessions.session_srv.euta.session_log - INFO:   ping                  - Ping IP address
+[2019-01-13 21:42:05.662] - cafe.sessions.session_srv.euta.session_log - INFO:   ping6                 - Ping IPv6 address
+[2019-01-13 21:42:05.663] - cafe.sessions.session_srv.euta.session_log - INFO:   quit                  - Exit the management session
+[2019-01-13 21:42:05.664] - cafe.sessions.session_srv.euta.session_log - INFO:   redundancy            - redundancy switchover commands
+[2019-01-13 21:42:05.664] - cafe.sessions.session_srv.euta.session_log - INFO:   reload                - Reboot the current card
+[2019-01-13 21:42:05.665] - cafe.sessions.session_srv.euta.session_log - INFO:   remove-dynamic-policy - 
+[2019-01-13 21:42:05.665] - cafe.sessions.session_srv.euta.session_log - INFO:   replay                - Replay card-config
+[2019-01-13 21:42:05.666] - cafe.sessions.session_srv.euta.session_log - INFO:   restart               - Restart Diameter daemon
+[2019-01-13 21:42:05.666] - cafe.sessions.session_srv.euta.session_log - INFO:   run                   - 
+[2019-01-13 21:42:05.667] - cafe.sessions.session_srv.euta.session_log - INFO:   send                  - Send message to terminal of one or all users
+[2019-01-13 21:42:05.668] - cafe.sessions.session_srv.euta.session_log - INFO:   session               - 
+[2019-01-13 21:42:05.668] - cafe.sessions.session_srv.euta.session_log - INFO:   show                  - Show information about the system
+[2019-01-13 21:42:05.669] - cafe.sessions.session_srv.euta.session_log - INFO:   ssh                   - ssh command
+[2019-01-13 21:42:05.669] - cafe.sessions.session_srv.euta.session_log - INFO:   start                 - Start an operation
+[2019-01-13 21:42:05.670] - cafe.sessions.session_srv.euta.session_log - INFO:   stop                  - Stop an operation
+[2019-01-13 21:42:05.670] - cafe.sessions.session_srv.euta.session_log - INFO:   switch                - Switch network clock
+[2019-01-13 21:42:05.671] - cafe.sessions.session_srv.euta.session_log - INFO:   tcpdump               - tcpdump command
+[2019-01-13 21:42:05.672] - cafe.sessions.session_srv.euta.session_log - INFO:   telnet                - telnet command
+[2019-01-13 21:42:05.672] - cafe.sessions.session_srv.euta.session_log - INFO:   templatize            - Find patterns in subtree.
+[2019-01-13 21:42:05.673] - cafe.sessions.session_srv.euta.session_log - INFO:   terminal              - Set terminal type
+[2019-01-13 21:42:05.673] - cafe.sessions.session_srv.euta.session_log - INFO:   timestamp             - Enable/disable the display of timestamp
+[2019-01-13 21:42:05.674] - cafe.sessions.session_srv.euta.session_log - INFO:   traceroute            - Traceroute IP address
+[2019-01-13 21:42:05.674] - cafe.sessions.session_srv.euta.session_log - INFO:   uninstall             - 
+[2019-01-13 21:42:05.675] - cafe.sessions.session_srv.euta.session_log - INFO:   unlock                - unlock a datastore
+[2019-01-13 21:42:05.675] - cafe.sessions.session_srv.euta.session_log - INFO:   upgrade               - Upgrade commands
+[2019-01-13 21:42:05.676] - cafe.sessions.session_srv.euta.session_log - INFO:   upload                - Upload files
+[2019-01-13 21:42:05.677] - cafe.sessions.session_srv.euta.session_log - INFO:   verify                - 
+[2019-01-13 21:42:05.739] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:42:05.740] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:42:05.916] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show version
+[2019-01-13 21:42:06.181] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/1
+[2019-01-13 21:42:06.182] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgy
+[2019-01-13 21:42:06.183] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:42:06.183] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:42:06.184] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:42:06.184] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:42:06.184] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:42:06.185] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:42:06.185] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:42:06.186] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:42:06.186] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:42:06.187] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/2
+[2019-01-13 21:42:06.187] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgx
+[2019-01-13 21:42:06.187] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:42:06.188] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:42:06.188] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:42:06.189] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:42:06.189] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:42:06.190] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:42:06.190] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:42:06.191] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:42:06.191] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:42:06.279] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:42:06.288] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: release_adapter.get_eut_version
+[2019-01-13 21:42:06.296] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: release_adapter.get_eut_distro
+[2019-01-13 21:42:06.297] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:42:06.483] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show version
+[2019-01-13 21:42:06.749] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/1
+[2019-01-13 21:42:06.751] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgy
+[2019-01-13 21:42:06.754] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:42:06.773] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:42:06.774] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:42:06.784] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:42:06.788] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:42:06.792] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:42:06.795] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:42:06.798] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:42:06.800] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:42:06.801] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/2
+[2019-01-13 21:42:06.802] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgx
+[2019-01-13 21:42:06.802] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 21:42:06.803] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 21:42:06.804] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 21:42:06.805] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 21:42:06.806] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 21:42:06.807] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 21:42:06.808] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 21:42:06.809] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 21:42:06.810] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 21:42:06.991] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:42:07.3] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: release_adapter.get_eut_distro
+[2019-01-13 21:42:07.124] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit For Item Keyword: ${eut} = eutA
+[2019-01-13 21:42:07.125] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit For Keyword: ${eut} IN [ @{keys} ]
+[2019-01-13 21:42:07.137] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: release_adapter.set_eut_version
+[2019-01-13 21:42:07.227] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_command.get_system_equipment_card_info
+[2019-01-13 21:42:07.228] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:42:07.486] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show system-equipment
+[2019-01-13 21:42:07.706] - cafe.sessions.session_srv.euta.session_log - INFO: system-equipment
+[2019-01-13 21:42:07.707] - cafe.sessions.session_srv.euta.session_log - INFO:  equipment-type     "Multi Card"
+[2019-01-13 21:42:07.714] - cafe.sessions.session_srv.euta.session_log - INFO:  active-controller  "card 1/1 (this card)"
+[2019-01-13 21:42:07.722] - cafe.sessions.session_srv.euta.session_log - INFO:  standby-controller "card 1/2 (mate card)"
+[2019-01-13 21:42:07.778] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:42:07.789] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_command.get_system_equipment_card_info
+[2019-01-13 21:42:07.986] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_command.redundancy_switchover
+[2019-01-13 21:42:07.988] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 21:42:07.989] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:42:08.228] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# redundancy switchover
+[2019-01-13 21:42:08.392] - cafe.sessions.session_srv.euta.session_log - INFO: status Controller Switch-over triggered successfully from 1/1 to 1/2 at 2019-01-13 21:24:20:151 PST
+[2019-01-13 21:42:08.427] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:42:08.432] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 21:42:38.516] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:43:06.890] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:10.409] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# Last login: Sun Jan 13 21:26:58 2019 from 192.168.37.130
+[2019-01-13 21:48:10.409] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:48:10.978] - cafe.sessions.session_srv.euta.session_log - INFO: **** ACTIVE 10GE-12 CARD  ****
+[2019-01-13 21:48:12.49] - cafe.sessions.session_srv.euta.session_log - INFO: Welcome to CLI
+[2019-01-13 21:48:12.50] - cafe.sessions.session_srv.euta.session_log - INFO: sysadmin connected from 10.200.201.26 using ssh on NGPON2X4
+[2019-01-13 21:48:12.341] - cafe.sessions.session_srv.euta.session_log - INFO: [?7hNGPON2X4# show switchover status
+[2019-01-13 21:48:12.712] - cafe.sessions.session_srv.euta.session_log - INFO: switchover status
+[2019-01-13 21:48:12.713] - cafe.sessions.session_srv.euta.session_log - INFO:  card-location                1/2
+[2019-01-13 21:48:12.714] - cafe.sessions.session_srv.euta.session_log - INFO:  system-state                 ACTIVE
+[2019-01-13 21:48:12.714] - cafe.sessions.session_srv.euta.session_log - INFO:  switchover-reason            "User Initiated Normal-mode"
+[2019-01-13 21:48:12.715] - cafe.sessions.session_srv.euta.session_log - INFO:  switchover-status            Successful
+[2019-01-13 21:48:12.715] - cafe.sessions.session_srv.euta.session_log - INFO:  switchover-start-time        "2019-01-13 21:24:23:455 PST"
+[2019-01-13 21:48:12.716] - cafe.sessions.session_srv.euta.session_log - INFO:  switchover-end-time          "2019-01-13 21:24:25:478 PST"
+[2019-01-13 21:48:12.716] - cafe.sessions.session_srv.euta.session_log - INFO:  switchover-dm-in-sync-status "All DMs in sync"
+[2019-01-13 21:48:12.781] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:12.782] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:48:12.784] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_command.redundancy_switchover
+[2019-01-13 21:48:12.812] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:48:12.814] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_command.check_switchover_status
+[2019-01-13 21:48:12.815] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:13.57] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show switchover status
+[2019-01-13 21:48:13.323] - cafe.sessions.session_srv.euta.session_log - INFO: switchover status
+[2019-01-13 21:48:13.343] - cafe.sessions.session_srv.euta.session_log - INFO:  card-location                1/2
+[2019-01-13 21:48:13.345] - cafe.sessions.session_srv.euta.session_log - INFO:  system-state                 ACTIVE
+[2019-01-13 21:48:13.346] - cafe.sessions.session_srv.euta.session_log - INFO:  switchover-reason            "User Initiated Normal-mode"
+[2019-01-13 21:48:13.346] - cafe.sessions.session_srv.euta.session_log - INFO:  switchover-status            Successful
+[2019-01-13 21:48:13.347] - cafe.sessions.session_srv.euta.session_log - INFO:  switchover-start-time        "2019-01-13 21:24:23:455 PST"
+[2019-01-13 21:48:13.347] - cafe.sessions.session_srv.euta.session_log - INFO:  switchover-end-time          "2019-01-13 21:24:25:478 PST"
+[2019-01-13 21:48:13.348] - cafe.sessions.session_srv.euta.session_log - INFO:  switchover-dm-in-sync-status "All DMs in sync"
+[2019-01-13 21:48:13.390] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:13.401] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_command.check_switchover_status
+[2019-01-13 21:48:13.403] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:48:13.465] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:48:13.468] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:13.660] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:48:13.976] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                 SOFTWARE  
+[2019-01-13 21:48:13.977] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:48:13.977] - cafe.sessions.session_srv.euta.session_log - INFO: ----------------------------------------------------------------------------------------------------------
+[2019-01-13 21:48:13.978] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:48:13.978] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:48:13.979] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:48:13.979] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:48:13.980] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:48:13.980] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:48:13.981] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:48:14.22] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:14.31] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:48:14.80] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:48:14.83] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:14.265] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:48:14.530] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                 SOFTWARE  
+[2019-01-13 21:48:14.534] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:48:14.534] - cafe.sessions.session_srv.euta.session_log - INFO: ----------------------------------------------------------------------------------------------------------
+[2019-01-13 21:48:14.535] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:48:14.536] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:48:14.536] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:48:14.537] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:48:14.543] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:48:14.544] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:48:14.545] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:48:14.595] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:14.602] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:48:14.642] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_command.check_system_equipment_info
+[2019-01-13 21:48:14.644] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:14.837] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show system-equipment
+[2019-01-13 21:48:15.53] - cafe.sessions.session_srv.euta.session_log - INFO: system-equipment
+[2019-01-13 21:48:15.66] - cafe.sessions.session_srv.euta.session_log - INFO:  equipment-type     "Multi Card"
+[2019-01-13 21:48:15.67] - cafe.sessions.session_srv.euta.session_log - INFO:  active-controller  "card 1/2 (this card)"
+[2019-01-13 21:48:15.68] - cafe.sessions.session_srv.euta.session_log - INFO:  standby-controller "card 1/1 (mate card)"
+[2019-01-13 21:48:15.103] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:15.123] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_command.check_system_equipment_info
+[2019-01-13 21:48:15.139] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_command.check_system_equipment_info
+[2019-01-13 21:48:15.141] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:15.319] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show system-equipment
+[2019-01-13 21:48:15.535] - cafe.sessions.session_srv.euta.session_log - INFO: system-equipment
+[2019-01-13 21:48:15.582] - cafe.sessions.session_srv.euta.session_log - INFO:  equipment-type     "Multi Card"
+[2019-01-13 21:48:15.617] - cafe.sessions.session_srv.euta.session_log - INFO:  active-controller  "card 1/2 (this card)"
+[2019-01-13 21:48:15.617] - cafe.sessions.session_srv.euta.session_log - INFO:  standby-controller "card 1/1 (mate card)"
+[2019-01-13 21:48:15.701] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:15.719] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_command.check_system_equipment_info
+[2019-01-13 21:48:15.741] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Teardown Keyword: case teardown
+[2019-01-13 21:48:15.744] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:48:15.745] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:48:15.748] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:15.930] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:48:16.200] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                 SOFTWARE  
+[2019-01-13 21:48:16.201] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:48:16.202] - cafe.sessions.session_srv.euta.session_log - INFO: ----------------------------------------------------------------------------------------------------------
+[2019-01-13 21:48:16.203] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:48:16.203] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:48:16.204] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:48:16.205] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:48:16.205] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:48:16.206] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:48:16.207] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:48:16.244] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:16.252] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:48:16.254] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:48:16.256] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:48:16.257] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_card_info
+[2019-01-13 21:48:16.262] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:16.456] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show card
+[2019-01-13 21:48:16.722] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                                 SOFTWARE  
+[2019-01-13 21:48:16.725] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+[2019-01-13 21:48:16.725] - cafe.sessions.session_srv.euta.session_log - INFO: ----------------------------------------------------------------------------------------------------------
+[2019-01-13 21:48:16.726] - cafe.sessions.session_srv.euta.session_log - INFO: 1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+[2019-01-13 21:48:16.727] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:48:16.728] - cafe.sessions.session_srv.euta.session_log - INFO:       PROVISION                                                                       SOFTWARE  
+[2019-01-13 21:48:16.734] - cafe.sessions.session_srv.euta.session_log - INFO: CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+[2019-01-13 21:48:16.737] - cafe.sessions.session_srv.euta.session_log - INFO: ------------------------------------------------------------------------------------------------
+[2019-01-13 21:48:16.741] - cafe.sessions.session_srv.euta.session_log - INFO: 1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+[2019-01-13 21:48:16.744] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 21:48:17.32] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 21:48:17.45] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_card_info
+[2019-01-13 21:48:17.50] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Wait Until Keyword Succeeds
+[2019-01-13 21:48:17.53] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Teardown Keyword: case teardown
+[2019-01-13 21:48:17.171] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Case: tc_Verify_craft_connection_after_switchover_through_CLI_dualcard
+[2019-01-13 21:48:17.375] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Suite: tc Verify craft connection after switchover through CLI dualcard
+[2019-01-13 21:48:17.525] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<Exit Suite: Test Cases
+[2019-01-13 21:48:17.538] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<Exit Suite: Local Craft Interface Support
+[2019-01-13 21:48:17.545] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<Exit Suite: Management
+[2019-01-13 21:48:17.553] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<Exit Suite: System
+[2019-01-13 21:48:17.562] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<Exit Suite: ST Test Cases
+[2019-01-13 21:48:17.567] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<Exit Suite: Milan
+[2019-01-13 21:48:17.572] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<Exit Suite: AXOS-automation
+[2019-01-13 21:48:17.594] - cafe.sessions.session_srv.euta.session_log - DEBUG: <Exit Suite: AXOS

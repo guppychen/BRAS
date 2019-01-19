@@ -1,0 +1,38 @@
+global:
+  stag_vlan: 3003
+  ctag_vlan: 10
+  Qtag_vlan: 1006     #for subscriber1
+  Qtag_vlan_2: 1012     #for subscriber2
+  Qtag_vlan_3: 1007     #for subscriber1
+  Qtag_vlan_4: 1011     #for subscriber2
+
+  lease_limit: 5
+  lease_limit_2: 6
+  mac_limit: 3
+  mac_limit_2: 6
+  l2_profile_name: auto
+  l2_profile_name_2: auto2
+  class_map_name: auto
+  policy_map_name: auto
+  server_mac: 00:00:00:aa:bb:cc
+  server_mac_2: 00:00:00:aa:bb:dd
+  server_name: server
+  server_name_2: server2
+  lease_time: 3000
+  lease_start: 10.10.10.2
+  lease_start_2: 20.20.20.2
+  server_ip: 10.10.10.1
+  server_ip_2: 20.20.20.1
+  lease_number_1: 6
+  lease_number_2: 7
+  client_mac: aa:bb:cc:00:00:01
+  client_mac_2: 00:00:00:00:bb:01
+#  client_mac_3: aa:bb:dd:00:00:01
+#  client_mac_4: 00:00:00:00:cc:01
+  client_name: client
+  client_name_2: client2
+  group_name: group1
+  group_name_2: group2
+  lease_wait_time: 60  # wait for all session nogotiated
+  stc_sleep_time: 10
+  wait_ont_come_back_in_reality: 5min      #when ont is present on NGPON2-4,but it doesn't up in reality, so need to wait

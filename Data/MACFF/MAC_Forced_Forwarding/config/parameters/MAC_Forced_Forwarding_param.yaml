@@ -1,0 +1,49 @@
+global:
+  service_vlan1: 2111
+  service_vlan2: 2112
+  inner_vlan1: 201
+  inner_vlan2: 202
+  subscriber_vlan1: 4001
+  subscriber_vlan2: 4002
+  gateway_mac1: 00:06:f6:f1:1d:c2
+  subscriber_vlan3: 4003
+  subscriber_vlan4: 4006
+  dhcp_profile_name: dhcp
+
+  service_ip1: 172.30.101.254
+  service_ip2: 172.30.101.253
+  service_ip3: 172.30.101.251
+  service_ip4: 172.30.110.250
+  pool_start_ip: 172.30.101.100
+  pool_start_ip4: 172.30.110.100
+  subscriber_ip1: 172.30.101.98
+  subscriber_ip2: 172.30.101.199
+  subscriber_ip3: 172.30.101.99
+  subscriber_ip4: 172.30.110.99
+  subscriber_ip5: 172.30.110.98
+  network_ip1: 172.30.101.0
+  network_ip2: 172.30.101.128
+  gateway_ip1: 172.30.101.1
+  gateway_ip2: 172.30.101.4
+  gateway_ip3: 172.30.101.129
+  mask_ip1: 255.255.255.0
+  mask_ip2: 255.255.255.128
+
+  service_mac1: 00:03:91:00:00:01
+  service_mac2: 00:03:91:00:00:02
+  service_mac3: 00:03:91:00:00:03
+  service_mac4: 00:03:91:00:00:04
+  service_mac5: 00:03:91:00:00:05
+  subscriber_mac1: 00:10:18:00:00:01
+  subscriber_mac2: 00:10:18:00:00:02
+  subscriber_mac3: 00:10:18:00:00:03
+  subscriber_mac4: 00:10:18:00:00:04
+  subscriber_mac5: 00:10:18:00:00:04
+  gateway_mac2: 00:06:f6:f1:1d:c2
+  gateway_mac3: 00:06:f6:f1:1d:c2
+
+  traffic_run_time1: 60s
+  traffic_run_time2: 20s
+  lease_time1: 1000
+  lease_time2: 100
+  loss_rate: 0.01

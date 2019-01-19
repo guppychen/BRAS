@@ -1,0 +1,4 @@
+global:
+  p_match_vlan: 100
+  p_data_vlan: 400
+

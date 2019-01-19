@@ -1,0 +1,239 @@
+[2019-01-07 23:02:47.252] - cafe                 - WARNING: File 'cafepath' not found in this project's directory tree. Cafe Path  References (such as 'project://') will not function correctly.
+[2019-01-07 23:02:47.259] - cafe                 - DEBUG: Loaded parameter file '/home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/config/parameters/E7_param.yaml'
+[2019-01-07 23:02:47.272] - cafe                 - DEBUG: Loaded parameter file '/home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/config/parameters/E7_service_model.yaml'
+[2019-01-07 23:02:47.276] - cafe.core.utils      - INFO: Configuration details:
+    git: {
+        test_case_repo: ,
+        test_case_branch: 
+    },
+    session_server: {
+        kill_if_exist_timeout: 300,
+        python_exe: python2,
+        filename: /home/guchen/repo/calix/src/cafe/sessions/session_srv.py,
+        host: localhost,
+        policy: SIMPLE,
+        kill_if_exist: False,
+        port: 18890
+    },
+    cafebot: {
+        enable_repeat_test_case: True,
+        write_results_to_db: True,
+        name: ,
+        topo_specific_init: True,
+        reset_tg_sessions: False,
+        enable_duplicated_keyword_check: True,
+        write_results_one_suite_name: Default Test Suite,
+        session_log_markup_level: [u'ALL'],
+        test_case_repeat_times: -1,
+        reset_sessions: False,
+        pause_on_specified_exception: None,
+        duplicated_keyword_check_level: WARNING,
+        rerun: 1,
+        enable_log_collection: False,
+        dryrun: False,
+        exit_on_specified_exception: None,
+        write_results_suite_mode: one_to_one,
+        write_results_ignore_empty_suites: True,
+        auto_save_tg_config_file_on_failed_cases: False
+    },
+    parameters: {
+        files: ['/home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/config/parameters/E7_param.yaml', '/home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/config/parameters/E7_service_model.yaml'],
+        random_state: ,
+        random_seed: -1
+    },
+    tempfile: {
+        cleanup_temp_files: True
+    },
+    snmp: {
+        force_build_mib_sessions: ,
+        base_mib_path: /usr/share/snmp/mibs/*.txt,
+        mib_paths: None,
+        v3_security_engine_id: 8000000001020304,
+        backup_mib_sources: [u'http://mibs.snmplabs.com/asn1/@mib@'],
+        dest_dir: None
+    },
+    traffic_gen: {
+        ixia_version_file: /opt/ixia/version.txt,
+        tcl_session_timeout_relaunch: False,
+        auto_adapt_tg_arguments: False,
+        trex_client_hltapi_path: /opt/trex_client/stl
+    },
+    diagnostic_hooks: {
+        test_step_failure_kw: ,
+        log_message_patterns: None,
+        log_message_on_fail_only: False,
+        timer_kw: ,
+        enabled: False,
+        test_case_end_kw_before_teardown: ,
+        test_case_end_kw: ,
+        test_step_end_kw: ,
+        test_suite_end_kw: ,
+        test_suite_start_kw: ,
+        test_step_start_kw: ,
+        test_case_start_kw: ,
+        log_message_kw: ,
+        timer_kw_interval: 0,
+        resources: None
+    },
+    webgui: {
+        log_level: ERROR
+    },
+    random_delay: {
+        max_delay_seconds: -1
+    },
+    bugfile: {
+        path: None
+    },
+    timeout: {
+        webgui_timeout: -1,
+        cli_timeout: -1,
+        default_global_timeout: -1,
+        netconf_timeout: -1,
+        restful_timeout: -1,
+        snmp_timeout: -1,
+        trafficgen_timeout: -1
+    },
+    test_suite: {
+        parameter_files: None,
+        topology_file: None,
+        abort_on_failure: False
+    },
+    _default_report: {
+        __type__: console_report
+    },
+    disk_monitor: {
+        error_limit: 95,
+        directories: None,
+        enabled: False,
+        warning_limit: 80
+    },
+    logger: {
+        show_sessions: ['tg1'],
+        console: False,
+        level: DEBUG
+    },
+    cafe_runner: {
+        enable_cafe_tracker: False,
+        log_path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_02_46/logs,
+        enable_xunit_editor: False,
+        variables: {},
+        tracker_comm_type: ASYNC,
+        renderer: <class 'cafe.runner.renderers.cliprinter.TextRenderer'>,
+        path: /home/guchen/workspace/AXOS,
+        device_monitor_host: http://cdc-cafecmdr.calix.local,
+        tc_include_list: None,
+        test_result_path_postfix: ,
+        collect_tc_id: False,
+        exclude_tags: None,
+        tc_exclude_list: None,
+        db_path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_02_46/db,
+        db_echo: False,
+        tcl_interpreter: /opt/active_tcl/bin/tclsh,
+        enable_device_monitor: False,
+        enforce_documentation: False,
+        tc_exec_order: <function in_order at 0x7f9f7dd80320>,
+        test_result_path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_02_46,
+        include_tags: None,
+        db_type: sqlite,
+        reports: [u'_default_report'],
+        show_print_statements: True,
+        exit_on_error_cafe_tracker: False,
+        enable_cafe_vm_register: True,
+        runner_log_name: runner.log
+    },
+    runner_state: {
+        executing_in_runner: False,
+        timestamp: {
+            raw: 1546930966.77,
+            path_safe: 01_08_2019_07_02_46
+        },
+        path_reference_file: /cafepath,
+        callbacks: <cafe.runner.renderers.cliprinter.TextRenderer object at 0x7f9f791d0d10>,
+        user: {
+            available_log_dir: .
+        },
+        path_reference: {},
+        logger: <cafe.core.logger.CLogger object at 0x7f9f7ff23a90>
+    },
+    topology: {
+        force_eut_tag: False,
+        user_interface: ,
+        logical_query: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/config/topology/E7_topo.yaml,
+        eut_ua_injector_on: True,
+        session_initiation: DO_NOTHING,
+        dut_release_branch: ,
+        force_user_interface_tag: False,
+        dut_version: ,
+        file: None,
+        eut: ,
+        raise_validation_error: False,
+        aliases: {}
+    }
+[2019-01-07 23:02:47.393] - cafe.core.utils      - INFO: Configuration details:
+    connection: {
+        eutA: {
+            cli_response_error_check: {
+                regex: ,
+                enable: False
+            },
+            user_interface: CLI,
+            prompt: #,
+            ip: 10.245.96.74,
+            meta: {
+                driver: cafe.app.driver.ssh.SSHDriver
+            },
+            user: sysadmin,
+            timeout: 30,
+            protocol: ssh,
+            model: MILAN,
+            password: sysadmin,
+            type: AXOS,
+            port: 22,
+            crlf: 
+
+        }
+    }
+[2019-01-07 23:02:47.399] - cafe.sessions.session_manager - DEBUG: session policy class chosen (<class 'cafe.sessions.session_manager.SimpleLocalOnlyPolicy'>)
+[2019-01-07 23:02:47.401] - cafe.sessions.session_srv - INFO: session server connected!!!
+[2019-01-07 23:02:47.402] - cafe.sessions.session_manager - DEBUG: create_session: eutA, ssh, AXOS, {'cli_response_error_check': <cafe.core.utils.Param object at 0x7f9f78ff1210>, 'user_interface': 'CLI', 'prompt': '#', 'ip': '10.245.96.74', 'host': '10.245.96.74', 'meta': <cafe.core.utils.Param object at 0x7f9f78ff1750>, 'user': 'sysadmin', 'timeout': 30, 'protocol': 'ssh', 'model': 'MILAN', 'password': 'sysadmin', 'type': 'AXOS', 'port': 22, 'crlf': '\n'}
+[2019-01-07 23:02:47.403] - cafe.sessions.session_srv - INFO: create_session: euta, ssh, axos, {'cli_response_error_check': <cafe.core.utils.Param object at 0x7f9f78ff1210>, 'user_interface': 'CLI', 'prompt': '#', 'ip': '10.245.96.74', 'host': '10.245.96.74', 'meta': <cafe.core.utils.Param object at 0x7f9f78ff1750>, 'user': 'sysadmin', 'timeout': 30, 'protocol': 'ssh', 'model': 'MILAN', 'password': 'sysadmin', 'type': 'AXOS', 'port': 22, 'crlf': '\n'}
+[2019-01-07 23:02:47.405] - cafe.sessions.session_srv.euta - DEBUG: session log level is: DEBUG
+[2019-01-07 23:02:47.406] - cafe.sessions.session_srv.euta - DEBUG: default prompt for this session is #
+[2019-01-07 23:02:47.407] - cafe.sessions.session_srv.euta - INFO: create folder for /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_02_46/logs/euta.log successful
+[2019-01-07 23:02:47.413] - cafe                 - DEBUG: driver created: eutA
+[2019-01-07 23:02:47.415] - cafe                 - DEBUG: session initiation is DO_NOTHING
+[2019-01-07 23:02:47.416] - cafe                 - INFO: Register dynamic listener <caferobot.listener.keyword_duplicated_check.KeywordDuplicatedCheckListener object at 0x7f9f790b8d10>, version 2
+[2019-01-07 23:02:47.417] - cafe                 - INFO: Register dynamic listener <caferobot.listener.session_listener.SessionListener object at 0x7f9f790b8d50>, version 2
+[2019-01-07 23:02:47.417] - cafe                 - INFO: Register dynamic listener <caferobot.listener.log_listener.LogListener object at 0x7f9f790b8dd0>, version 2
+[2019-01-07 23:02:47.418] - cafe                 - INFO: Register dynamic listener <caferobot.listener.cafe_db_writer.CafeDBWriter object at 0x7f9f790b8e10>, version 2
+[2019-01-07 23:02:47.420] - cafe                 - INFO: Register dynamic listener <caferobot.listener.eut_ua_injector.EUTUAInjector object at 0x7f9f790b8e50>, version 2
+[2019-01-07 23:02:47.421] - cafe                 - INFO: Register dynamic listener <class 'caferobot.listener.enforce_documentation.EnforceDocumentationListener'>, version 3
+[2019-01-07 23:02:47.422] - cafe                 - INFO: Register dynamic listener <caferobot.listener.scope_listener.ScopeListener object at 0x7f9f790b8ed0>, version 2
+[2019-01-07 23:02:47.423] - cafe                 - INFO: Register dynamic listener <caferobot.listener.randomstate_listener.RandomStateListener object at 0x7f9f790b8f10>, version 3
+[2019-01-07 23:02:47.424] - cafe                 - INFO: App() session has built
+[2019-01-07 23:02:47.425] - cafe                 - INFO: Register Cafe Virtual Machine Information
+[2019-01-07 23:02:47.756] - cafe.core.device     - WARNING: Exception ignored: No JSON object could be decoded
+[2019-01-07 23:02:47.757] - cafe                 - INFO: Cafe Tracker Is Disabled
+[2019-01-07 23:02:52.708] - cafe.core.db         - DEBUG: db (sqlite:////home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_02_46/db/20190107/20190107230252.idb) create success
+[2019-01-07 23:02:53.530] - caferobot.session.control.status - INFO: Reset flag_of_reset_session from True to False
+[2019-01-07 23:02:53.617] - cafe.util.generators.accessor - WARNING: Invalid random seed. use fractional second instead.
+[2019-01-07 23:02:53.618] - cafe.util.generators.accessor - WARNING: Invalid random state. use default state instead.
+[2019-01-07 23:02:53.620] - caferobot.listener.session_listener - INFO: Do not reset all sessions
+[2019-01-07 23:02:53.969] - cafe.util.tracer     - DEBUG: Enter reset_all_sessions
+[2019-01-07 23:02:54.136] - cafe.util.tracer     - DEBUG: Exit reset_all_sessions, takes 0.164863 secs.
+[2019-01-07 23:02:54.137] - cafe                 - INFO: App() destroy session: eutA
+[2019-01-07 23:02:54.192] - cafe.sessions.session_manager - DEBUG: closing server local_server
+[2019-01-07 23:02:54.193] - cafe.sessions.session_srv - INFO: session server (local_server) is closed
+[2019-01-07 23:02:54.232] - cafe.console_logger  - INFO: *** test suite report (AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support.MTU.Testcase.tc 9k INNI port to INNI port) ***
+[2019-01-07 23:02:54.233] - cafe.core.db         - DEBUG: get testsuite report text (1)
+[2019-01-07 23:02:54.254] - cafe.console_logger  - INFO: +---------------------------------------+-------------------------+--------+----------+----------+----------------+--------------+------+------+------+------+-------+---------------+----------------+
+[2019-01-07 23:02:54.255] - cafe.console_logger  - INFO: | name                                  |        global_id        | status | assignee |   eut    | user_interface | teststep_cnt | pass | fail | info | warn | error | start_time    | elapsed_time   |
+[2019-01-07 23:02:54.256] - cafe.console_logger  - INFO: +---------------------------------------+-------------------------+--------+----------+----------+----------------+--------------+------+------+------+------+-------+---------------+----------------+
+[2019-01-07 23:02:54.257] - cafe.console_logger  - INFO: | tc_tc_9k_INNI_port_to_INNI_port.robot | AXOS_E72_PARENT-TC-4716 |  fail  |  pzhang  | GPON-8r2 |      CLI       |      0       |  0   |  0   |  0   |  0   |   0   | 1546930973.53 | 0.250085115433 |
+[2019-01-07 23:02:54.258] - cafe.console_logger  - INFO: +---------------------------------------+-------------------------+--------+----------+----------+----------------+--------------+------+------+------+------+-------+---------------+----------------+
+[2019-01-07 23:02:54.267] - cafe.console_logger  - INFO: 
+[2019-01-07 23:02:54.268] - cafe.console_logger  - INFO: Result Path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_02_46
+[2019-01-07 23:02:54.269] - cafe.console_logger  - INFO: Log Path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/logs/results_01_08_2019_07_02_46/logs
+[2019-01-07 23:02:54.270] - cafe.console_logger  - INFO: 
+[2019-01-07 23:02:54.271] - cafe.console_logger  - INFO: Total: 1 test cases in 1 test suites.
+[2019-01-07 23:02:54.272] - cafe.console_logger  - INFO: 0 passed, 1 failed, 0 indeterminate.

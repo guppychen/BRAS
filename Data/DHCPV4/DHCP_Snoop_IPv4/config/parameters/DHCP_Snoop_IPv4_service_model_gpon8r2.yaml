@@ -1,0 +1,28 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x3
+      attribute:
+        interface_role: inni
+
+    subscriber_point1: 
+      device: eutA
+      type: ont_port
+      name: 844/g4
+      member:
+        interface1: 844/g4
+      attribute:
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: 844
+        ont_profile_id: 854G_ARF
+        serial_number: 2D5640
+#        serial_number: 3D15BA
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/gp1

@@ -1,0 +1,36 @@
+global:
+  ctag_vlan: 500
+  stag_vlan: 3002
+  Qtag_vlan: 3001
+  Qtag_vlan_2: 3003
+  l2_profile_name: auto
+  class_map_name: auto
+  policy_map_name: auto
+  match_oui: aa:bb:cc
+  server_mac: 00:00:00:aa:bb:cc
+  server_mac_2: 00:00:00:aa:bb:dd
+  server_name: server
+  server_name_2: server2
+  lease_time: 900
+  lease_time_2: 3000             #lease time
+  lease_start: 10.10.10.2
+  lease_start_2: 20.20.20.2
+  server_ip: 10.10.10.1
+  server_ip_2: 20.20.20.1
+  lease_number: 10
+  client_mac: aa:bb:cc:00:00:01
+  client_mac_2: 00:00:00:00:bb:01
+  client_name: client
+  client_name_2: client2
+  group_name: group1
+  group_name_2: group2
+  mask: 16
+  mask_in_cli: 255.255.0.0
+  lease_wait_time: 60            # wait for all session nogotiated
+  traffic_run_time: 10           # run traffic for 10s
+  STC_wait_time: 5
+  traffic_loss_rate: 0.001        # traffic loss rate
+  wait_ont_card_up_time: 5min   # wait until check time for ont or card after rebooting
+
+
+

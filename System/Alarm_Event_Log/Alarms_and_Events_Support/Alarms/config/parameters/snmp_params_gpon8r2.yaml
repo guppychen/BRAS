@@ -1,0 +1,50 @@
+
+netconf:
+        showevent:   '<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> <get> <filter> <status xmlns="http://www.calix.com/ns/exa/base"> <system> <instances> <event> <detail> </detail> </event> </instances> </system> </status> </filter> </get> </rpc>'
+        closesession: '<rpc message-id="215" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> <close-session/> </rpc>'
+        subscription: '<?xml version="1.0" encoding="utf-8"?> <rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> <create-subscription xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0"> <stream>exa-events</stream> </create-subscription> </rpc>'
+        ontupgserver: '<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id=""> <edit-config> <target> <running/> </target> <config> <config xmlns="http://www.calix.com/ns/exa/base"> <system> <ont-upgrade> <server> <hostname>10.205.32.10</hostname> <username>upgrade</username> <password>upgrade</password> <directory-path>.</directory-path> <xfermode>FTP</xfermode> <port>21</port> </server> </ont-upgrade> </system> </config> </edit-config> </rpc> ]]>]]>'
+        alarm-active: '<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> \ \ <get> \ \ \ \ <filter> \ \ \ \ \ \ <status xmlns="http://www.calix.com/ns/exa/base"> \ \ \ \ \ \ \ <system> \ \ \ \ \ \ \ \ \ \ <alarm> \ \ \ \ \ \ \ \ \ \ \ \ <active> \	\	\	</active> \ \ \ \ \ \ \ \ \ \ </alarm> \ \ \ \ \ \ \ \ </system> \ \ \ \ \ \ </status> \ \ \ \ </filter> \ \ </get> </rpc> ]]>]]>'
+
+
+bamboo:
+        denali: "ftp://log_store:log_store@10.245.250.136/DPU_MDU/IB_ROLT/Patch/FullRelease_denali_IB-ROLT_20170307185541_builder.run"
+        eolus: "ftp://log_store:log_store@10.245.250.136/DPU_MDU/IB_ROLT/Patch/FullRelease_eolus_MB-AXOS-3.1_20171129060227_builder.run"
+#        eolus: "http://bamboo.calix.local/browse/EEXA8976-CI1-163/artifact/shared/FullRelease.run/FullRelease_eolus_FB-EEXA-8976-L2-Integ_20170608020105_builder.run"
+        eoluswrong: "http://bamboo.calix.local/browse/EEXA4902-CI1-1576/artifact/shared/FullRelease.run/FullRelease_eolus_IB-ROLT_20170304719_builder.run"
+#        patch: "ftp://log_store:log_store@10.245.250.136/DPU_MDU/IB_ROLT/Patch/PatchRelease_eolus_IB-ROLT_20170620192918_builder.run"
+#        patch1: "ftp://log_store:log_store@10.245.250.136/DPU_MDU/IB_ROLT/Patch/PatchRelease_eolus_IB-ROLT_20170621082328_builder.run"
+        patch: "ftp://log_store:log_store@10.245.250.136/DPU_MDU/IB_ROLT/Patch/PatchRelease_eolus_MB-AXOS-3.1_20171124034616_builder.run"
+        patch1: "ftp://log_store:log_store@10.245.250.136/DPU_MDU/IB_ROLT/Patch/PatchRelease_eolus_MB-AXOS-3.1_20171124034616_builder.run"
+
+
+cafe:
+     password: "marino13"
+
+serverIp:
+         v4_addr: "10.245.249.119"
+         vm_addr: "10.245.249.187"
+
+
+ntp:
+    server1: "SNMP1"
+    server2: "SNMP2"
+    server3: "SNMP9"
+    server4: "10.23.21.41"
+
+clock:
+  time1: "2016-12-18T22:52:00"
+
+diagnostic:
+     filename: "mt_selftest"
+
+syslog:
+     path: "/var/log"
+     filename: "GPON-8R2"
+
+ethernet:
+     ponport: "1/1/gp"
+
+
+
+

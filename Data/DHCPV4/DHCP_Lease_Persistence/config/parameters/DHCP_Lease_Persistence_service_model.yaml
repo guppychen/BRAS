@@ -1,0 +1,27 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x1
+      attribute:
+        interface_role: inni
+
+    subscriber_point1: 
+      device: eutA
+      type: ont_port
+      name: 801/x1
+      member:
+        interface1: 801/x1
+      attribute:
+        interface_role: uni
+        ont_id: 801
+        ont_profile_id: GP1000X
+        serial_number: 3D15BA
+#        serial_number: 3D15AD
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/xp1

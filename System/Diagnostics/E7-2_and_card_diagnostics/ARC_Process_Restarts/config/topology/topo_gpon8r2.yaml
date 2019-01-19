@@ -1,0 +1,46 @@
+connection:
+  h1:
+    ip: localhost
+    type: linux
+    protocol: ssh
+    user: cafetest
+    password: cafetest
+    timeout: 11
+  
+  n1_session1:
+    ip: 10.245.74.71
+    type: exa
+    user_interface: CLI
+    protocol: exa_ssh
+    user: sysadmin
+    password: sysadmin
+    timeout: 30
+    ports:
+      service_p1:
+        port: 1/1/x1
+        type: Ethernet
+      subscriber_p1:
+        port: 1/g1
+        type: ont-ethernet
+      subscriber_p2:
+        port: 1/1/gp1
+        type: pon
+  
+  n1_session2:
+    ip: 10.245.74.71
+    type: linux
+    user_interface: CLI
+    protocol: ssh
+    user: root
+    password: root
+    timeout: 30
+    ports:
+      service_p1:
+        port: 1/1/x1
+        type: Ethernet
+      subscriber_p1:
+        port: 1/g1
+        type: ont-ethernet
+      subscriber_p2:
+        port: 1/1/gp1
+        type: pon

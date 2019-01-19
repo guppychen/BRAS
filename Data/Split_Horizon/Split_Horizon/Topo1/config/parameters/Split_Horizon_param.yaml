@@ -1,0 +1,19 @@
+global:
+  p_match_vlan1: 1190
+  p_match_vlan2: 1100
+  p_data_vlan: 666
+
+  service_ip: 20.20.20.2
+  service_ip2: 20.20.20.3
+  subscriber_ip: 20.20.20.20
+
+  service_mac1: 00:00:00:11:00:11
+  service_mac2: 00:00:11:11:00:11
+  subscriber_mac1: 00:00:00:44:55:66
+
+
+  rate_pps: 10000
+  sleep_time: 10s
+  traffic_run_time: 30s
+  wait_time: 10s
+  loss_rate: 0.01

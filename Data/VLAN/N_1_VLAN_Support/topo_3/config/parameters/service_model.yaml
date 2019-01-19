@@ -1,0 +1,30 @@
+global:
+  service_model:
+    service_point_list1:
+    - service_point1
+    - service_point2
+    - service_point3
+    service_point1:
+      device: eutA
+      type: lag
+      name: la1
+      member:
+        interface1: 1/1/x4
+      attribute:
+        interface_role: lag
+    service_point2:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x2
+      attribute:
+        interface_role: inni
+    service_point3:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x3
+      attribute:
+        interface_role: inni
+
+

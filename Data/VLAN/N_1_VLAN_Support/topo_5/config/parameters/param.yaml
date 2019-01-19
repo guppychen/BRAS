@@ -1,0 +1,43 @@
+global:
+  service_vlan: 211
+#  c_vlan: 4001
+#  cvlan_2: 4002
+  match_vlan: 4002
+  match_vlan_2: 10
+  match_vlan_3: 50
+  match_vlan_4: 20
+  traslate_cevlan: 20
+  match_pcp_1: 6
+  match_pcp_2: 2
+  pcp_1: 1
+  pcp_2: 0
+  change_vlan:
+  send_traffic_time: 5
+  stop_traffic_time: 3
+  mac1: 00:00:01:00:00:01
+  mac2: 00:00:02:00:00:02
+  mac3: 00:00:03:00:00:04
+  mac4: 00:00:04:00:00:04
+  mac_broadcast: FF:FF:FF:FF:FF:FF
+  mac_multicast: 01:00:5E:01:01:01
+  mac_oui: 00:00:01
+  ip1: 192.168.10.3
+  ip2: 192.168.10.2
+  ip_multicast: 224.1.1.1
+  udp_port1: 63
+  udp_port2: 64
+  rate_bps: 1000000
+  class_map_name: anne
+  class_map_type: ethernet
+  flow_index: 1
+  flow_index_1: 2
+  rule_index: 1
+  rule_index_1: 2
+  policy_map_name: anne
+  error_rate: 0.005
+  interface_type1: ethernet
+  interface_type2: ont-etherne
+
+
+
+

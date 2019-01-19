@@ -1,0 +1,36 @@
+global:
+  hostname: NGPON2X4        #option82 option and need to change as your testbed configuration
+  ctag_vlan: 500
+  ctag_pbit: 4
+  stag_vlan: 3001
+  stag_pbit: 3
+  Qtag_vlan: 3002
+  Qtag_vlan_2: 3001
+  Qtag_pbit: 6
+  id_profile_name: auto
+  l2_profile_name: auto
+  class_map_name: auto
+  policy_map_name: auto
+  server_mac: 00:00:00:aa:bb:cc
+  server_mac_2: 00:00:00:aa:bb:dd
+  server_name: server
+  server_name_2: server2
+  lease_time: 300
+  lease_start: 10.10.10.2
+  lease_start_2: 20.20.20.2
+  server_ip: 10.10.10.1
+  server_ip_2: 20.20.20.1
+  lease_number: 10
+  client_mac: aa:bb:cc:00:00:01
+  client_mac_2: 00:00:00:00:bb:01
+  client_name: client
+  client_name_2: client2
+  group_name: group1
+  group_name_2: group2
+  lease_wait_time: 60            # wait for all session nogotiated
+  shelf: 1   # option82 option and no need to change when porting
+  slot: 1          # option82 option and no need to change when porting
+  ontslot: 1                # option82 option and no need to change when porting
+  desc: ryiONT     # option82 option and no need to change when porting
+  wait_ont_come_back_in_reality: 5min      #when ont is present on NGPON2-4,but it doesn't up in reality, so need to wait
+  circuit_id: 123456789012345678901234567890123456789012345678901234567890123

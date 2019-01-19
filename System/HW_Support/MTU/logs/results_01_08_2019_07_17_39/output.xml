@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20190107 23:17:44.175" generator="Robot 3.0.4 (Python 2.7.14 on linux2)">
+<suite source="/home/guchen/workspace/AXOS" id="s1" name="AXOS">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation" id="s1-s1" name="AXOS-automation">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan" id="s1-s1-s1" name="Milan">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases" id="s1-s1-s1-s1" name="ST Test Cases">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System" id="s1-s1-s1-s1-s1" name="System">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support" id="s1-s1-s1-s1-s1-s1" name="HW Support">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU" id="s1-s1-s1-s1-s1-s1-s1" name="MTU">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/testcase" id="s1-s1-s1-s1-s1-s1-s1-s1" name="Testcase">
+<kw type="setup" name="test_setup">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>Enter setup</arg>
+</arguments>
+<msg timestamp="20190107 23:17:45.143" level="INFO">Enter setup</msg>
+<status status="PASS" endtime="20190107 23:17:45.144" starttime="20190107 23:17:45.143"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>service_point_provision for uplink side</arg>
+</arguments>
+<msg timestamp="20190107 23:17:45.145" level="INFO">service_point_provision for uplink side</msg>
+<status status="PASS" endtime="20190107 23:17:45.146" starttime="20190107 23:17:45.145"></status>
+</kw>
+<kw name="service_point_prov" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: provision for service_point</doc>
+<arguments>
+<arg>service_point_list1</arg>
+</arguments>
+<kw type="for" name="${service_point} IN [ @{service_model.${service_point_list}} ]">
+<msg timestamp="20190107 23:17:45.148" level="FAIL">Value of variable '@{service_model.service_point_list1}' is not list or list-like.</msg>
+<status status="FAIL" endtime="20190107 23:17:45.148" starttime="20190107 23:17:45.147"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:17:45.149" starttime="20190107 23:17:45.146"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:17:45.149" starttime="20190107 23:17:45.141"></status>
+</kw>
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/HW_Support/MTU/testcase/tc_9k_INNI_port_to_INNI_port.robot" id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="tc 9k INNI port to INNI port">
+<test id="s1-s1-s1-s1-s1-s1-s1-s1-s1-t1" name="tc_tc_9k_INNI_port_to_INNI_port.robot">
+<doc>The purpose of this test is to Check card's ethernet mtu 9000
+1.set ethernet mtu 9000
+2.check ethernet mtu 9000</doc>
+<tags>
+<tag>@author=pzhang</tag>
+<tag>@eut=10GE-12</tag>
+<tag>@eut=GPON-8r2</tag>
+<tag>@feature=HW_Support</tag>
+<tag>@globalid=2533451</tag>
+<tag>@subfeature=MTU_size_of_9k</tag>
+<tag>@tcid=AXOS_E72_PARENT-TC-4716</tag>
+<tag>@user_interface=CLI</tag>
+</tags>
+<status status="FAIL" endtime="20190107 23:17:45.418" critical="yes" starttime="20190107 23:17:45.297">Parent suite setup failed:
+Value of variable '@{service_model.service_point_list1}' is not list or list-like.</status>
+</test>
+<doc>The purpose of this test is to Check card's ethernet mtu 9000
+1.set ethernet mtu 9000
+2.check ethernet mtu 9000
+</doc>
+<status status="FAIL" endtime="20190107 23:17:45.566" starttime="20190107 23:17:45.150">Parent suite setup failed:
+Value of variable '@{service_model.service_point_list1}' is not list or list-like.</status>
+</suite>
+<kw type="teardown" name="test_teardown">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>Enter teardown</arg>
+</arguments>
+<msg timestamp="20190107 23:17:45.671" level="INFO">Enter teardown</msg>
+<status status="PASS" endtime="20190107 23:17:45.671" starttime="20190107 23:17:45.669"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>service_point remove_svc and deprovision</arg>
+</arguments>
+<msg timestamp="20190107 23:17:45.676" level="INFO">service_point remove_svc and deprovision</msg>
+<status status="PASS" endtime="20190107 23:17:45.677" starttime="20190107 23:17:45.673"></status>
+</kw>
+<kw name="service_point_remove_vlan" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: remove vlan for service_point</doc>
+<arguments>
+<arg>service_point_list1</arg>
+<arg>${service_vlan}</arg>
+</arguments>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${vlan_list}</arg>
+</arguments>
+<assign>
+<var>${vlan_list_str}</var>
+</assign>
+<msg timestamp="20190107 23:17:45.682" level="DEBUG">Argument types are:
+&lt;type 'int'&gt;</msg>
+<msg timestamp="20190107 23:17:45.682" level="INFO">${vlan_list_str} = 777</msg>
+<status status="PASS" endtime="20190107 23:17:45.683" starttime="20190107 23:17:45.680"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${vlan_list_str}</arg>
+<arg>,</arg>
+<arg>_</arg>
+</arguments>
+<assign>
+<var>${vlan_list_str}</var>
+</assign>
+<msg timestamp="20190107 23:17:45.687" level="INFO">${vlan_list_str} = 777</msg>
+<status status="PASS" endtime="20190107 23:17:45.687" starttime="20190107 23:17:45.684"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${cfg_prefix}_TransVlan_${vlan_list_str}</arg>
+</arguments>
+<assign>
+<var>${transport_prf}</var>
+</assign>
+<msg timestamp="20190107 23:17:45.690" level="INFO">${transport_prf} = auto_TransVlan_777</msg>
+<status status="PASS" endtime="20190107 23:17:45.690" starttime="20190107 23:17:45.688"></status>
+</kw>
+<kw type="for" name="${service_point} IN [ @{service_model.${service_point_list}} ]">
+<msg timestamp="20190107 23:17:45.692" level="FAIL">Value of variable '@{service_model.service_point_list1}' is not list or list-like.</msg>
+<status status="FAIL" endtime="20190107 23:17:45.692" starttime="20190107 23:17:45.691"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:17:45.693" starttime="20190107 23:17:45.678"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>delete vlan</arg>
+</arguments>
+<msg timestamp="20190107 23:17:45.696" level="INFO">delete vlan</msg>
+<status status="PASS" endtime="20190107 23:17:45.697" starttime="20190107 23:17:45.694"></status>
+</kw>
+<kw name="dprov_vlan" library="keyword_command">
+<tags>
+<tag>@author=AnneLi</tag>
+</tags>
+<doc>deprovision vlan</doc>
+<arguments>
+<arg>eutA</arg>
+<arg>${service_vlan}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>configure</arg>
+</arguments>
+<msg timestamp="20190107 23:17:49.233" level="INFO">Created ShellDevice(eutA)</msg>
+<msg timestamp="20190107 23:17:49.235" level="INFO">send session_command, cmd=configure, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:17:49.713" level="INFO">session_command result=configure
+Enter configuration commands, one per line. End with CNTL/Z.
+NGPON2X4(config)</msg>
+<status status="PASS" endtime="20190107 23:17:49.714" starttime="20190107 23:17:45.701"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>vlan ${vlan}</arg>
+</arguments>
+<msg timestamp="20190107 23:17:49.722" level="INFO">send session_command, cmd=vlan 777, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:17:50.139" level="INFO">session_command result=vlan 777
+NGPON2X4(config-vlan-777)</msg>
+<status status="PASS" endtime="20190107 23:17:50.139" starttime="20190107 23:17:49.717"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${EMPTY}</arg>
+</arguments>
+<assign>
+<var>${cmd_string}</var>
+</assign>
+<msg timestamp="20190107 23:17:50.142" level="INFO">${cmd_string} = </msg>
+<status status="PASS" endtime="20190107 23:17:50.142" starttime="20190107 23:17:50.141"></status>
+</kw>
+<kw type="for" name="${element} IN [ @{cmd_list} ]">
+<status status="PASS" endtime="20190107 23:17:50.144" starttime="20190107 23:17:50.143"></status>
+</kw>
+<kw type="teardown" name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>end</arg>
+</arguments>
+<msg timestamp="20190107 23:17:50.146" level="INFO">send session_command, cmd=end, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190107 23:17:50.439" level="INFO">session_command result=end
+NGPON2X4</msg>
+<status status="PASS" endtime="20190107 23:17:50.439" starttime="20190107 23:17:50.144"></status>
+</kw>
+<status status="PASS" endtime="20190107 23:17:50.445" starttime="20190107 23:17:45.699"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>service_point deprovision</arg>
+</arguments>
+<msg timestamp="20190107 23:17:50.447" level="INFO">service_point deprovision</msg>
+<status status="PASS" endtime="20190107 23:17:50.448" starttime="20190107 23:17:50.446"></status>
+</kw>
+<kw name="service_point_dprov" library="keyword_service_model">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: deprovision for service_point</doc>
+<arguments>
+<arg>service_point_list1</arg>
+</arguments>
+<kw type="for" name="${service_point} IN [ @{service_model.${service_point_list}} ]">
+<msg timestamp="20190107 23:17:50.450" level="FAIL">Value of variable '@{service_model.service_point_list1}' is not list or list-like.</msg>
+<status status="FAIL" endtime="20190107 23:17:50.451" starttime="20190107 23:17:50.449"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:17:50.451" starttime="20190107 23:17:50.448"></status>
+</kw>
+<status status="FAIL" endtime="20190107 23:17:50.452" starttime="20190107 23:17:45.666">Several failures occurred:
+
+1) Value of variable '@{service_model.service_point_list1}' is not list or list-like.
+
+2) Value of variable '@{service_model.service_point_list1}' is not list or list-like.</status>
+</kw>
+<doc>Initialization file test suites
+It is for putting suite level setup and teardown procedures
+And setting the forced tags for all the test cases in folder and subfolder</doc>
+<status status="FAIL" endtime="20190107 23:17:50.453" starttime="20190107 23:17:44.446">Suite setup failed:
+Value of variable '@{service_model.service_point_list1}' is not list or list-like.
+
+Also suite teardown failed:
+Several failures occurred:
+
+1) Value of variable '@{service_model.service_point_list1}' is not list or list-like.
+
+2) Value of variable '@{service_model.service_point_list1}' is not list or list-like.</status>
+</suite>
+<status status="FAIL" endtime="20190107 23:17:50.457" starttime="20190107 23:17:44.443"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:17:50.460" starttime="20190107 23:17:44.438"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:17:50.463" starttime="20190107 23:17:44.435"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:17:50.466" starttime="20190107 23:17:44.432"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:17:50.469" starttime="20190107 23:17:44.430"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:17:50.471" starttime="20190107 23:17:44.426"></status>
+</suite>
+<status status="FAIL" endtime="20190107 23:17:50.474" starttime="20190107 23:17:44.251"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">@author=pzhang</stat>
+<stat fail="1" pass="0">@eut=10GE-12</stat>
+<stat fail="1" pass="0">@eut=GPON-8r2</stat>
+<stat fail="1" pass="0">@feature=HW_Support</stat>
+<stat fail="1" pass="0">@globalid=2533451</stat>
+<stat fail="1" pass="0">@subfeature=MTU_size_of_9k</stat>
+<stat fail="1" pass="0">@tcid=AXOS_E72_PARENT-TC-4716</stat>
+<stat fail="1" pass="0">@user_interface=CLI</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="AXOS" pass="0">AXOS</stat>
+<stat fail="1" id="s1-s1" name="AXOS-automation" pass="0">AXOS.AXOS-automation</stat>
+<stat fail="1" id="s1-s1-s1" name="Milan" pass="0">AXOS.AXOS-automation.Milan</stat>
+<stat fail="1" id="s1-s1-s1-s1" name="ST Test Cases" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases</stat>
+<stat fail="1" id="s1-s1-s1-s1-s1" name="System" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System</stat>
+<stat fail="1" id="s1-s1-s1-s1-s1-s1" name="HW Support" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support</stat>
+<stat fail="1" id="s1-s1-s1-s1-s1-s1-s1" name="MTU" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support.MTU</stat>
+<stat fail="1" id="s1-s1-s1-s1-s1-s1-s1-s1" name="Testcase" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support.MTU.Testcase</stat>
+<stat fail="1" id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="tc 9k INNI port to INNI port" pass="0">AXOS.AXOS-automation.Milan.ST Test Cases.System.HW Support.MTU.Testcase.tc 9k INNI port to INNI port</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

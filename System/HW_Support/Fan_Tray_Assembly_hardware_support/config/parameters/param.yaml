@@ -1,0 +1,44 @@
+global:
+  #class map type
+  g_class_map_type:
+    - ethernet
+    - ip
+
+  g_flow_index:
+    - 1
+    - 2
+    - 3
+
+  policy_map_name:    pmap-at1
+  class_map_name:    cmap_at1
+  server_ip:
+    - 192.168.33.10
+  ntp_staus:
+    - Operational
+  remote_reference_id:
+    - 172.23.41.10
+    - Not Available
+
+  connection_status:
+    - Connected
+    - Trying to connect
+
+  synchronize_status:
+    - Synchronized
+    - Unsynchronized
+  source_status:
+    - Source selected, synchronized
+    - Has not passed sanity
+  fan_num: 4
+
+
+
+
+
+
+
+
+
+
+
+

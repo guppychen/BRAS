@@ -1,0 +1,13 @@
+global:
+  #class map type
+  g_class_map_type:
+    - ethernet
+    - ip
+
+  g_flow_index:
+    - 1
+    - 2
+    - 3
+
+  policy_map_name:    pmap_at1
+  class_map_name:    cmap_at1

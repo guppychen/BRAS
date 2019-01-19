@@ -1,0 +1,54 @@
+*** Settings ***
+Documentation     DHCP-R-206 All Calix DHCPv4 Relay or Snoop supporting Option 82 insertion/removal must default the format of the Circuit ID to a TR-101 compliant format for all DSL and Ethernet interfaces type 1 ================================= DHCP Client ----- UNI A ---- snoop agent of EXA -------- INNI B ---- DHCP Server ======== current default fomat ======= %systemID eth :
+Resource          ./base.robot
+
+
+*** Variables ***
+
+
+*** Test Cases ***
+tc_DHCP_Option_82_ID_Profile_Default_format_match_X_translate_to_Y_set_pcp_X_S_Y
+    [Documentation]    1	Configure UNI service type 1 on UNI port A.
+    ...    2	Enable DHCP Snoop on SVLAN X.	Option 82 configuration enabled
+    ...    3	Set SystemID.
+    ...    4	Force subscriber to obtain an IP address via DHCP.	Subscriber should send a DHCP request and receive and IP address.
+    ...    5	Capture entire DHCP transaction.	Relay agent should insert sub options to the DHCP request received from subscriber and remove sub options before sending DHCP response back to subscriber. Circuit ID and Remote ID should default to a format as described in the table above.
+    [Tags]       @author=Ronnie_Yi     @TCID=AXOS_E72_PARENT-TC-2221    @globalid=2344037    @subfeature=DHCP_Option_82    @feature=DHCPV4    @eut=NGPON2-4    @priority=P1    @user_interface=CLI
+    [Setup]      case setup
+    [Teardown]   case teardown
+    log    STEP:1 Configure UNI service type 1 on UNI port A.
+    log    STEP:2 Enable DHCP Snoop on SVLAN X. Option 82 configuration enabled
+    log    STEP:3 Set SystemID.
+    log    STEP:4 Force subscriber to obtain an IP address via DHCP. Subscriber should send a DHCP request and receive and IP address.
+    create_dhcp_server    tg1    ${server_name}    service_p1    ${server_mac}     ${server_ip}     ${lease_start}    ${stag_vlan}    lease_time=${lease_time}    ovlan_pbit=${stag_pbit}
+    create_dhcp_client    tg1    ${client_name}    subscriber_p1    ${group_name}    ${client_mac}    ${Qtag_vlan}
+    start_capture    tg1    service_p1
+    start_capture    tg1    subscriber_p1
+    Tg Control Dhcp Server    tg1    ${server_name}    start
+    Tg Control Dhcp Client    tg1    ${group_name}    start
+    Tg Wait Until All Dhcp Session Negotiated    tg1    subscriber_p1    ${lease_wait_time}
+    log    show dhcp leases, 1
+    check_l3_hosts    eutA    1    ${stag_vlan}    ${service_model.subscriber_point1.name}
+    log    STEP:5 Capture entire DHCP transaction. Relay agent should insert sub options to the DHCP request received from subscriber and remove sub options before sending DHCP response back to subscriber. Circuit ID and Remote ID should default to a format as described in the table above.
+    stop_capture    tg1    service_p1
+    stop_capture    tg1    subscriber_p1
+    ${type}    get_dhcp_option82_expected_port_type    subscriber_point1
+    ${port}    get_dhcp_option82_exported_port    subscriber_point1
+    check_dhcp_option82_circuit_id    tg1    service_p1    ${hostname} ${type} ${port}:${Qtag_vlan}
+    check_no_dhcp_option82    tg1    subscriber_p1
+
+
+*** Keywords ***
+case setup
+    [Documentation]    case setup
+    [Arguments]
+    subscriber_point_add_svc    subscriber_point1    ${Qtag_vlan}    ${stag_vlan}    cevlan_action=remove-cevlan    set-stag-pcp=${stag_pbit}
+    check_running_configure     eutA          id-profile | detail
+case teardown
+    [Documentation]    case teardown
+    [Arguments]
+    run keyword and ignore error    Tg Control Dhcp Client    tg1    ${group_name}    stop
+    run keyword and ignore error    Tg Control Dhcp Server    tg1    ${server_name}    stop
+    run keyword and ignore error    Tg Delete Dhcp Client    tg1    ${client_name}
+    run keyword and ignore error    Tg Delete Dhcp Server    tg1    ${server_name}
+    subscriber_point_remove_svc    subscriber_point1    ${Qtag_vlan}    ${stag_vlan}

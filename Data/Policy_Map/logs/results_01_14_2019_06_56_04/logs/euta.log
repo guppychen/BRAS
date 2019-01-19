@@ -1,0 +1,1376 @@
+[2019-01-13 22:57:10.543] - cafe.sessions.session_srv.euta.session_log - DEBUG: >Enter Suite: AXOS
+[2019-01-13 22:57:10.689] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>Enter Suite: AXOS-automation
+[2019-01-13 22:57:10.692] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>Enter Suite: Milan
+[2019-01-13 22:57:10.695] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>Enter Suite: ST Test Cases
+[2019-01-13 22:57:10.698] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>Enter Suite: Data
+[2019-01-13 22:57:10.701] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>Enter Suite: Policy Map
+[2019-01-13 22:57:11.501] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>Enter Suite: Testcase
+[2019-01-13 22:57:11.503] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>Enter Setup Keyword: eth_policy_map_suite_provision
+[2019-01-13 22:57:11.507] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Keyword: release_adapter.set_eut_version
+[2019-01-13 22:57:11.512] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter For Keyword: ${eut} IN [ @{keys} ]
+[2019-01-13 22:57:11.513] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter For Item Keyword: ${eut} = eutA
+[2019-01-13 22:57:11.517] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: release_adapter.get_eut_version
+[2019-01-13 22:57:11.518] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:13.834] - cafe.sessions.session_srv.euta.session_log - INFO: Last login: Sun Jan 13 22:19:10 2019 from 10.200.201.26
+[2019-01-13 22:57:13.834] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-13 22:57:14.451] - cafe.sessions.session_srv.euta.session_log - INFO: **** ACTIVE 10GE-12 CARD  ****
+[2019-01-13 22:57:15.475] - cafe.sessions.session_srv.euta.session_log - INFO: Welcome to CLI
+[2019-01-13 22:57:15.476] - cafe.sessions.session_srv.euta.session_log - INFO: sysadmin connected from 10.200.201.26 using ssh on NGPON2X4
+[2019-01-13 22:57:15.935] - cafe.sessions.session_srv.euta.session_log - INFO: [?7hNGPON2X4# cli
+[2019-01-13 22:57:16.151] - cafe.sessions.session_srv.euta.session_log - INFO: ----------^
+[2019-01-13 22:57:16.152] - cafe.sessions.session_srv.euta.session_log - INFO: syntax error: expecting 
+[2019-01-13 22:57:16.153] - cafe.sessions.session_srv.euta.session_log - INFO:   abort                 - 
+[2019-01-13 22:57:16.153] - cafe.sessions.session_srv.euta.session_log - INFO:   accept                - Accept config
+[2019-01-13 22:57:16.154] - cafe.sessions.session_srv.euta.session_log - INFO:   apply                 - 
+[2019-01-13 22:57:16.155] - cafe.sessions.session_srv.euta.session_log - INFO:   apply-dynamic-policy  - 
+[2019-01-13 22:57:16.156] - cafe.sessions.session_srv.euta.session_log - INFO:   bng-state-persistence - BNG state persistence control commands
+[2019-01-13 22:57:16.156] - cafe.sessions.session_srv.euta.session_log - INFO:   clear                 - Clear object data
+[2019-01-13 22:57:16.157] - cafe.sessions.session_srv.euta.session_log - INFO:   clock                 - Modify clock
+[2019-01-13 22:57:16.158] - cafe.sessions.session_srv.euta.session_log - INFO:   configure             - Manipulate software configuration information
+[2019-01-13 22:57:16.159] - cafe.sessions.session_srv.euta.session_log - INFO:   copy                  - Copy files
+[2019-01-13 22:57:16.159] - cafe.sessions.session_srv.euta.session_log - INFO:   cpe-upgrade:cpe       - CPE operation
+[2019-01-13 22:57:16.160] - cafe.sessions.session_srv.euta.session_log - INFO:   debug                 - 
+[2019-01-13 22:57:16.160] - cafe.sessions.session_srv.euta.session_log - INFO:   delete                - Delete files
+[2019-01-13 22:57:16.161] - cafe.sessions.session_srv.euta.session_log - INFO:   devtools              - Enable/disable development tools
+[2019-01-13 22:57:16.162] - cafe.sessions.session_srv.euta.session_log - INFO:   download              - Download files
+[2019-01-13 22:57:16.163] - cafe.sessions.session_srv.euta.session_log - INFO:   enable                - Enable EXEC commands
+[2019-01-13 22:57:16.163] - cafe.sessions.session_srv.euta.session_log - INFO:   exit                  - Exit the management session
+[2019-01-13 22:57:16.164] - cafe.sessions.session_srv.euta.session_log - INFO:   folder                - 
+[2019-01-13 22:57:16.164] - cafe.sessions.session_srv.euta.session_log - INFO:   generate              - Generate files
+[2019-01-13 22:57:16.165] - cafe.sessions.session_srv.euta.session_log - INFO:   idle-timeout          - Configure idle timeout
+[2019-01-13 22:57:16.165] - cafe.sessions.session_srv.euta.session_log - INFO:   install               - 
+[2019-01-13 22:57:16.166] - cafe.sessions.session_srv.euta.session_log - INFO:   lock                  - lock a datastore
+[2019-01-13 22:57:16.167] - cafe.sessions.session_srv.euta.session_log - INFO:   logout                - Logout a user
+[2019-01-13 22:57:16.167] - cafe.sessions.session_srv.euta.session_log - INFO:   manual                - Manual operation with alarms
+[2019-01-13 22:57:16.168] - cafe.sessions.session_srv.euta.session_log - INFO:   no                    - Negate a command or set its defaults
+[2019-01-13 22:57:16.168] - cafe.sessions.session_srv.euta.session_log - INFO:   ofa-connect           - Open Flow Connect
+[2019-01-13 22:57:16.169] - cafe.sessions.session_srv.euta.session_log - INFO:   ofa-listener          - Open Flow Listener
+[2019-01-13 22:57:16.169] - cafe.sessions.session_srv.euta.session_log - INFO:   ofa-port              - Open Flow port
+[2019-01-13 22:57:16.170] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-eth               - ONT-ETH efm-loopback-status mode
+[2019-01-13 22:57:16.171] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-firmware-upgrade  - Start software download
+[2019-01-13 22:57:16.171] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-simulation        - ONT simulation commands
+[2019-01-13 22:57:16.172] - cafe.sessions.session_srv.euta.session_log - INFO:   ont-upgrade           - ONT upgrade commands
+[2019-01-13 22:57:16.172] - cafe.sessions.session_srv.euta.session_log - INFO:   paginate              - Paginate output from CLI commands
+[2019-01-13 22:57:16.173] - cafe.sessions.session_srv.euta.session_log - INFO:   perform               - Perform an operation
+[2019-01-13 22:57:16.174] - cafe.sessions.session_srv.euta.session_log - INFO:   ping                  - Ping IP address
+[2019-01-13 22:57:16.174] - cafe.sessions.session_srv.euta.session_log - INFO:   ping6                 - Ping IPv6 address
+[2019-01-13 22:57:16.175] - cafe.sessions.session_srv.euta.session_log - INFO:   quit                  - Exit the management session
+[2019-01-13 22:57:16.175] - cafe.sessions.session_srv.euta.session_log - INFO:   redundancy            - redundancy switchover commands
+[2019-01-13 22:57:16.176] - cafe.sessions.session_srv.euta.session_log - INFO:   reload                - Reboot the current card
+[2019-01-13 22:57:16.177] - cafe.sessions.session_srv.euta.session_log - INFO:   remove-dynamic-policy - 
+[2019-01-13 22:57:16.177] - cafe.sessions.session_srv.euta.session_log - INFO:   replay                - Replay card-config
+[2019-01-13 22:57:16.178] - cafe.sessions.session_srv.euta.session_log - INFO:   restart               - Restart Diameter daemon
+[2019-01-13 22:57:16.179] - cafe.sessions.session_srv.euta.session_log - INFO:   run                   - 
+[2019-01-13 22:57:16.179] - cafe.sessions.session_srv.euta.session_log - INFO:   send                  - Send message to terminal of one or all users
+[2019-01-13 22:57:16.180] - cafe.sessions.session_srv.euta.session_log - INFO:   session               - 
+[2019-01-13 22:57:16.180] - cafe.sessions.session_srv.euta.session_log - INFO:   show                  - Show information about the system
+[2019-01-13 22:57:16.181] - cafe.sessions.session_srv.euta.session_log - INFO:   ssh                   - ssh command
+[2019-01-13 22:57:16.182] - cafe.sessions.session_srv.euta.session_log - INFO:   start                 - Start an operation
+[2019-01-13 22:57:16.182] - cafe.sessions.session_srv.euta.session_log - INFO:   stop                  - Stop an operation
+[2019-01-13 22:57:16.183] - cafe.sessions.session_srv.euta.session_log - INFO:   switch                - Switch network clock
+[2019-01-13 22:57:16.184] - cafe.sessions.session_srv.euta.session_log - INFO:   tcpdump               - tcpdump command
+[2019-01-13 22:57:16.185] - cafe.sessions.session_srv.euta.session_log - INFO:   telnet                - telnet command
+[2019-01-13 22:57:16.185] - cafe.sessions.session_srv.euta.session_log - INFO:   templatize            - Find patterns in subtree.
+[2019-01-13 22:57:16.186] - cafe.sessions.session_srv.euta.session_log - INFO:   terminal              - Set terminal type
+[2019-01-13 22:57:16.187] - cafe.sessions.session_srv.euta.session_log - INFO:   timestamp             - Enable/disable the display of timestamp
+[2019-01-13 22:57:16.187] - cafe.sessions.session_srv.euta.session_log - INFO:   traceroute            - Traceroute IP address
+[2019-01-13 22:57:16.188] - cafe.sessions.session_srv.euta.session_log - INFO:   uninstall             - 
+[2019-01-13 22:57:16.188] - cafe.sessions.session_srv.euta.session_log - INFO:   unlock                - unlock a datastore
+[2019-01-13 22:57:16.189] - cafe.sessions.session_srv.euta.session_log - INFO:   upgrade               - Upgrade commands
+[2019-01-13 22:57:16.190] - cafe.sessions.session_srv.euta.session_log - INFO:   upload                - Upload files
+[2019-01-13 22:57:16.190] - cafe.sessions.session_srv.euta.session_log - INFO:   verify                - 
+[2019-01-13 22:57:16.194] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:16.196] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:16.385] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show version
+[2019-01-13 22:57:16.651] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/1
+[2019-01-13 22:57:16.652] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgy
+[2019-01-13 22:57:16.653] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 22:57:16.654] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 22:57:16.654] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 22:57:16.655] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 22:57:16.656] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 22:57:16.657] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 22:57:16.658] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 22:57:16.658] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 22:57:16.659] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 22:57:16.660] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/2
+[2019-01-13 22:57:16.660] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgx
+[2019-01-13 22:57:16.661] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 22:57:16.663] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 22:57:16.663] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 22:57:16.664] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 22:57:16.665] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 22:57:16.665] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 22:57:16.666] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 22:57:16.667] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 22:57:16.667] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 22:57:16.671] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:16.680] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: release_adapter.get_eut_version
+[2019-01-13 22:57:16.686] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: release_adapter.get_eut_distro
+[2019-01-13 22:57:16.687] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:16.880] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show version
+[2019-01-13 22:57:17.96] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/1
+[2019-01-13 22:57:17.104] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgy
+[2019-01-13 22:57:17.106] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 22:57:17.106] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 22:57:17.107] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 22:57:17.108] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 22:57:17.108] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 22:57:17.109] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 22:57:17.109] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 22:57:17.110] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 22:57:17.111] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 22:57:17.111] - cafe.sessions.session_srv.euta.session_log - INFO: version 1/2
+[2019-01-13 22:57:17.112] - cafe.sessions.session_srv.euta.session_log - INFO:  image-partition      imgx
+[2019-01-13 22:57:17.112] - cafe.sessions.session_srv.euta.session_log - INFO:  full-release-version dirty
+[2019-01-13 22:57:17.113] - cafe.sessions.session_srv.euta.session_log - INFO:  live-release-version N/A
+[2019-01-13 22:57:17.113] - cafe.sessions.session_srv.euta.session_log - INFO:  image-type           FullRelease
+[2019-01-13 22:57:17.114] - cafe.sessions.session_srv.euta.session_log - INFO:  patches              none
+[2019-01-13 22:57:17.115] - cafe.sessions.session_srv.euta.session_log - INFO:  features             Signed-Optics-Enforcement-Disabled
+[2019-01-13 22:57:17.115] - cafe.sessions.session_srv.euta.session_log - INFO:  distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+[2019-01-13 22:57:17.116] - cafe.sessions.session_srv.euta.session_log - INFO:  schema               18.0.0-ib191
+[2019-01-13 22:57:17.116] - cafe.sessions.session_srv.euta.session_log - INFO:  timestamp            "2019.01.12 02:16:30"
+[2019-01-13 22:57:17.117] - cafe.sessions.session_srv.euta.session_log - INFO:  details              IBAXOS191-CI-330
+[2019-01-13 22:57:17.120] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:17.130] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: release_adapter.get_eut_distro
+[2019-01-13 22:57:17.229] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit For Item Keyword: ${eut} = eutA
+[2019-01-13 22:57:17.249] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit For Keyword: ${eut} IN [ @{keys} ]
+[2019-01-13 22:57:17.257] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Keyword: release_adapter.set_eut_version
+[2019-01-13 22:57:17.267] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Keyword: keyword_service_model.service_point_prov
+[2019-01-13 22:57:17.268] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter For Keyword: ${service_point} IN [ @{service_model.${service_point_list}} ]
+[2019-01-13 22:57:17.269] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter For Item Keyword: ${service_point} = service_point1
+[2019-01-13 22:57:17.273] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword
+[2019-01-13 22:57:17.274] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_service_model.service_point_eth_prov
+[2019-01-13 22:57:17.298] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter For Keyword: ${port_key} IN [ @{service_model.${service_point}.member} ]
+[2019-01-13 22:57:17.299] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter For Item Keyword: ${port_key} = interface1
+[2019-01-13 22:57:17.303] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_command.prov_interface_ethernet
+[2019-01-13 22:57:17.306] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:17.308] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:17.515] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:17.516] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:17.520] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:17.523] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:17.525] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:17.526] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:17.704] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x2
+[2019-01-13 22:57:17.828] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:17.831] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:17.833] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:17.834] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:17.836] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:18.15] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x2)# switchport ENABLED
+[2019-01-13 22:57:18.192] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:18.195] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:18.196] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:18.198] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:18.199] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:18.201] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:18.389] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x2)# role inni
+[2019-01-13 22:57:19.18] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:19.30] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:19.31] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:19.45] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:19.47] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:19.244] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x2)# end
+[2019-01-13 22:57:19.251] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:19.253] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:19.254] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_command.prov_interface_ethernet
+[2019-01-13 22:57:19.256] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_command.no_shutdown_port
+[2019-01-13 22:57:19.257] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:19.258] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:19.436] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:19.454] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:19.464] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:19.468] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:19.469] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:19.470] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:19.651] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x2
+[2019-01-13 22:57:19.687] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:19.690] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:19.691] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:19.692] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:19.872] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x2)# no shutdown
+[2019-01-13 22:57:20.399] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:20.402] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:20.403] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:20.405] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:20.588] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x2)# end
+[2019-01-13 22:57:20.609] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:20.612] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:20.624] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_command.no_shutdown_port
+[2019-01-13 22:57:20.625] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit For Item Keyword: ${port_key} = interface1
+[2019-01-13 22:57:20.630] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit For Keyword: ${port_key} IN [ @{service_model.${service_point}.member} ]
+[2019-01-13 22:57:20.631] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_service_model.service_point_eth_prov
+[2019-01-13 22:57:20.632] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword
+[2019-01-13 22:57:20.633] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit For Item Keyword: ${service_point} = service_point1
+[2019-01-13 22:57:20.634] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit For Keyword: ${service_point} IN [ @{service_model.${service_point_list}} ]
+[2019-01-13 22:57:20.635] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Keyword: keyword_service_model.service_point_prov
+[2019-01-13 22:57:20.639] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Keyword: keyword_command.prov_vlan
+[2019-01-13 22:57:20.654] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:20.834] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:20.838] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:20.841] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:20.844] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:20.846] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:21.39] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# vlan 4002
+[2019-01-13 22:57:22.118] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:22.122] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:22.136] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:22.311] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)# end
+[2019-01-13 22:57:22.349] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:22.350] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Keyword: keyword_command.prov_vlan
+[2019-01-13 22:57:22.352] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Keyword: keyword_service_model.service_point_add_vlan
+[2019-01-13 22:57:22.359] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter For Keyword: ${service_point} IN [ @{service_model.${service_point_list}} ]
+[2019-01-13 22:57:22.360] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter For Item Keyword: ${service_point} = service_point1
+[2019-01-13 22:57:22.367] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_command.prov_transport_service_profile
+[2019-01-13 22:57:22.368] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:22.371] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:22.554] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:22.561] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:22.575] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:22.578] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:22.580] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:22.581] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:22.765] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# transport-service-profile auto_TransVlan_4002
+[2019-01-13 22:57:22.849] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:22.853] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:22.855] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:22.857] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:23.84] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-transport-service-profile-auto_TransVlan_4002)# vlan-list 4002
+[2019-01-13 22:57:23.151] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:23.155] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:23.157] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:23.159] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:23.360] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-transport-service-profile-auto_TransVlan_4002)# end
+[2019-01-13 22:57:23.365] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:23.368] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:23.372] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_command.prov_transport_service_profile
+[2019-01-13 22:57:23.374] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_service_model.service_point_add_transport_profile
+[2019-01-13 22:57:23.379] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter For Keyword: ${port_key} IN [ @{service_model.${service_point}.member} ]
+[2019-01-13 22:57:23.380] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter For Item Keyword: ${port_key} = interface1
+[2019-01-13 22:57:23.385] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_command.prov_interface_ethernet
+[2019-01-13 22:57:23.386] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:23.388] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:23.577] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:23.578] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:23.581] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:23.583] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:23.585] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:23.587] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:23.767] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x2
+[2019-01-13 22:57:23.817] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:23.822] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:23.849] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:23.851] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:23.852] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:24.81] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x2)#  transport-service-profile auto_TransVlan_4002
+[2019-01-13 22:57:24.298] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:24.301] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:24.302] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:24.304] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:24.306] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:24.506] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x2)# end
+[2019-01-13 22:57:24.510] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:24.513] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:24.514] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_command.prov_interface_ethernet
+[2019-01-13 22:57:24.524] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_command.check_running_config_interface
+[2019-01-13 22:57:24.526] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:24.528] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:24.704] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show running-config interface ethernet 1/2/x2 
+[2019-01-13 22:57:25.927] - cafe.sessions.session_srv.euta.session_log - INFO: interface ethernet 1/2/x2
+[2019-01-13 22:57:25.928] - cafe.sessions.session_srv.euta.session_log - INFO:  no shutdown
+[2019-01-13 22:57:25.928] - cafe.sessions.session_srv.euta.session_log - INFO:  role                      inni
+[2019-01-13 22:57:25.961] - cafe.sessions.session_srv.euta.session_log - INFO:  transport-service-profile auto_TransVlan_4002
+[2019-01-13 22:57:26.80] - cafe.sessions.session_srv.euta.session_log - INFO: !
+[2019-01-13 22:57:26.95] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:26.98] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:26.106] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_command.check_running_config_interface
+[2019-01-13 22:57:26.108] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit For Item Keyword: ${port_key} = interface1
+[2019-01-13 22:57:26.109] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit For Keyword: ${port_key} IN [ @{service_model.${service_point}.member} ]
+[2019-01-13 22:57:26.110] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_service_model.service_point_add_transport_profile
+[2019-01-13 22:57:26.111] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit For Item Keyword: ${service_point} = service_point1
+[2019-01-13 22:57:26.112] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit For Keyword: ${service_point} IN [ @{service_model.${service_point_list}} ]
+[2019-01-13 22:57:26.113] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Keyword: keyword_service_model.service_point_add_vlan
+[2019-01-13 22:57:26.116] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Keyword: keyword_service_model.subscriber_point_prov
+[2019-01-13 22:57:26.120] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword
+[2019-01-13 22:57:26.122] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_service_model.subscriber_point_eth_prov
+[2019-01-13 22:57:26.124] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter For Keyword: ${port_key} IN [ @{service_model.${subscriber_point}.member} ]
+[2019-01-13 22:57:26.125] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter For Item Keyword: ${port_key} = interface1
+[2019-01-13 22:57:26.130] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_command.prov_interface_ethernet
+[2019-01-13 22:57:26.131] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:26.132] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:26.341] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:26.342] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:26.345] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:26.348] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:26.349] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:26.351] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:26.578] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:57:26.581] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:26.584] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:26.585] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:26.586] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:26.588] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:26.781] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# switchport ENABLED
+[2019-01-13 22:57:26.908] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:26.911] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:26.912] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:26.914] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:26.916] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:26.918] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:27.95] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# role uni
+[2019-01-13 22:57:27.666] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:27.669] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:27.670] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:27.681] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:27.682] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:27.874] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# end
+[2019-01-13 22:57:27.878] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:27.881] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:27.883] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_command.prov_interface_ethernet
+[2019-01-13 22:57:27.884] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_command.no_shutdown_port
+[2019-01-13 22:57:27.886] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:27.887] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:28.70] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:28.78] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:28.81] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:28.84] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:28.86] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:28.88] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:28.269] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:57:28.296] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:28.298] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:28.301] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:28.302] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:28.492] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# no shutdown
+[2019-01-13 22:57:28.883] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:28.887] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:28.890] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:28.892] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:29.71] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# end
+[2019-01-13 22:57:29.138] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:29.142] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:29.143] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_command.no_shutdown_port
+[2019-01-13 22:57:29.144] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit For Item Keyword: ${port_key} = interface1
+[2019-01-13 22:57:29.145] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit For Keyword: ${port_key} IN [ @{service_model.${subscriber_point}.member} ]
+[2019-01-13 22:57:29.147] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_service_model.subscriber_point_eth_prov
+[2019-01-13 22:57:29.148] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword
+[2019-01-13 22:57:29.150] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Keyword: keyword_service_model.subscriber_point_prov
+[2019-01-13 22:57:29.151] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<Exit Setup Keyword: eth_policy_map_suite_provision
+[2019-01-13 22:57:29.203] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>Enter Suite: Tc Add Cevlan Tag
+[2019-01-13 22:57:29.380] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Case: tc_add_cevlan_tag
+[2019-01-13 22:57:29.416] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Setup Keyword: case setup
+[2019-01-13 22:57:29.434] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_service_model.subscriber_point_add_svc
+[2019-01-13 22:57:29.452] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_svc.l2_setting_prov_vlan_policy
+[2019-01-13 22:57:29.466] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.prov_class_map
+[2019-01-13 22:57:29.467] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:29.673] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:29.674] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:29.969] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:29.971] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:30.151] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# class-map ethernet auto_ClassMap_vuntagged
+[2019-01-13 22:57:30.469] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:30.470] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:30.472] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:30.655] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-auto_ClassMap_vuntagged)# flow 1
+[2019-01-13 22:57:30.802] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:30.805] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:30.818] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:30.819] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:31.4] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-flow-1)# rule 1 match  untagged 
+[2019-01-13 22:57:31.200] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:31.202] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:31.204] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:31.386] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-flow-1)# end
+[2019-01-13 22:57:31.462] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:31.464] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.prov_class_map
+[2019-01-13 22:57:31.499] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.prov_policy_map
+[2019-01-13 22:57:31.501] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:31.679] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:31.687] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:31.742] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:31.743] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:31.938] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# policy-map auto_PolicyMap_v1000
+[2019-01-13 22:57:32.102] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:32.104] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:32.106] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:32.282] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-policy-map-auto_PolicyMap_v1000)# class-map-ethernet auto_ClassMap_vuntagged
+[2019-01-13 22:57:32.510] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:32.513] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:32.515] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:32.516] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:32.518] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:32.714] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-class-map-ethernet-auto_ClassMap_vuntagged)# flow 1
+[2019-01-13 22:57:32.901] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:32.904] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:32.905] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:32.923] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:32.924] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:32.925] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:33.121] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-flow-1)#  add-cevlan-tag 1000  
+[2019-01-13 22:57:33.283] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:33.286] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:33.287] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:33.289] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:33.465] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-flow-1)# end
+[2019-01-13 22:57:33.606] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:33.607] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.prov_policy_map
+[2019-01-13 22:57:33.610] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 22:57:33.614] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_command.check_running_config_interface
+[2019-01-13 22:57:33.616] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:33.617] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:33.805] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show running-config interface ethernet 1/2/x3 
+[2019-01-13 22:57:35.26] - cafe.sessions.session_srv.euta.session_log - INFO: interface ethernet 1/2/x3
+[2019-01-13 22:57:35.33] - cafe.sessions.session_srv.euta.session_log - INFO:  no shutdown
+[2019-01-13 22:57:35.34] - cafe.sessions.session_srv.euta.session_log - INFO:  role     uni
+[2019-01-13 22:57:35.199] - cafe.sessions.session_srv.euta.session_log - INFO: !
+[2019-01-13 22:57:35.236] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:35.240] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:35.244] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_command.check_running_config_interface
+[2019-01-13 22:57:35.245] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 22:57:35.247] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.prov_interface
+[2019-01-13 22:57:35.251] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:35.430] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:35.438] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:35.484] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:35.486] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:35.487] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:35.679] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:57:35.753] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:35.755] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:35.757] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:35.758] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:35.759] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:35.935] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# vlan 4002
+[2019-01-13 22:57:36.556] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:36.559] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:36.560] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:36.577] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:36.578] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:36.579] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:36.780] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)#  no shutdown
+[2019-01-13 22:57:36.986] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:36.989] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:36.990] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:36.991] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:37.173] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)# end
+[2019-01-13 22:57:37.258] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:37.259] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.prov_interface
+[2019-01-13 22:57:37.261] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.prov_interface
+[2019-01-13 22:57:37.265] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:37.441] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:37.457] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:37.504] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:37.506] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:37.507] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:37.682] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:57:37.789] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:37.792] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:37.794] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:37.796] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:37.798] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:37.982] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# vlan 4002
+[2019-01-13 22:57:38.93] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:38.96] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:38.97] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:38.99] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:38.100] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:38.102] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:38.286] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)# policy-map auto_PolicyMap_v1000
+[2019-01-13 22:57:38.599] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:38.601] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:38.603] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:38.605] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:38.606] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:38.608] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:38.798] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-policy-map-auto_PolicyMap_v1000)# class-map-ethernet auto_ClassMap_vuntagged
+[2019-01-13 22:57:38.882] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:38.888] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:38.889] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:38.903] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:39.81] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-class-map-ethernet-auto_ClassMap_vuntagged)# end
+[2019-01-13 22:57:39.179] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:39.180] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.prov_interface
+[2019-01-13 22:57:39.191] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_running_config_interface
+[2019-01-13 22:57:39.192] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:39.194] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:39.368] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show running-config interface ethernet 1/2/x3 
+[2019-01-13 22:57:40.589] - cafe.sessions.session_srv.euta.session_log - INFO: interface ethernet 1/2/x3
+[2019-01-13 22:57:40.590] - cafe.sessions.session_srv.euta.session_log - INFO:  no shutdown
+[2019-01-13 22:57:40.591] - cafe.sessions.session_srv.euta.session_log - INFO:  role     uni
+[2019-01-13 22:57:40.755] - cafe.sessions.session_srv.euta.session_log - INFO:  vlan 4002
+[2019-01-13 22:57:40.756] - cafe.sessions.session_srv.euta.session_log - INFO:   policy-map auto_PolicyMap_v1000
+[2019-01-13 22:57:40.757] - cafe.sessions.session_srv.euta.session_log - INFO:    class-map-ethernet auto_ClassMap_vuntagged
+[2019-01-13 22:57:40.757] - cafe.sessions.session_srv.euta.session_log - INFO:     flow 1
+[2019-01-13 22:57:40.758] - cafe.sessions.session_srv.euta.session_log - INFO:     !
+[2019-01-13 22:57:40.758] - cafe.sessions.session_srv.euta.session_log - INFO:    !
+[2019-01-13 22:57:40.759] - cafe.sessions.session_srv.euta.session_log - INFO:   !
+[2019-01-13 22:57:40.759] - cafe.sessions.session_srv.euta.session_log - INFO:   no shutdown
+[2019-01-13 22:57:40.824] - cafe.sessions.session_srv.euta.session_log - INFO:  !
+[2019-01-13 22:57:40.989] - cafe.sessions.session_srv.euta.session_log - INFO: !
+[2019-01-13 22:57:41.27] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:41.31] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:41.46] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_running_config_interface
+[2019-01-13 22:57:41.50] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_svc.l2_setting_prov_vlan_policy
+[2019-01-13 22:57:41.51] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_service_model.subscriber_point_add_svc
+[2019-01-13 22:57:41.56] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Setup Keyword: case setup
+[2019-01-13 22:57:41.167] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Teardown Keyword: case teardown
+[2019-01-13 22:57:41.170] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_service_model.subscriber_point_remove_svc
+[2019-01-13 22:57:41.182] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_svc.l2_setting_dprov_vlan_policy
+[2019-01-13 22:57:41.190] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:41.421] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show running-config interface ethernet 1/2/x3
+[2019-01-13 22:57:42.595] - cafe.sessions.session_srv.euta.session_log - INFO: interface ethernet 1/2/x3
+[2019-01-13 22:57:42.596] - cafe.sessions.session_srv.euta.session_log - INFO:  no shutdown
+[2019-01-13 22:57:42.596] - cafe.sessions.session_srv.euta.session_log - INFO:  role     uni
+[2019-01-13 22:57:42.761] - cafe.sessions.session_srv.euta.session_log - INFO:  vlan 4002
+[2019-01-13 22:57:42.762] - cafe.sessions.session_srv.euta.session_log - INFO:   policy-map auto_PolicyMap_v1000
+[2019-01-13 22:57:42.762] - cafe.sessions.session_srv.euta.session_log - INFO:    class-map-ethernet auto_ClassMap_vuntagged
+[2019-01-13 22:57:42.763] - cafe.sessions.session_srv.euta.session_log - INFO:     flow 1
+[2019-01-13 22:57:42.764] - cafe.sessions.session_srv.euta.session_log - INFO:     !
+[2019-01-13 22:57:42.764] - cafe.sessions.session_srv.euta.session_log - INFO:    !
+[2019-01-13 22:57:42.764] - cafe.sessions.session_srv.euta.session_log - INFO:   !
+[2019-01-13 22:57:42.765] - cafe.sessions.session_srv.euta.session_log - INFO:   no shutdown
+[2019-01-13 22:57:42.831] - cafe.sessions.session_srv.euta.session_log - INFO:  !
+[2019-01-13 22:57:42.946] - cafe.sessions.session_srv.euta.session_log - INFO: !
+[2019-01-13 22:57:43.49] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:43.55] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Continue On Failure
+[2019-01-13 22:57:43.56] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_command.dprov_interface
+[2019-01-13 22:57:43.58] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:43.235] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:43.243] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:43.357] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:43.358] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:43.360] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:43.540] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:57:43.684] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:43.687] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:43.689] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:43.690] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:43.691] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:43.870] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# vlan 4002
+[2019-01-13 22:57:44.18] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:44.21] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:44.23] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:44.47] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:44.49] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:44.51] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:44.242] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)# no  policy-map auto_PolicyMap_v1000
+[2019-01-13 22:57:44.547] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:44.549] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:44.550] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:44.552] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:44.726] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)# end
+[2019-01-13 22:57:44.819] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:44.820] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_command.dprov_interface
+[2019-01-13 22:57:44.821] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Continue On Failure
+[2019-01-13 22:57:44.825] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Continue On Failure
+[2019-01-13 22:57:44.826] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_command.dprov_interface
+[2019-01-13 22:57:44.828] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:45.7] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:45.15] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:45.102] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:45.104] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:45.105] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:45.295] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:57:45.371] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:45.373] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:45.396] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:45.397] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:45.399] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:45.596] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# no  vlan 4002
+[2019-01-13 22:57:45.892] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:45.895] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:45.896] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:45.897] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:46.79] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# end
+[2019-01-13 22:57:46.177] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:46.178] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_command.dprov_interface
+[2019-01-13 22:57:46.179] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Continue On Failure
+[2019-01-13 22:57:46.182] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:46.358] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show running-config interface ethernet 1/2/x3
+[2019-01-13 22:57:47.528] - cafe.sessions.session_srv.euta.session_log - INFO: interface ethernet 1/2/x3
+[2019-01-13 22:57:47.528] - cafe.sessions.session_srv.euta.session_log - INFO:  no shutdown
+[2019-01-13 22:57:47.529] - cafe.sessions.session_srv.euta.session_log - INFO:  role     uni
+[2019-01-13 22:57:47.643] - cafe.sessions.session_srv.euta.session_log - INFO: !
+[2019-01-13 22:57:47.680] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:47.683] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.delete_config_object
+[2019-01-13 22:57:47.684] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:47.864] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:47.872] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:47.926] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:47.939] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:47.941] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:48.129] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# no policy-map auto_PolicyMap_v1000
+[2019-01-13 22:57:48.942] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:48.946] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:48.948] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:49.135] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# end
+[2019-01-13 22:57:49.214] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:49.215] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.delete_config_object
+[2019-01-13 22:57:49.218] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.delete_config_object
+[2019-01-13 22:57:49.219] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:49.403] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:49.407] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:49.512] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:49.513] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:49.515] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:49.704] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# no class-map ethernet auto_ClassMap_vuntagged
+[2019-01-13 22:57:49.859] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:49.862] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:49.864] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:50.50] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# end
+[2019-01-13 22:57:50.138] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:50.139] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.delete_config_object
+[2019-01-13 22:57:50.141] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_svc.l2_setting_dprov_vlan_policy
+[2019-01-13 22:57:50.142] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_service_model.subscriber_point_remove_svc
+[2019-01-13 22:57:50.144] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Teardown Keyword: case teardown
+[2019-01-13 22:57:50.189] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Case: tc_add_cevlan_tag
+[2019-01-13 22:57:50.327] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<Exit Suite: Tc Add Cevlan Tag
+[2019-01-13 22:57:50.439] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>Enter Suite: Tc Remove Cevlan
+[2019-01-13 22:57:50.560] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Case: tc_remove_cevlan
+[2019-01-13 22:57:50.646] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Setup Keyword: case setup
+[2019-01-13 22:57:50.658] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_service_model.subscriber_point_add_svc
+[2019-01-13 22:57:50.677] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_svc.l2_setting_prov_vlan_policy
+[2019-01-13 22:57:50.694] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.prov_class_map
+[2019-01-13 22:57:50.696] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:50.902] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:50.902] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:50.957] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:50.959] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:51.184] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# class-map ethernet auto_ClassMap_v4008
+[2019-01-13 22:57:51.372] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:51.374] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:51.375] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:51.565] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-auto_ClassMap_v4008)# flow 1
+[2019-01-13 22:57:51.740] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:51.742] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:51.754] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:51.756] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:51.934] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-flow-1)# rule 1 match  vlan 4008
+[2019-01-13 22:57:52.156] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:52.159] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:52.160] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:52.335] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-flow-1)# end
+[2019-01-13 22:57:52.443] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:52.444] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.prov_class_map
+[2019-01-13 22:57:52.450] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.prov_policy_map
+[2019-01-13 22:57:52.452] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:52.637] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:52.641] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:52.697] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:52.702] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:52.882] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# policy-map auto_PolicyMap_v
+[2019-01-13 22:57:52.989] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:52.991] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:52.992] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:53.183] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-policy-map-auto_PolicyMap_v)# class-map-ethernet auto_ClassMap_v4008
+[2019-01-13 22:57:53.374] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:53.377] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:53.378] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:53.379] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:53.381] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:53.559] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-class-map-ethernet-auto_ClassMap_v4008)# flow 1
+[2019-01-13 22:57:53.782] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:53.785] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:53.785] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:53.802] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:53.803] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:53.805] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:53.985] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-flow-1)#  remove-cevlan   
+[2019-01-13 22:57:54.135] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:54.138] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:54.139] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:54.141] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:54.314] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-flow-1)# end
+[2019-01-13 22:57:54.418] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:54.419] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.prov_policy_map
+[2019-01-13 22:57:54.422] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 22:57:54.426] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_command.check_running_config_interface
+[2019-01-13 22:57:54.428] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:54.429] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:54.631] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show running-config interface ethernet 1/2/x3 
+[2019-01-13 22:57:55.965] - cafe.sessions.session_srv.euta.session_log - INFO: interface ethernet 1/2/x3
+[2019-01-13 22:57:55.973] - cafe.sessions.session_srv.euta.session_log - INFO:  no shutdown
+[2019-01-13 22:57:55.982] - cafe.sessions.session_srv.euta.session_log - INFO:  role     uni
+[2019-01-13 22:57:56.149] - cafe.sessions.session_srv.euta.session_log - INFO: !
+[2019-01-13 22:57:56.380] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:56.384] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:56.388] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_command.check_running_config_interface
+[2019-01-13 22:57:56.389] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 22:57:56.391] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.prov_interface
+[2019-01-13 22:57:56.397] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:56.577] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:56.588] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:56.706] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:56.707] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:56.709] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:56.888] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:57:57.28] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:57.31] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:57.33] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:57.34] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:57.36] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:57.226] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# vlan 4002
+[2019-01-13 22:57:57.801] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:57.804] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:57.805] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:57.825] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:57.826] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:57.828] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:58.23] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)#  no shutdown
+[2019-01-13 22:57:58.242] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:58.246] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:58.248] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:58.250] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:58.427] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)# end
+[2019-01-13 22:57:58.519] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:58.520] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.prov_interface
+[2019-01-13 22:57:58.521] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.prov_interface
+[2019-01-13 22:57:58.525] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:58.703] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:57:58.711] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:57:58.805] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:58.811] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:58.812] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:58.990] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:57:59.142] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:59.145] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:59.147] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:59.149] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:59.150] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:59.329] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# vlan 4002
+[2019-01-13 22:57:59.447] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:59.450] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:59.450] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:59.452] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:59.453] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:59.455] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:59.648] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)# policy-map auto_PolicyMap_v
+[2019-01-13 22:57:59.979] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:57:59.981] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:59.982] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:59.984] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:57:59.985] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:57:59.987] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:00.181] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-policy-map-auto_PolicyMap_v)# class-map-ethernet auto_ClassMap_v4008
+[2019-01-13 22:58:00.277] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:00.280] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:00.281] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:00.294] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:00.485] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-class-map-ethernet-auto_ClassMap_v4008)# end
+[2019-01-13 22:58:00.571] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:00.572] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.prov_interface
+[2019-01-13 22:58:00.581] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_running_config_interface
+[2019-01-13 22:58:00.583] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:00.585] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:00.780] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show running-config interface ethernet 1/2/x3 
+[2019-01-13 22:58:02.8] - cafe.sessions.session_srv.euta.session_log - INFO: interface ethernet 1/2/x3
+[2019-01-13 22:58:02.10] - cafe.sessions.session_srv.euta.session_log - INFO:  no shutdown
+[2019-01-13 22:58:02.10] - cafe.sessions.session_srv.euta.session_log - INFO:  role     uni
+[2019-01-13 22:58:02.175] - cafe.sessions.session_srv.euta.session_log - INFO:  vlan 4002
+[2019-01-13 22:58:02.176] - cafe.sessions.session_srv.euta.session_log - INFO:   policy-map auto_PolicyMap_v
+[2019-01-13 22:58:02.177] - cafe.sessions.session_srv.euta.session_log - INFO:    class-map-ethernet auto_ClassMap_v4008
+[2019-01-13 22:58:02.177] - cafe.sessions.session_srv.euta.session_log - INFO:     flow 1
+[2019-01-13 22:58:02.178] - cafe.sessions.session_srv.euta.session_log - INFO:     !
+[2019-01-13 22:58:02.178] - cafe.sessions.session_srv.euta.session_log - INFO:    !
+[2019-01-13 22:58:02.179] - cafe.sessions.session_srv.euta.session_log - INFO:   !
+[2019-01-13 22:58:02.179] - cafe.sessions.session_srv.euta.session_log - INFO:   no shutdown
+[2019-01-13 22:58:02.294] - cafe.sessions.session_srv.euta.session_log - INFO:  !
+[2019-01-13 22:58:02.409] - cafe.sessions.session_srv.euta.session_log - INFO: !
+[2019-01-13 22:58:02.433] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:02.437] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:02.453] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_running_config_interface
+[2019-01-13 22:58:02.457] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_svc.l2_setting_prov_vlan_policy
+[2019-01-13 22:58:02.458] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_service_model.subscriber_point_add_svc
+[2019-01-13 22:58:02.459] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Setup Keyword: case setup
+[2019-01-13 22:58:02.507] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Teardown Keyword: case teardown
+[2019-01-13 22:58:02.510] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_service_model.subscriber_point_remove_svc
+[2019-01-13 22:58:02.520] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_svc.l2_setting_dprov_vlan_policy
+[2019-01-13 22:58:02.528] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:02.713] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show running-config interface ethernet 1/2/x3
+[2019-01-13 22:58:03.988] - cafe.sessions.session_srv.euta.session_log - INFO: interface ethernet 1/2/x3
+[2019-01-13 22:58:03.991] - cafe.sessions.session_srv.euta.session_log - INFO:  no shutdown
+[2019-01-13 22:58:03.992] - cafe.sessions.session_srv.euta.session_log - INFO:  role     uni
+[2019-01-13 22:58:04.157] - cafe.sessions.session_srv.euta.session_log - INFO:  vlan 4002
+[2019-01-13 22:58:04.164] - cafe.sessions.session_srv.euta.session_log - INFO:   policy-map auto_PolicyMap_v
+[2019-01-13 22:58:04.175] - cafe.sessions.session_srv.euta.session_log - INFO:    class-map-ethernet auto_ClassMap_v4008
+[2019-01-13 22:58:04.176] - cafe.sessions.session_srv.euta.session_log - INFO:     flow 1
+[2019-01-13 22:58:04.176] - cafe.sessions.session_srv.euta.session_log - INFO:     !
+[2019-01-13 22:58:04.177] - cafe.sessions.session_srv.euta.session_log - INFO:    !
+[2019-01-13 22:58:04.177] - cafe.sessions.session_srv.euta.session_log - INFO:   !
+[2019-01-13 22:58:04.178] - cafe.sessions.session_srv.euta.session_log - INFO:   no shutdown
+[2019-01-13 22:58:04.292] - cafe.sessions.session_srv.euta.session_log - INFO:  !
+[2019-01-13 22:58:04.407] - cafe.sessions.session_srv.euta.session_log - INFO: !
+[2019-01-13 22:58:04.435] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:04.441] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Continue On Failure
+[2019-01-13 22:58:04.442] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_command.dprov_interface
+[2019-01-13 22:58:04.444] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:04.620] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:04.628] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:04.709] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:04.711] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:04.712] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:04.899] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:58:04.966] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:04.970] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:04.973] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:04.975] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:04.977] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:05.157] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# vlan 4002
+[2019-01-13 22:58:05.264] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:05.266] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:05.267] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:05.301] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:05.302] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:05.303] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:05.508] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)# no  policy-map auto_PolicyMap_v
+[2019-01-13 22:58:05.751] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:05.754] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:05.756] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:05.757] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:05.933] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)# end
+[2019-01-13 22:58:06.44] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:06.47] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_command.dprov_interface
+[2019-01-13 22:58:06.48] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Continue On Failure
+[2019-01-13 22:58:06.51] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Continue On Failure
+[2019-01-13 22:58:06.53] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_command.dprov_interface
+[2019-01-13 22:58:06.55] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:06.257] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:06.258] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:06.320] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:06.321] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:06.323] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:06.512] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:58:06.574] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:06.577] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:06.595] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:06.596] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:06.598] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:06.792] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# no  vlan 4002
+[2019-01-13 22:58:07.119] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:07.122] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:07.122] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:07.124] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:07.304] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# end
+[2019-01-13 22:58:07.372] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:07.373] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_command.dprov_interface
+[2019-01-13 22:58:07.374] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Continue On Failure
+[2019-01-13 22:58:07.377] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:07.553] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show running-config interface ethernet 1/2/x3
+[2019-01-13 22:58:08.776] - cafe.sessions.session_srv.euta.session_log - INFO: interface ethernet 1/2/x3
+[2019-01-13 22:58:08.777] - cafe.sessions.session_srv.euta.session_log - INFO:  no shutdown
+[2019-01-13 22:58:08.777] - cafe.sessions.session_srv.euta.session_log - INFO:  role     uni
+[2019-01-13 22:58:08.942] - cafe.sessions.session_srv.euta.session_log - INFO: !
+[2019-01-13 22:58:08.972] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:08.975] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.delete_config_object
+[2019-01-13 22:58:08.976] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:09.152] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:09.169] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:09.256] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:09.258] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:09.259] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:09.440] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# no policy-map auto_PolicyMap_v
+[2019-01-13 22:58:10.352] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:10.356] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:10.358] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:10.535] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# end
+[2019-01-13 22:58:10.664] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:10.665] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.delete_config_object
+[2019-01-13 22:58:10.669] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.delete_config_object
+[2019-01-13 22:58:10.670] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:10.845] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:10.853] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:10.944] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:10.947] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:10.949] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:11.129] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# no class-map ethernet auto_ClassMap_v4008
+[2019-01-13 22:58:11.296] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:11.299] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:11.300] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:11.476] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# end
+[2019-01-13 22:58:11.584] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:11.585] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.delete_config_object
+[2019-01-13 22:58:11.587] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_svc.l2_setting_dprov_vlan_policy
+[2019-01-13 22:58:11.589] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_service_model.subscriber_point_remove_svc
+[2019-01-13 22:58:11.590] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Teardown Keyword: case teardown
+[2019-01-13 22:58:11.614] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Case: tc_remove_cevlan
+[2019-01-13 22:58:11.700] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<Exit Suite: Tc Remove Cevlan
+[2019-01-13 22:58:11.825] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>Enter Suite: Tc Translate Cevlan Tag
+[2019-01-13 22:58:11.913] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Case: tc_translate_cevlan_tag
+[2019-01-13 22:58:12.50] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Setup Keyword: case setup
+[2019-01-13 22:58:12.64] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_service_model.subscriber_point_add_svc
+[2019-01-13 22:58:12.81] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_svc.l2_setting_prov_vlan_policy
+[2019-01-13 22:58:12.96] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.prov_class_map
+[2019-01-13 22:58:12.98] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:12.312] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:12.312] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:12.374] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:12.376] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:12.550] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# class-map ethernet auto_ClassMap_v4008
+[2019-01-13 22:58:12.769] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:12.771] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:12.773] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:12.966] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-auto_ClassMap_v4008)# flow 1
+[2019-01-13 22:58:13.123] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:13.126] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:13.139] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:13.140] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:13.318] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-flow-1)# rule 1 match  vlan 4008
+[2019-01-13 22:58:13.528] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:13.531] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:13.533] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:13.706] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-flow-1)# end
+[2019-01-13 22:58:13.766] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:13.767] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.prov_class_map
+[2019-01-13 22:58:13.777] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.prov_policy_map
+[2019-01-13 22:58:13.780] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:13.981] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:13.986] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:14.44] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:14.45] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:14.222] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# policy-map auto_PolicyMap_v4009
+[2019-01-13 22:58:14.366] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:14.368] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:14.370] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:14.547] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-policy-map-auto_PolicyMap_v4009)# class-map-ethernet auto_ClassMap_v4008
+[2019-01-13 22:58:14.750] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:14.753] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:14.754] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:14.755] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:14.757] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:14.936] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-class-map-ethernet-auto_ClassMap_v4008)# flow 1
+[2019-01-13 22:58:15.122] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:15.125] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:15.126] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:15.145] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:15.146] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:15.148] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:15.341] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-flow-1)#  translate-cevlan-tag 4009  
+[2019-01-13 22:58:15.488] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:15.491] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:15.492] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:15.494] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:15.679] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-flow-1)# end
+[2019-01-13 22:58:15.785] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:15.793] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.prov_policy_map
+[2019-01-13 22:58:15.803] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 22:58:15.808] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_command.check_running_config_interface
+[2019-01-13 22:58:15.810] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:15.812] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:16.4] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show running-config interface ethernet 1/2/x3 
+[2019-01-13 22:58:17.180] - cafe.sessions.session_srv.euta.session_log - INFO: interface ethernet 1/2/x3
+[2019-01-13 22:58:17.181] - cafe.sessions.session_srv.euta.session_log - INFO:  no shutdown
+[2019-01-13 22:58:17.185] - cafe.sessions.session_srv.euta.session_log - INFO:  role     uni
+[2019-01-13 22:58:17.352] - cafe.sessions.session_srv.euta.session_log - INFO: !
+[2019-01-13 22:58:17.406] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:17.409] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:17.413] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_command.check_running_config_interface
+[2019-01-13 22:58:17.414] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 22:58:17.416] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.prov_interface
+[2019-01-13 22:58:17.420] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:17.599] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:17.600] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:17.683] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:17.689] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:17.690] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:17.880] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:58:17.961] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:17.965] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:17.968] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:17.970] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:17.972] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:18.179] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# vlan 4002
+[2019-01-13 22:58:18.757] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:18.760] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:18.761] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:18.780] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:18.782] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:18.783] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:18.989] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)#  no shutdown
+[2019-01-13 22:58:19.262] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:19.265] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:19.265] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:19.268] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:19.449] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)# end
+[2019-01-13 22:58:19.544] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:19.546] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.prov_interface
+[2019-01-13 22:58:19.548] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.prov_interface
+[2019-01-13 22:58:19.551] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:19.738] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:19.747] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:19.815] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:19.817] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:19.819] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:20.37] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:58:20.127] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:20.130] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:20.132] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:20.134] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:20.136] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:20.343] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# vlan 4002
+[2019-01-13 22:58:20.407] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:20.410] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:20.411] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:20.412] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:20.413] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:20.415] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:20.603] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)# policy-map auto_PolicyMap_v4009
+[2019-01-13 22:58:20.921] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:20.923] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:20.924] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:20.925] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:20.926] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:20.928] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:21.112] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-policy-map-auto_PolicyMap_v4009)# class-map-ethernet auto_ClassMap_v4008
+[2019-01-13 22:58:21.198] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:21.201] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:21.204] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:21.222] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:21.397] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-class-map-ethernet-auto_ClassMap_v4008)# end
+[2019-01-13 22:58:21.507] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:21.508] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.prov_interface
+[2019-01-13 22:58:21.517] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.check_running_config_interface
+[2019-01-13 22:58:21.519] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:21.520] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:21.719] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show running-config interface ethernet 1/2/x3 
+[2019-01-13 22:58:22.953] - cafe.sessions.session_srv.euta.session_log - INFO: interface ethernet 1/2/x3
+[2019-01-13 22:58:22.954] - cafe.sessions.session_srv.euta.session_log - INFO:  no shutdown
+[2019-01-13 22:58:22.955] - cafe.sessions.session_srv.euta.session_log - INFO:  role     uni
+[2019-01-13 22:58:23.71] - cafe.sessions.session_srv.euta.session_log - INFO:  vlan 4002
+[2019-01-13 22:58:23.77] - cafe.sessions.session_srv.euta.session_log - INFO:   policy-map auto_PolicyMap_v4009
+[2019-01-13 22:58:23.78] - cafe.sessions.session_srv.euta.session_log - INFO:    class-map-ethernet auto_ClassMap_v4008
+[2019-01-13 22:58:23.79] - cafe.sessions.session_srv.euta.session_log - INFO:     flow 1
+[2019-01-13 22:58:23.79] - cafe.sessions.session_srv.euta.session_log - INFO:     !
+[2019-01-13 22:58:23.80] - cafe.sessions.session_srv.euta.session_log - INFO:    !
+[2019-01-13 22:58:23.81] - cafe.sessions.session_srv.euta.session_log - INFO:   !
+[2019-01-13 22:58:23.82] - cafe.sessions.session_srv.euta.session_log - INFO:   no shutdown
+[2019-01-13 22:58:23.197] - cafe.sessions.session_srv.euta.session_log - INFO:  !
+[2019-01-13 22:58:23.311] - cafe.sessions.session_srv.euta.session_log - INFO: !
+[2019-01-13 22:58:23.339] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:23.343] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:23.355] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.check_running_config_interface
+[2019-01-13 22:58:23.359] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_svc.l2_setting_prov_vlan_policy
+[2019-01-13 22:58:23.360] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_service_model.subscriber_point_add_svc
+[2019-01-13 22:58:23.361] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Setup Keyword: case setup
+[2019-01-13 22:58:23.418] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Teardown Keyword: case teardown
+[2019-01-13 22:58:23.420] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_service_model.subscriber_point_remove_svc
+[2019-01-13 22:58:23.432] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_svc.l2_setting_dprov_vlan_policy
+[2019-01-13 22:58:23.439] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:23.625] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show running-config interface ethernet 1/2/x3
+[2019-01-13 22:58:24.866] - cafe.sessions.session_srv.euta.session_log - INFO: interface ethernet 1/2/x3
+[2019-01-13 22:58:24.868] - cafe.sessions.session_srv.euta.session_log - INFO:  no shutdown
+[2019-01-13 22:58:24.868] - cafe.sessions.session_srv.euta.session_log - INFO:  role     uni
+[2019-01-13 22:58:25.33] - cafe.sessions.session_srv.euta.session_log - INFO:  vlan 4002
+[2019-01-13 22:58:25.34] - cafe.sessions.session_srv.euta.session_log - INFO:   policy-map auto_PolicyMap_v4009
+[2019-01-13 22:58:25.35] - cafe.sessions.session_srv.euta.session_log - INFO:    class-map-ethernet auto_ClassMap_v4008
+[2019-01-13 22:58:25.35] - cafe.sessions.session_srv.euta.session_log - INFO:     flow 1
+[2019-01-13 22:58:25.36] - cafe.sessions.session_srv.euta.session_log - INFO:     !
+[2019-01-13 22:58:25.36] - cafe.sessions.session_srv.euta.session_log - INFO:    !
+[2019-01-13 22:58:25.37] - cafe.sessions.session_srv.euta.session_log - INFO:   !
+[2019-01-13 22:58:25.38] - cafe.sessions.session_srv.euta.session_log - INFO:   no shutdown
+[2019-01-13 22:58:25.152] - cafe.sessions.session_srv.euta.session_log - INFO:  !
+[2019-01-13 22:58:25.269] - cafe.sessions.session_srv.euta.session_log - INFO: !
+[2019-01-13 22:58:25.352] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:25.358] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Continue On Failure
+[2019-01-13 22:58:25.359] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_command.dprov_interface
+[2019-01-13 22:58:25.361] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:25.549] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:25.550] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:25.618] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:25.626] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:25.628] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:25.811] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:58:25.930] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:25.934] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:25.936] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:25.938] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:25.940] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:26.133] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# vlan 4002
+[2019-01-13 22:58:26.208] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:26.211] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:26.212] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:26.233] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:26.235] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:26.236] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:26.430] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)# no  policy-map auto_PolicyMap_v4009
+[2019-01-13 22:58:26.744] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:26.746] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:26.748] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:26.749] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:26.925] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-4002)# end
+[2019-01-13 22:58:27.99] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:27.100] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_command.dprov_interface
+[2019-01-13 22:58:27.101] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Continue On Failure
+[2019-01-13 22:58:27.105] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Continue On Failure
+[2019-01-13 22:58:27.106] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_command.dprov_interface
+[2019-01-13 22:58:27.108] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:27.291] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:27.292] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:27.372] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:27.373] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:27.375] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:27.551] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:58:27.654] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:27.657] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:27.677] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:27.678] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:27.680] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:27.863] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# no  vlan 4002
+[2019-01-13 22:58:28.157] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:28.160] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:28.161] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword If
+[2019-01-13 22:58:28.162] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:28.337] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# end
+[2019-01-13 22:58:28.428] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:28.429] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_command.dprov_interface
+[2019-01-13 22:58:28.430] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Continue On Failure
+[2019-01-13 22:58:28.433] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:28.607] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show running-config interface ethernet 1/2/x3
+[2019-01-13 22:58:29.868] - cafe.sessions.session_srv.euta.session_log - INFO: interface ethernet 1/2/x3
+[2019-01-13 22:58:29.880] - cafe.sessions.session_srv.euta.session_log - INFO:  no shutdown
+[2019-01-13 22:58:29.882] - cafe.sessions.session_srv.euta.session_log - INFO:  role     uni
+[2019-01-13 22:58:29.997] - cafe.sessions.session_srv.euta.session_log - INFO: !
+[2019-01-13 22:58:30.27] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:30.31] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.delete_config_object
+[2019-01-13 22:58:30.32] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:30.219] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:30.235] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:30.318] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:30.320] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:30.322] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:30.516] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# no policy-map auto_PolicyMap_v4009
+[2019-01-13 22:58:31.412] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:31.414] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:31.416] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:31.597] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# end
+[2019-01-13 22:58:31.657] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:31.659] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.delete_config_object
+[2019-01-13 22:58:31.662] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.delete_config_object
+[2019-01-13 22:58:31.663] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:31.855] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:31.856] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:31.955] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:31.957] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:31.960] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:32.153] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# no class-map ethernet auto_ClassMap_v4008
+[2019-01-13 22:58:32.394] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:32.398] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:32.403] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:32.623] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# end
+[2019-01-13 22:58:32.863] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:32.872] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.delete_config_object
+[2019-01-13 22:58:32.888] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_svc.l2_setting_dprov_vlan_policy
+[2019-01-13 22:58:32.906] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_service_model.subscriber_point_remove_svc
+[2019-01-13 22:58:32.930] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Teardown Keyword: case teardown
+[2019-01-13 22:58:33.275] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Case: tc_translate_cevlan_tag
+[2019-01-13 22:58:33.730] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<Exit Suite: Tc Translate Cevlan Tag
+[2019-01-13 22:58:33.920] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>Enter Teardown Keyword: eth_policy_map_suite_deprovision
+[2019-01-13 22:58:33.924] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Keyword: keyword_service_model.subscriber_point_dprov
+[2019-01-13 22:58:33.931] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword
+[2019-01-13 22:58:33.932] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: keyword_service_model.subscriber_point_eth_dprov
+[2019-01-13 22:58:33.935] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter For Keyword: ${port_key} IN [ @{service_model.${subscriber_point}.member} ]
+[2019-01-13 22:58:33.938] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter For Item Keyword: ${port_key} = interface1
+[2019-01-13 22:58:33.944] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_command.dprov_interface_ethernet
+[2019-01-13 22:58:33.946] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:33.948] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:34.142] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:34.143] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:34.146] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:34.149] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:34.150] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:34.152] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:34.339] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:58:34.508] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:34.511] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:34.514] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter For Keyword: ${element} IN [ @{list_cmd} ]
+[2019-01-13 22:58:34.515] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter For Item Keyword: ${element} = role
+[2019-01-13 22:58:34.516] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:34.517] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:34.807] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# no role
+[2019-01-13 22:58:35.279] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:35.283] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:35.284] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit For Item Keyword: ${element} = role
+[2019-01-13 22:58:35.285] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit For Keyword: ${element} IN [ @{list_cmd} ]
+[2019-01-13 22:58:35.287] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:35.289] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:35.471] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# end
+[2019-01-13 22:58:35.503] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:35.506] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:35.507] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_command.dprov_interface_ethernet
+[2019-01-13 22:58:35.509] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_command.shutdown_port
+[2019-01-13 22:58:35.510] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:35.511] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:35.689] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:35.697] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:35.717] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:35.720] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:35.722] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:35.723] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:35.914] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x3
+[2019-01-13 22:58:35.928] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:35.932] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:35.934] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:35.936] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:36.114] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# shutdown
+[2019-01-13 22:58:36.483] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:36.486] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:36.492] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:36.493] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:36.673] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x3)# end
+[2019-01-13 22:58:36.726] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:36.731] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:36.736] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_command.shutdown_port
+[2019-01-13 22:58:36.737] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit For Item Keyword: ${port_key} = interface1
+[2019-01-13 22:58:36.742] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit For Keyword: ${port_key} IN [ @{service_model.${subscriber_point}.member} ]
+[2019-01-13 22:58:36.743] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: keyword_service_model.subscriber_point_eth_dprov
+[2019-01-13 22:58:36.745] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword
+[2019-01-13 22:58:36.746] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Keyword: keyword_service_model.subscriber_point_dprov
+[2019-01-13 22:58:36.751] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Keyword: keyword_service_model.service_point_remove_vlan
+[2019-01-13 22:58:36.758] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter For Keyword: ${service_point} IN [ @{service_model.${service_point_list}} ]
+[2019-01-13 22:58:36.759] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter For Item Keyword: ${service_point} = service_point1
+[2019-01-13 22:58:36.763] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: keyword_service_model.service_point_remove_transport_profile
+[2019-01-13 22:58:36.769] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter For Keyword: ${port_key} IN [ @{service_model.${service_point}.member} ]
+[2019-01-13 22:58:36.770] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter For Item Keyword: ${port_key} = interface1
+[2019-01-13 22:58:36.774] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:36.958] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# show running-config interface ethernet 1/2/x2
+[2019-01-13 22:58:38.229] - cafe.sessions.session_srv.euta.session_log - INFO: interface ethernet 1/2/x2
+[2019-01-13 22:58:38.230] - cafe.sessions.session_srv.euta.session_log - INFO:  no shutdown
+[2019-01-13 22:58:38.231] - cafe.sessions.session_srv.euta.session_log - INFO:  role                      inni
+[2019-01-13 22:58:38.247] - cafe.sessions.session_srv.euta.session_log - INFO:  transport-service-profile auto_TransVlan_4002
+[2019-01-13 22:58:38.361] - cafe.sessions.session_srv.euta.session_log - INFO: !
+[2019-01-13 22:58:38.366] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:38.368] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: keyword_command.dprov_interface_ethernet
+[2019-01-13 22:58:38.369] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:38.371] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:38.548] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:38.564] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:38.571] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:38.575] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:38.577] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:38.579] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:38.759] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x2
+[2019-01-13 22:58:38.800] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:38.805] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:38.807] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter For Keyword: ${element} IN [ @{list_cmd} ]
+[2019-01-13 22:58:38.808] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter For Item Keyword: ${element} = transport-service-profile
+[2019-01-13 22:58:38.809] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:38.812] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:38.999] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x2)# no transport-service-profile
+[2019-01-13 22:58:39.218] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:39.223] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:39.224] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit For Item Keyword: ${element} = transport-service-profile
+[2019-01-13 22:58:39.225] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit For Keyword: ${element} IN [ @{list_cmd} ]
+[2019-01-13 22:58:39.227] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:39.229] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:39.407] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x2)# end
+[2019-01-13 22:58:39.456] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:39.458] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:39.459] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: keyword_command.dprov_interface_ethernet
+[2019-01-13 22:58:39.460] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit For Item Keyword: ${port_key} = interface1
+[2019-01-13 22:58:39.461] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit For Keyword: ${port_key} IN [ @{service_model.${service_point}.member} ]
+[2019-01-13 22:58:39.463] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: keyword_service_model.service_point_remove_transport_profile
+[2019-01-13 22:58:39.464] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 22:58:39.465] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_command.delete_config_object
+[2019-01-13 22:58:39.466] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:39.650] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:39.667] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:39.689] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:39.691] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:39.692] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:39.870] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# no transport-service-profile auto_TransVlan_4002
+[2019-01-13 22:58:40.959] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:40.963] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:40.966] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:41.178] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# end
+[2019-01-13 22:58:41.183] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:41.185] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_command.delete_config_object
+[2019-01-13 22:58:41.186] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword And Ignore Error
+[2019-01-13 22:58:41.188] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit For Item Keyword: ${service_point} = service_point1
+[2019-01-13 22:58:41.189] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit For Keyword: ${service_point} IN [ @{service_model.${service_point_list}} ]
+[2019-01-13 22:58:41.192] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Keyword: keyword_service_model.service_point_remove_vlan
+[2019-01-13 22:58:41.195] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Keyword: keyword_command.delete_config_object
+[2019-01-13 22:58:41.196] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:41.468] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:41.472] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:41.476] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:41.478] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:41.480] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:41.658] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# no vlan 4002
+[2019-01-13 22:58:43.154] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:43.158] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:43.160] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:43.336] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# end
+[2019-01-13 22:58:43.369] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:43.370] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Keyword: keyword_command.delete_config_object
+[2019-01-13 22:58:43.378] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Keyword: keyword_service_model.service_point_dprov
+[2019-01-13 22:58:43.380] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter For Keyword: ${service_point} IN [ @{service_model.${service_point_list}} ]
+[2019-01-13 22:58:43.381] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter For Item Keyword: ${service_point} = service_point1
+[2019-01-13 22:58:43.384] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>Enter Keyword: BuiltIn.Run Keyword
+[2019-01-13 22:58:43.386] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>Enter Keyword: keyword_service_model.service_point_eth_dprov
+[2019-01-13 22:58:43.388] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>Enter For Keyword: ${port_key} IN [ @{service_model.${service_point}.member} ]
+[2019-01-13 22:58:43.389] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>Enter For Item Keyword: ${port_key} = interface1
+[2019-01-13 22:58:43.393] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_command.dprov_interface_ethernet
+[2019-01-13 22:58:43.394] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:43.395] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:43.576] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:43.585] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:43.609] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:43.617] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:43.619] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:43.621] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:43.800] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x2
+[2019-01-13 22:58:43.837] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:43.841] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:43.843] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter For Keyword: ${element} IN [ @{list_cmd} ]
+[2019-01-13 22:58:43.844] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter For Item Keyword: ${element} = role
+[2019-01-13 22:58:43.845] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:43.847] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:44.37] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x2)# no role
+[2019-01-13 22:58:44.813] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:44.816] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:44.818] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit For Item Keyword: ${element} = role
+[2019-01-13 22:58:44.819] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit For Keyword: ${element} IN [ @{list_cmd} ]
+[2019-01-13 22:58:44.821] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:44.822] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:45.36] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x2)# end
+[2019-01-13 22:58:45.59] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:45.62] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:45.64] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_command.dprov_interface_ethernet
+[2019-01-13 22:58:45.66] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>Enter Keyword: keyword_command.shutdown_port
+[2019-01-13 22:58:45.67] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:45.68] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:45.291] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4# configure
+[2019-01-13 22:58:45.292] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-13 22:58:45.295] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:45.297] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:45.299] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:45.300] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:45.498] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# interface ethernet 1/2/x2
+[2019-01-13 22:58:45.503] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:45.513] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:45.515] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:45.517] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:45.712] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x2)# shutdown
+[2019-01-13 22:58:46.82] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:46.85] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:46.87] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>Enter Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:46.88] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:46.269] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-ethernet-1/2/x2)# end
+[2019-01-13 22:58:46.309] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-13 22:58:46.314] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<<Exit Teardown Keyword: keyword_common.Axos Cli With Error Check
+[2019-01-13 22:58:46.316] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<<Exit Keyword: keyword_command.shutdown_port
+[2019-01-13 22:58:46.317] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<<Exit For Item Keyword: ${port_key} = interface1
+[2019-01-13 22:58:46.319] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<<Exit For Keyword: ${port_key} IN [ @{service_model.${service_point}.member} ]
+[2019-01-13 22:58:46.320] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<<Exit Keyword: keyword_service_model.service_point_eth_dprov
+[2019-01-13 22:58:46.321] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<<Exit Keyword: BuiltIn.Run Keyword
+[2019-01-13 22:58:46.322] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit For Item Keyword: ${service_point} = service_point1
+[2019-01-13 22:58:46.323] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit For Keyword: ${service_point} IN [ @{service_model.${service_point_list}} ]
+[2019-01-13 22:58:46.325] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Keyword: keyword_service_model.service_point_dprov
+[2019-01-13 22:58:46.326] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<Exit Teardown Keyword: eth_policy_map_suite_deprovision
+[2019-01-13 22:58:46.329] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<Exit Suite: Testcase
+[2019-01-13 22:58:46.335] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<Exit Suite: Policy Map
+[2019-01-13 22:58:46.340] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<Exit Suite: Data
+[2019-01-13 22:58:46.345] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<Exit Suite: ST Test Cases
+[2019-01-13 22:58:46.350] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<Exit Suite: Milan
+[2019-01-13 22:58:46.355] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<Exit Suite: AXOS-automation
+[2019-01-13 22:58:46.360] - cafe.sessions.session_srv.euta.session_log - DEBUG: <Exit Suite: AXOS

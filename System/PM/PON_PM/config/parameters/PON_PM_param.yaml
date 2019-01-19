@@ -1,0 +1,33 @@
+global:
+
+  speed_m: 100           #add for ticket AT-3935, porting to ont 836.
+  service_vlan: 600          # Service vlan provisioned for uplink.
+  match_vlan: untagged       # UNI service vlan match.
+  rmon_session_15_min: fifteen-minutes
+  rmon_session_1_hour: one-hour
+  rmon_session_1_day: one-day
+  rmon_type:    bin          # PM_session type, options are bin and interval.
+  num_back:     0            # PM_session pointer to starting position.
+  num_show:     1            # PM session number of bins to retrieve.
+  pon_pm_counter_name:       # List of PON PM counters.
+   - rx-pkts
+   - rx-octets
+   - rx-unicast-pkts
+   - rx-broadcast-pkts
+   - rx-multicast-pkts
+   - rx-unknown-protos
+   - rx-discards
+   - rx-errors
+   - tx-pkts
+   - tx-octets
+   - tx-unicast-pkts
+   - tx-broadcast-pkts
+   - tx-multicast-pkts
+   - tx-discards
+   - tx-errors
+  mac1:    00:00:00:00:00:11  # STC UNI source MAC.
+  mac2:    00:00:00:00:00:22  # STC NNI source MAC.
+  ip1:    11.0.0.1            # STC UNI source IP.
+  ip2:    22.0.0.1            # STC NNI source IP.
+  send_traffic_time:   60     # STC traffic sending period.
+  stop_traffic_time:   20     # STC waiting period after traffic stops.

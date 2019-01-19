@@ -1,0 +1,16 @@
+global:
+  SNMPv3_user: auto_v3
+  SNMPv3_user_auth_1: auto_v3_auth_1
+  SNMPv3_user_auth_2: auto_v3_auth_2
+  SNMPv3_user_auth_priv_3: auto_v3_auth_priv_3
+  SNMPv3_user_auth_priv_4: auto_v3_auth_priv_4
+  SNMPv3_user_auth_priv_5: auto_v3_auth_priv_5
+  SNMPv3_user_auth_priv_6: auto_v3_auth_priv_6
+
+  auth_key: testpwd_a
+  priv_key: testpwd_e
+
+  trap_host_1: 10.245.31.166    #do not modify!
+  trap_host_vm: CAFETOPO.connection.eutA.ip
+
+  smmp get empty response:       No Such Object currently exists at this OID

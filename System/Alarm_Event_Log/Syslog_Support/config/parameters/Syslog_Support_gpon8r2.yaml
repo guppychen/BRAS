@@ -1,0 +1,31 @@
+global:
+  stag_vlan: 3003
+  card_type: GPON-8R2
+  log_path: /var/log/syslog/
+  client_ip: 10.245.74.71   # change this to your NGPON card ip
+  sys_server1: 10.245.249.151   # this is your VM ip
+  sys_server2: 192.168.37.129
+  sys_server3: 10.245.31.200
+  sys_server4: 10.245.31.201
+  sys_server5: 10.245.31.202
+  ntp_server: 2
+  ntp_server_ip: 10.10.10.10
+  Default_Transport_Protocol: UDP
+  Secure_Transport_Protocol: TCP
+  Syslog_default_port: 514
+  configure_port: 600
+  Default_Log_Level: WARN
+  Default_Admin_State: ENABLED
+  sudo_pwd: marino13
+  wait_log_transfer: 5min
+  check_log_interval: 10
+  severity_level:
+    - EMERG
+    - ALERT
+    - CRIT
+    - ERR
+    - WARN
+    - NOTICE
+    - INFO
+    - DEBUG
+

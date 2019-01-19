@@ -1,0 +1,23 @@
+*** Settings ***
+Resource         ../base.robot
+Resource         ./keyword/support_ont_keyword.robot
+Resource        case_template/template_modify_PoE_Priority.robot
+Resource        case_template/template_modify_PoE_admin_status.robot
+Resource        case_template/template_show_default_ONT_detail.robot
+Resource        case_template/template_show_default_ont_profile.robot
+Resource        case_template/template_modify_default_ont_profile.robot
+Resource        case_template/template_delete_default_ont_profile.robot
+Resource        case_template/template_modify_PoE_High_Power_Mode.robot
+Resource        case_template/template_create_voice_policy_profile.robot
+Resource        case_template/template_delete_voice_policy_profile.robot
+Resource        case_template/template_modify_voice_policy_profile.robot
+Resource        case_template/template_show_default_ont_port_gig_eth_detail.robot
+Resource        case_template/template_when_ONT_is_off_line_show_default_ONT_detail.robot
+Resource        case_template/template_change_voice_policy_profile_check_its_parameters.robot
+Resource        case_template/template_modify_user_defined_ont_profile_referenced_by_ONT.robot
+Resource        case_template/templete_create_an_ONT_binding_matched_default_ont_profile.robot
+Resource        case_template/template_create_an_ONT_binding_mismatched_default_ont_profile.robot
+Resource        case_template/template_when_voice_policy_profile_is_none_modify_its_parameters.robot
+Resource        case_template/template_when_ONT_is_off_line_show_default_ont_port_gig_eth_detail.robot
+Resource        case_template/template_when_voice_policy_profile_is_not_none_check_the_logic_relationships_among_its_parameters.robot
+Resource        case_template/template_check_the_logic_relationships_among_PSE_Max_Power_Budget_PSE_Available_Power_Budget_PSE_Aggregate_Output_Power.robot

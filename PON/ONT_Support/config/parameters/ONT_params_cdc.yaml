@@ -1,0 +1,70 @@
+global:
+    val1: "100"
+    val2: "200"
+    #ClassMap and PolicyMap
+    policyName: Ptest
+    #Layer 2
+    classMapName: Ctest
+    classRule: untagged
+    #vlan
+    serVlan: 199
+    serVlan1: 99
+
+ONT:
+    ontNum: 1
+    ontProfile: GP1000X
+    ontSerNum: !!str 3D18C5
+    ontLocation: gpi1
+    ontPort: xp1
+    ontVenId: CXNK
+    ontMACAdd: cc:be:59:51:3a:1d
+    ontSubId: ONT801
+    ethernet: 1/g1
+
+    #ONT With registration ID configured
+ONT1:
+    ontNum: 2
+    ontProfile: GP1000X
+    ontSerNum: !!str 3D18C5
+    ontLocation: gpi1
+    ontPort: xp1
+    ontVenId: CXNK
+    ontMACAdd: cc:be:59:51:3a:1d
+    ontRegId: '12345'
+
+#Unassigned ONT -- to verify unassigned ONT discovery TCs(TC-3553,3554,3555,3556)
+Uont:
+      Num: 2
+      SerNum: !!str 3D18C5
+      Port: xp1
+      pon: 1/1/xp1
+      ethernet: 2/x1
+      serviceVlan: 200
+      Profile: GP1000X
+
+#Paramaters for ONT replacement test cases with same and more ports ONT-Profiles
+ONTSamePort:
+    ontNum: 1
+    ontProfile: 801G
+    ontSerNum: 21849A
+    ontPort: 1/1/gp2
+    ontVenId: CXNK
+
+
+ONTMorePort:
+    ontNum: 1
+    ontProfile: 813G_ARF
+    ontSerNum: 320FD6
+    ontPort: 1/1/gp2
+    ontVenId: CXNK
+    ethernet1: g1
+    ethernet2: g2
+
+    #Services and Interfaces
+PORT:
+      gponport: 1/1/xp1
+      gponport1: 1/1/gp2   #need to change if regid has with different pon port. So, giving two diff. variables.
+      porttype: pon
+
+OUTPUT:
+        dcli: ONT Linkage

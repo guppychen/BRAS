@@ -1,0 +1,13 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/2/x2
+        interface2: 1/2/x3
+      attribute:
+        interface_role: inni
+        interface_type: ethernet

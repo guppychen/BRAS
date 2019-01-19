@@ -1,0 +1,14 @@
+global:
+    ip_address_1: 100.1.1.1    #interface IP address for device1 port1
+    prefix_length: 24
+    add_config: <config><config xmlns="http://www.calix.com/ns/exa/base"><system><contact>Ero34</contact></system></config></config>
+    remove_config: <config><config xmlns="http://www.calix.com/ns/exa/base"><system><contact>no contact</contact></system></config></config>
+    copy_run_to_start: <?xml version="1.0" encoding="utf-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="9"><copy-running-startup xmlns="http://www.calix.com/ns/exa/base"></copy-running-startup></rpc>]]>]]>
+    showing_alarm: <?xml version="1.0" encoding="utf-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="9"><show-alarm-instances-active-subscope xmlns="http://www.calix.com/ns/exa/base"><id>702</id></show-alarm-instances-active-subscope></rpc>]]>]]>
+    show_ack_alarm: <?xml version="1.0" encoding="utf-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="9"><get><filter xmlns:t="http://www.calix.com/ns/exa/base" type="xpath" select="/status/system/alarm/acknowledged"/></get></rpc>]]>]]>
+    show_inventory: <rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1"><get><filter xmlns="http://www.calix.com/ns/exa/base"><status><system><inventory/></system></status></filter></get></rpc>]]>]]>
+    show_alarm_active_rmon: <?xml version="1.0" encoding="utf-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="9"><show-alarm-instances-active-subscope xmlns="http://www.calix.com/ns/exa/base"><name>ethernet-rmon-session-stopped</name></show-alarm-instances-active-subscope></rpc>]]>]]>
+    craft: 2
+    syslog_log: 10.245.74.71.log
+    syslog_dir: /var/log/syslog
+    hostname: GPON-8R2

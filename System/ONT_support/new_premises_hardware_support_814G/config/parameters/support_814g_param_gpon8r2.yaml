@@ -1,0 +1,20 @@
+global: 
+  status_disabled: DISABLED
+  status_ensabled: ENABLED
+  voice_policy_profile_id: vppro_test
+  voice_policy_profile_user: 
+   vlan: 1
+   priority: 1
+   dscp: 1
+  service_vlan: 800          # Service vlan provisioned for uplink.
+  match_vlan: untagged       # UNI service vlan match.
+  mismatch_ont_profile: 714G
+  user_ont_profile: 814G_test
+  pse_max_power: 60           # User define PSE Max Power Budget, 0-90
+  poe_priority_high: high     # poe-priority display as high, medium, low on E7 side
+  ###########################parameter for ont support template###########################
+  default_voice:              # default voice-policy-profile on E7 side
+   vlan: 4094
+   priority: 6
+   dscp: EF
+   ###########################parameter for ont support template###########################

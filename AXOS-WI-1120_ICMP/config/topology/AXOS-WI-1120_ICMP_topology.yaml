@@ -1,0 +1,33 @@
+connection:
+  h1:
+    ip: localhost
+    type: linux
+    protocol: ssh
+    user: cafetest
+    password: cafetest
+    timeout: 10
+
+  n1:
+    ip: 10.245.96.71
+    port: 22
+    type: AXOS
+    protocol: ssh
+    user: sysadmin
+    password: sysadmin
+    device_type: exa
+    prompt: ['#']
+    timeout: 300
+
+  n1_console:
+    ip: 10.245.96.10
+    port: 10001 #iolan
+    type: exa
+    protocol: telnet
+    user: sysadmin
+    password: sysadmin
+    device_type: exa
+    login_prompt: 'login:'
+    password_prompt: 'Password:'
+    prompt: ['#']
+    timeout: 300
+

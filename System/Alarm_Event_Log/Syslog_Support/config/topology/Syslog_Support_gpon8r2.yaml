@@ -1,0 +1,21 @@
+connection:
+  h1:
+    ip: 10.245.249.151
+    type: linux
+    protocol: ssh
+    user: stautotest
+    password: marino13
+    timeout: 11
+    prompt: "$"
+
+
+  eutA:
+    ip: 10.245.74.71
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: MILAN
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30

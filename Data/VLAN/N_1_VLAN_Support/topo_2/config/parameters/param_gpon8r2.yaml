@@ -1,0 +1,40 @@
+global:
+  service_vlan: 400
+  c_vlan: 100
+  cvlan_2: 300
+  match_vlan: 4001
+  match_vlan_2: 4003
+  match_vlan_3: 4004
+  match_vlan_4: 4005
+  traslate_cevlan: 20
+  match_pcp_1: 6
+  match_pcp_2: 2
+  pcp_1: 1
+  pcp_2: 0
+  change_vlan:
+  send_traffic_time: 5
+  stop_traffic_time: 3
+  mac1: 00:00:01:00:00:01
+  mac2: 00:00:02:00:00:02
+  mac3: 00:00:03:00:00:04
+  mac4: 00:00:04:00:00:04
+  mac_oui: 00:00:01
+  ip1: 192.168.10.3
+  ip2: 192.168.10.2
+  udp_port1: 63
+  udp_port2: 64
+  rate_bps: 1000000
+  class_map_name: anne
+  class_map_type: ethernet
+  flow_index: 1
+  flow_index_1: 2
+  rule_index: 1
+  rule_index_1: 2
+  policy_map_name: anne
+  error_rate: 0.005
+  interface_type1: ethernet
+  interface_type2: ont-etherne
+
+
+
+

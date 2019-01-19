@@ -1,0 +1,41 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x1
+      attribute:
+        interface_role: inni
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port
+      name: 333/x1
+      member:
+        interface1: 333/x1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        ont_id: 333
+        ont_profile_id: GP1000X     # use ont-profile on cli
+        serial_number: 3D18C5
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - 1/1/xp1
+
+    subscriber_point2:
+      device: eutA
+      type: ont_port
+      name: 666/g1
+      member:
+        interface1: 666/g1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        ont_id: 666
+        ont_profile_id: GPR3000X      # use ont-profile on cli
+        serial_number: 4783A4
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - 1/1/xp1

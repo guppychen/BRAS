@@ -1,0 +1,3031 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20190113 21:25:12.161" generator="Robot 3.0.4 (Python 2.7.14 on linux2)">
+<suite source="/home/guchen/workspace/AXOS" id="s1" name="AXOS">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation" id="s1-s1" name="AXOS-automation">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan" id="s1-s1-s1" name="Milan">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases" id="s1-s1-s1-s1" name="ST Test Cases">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System" id="s1-s1-s1-s1-s1" name="System">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/Management" id="s1-s1-s1-s1-s1-s1" name="Management">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/Management/Local_Craft_Interface_Support" id="s1-s1-s1-s1-s1-s1-s1" name="Local Craft Interface Support">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/Management/Local_Craft_Interface_Support/test_cases" id="s1-s1-s1-s1-s1-s1-s1-s1" name="Test Cases">
+<suite source="/home/guchen/workspace/AXOS/AXOS-automation/Milan/ST_Test_Cases/System/Management/Local_Craft_Interface_Support/test_cases/tc_Verify_craft_connection_after_reboot_the_standby_card.robot" id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="tc Verify craft connection after reboot the standby card">
+<test id="s1-s1-s1-s1-s1-s1-s1-s1-s1-t1" name="tc_Verify_craft_connection_after_reboot_the_standby_card">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>set eut version and release</arg>
+</arguments>
+<msg timestamp="20190113 21:25:13.133" level="INFO">set eut version and release</msg>
+<status status="PASS" endtime="20190113 21:25:13.134" starttime="20190113 21:25:13.132"></status>
+</kw>
+<kw name="set_eut_version" library="release_adapter">
+<doc>set EUT build and release attribution</doc>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>If device is not specified, get it from topo.yaml ${DEVICES} list</arg>
+</arguments>
+<msg timestamp="20190113 21:25:13.157" level="INFO">If device is not specified, get it from topo.yaml &lt;cafe.core.utils.Param object at 0x7f8b99ec2d50&gt; list</msg>
+<status status="PASS" endtime="20190113 21:25:13.158" starttime="20190113 21:25:13.156"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${EMPTY}'!='${device}'</arg>
+<arg>Create List</arg>
+<arg>${device}</arg>
+<arg>ELSE</arg>
+<arg>get dictionary keys</arg>
+<arg>${DEVICES}</arg>
+</arguments>
+<assign>
+<var>${keys}</var>
+</assign>
+<kw name="Get Dictionary Keys" library="Collections">
+<doc>Returns keys of the given ``dictionary``.</doc>
+<arguments>
+<arg>${DEVICES}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:13.160" starttime="20190113 21:25:13.160"></status>
+</kw>
+<msg timestamp="20190113 21:25:13.161" level="INFO">${keys} = ['eutA']</msg>
+<status status="PASS" endtime="20190113 21:25:13.161" starttime="20190113 21:25:13.158"></status>
+</kw>
+<kw type="for" name="${eut} IN [ @{keys} ]">
+<kw type="foritem" name="${eut} = eutA">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>current eut is ${eut}, type is ${DEVICES.${eut}.type}</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:13.164" starttime="20190113 21:25:13.163"></status>
+</kw>
+<kw name="Continue For Loop If" library="BuiltIn">
+<doc>Skips the current for loop iteration if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${DEVICES.${eut}.type}'!='AXOS'</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:13.166" starttime="20190113 21:25:13.165"></status>
+</kw>
+<kw name="get_eut_version" library="release_adapter">
+<tags>
+<tag>@author=llin</tag>
+</tags>
+<doc>this is the keyword used to get single device's build information</doc>
+<arguments>
+<arg>${eut}</arg>
+</arguments>
+<assign>
+<var>${build}</var>
+</assign>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>cli</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:25:17.442" level="INFO">Created ShellDevice(eutA)</msg>
+<msg timestamp="20190113 21:25:17.443" level="INFO">send session_command, cmd=cli, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:25:18.106" level="INFO">session_command result=cli
+----------^
+syntax error: expecting 
+  abort                 - 
+  accept                - Accept config
+  apply                 - 
+  apply-dynamic-policy  - 
+  bng-state-persistence - BNG state persistence control commands
+  clear                 - Clear object data
+  clock                 - Modify clock
+  configure             - Manipulate software configuration information
+  copy                  - Copy files
+  cpe-upgrade:cpe       - CPE operation
+  debug                 - 
+  delete                - Delete files
+  devtools              - Enable/disable development tools
+  download              - Download files
+  enable                - Enable EXEC commands
+  exit                  - Exit the management session
+  folder                - 
+  generate              - Generate files
+  idle-timeout          - Configure idle timeout
+  install               - 
+  lock                  - lock a datastore
+  logout                - Logout a user
+  manual                - Manual operation with alarms
+  no                    - Negate a command or set its defaults
+  ofa-connect           - Open Flow Connect
+  ofa-listener          - Open Flow Listener
+  ofa-port              - Open Flow port
+  ont-eth               - ONT-ETH efm-loopback-status mode
+  ont-firmware-upgrade  - Start software download
+  ont-simulation        - ONT simulation commands
+  ont-upgrade           - ONT upgrade commands
+  paginate              - Paginate output from CLI commands
+  perform               - Perform an operation
+  ping                  - Ping IP address
+  ping6                 - Ping IPv6 address
+  quit                  - Exit the management session
+  redundancy            - redundancy switchover commands
+  reload                - Reboot the current card
+  remove-dynamic-policy - 
+  replay                - Replay card-config
+  restart               - Restart Diameter daemon
+  run                   - 
+  send                  - Send message to terminal of one or all users
+  session               - 
+  show                  - Show information about the system
+  ssh                   - ssh command
+  start                 - Start an operation
+  stop                  - Stop an operation
+  switch                - Switch network clock
+  tcpdump               - tcpdump command
+  telnet                - telnet command
+  templatize            - Find patterns in subtree.
+  terminal              - Set terminal type
+  timestamp             - Enable/disable the display of timestamp
+  traceroute            - Traceroute IP address
+  uninstall             - 
+  unlock                - unlock a datastore
+  upgrade               - Upgrade commands
+  upload                - Upload files
+  verify                - 
+NGPON2X4</msg>
+<msg timestamp="20190113 21:25:18.107" level="INFO">${res} = cli
+----------^
+syntax error: expecting 
+  abort                 - 
+  accept                - Accept config
+  apply                 - 
+  apply-dynamic-policy  - 
+  bng-state-persistence - BNG s...</msg>
+<status status="PASS" endtime="20190113 21:25:18.107" starttime="20190113 21:25:13.168"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show version</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:25:18.110" level="INFO">send session_command, cmd=show version, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:25:18.611" level="INFO">session_command result=show version
+version 1/1
+ image-partition      imgy
+ full-release-version dirty
+ live-release-version N/A
+ image-type           FullRelease
+ patches              none
+ features             Signed-Optics-Enforcement-Disabled
+ distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+ schema               18.0.0-ib191
+ timestamp            "2019.01.12 02:16:30"
+ details              IBAXOS191-CI-330
+version 1/2
+ image-partition      imgx
+ full-release-version dirty
+ live-release-version N/A
+ image-type           FullRelease
+ patches              none
+ features             Signed-Optics-Enforcement-Disabled
+ distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+ schema               18.0.0-ib191
+ timestamp            "2019.01.12 02:16:30"
+ details              IBAXOS191-CI-330
+NGPON2X4</msg>
+<msg timestamp="20190113 21:25:18.612" level="INFO">${res} = show version
+version 1/1
+ image-partition      imgy
+ full-release-version dirty
+ live-release-version N/A
+ image-type           FullRelease
+ patches              none
+ features             Sign...</msg>
+<status status="PASS" endtime="20190113 21:25:18.612" starttime="20190113 21:25:18.108"></status>
+</kw>
+<kw name="Get Regexp Matches" library="String">
+<doc>Returns a list of all non-overlapping matches in the given string.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>(description|details)\\s*(.*)\r</arg>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${matches}</var>
+</assign>
+<msg timestamp="20190113 21:25:18.615" level="INFO">${matches} = ['IBAXOS191-CI-330', 'IBAXOS191-CI-330']</msg>
+<status status="PASS" endtime="20190113 21:25:18.615" starttime="20190113 21:25:18.613"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>we've got the matches: ${matches}</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:18.617" starttime="20190113 21:25:18.616"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${matches}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${build}</var>
+</assign>
+<msg timestamp="20190113 21:25:18.619" level="INFO">${build} = IBAXOS191-CI-330</msg>
+<status status="PASS" endtime="20190113 21:25:18.619" starttime="20190113 21:25:18.618"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>we've got the build informations : ${build}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:18.621" level="INFO">we've got the build informations : IBAXOS191-CI-330</msg>
+<status status="PASS" endtime="20190113 21:25:18.622" starttime="20190113 21:25:18.620"></status>
+</kw>
+<msg timestamp="20190113 21:25:18.622" level="INFO">${build} = IBAXOS191-CI-330</msg>
+<status status="PASS" endtime="20190113 21:25:18.622" starttime="20190113 21:25:13.167"></status>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<arguments>
+<arg>${DEVICES.${eut}}</arg>
+<arg>build</arg>
+<arg>${build}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:18.626" starttime="20190113 21:25:18.624"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>eut(${eut})'s build is ${DEVICES.${eut}.build}</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:18.628" starttime="20190113 21:25:18.626"></status>
+</kw>
+<kw name="get_eut_distro" library="release_adapter">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>this is the keyword used to get single device's distro information</doc>
+<arguments>
+<arg>${eut}</arg>
+</arguments>
+<assign>
+<var>${distro}</var>
+</assign>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show version</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:25:18.631" level="INFO">send session_command, cmd=show version, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:25:19.134" level="INFO">session_command result=show version
+version 1/1
+ image-partition      imgy
+ full-release-version dirty
+ live-release-version N/A
+ image-type           FullRelease
+ patches              none
+ features             Signed-Optics-Enforcement-Disabled
+ distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+ schema               18.0.0-ib191
+ timestamp            "2019.01.12 02:16:30"
+ details              IBAXOS191-CI-330
+version 1/2
+ image-partition      imgx
+ full-release-version dirty
+ live-release-version N/A
+ image-type           FullRelease
+ patches              none
+ features             Signed-Optics-Enforcement-Disabled
+ distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+ schema               18.0.0-ib191
+ timestamp            "2019.01.12 02:16:30"
+ details              IBAXOS191-CI-330
+NGPON2X4</msg>
+<msg timestamp="20190113 21:25:19.135" level="INFO">${res} = show version
+version 1/1
+ image-partition      imgy
+ full-release-version dirty
+ live-release-version N/A
+ image-type           FullRelease
+ patches              none
+ features             Sign...</msg>
+<status status="PASS" endtime="20190113 21:25:19.135" starttime="20190113 21:25:18.629"></status>
+</kw>
+<kw name="Get Regexp Matches" library="String">
+<doc>Returns a list of all non-overlapping matches in the given string.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>distro\\s*"(.*)"\r</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${matches}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.138" level="INFO">${matches} = ['IB-AXOS-19.1 2019.01.12 02:16:30', 'IB-AXOS-19.1 2019.01.12 02:16:30']</msg>
+<status status="PASS" endtime="20190113 21:25:19.138" starttime="20190113 21:25:19.136"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>we've got the matches: ${matches}</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.139" starttime="20190113 21:25:19.138"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${matches}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${distro}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.141" level="INFO">${distro} = IB-AXOS-19.1 2019.01.12 02:16:30</msg>
+<status status="PASS" endtime="20190113 21:25:19.141" starttime="20190113 21:25:19.140"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>we've got the build informations : ${distro}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.143" level="INFO">we've got the build informations : IB-AXOS-19.1 2019.01.12 02:16:30</msg>
+<status status="PASS" endtime="20190113 21:25:19.143" starttime="20190113 21:25:19.142"></status>
+</kw>
+<msg timestamp="20190113 21:25:19.143" level="INFO">${distro} = IB-AXOS-19.1 2019.01.12 02:16:30</msg>
+<status status="PASS" endtime="20190113 21:25:19.144" starttime="20190113 21:25:18.628"></status>
+</kw>
+<kw name="mapping_distro_to_release" library="release_adapter">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>this is the keyword used to mapping build id to release name</doc>
+<arguments>
+<arg>${distro}</arg>
+</arguments>
+<assign>
+<var>${release}</var>
+</assign>
+<kw name="Remove String Using Regexp" library="String">
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<arguments>
+<arg>${distro}</arg>
+<arg>\\s+.*$</arg>
+</arguments>
+<assign>
+<var>${build}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.153" level="INFO">${build} = IB-AXOS-19.1</msg>
+<status status="PASS" endtime="20190113 21:25:19.153" starttime="20190113 21:25:19.151"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>the branch of the build is : ${build}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.155" level="INFO">the branch of the build is : IB-AXOS-19.1</msg>
+<status status="PASS" endtime="20190113 21:25:19.155" starttime="20190113 21:25:19.154"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>open('${map}').readlines()</arg>
+</arguments>
+<assign>
+<var>${fileHandler}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.158" level="INFO">${fileHandler} = ['Release, Branch\n', 'AXOS_3_1, IBAXOS31-CI1, MBAXOS31-CI1, IB-AXOS-3.1, MB-AXOS-3.1, FBEEXA9935-CI0, FB-EEXA-9935-GPON8R2\n', 'AXOS_3_4, IB-AXOS-3.4, FB-EEXA-11124-DUAL-CARD-PFM-PROT, FB-EEXA-11124-...</msg>
+<status status="PASS" endtime="20190113 21:25:19.158" starttime="20190113 21:25:19.156"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>the mapping file content : ${fileHandler}</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.160" starttime="20190113 21:25:19.159"></status>
+</kw>
+<kw name="Convert To List" library="Collections">
+<doc>Converts the given ``item`` to a Python ``list`` type.</doc>
+<arguments>
+<arg>${fileHandler}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.162" starttime="20190113 21:25:19.161"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${rowIndex}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.163" level="INFO">${rowIndex} = 0</msg>
+<status status="PASS" endtime="20190113 21:25:19.163" starttime="20190113 21:25:19.162"></status>
+</kw>
+<kw type="for" name="${rowitem} IN [ @{fileHandler} ]">
+<kw type="foritem" name="${rowitem} = Release, Branch&#10;">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>current row index:${rowIndex} item:${rowitem}</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.166" starttime="20190113 21:25:19.165"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${rowitem}</arg>
+<arg>${build}</arg>
+</arguments>
+<assign>
+<var>${contain_build}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${rowitem}</arg>
+<arg>${build}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.169" level="FAIL">'Release, Branch
+' does not contain 'IB-AXOS-19.1'</msg>
+<msg timestamp="20190113 21:25:19.169" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:25:19.170" starttime="20190113 21:25:19.168"></status>
+</kw>
+<msg timestamp="20190113 21:25:19.170" level="INFO">${contain_build} = False</msg>
+<status status="PASS" endtime="20190113 21:25:19.170" starttime="20190113 21:25:19.167"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>build ${build} search result is ${contain_build}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.171" level="INFO">build IB-AXOS-19.1 search result is False</msg>
+<status status="PASS" endtime="20190113 21:25:19.172" starttime="20190113 21:25:19.171"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${contain_build}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.173" starttime="20190113 21:25:19.172"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${rowIndex}+1</arg>
+</arguments>
+<assign>
+<var>${rowIndex}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.174" level="INFO">${rowIndex} = 1</msg>
+<status status="PASS" endtime="20190113 21:25:19.174" starttime="20190113 21:25:19.173"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:25:19.175" starttime="20190113 21:25:19.164"></status>
+</kw>
+<kw type="foritem" name="${rowitem} = AXOS_3_1, IBAXOS31-CI1, MBAXOS31-CI1, IB-AXOS-3.1, MB-AXOS-3.1, FBEEXA9935-CI0, FB-EEXA-9935-GPON8R2&#10;">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>current row index:${rowIndex} item:${rowitem}</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.177" starttime="20190113 21:25:19.176"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${rowitem}</arg>
+<arg>${build}</arg>
+</arguments>
+<assign>
+<var>${contain_build}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${rowitem}</arg>
+<arg>${build}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.180" level="FAIL">'AXOS_3_1, IBAXOS31-CI1, MBAXOS31-CI1, IB-AXOS-3.1, MB-AXOS-3.1, FBEEXA9935-CI0, FB-EEXA-9935-GPON8R2
+' does not contain 'IB-AXOS-19.1'</msg>
+<msg timestamp="20190113 21:25:19.180" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:25:19.180" starttime="20190113 21:25:19.179"></status>
+</kw>
+<msg timestamp="20190113 21:25:19.180" level="INFO">${contain_build} = False</msg>
+<status status="PASS" endtime="20190113 21:25:19.181" starttime="20190113 21:25:19.178"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>build ${build} search result is ${contain_build}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.182" level="INFO">build IB-AXOS-19.1 search result is False</msg>
+<status status="PASS" endtime="20190113 21:25:19.182" starttime="20190113 21:25:19.181"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${contain_build}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.183" starttime="20190113 21:25:19.183"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${rowIndex}+1</arg>
+</arguments>
+<assign>
+<var>${rowIndex}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.185" level="INFO">${rowIndex} = 2</msg>
+<status status="PASS" endtime="20190113 21:25:19.185" starttime="20190113 21:25:19.184"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:25:19.185" starttime="20190113 21:25:19.175"></status>
+</kw>
+<kw type="foritem" name="${rowitem} = AXOS_3_4, IB-AXOS-3.4, FB-EEXA-11124-DUAL-CARD-PFM-PROT, FB-EEXA-11124-SAL-US, PB-AXOS-3.4.3.1&#10;">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>current row index:${rowIndex} item:${rowitem}</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.187" starttime="20190113 21:25:19.186"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${rowitem}</arg>
+<arg>${build}</arg>
+</arguments>
+<assign>
+<var>${contain_build}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${rowitem}</arg>
+<arg>${build}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.190" level="FAIL">'AXOS_3_4, IB-AXOS-3.4, FB-EEXA-11124-DUAL-CARD-PFM-PROT, FB-EEXA-11124-SAL-US, PB-AXOS-3.4.3.1
+' does not contain 'IB-AXOS-19.1'</msg>
+<msg timestamp="20190113 21:25:19.190" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:25:19.190" starttime="20190113 21:25:19.189"></status>
+</kw>
+<msg timestamp="20190113 21:25:19.191" level="INFO">${contain_build} = False</msg>
+<status status="PASS" endtime="20190113 21:25:19.191" starttime="20190113 21:25:19.188"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>build ${build} search result is ${contain_build}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.192" level="INFO">build IB-AXOS-19.1 search result is False</msg>
+<status status="PASS" endtime="20190113 21:25:19.193" starttime="20190113 21:25:19.192"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${contain_build}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.194" starttime="20190113 21:25:19.193"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${rowIndex}+1</arg>
+</arguments>
+<assign>
+<var>${rowIndex}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.195" level="INFO">${rowIndex} = 3</msg>
+<status status="PASS" endtime="20190113 21:25:19.196" starttime="20190113 21:25:19.194"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:25:19.196" starttime="20190113 21:25:19.186"></status>
+</kw>
+<kw type="foritem" name="${rowitem} = AXOS_4_1, EEXA9056-CI, FB-EEXA-9056-35B-Product, FB-EEXA-12718-DUAL-CARD-IGMP&#10;">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>current row index:${rowIndex} item:${rowitem}</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.202" starttime="20190113 21:25:19.197"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${rowitem}</arg>
+<arg>${build}</arg>
+</arguments>
+<assign>
+<var>${contain_build}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${rowitem}</arg>
+<arg>${build}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.204" level="FAIL">'AXOS_4_1, EEXA9056-CI, FB-EEXA-9056-35B-Product, FB-EEXA-12718-DUAL-CARD-IGMP
+' does not contain 'IB-AXOS-19.1'</msg>
+<msg timestamp="20190113 21:25:19.204" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:25:19.205" starttime="20190113 21:25:19.203"></status>
+</kw>
+<msg timestamp="20190113 21:25:19.205" level="INFO">${contain_build} = False</msg>
+<status status="PASS" endtime="20190113 21:25:19.205" starttime="20190113 21:25:19.202"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>build ${build} search result is ${contain_build}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.207" level="INFO">build IB-AXOS-19.1 search result is False</msg>
+<status status="PASS" endtime="20190113 21:25:19.207" starttime="20190113 21:25:19.206"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${contain_build}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.208" starttime="20190113 21:25:19.207"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${rowIndex}+1</arg>
+</arguments>
+<assign>
+<var>${rowIndex}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.210" level="INFO">${rowIndex} = 4</msg>
+<status status="PASS" endtime="20190113 21:25:19.210" starttime="20190113 21:25:19.209"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:25:19.210" starttime="20190113 21:25:19.196"></status>
+</kw>
+<kw type="foritem" name="${rowitem} = AXOS_4_2, FB-CPEGA-7838-E7-E9-Convergence, IB-AXOS-4.2, RB-AXOS-4.2.0, PB-AXOS-4.2.0.3&#10;">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>current row index:${rowIndex} item:${rowitem}</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.213" starttime="20190113 21:25:19.212"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${rowitem}</arg>
+<arg>${build}</arg>
+</arguments>
+<assign>
+<var>${contain_build}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${rowitem}</arg>
+<arg>${build}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.215" level="FAIL">'AXOS_4_2, FB-CPEGA-7838-E7-E9-Convergence, IB-AXOS-4.2, RB-AXOS-4.2.0, PB-AXOS-4.2.0.3
+' does not contain 'IB-AXOS-19.1'</msg>
+<msg timestamp="20190113 21:25:19.215" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:25:19.216" starttime="20190113 21:25:19.214"></status>
+</kw>
+<msg timestamp="20190113 21:25:19.216" level="INFO">${contain_build} = False</msg>
+<status status="PASS" endtime="20190113 21:25:19.216" starttime="20190113 21:25:19.213"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>build ${build} search result is ${contain_build}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.218" level="INFO">build IB-AXOS-19.1 search result is False</msg>
+<status status="PASS" endtime="20190113 21:25:19.218" starttime="20190113 21:25:19.217"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${contain_build}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.219" starttime="20190113 21:25:19.218"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${rowIndex}+1</arg>
+</arguments>
+<assign>
+<var>${rowIndex}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.221" level="INFO">${rowIndex} = 5</msg>
+<status status="PASS" endtime="20190113 21:25:19.221" starttime="20190113 21:25:19.220"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:25:19.221" starttime="20190113 21:25:19.211"></status>
+</kw>
+<kw type="foritem" name="${rowitem} = AXOS_19_1, IB-AXOS-19.1&#10;">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>current row index:${rowIndex} item:${rowitem}</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.224" starttime="20190113 21:25:19.223"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${rowitem}</arg>
+<arg>${build}</arg>
+</arguments>
+<assign>
+<var>${contain_build}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${rowitem}</arg>
+<arg>${build}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.226" starttime="20190113 21:25:19.225"></status>
+</kw>
+<msg timestamp="20190113 21:25:19.227" level="INFO">${contain_build} = True</msg>
+<status status="PASS" endtime="20190113 21:25:19.227" starttime="20190113 21:25:19.224"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>build ${build} search result is ${contain_build}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.228" level="INFO">build IB-AXOS-19.1 search result is True</msg>
+<status status="PASS" endtime="20190113 21:25:19.228" starttime="20190113 21:25:19.227"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${contain_build}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.230" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20190113 21:25:19.230" starttime="20190113 21:25:19.229"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:25:19.230" starttime="20190113 21:25:19.222"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:25:19.231" starttime="20190113 21:25:19.164"></status>
+</kw>
+<kw name="Return From Keyword If" library="BuiltIn">
+<doc>Returns from the enclosing user keyword if ``condition`` is true.</doc>
+<arguments>
+<arg>'${contain_build}'!='True'</arg>
+<arg>NONE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.232" starttime="20190113 21:25:19.231"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>we find the release info in ${rowIndex} row</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.234" starttime="20190113 21:25:19.233"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${fileHandler}</arg>
+</arguments>
+<assign>
+<var>${len}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.235" level="INFO">Length is 6</msg>
+<msg timestamp="20190113 21:25:19.236" level="INFO">${len} = 6</msg>
+<status status="PASS" endtime="20190113 21:25:19.236" starttime="20190113 21:25:19.234"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>@{fileHandler}[${rowIndex}]</arg>
+</arguments>
+<assign>
+<var>${releaseStr}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.237" level="DEBUG">Argument types are:
+&lt;type 'str'&gt;</msg>
+<msg timestamp="20190113 21:25:19.238" level="INFO">${releaseStr} = AXOS_19_1, IB-AXOS-19.1
+</msg>
+<status status="PASS" endtime="20190113 21:25:19.238" starttime="20190113 21:25:19.236"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>release=${releaseStr}</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.239" starttime="20190113 21:25:19.238"></status>
+</kw>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${releaseStr}</arg>
+<arg>,</arg>
+</arguments>
+<assign>
+<var>@{matches}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.241" level="INFO">@{matches} = [ AXOS_19_1 |  IB-AXOS-19.1
+ ]</msg>
+<status status="PASS" endtime="20190113 21:25:19.241" starttime="20190113 21:25:19.240"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>got the matches: ${matches}</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.243" starttime="20190113 21:25:19.242"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${matches}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${release}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.244" level="INFO">${release} = AXOS_19_1</msg>
+<status status="PASS" endtime="20190113 21:25:19.244" starttime="20190113 21:25:19.243"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>we've got the release information: ${release}.</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.246" level="INFO">we've got the release information: AXOS_19_1.</msg>
+<status status="PASS" endtime="20190113 21:25:19.246" starttime="20190113 21:25:19.245"></status>
+</kw>
+<msg timestamp="20190113 21:25:19.247" level="INFO">${release} = AXOS_19_1</msg>
+<status status="PASS" endtime="20190113 21:25:19.247" starttime="20190113 21:25:19.150"></status>
+</kw>
+<kw name="Continue For Loop If" library="BuiltIn">
+<doc>Skips the current for loop iteration if the ``condition`` is true.</doc>
+<arguments>
+<arg>'NONE'=='${release}'</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.249" starttime="20190113 21:25:19.248"></status>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<arguments>
+<arg>${DEVICES.${eut}}</arg>
+<arg>release</arg>
+<arg>${release}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.250" starttime="20190113 21:25:19.249"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>eut(${eut})'s release is ${DEVICES.${eut}.release}</arg>
+<arg>TRACE</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:19.252" starttime="20190113 21:25:19.251"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:25:19.252" starttime="20190113 21:25:13.162"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:25:19.254" starttime="20190113 21:25:13.161"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:25:19.255" starttime="20190113 21:25:13.155"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>STEP:1 Provision ip address for craft 1 and login the device</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.275" level="INFO">STEP:1 Provision ip address for craft 1 and login the device</msg>
+<status status="PASS" endtime="20190113 21:25:19.275" starttime="20190113 21:25:19.274"></status>
+</kw>
+<kw name="get_system_equipment_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: get "show system-equipment" command information,</doc>
+<arguments>
+<arg>eutA</arg>
+</arguments>
+<assign>
+<var>&amp;{dict_card_info}</var>
+</assign>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show system-equipment</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.356" level="INFO">send session_command, cmd=show system-equipment, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:25:19.800" level="INFO">session_command result=show system-equipment
+system-equipment
+ equipment-type     "Multi Card"
+ active-controller  "card 1/2 (this card)"
+ standby-controller "card 1/1 (mate card)"
+NGPON2X4</msg>
+<msg timestamp="20190113 21:25:19.800" level="INFO">${res} = show system-equipment
+system-equipment
+ equipment-type     "Multi Card"
+ active-controller  "card 1/2 (this card)"
+ standby-controller "card 1/1 (mate card)"
+NGPON2X4</msg>
+<status status="PASS" endtime="20190113 21:25:19.800" starttime="20190113 21:25:19.354"></status>
+</kw>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>active-controller\\s+"card\\s+(\\d/\\d)\\s+.*"</arg>
+</arguments>
+<assign>
+<var>${match}</var>
+<var>${active_card}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.803" level="INFO">${match} = active-controller  "card 1/2 (this card)"</msg>
+<msg timestamp="20190113 21:25:19.804" level="INFO">${active_card} = 1/2</msg>
+<status status="PASS" endtime="20190113 21:25:19.804" starttime="20190113 21:25:19.802"></status>
+</kw>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>standby-controller\\s+"card\\s+(\\d/\\d)\\s+.*"</arg>
+</arguments>
+<assign>
+<var>${match}</var>
+<var>${standby_card}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.806" level="INFO">${match} = standby-controller "card 1/1 (mate card)"</msg>
+<msg timestamp="20190113 21:25:19.806" level="INFO">${standby_card} = 1/1</msg>
+<status status="PASS" endtime="20190113 21:25:19.807" starttime="20190113 21:25:19.804"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] get system-equipment active-controller ${active_card}, standby-controller ${standby_card}******</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.808" level="INFO">******[eutA] get system-equipment active-controller 1/2, standby-controller 1/1******</msg>
+<status status="PASS" endtime="20190113 21:25:19.809" starttime="20190113 21:25:19.807"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>active=${active_card}</arg>
+<arg>standby=${standby_card}</arg>
+</arguments>
+<assign>
+<var>&amp;{dict_info}</var>
+</assign>
+<msg timestamp="20190113 21:25:19.811" level="INFO">&amp;{dict_info} = { active=1/2 | standby=1/1 }</msg>
+<status status="PASS" endtime="20190113 21:25:19.811" starttime="20190113 21:25:19.809"></status>
+</kw>
+<msg timestamp="20190113 21:25:19.815" level="INFO">&amp;{dict_card_info} = { active=1/2 | standby=1/1 }</msg>
+<status status="PASS" endtime="20190113 21:25:19.815" starttime="20190113 21:25:19.352"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${old_active_Card}</arg>
+<arg>&amp;{dict_card_info}[active]</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.835" level="INFO">${old_active_Card} = 1/2</msg>
+<status status="PASS" endtime="20190113 21:25:19.836" starttime="20190113 21:25:19.833"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${old_standby_Card}</arg>
+<arg>&amp;{dict_card_info}[standby]</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.851" level="INFO">${old_standby_Card} = 1/1</msg>
+<status status="PASS" endtime="20190113 21:25:19.851" starttime="20190113 21:25:19.849"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>STEP:2 reboot the standby card connection works and has no interrupt.</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.864" level="INFO">STEP:2 reboot the standby card connection works and has no interrupt.</msg>
+<status status="PASS" endtime="20190113 21:25:19.864" starttime="20190113 21:25:19.863"></status>
+</kw>
+<kw name="reload_card" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: reload operation</doc>
+<arguments>
+<arg>eutA</arg>
+<arg>${old_standby_Card}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>reload ${card}</arg>
+<arg>prompt=Proceed with reload\\? \\[y/N\\]</arg>
+</arguments>
+<msg timestamp="20190113 21:25:19.877" level="INFO">send session_command, cmd=reload 1/1, prompt={u'Proceed with reload\\? \\[y/N\\]': None}, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:25:20.352" level="INFO">session_command result=reload 1/1
+Warning! Reloading the device will impact services.
+Running configuration has been changed
+Use 'copy running-config startup-config' to save modified configuration
+</msg>
+<status status="PASS" endtime="20190113 21:25:20.352" starttime="20190113 21:25:19.876"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>y</arg>
+<arg>timeout=120</arg>
+</arguments>
+<msg timestamp="20190113 21:25:20.356" level="INFO">send session_command, cmd=y, prompt=None, timeout=120, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:25:22.504" level="INFO">session_command result=y
+NGPON2X4</msg>
+<status status="PASS" endtime="20190113 21:25:22.504" starttime="20190113 21:25:20.354"></status>
+</kw>
+<kw name="Disconnect" library="caferobot.command.adapter.CliAdapter">
+<doc>Disconnect the connection to the device which named connection_name</doc>
+<arguments>
+<arg>${device}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:25:22.574" starttime="20190113 21:25:22.506"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>Wait for card ${card} reload</arg>
+</arguments>
+<msg timestamp="20190113 21:25:32.576" level="INFO">Slept 10 seconds</msg>
+<msg timestamp="20190113 21:25:32.577" level="INFO">Wait for card 1/1 reload</msg>
+<status status="PASS" endtime="20190113 21:25:32.577" starttime="20190113 21:25:22.575"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>120s</arg>
+<arg>5s</arg>
+<arg>check_card_info</arg>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>Unequipped</arg>
+</arguments>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>Unequipped</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:25:32.582" level="INFO">******[eutA] check card 1/1 Unequipped, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:25:32.583" starttime="20190113 21:25:32.581"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:25:32.585" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:25:36.947" level="INFO">session_command result=show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:25:36.948" level="INFO">${res} = show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL    ...</msg>
+<status status="PASS" endtime="20190113 21:25:36.948" starttime="20190113 21:25:32.583"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:25:36.952" level="INFO">${pattern} = (?i)1/1\s+.*Unequipped\s+.*</msg>
+<status status="PASS" endtime="20190113 21:25:36.952" starttime="20190113 21:25:36.950"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:36.955" level="FAIL">'show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4' does not match '(?i)1/1\s+.*Unequipped\s+.*'</msg>
+<msg timestamp="20190113 21:25:36.956" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:25:36.956" starttime="20190113 21:25:36.954"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:25:36.956" starttime="20190113 21:25:36.953"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:25:36.957" starttime="20190113 21:25:32.580"></status>
+</kw>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>Unequipped</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:25:41.962" level="INFO">******[eutA] check card 1/1 Unequipped, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:25:41.962" starttime="20190113 21:25:41.961"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:25:41.964" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:25:46.406" level="INFO">session_command result=show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:25:46.407" level="INFO">${res} = show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL    ...</msg>
+<status status="PASS" endtime="20190113 21:25:46.407" starttime="20190113 21:25:41.963"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:25:46.410" level="INFO">${pattern} = (?i)1/1\s+.*Unequipped\s+.*</msg>
+<status status="PASS" endtime="20190113 21:25:46.410" starttime="20190113 21:25:46.409"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:46.413" level="FAIL">'show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4' does not match '(?i)1/1\s+.*Unequipped\s+.*'</msg>
+<msg timestamp="20190113 21:25:46.414" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:25:46.414" starttime="20190113 21:25:46.412"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:25:46.414" starttime="20190113 21:25:46.411"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:25:46.415" starttime="20190113 21:25:41.959"></status>
+</kw>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>Unequipped</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:25:51.420" level="INFO">******[eutA] check card 1/1 Unequipped, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:25:51.420" starttime="20190113 21:25:51.419"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:25:51.422" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:25:51.928" level="INFO">session_command result=show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:25:51.929" level="INFO">${res} = show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+---------------------------...</msg>
+<status status="PASS" endtime="20190113 21:25:51.929" starttime="20190113 21:25:51.421"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:25:51.932" level="INFO">${pattern} = (?i)1/1\s+.*Unequipped\s+.*</msg>
+<status status="PASS" endtime="20190113 21:25:51.932" starttime="20190113 21:25:51.931"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:51.935" level="FAIL">'show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4' does not match '(?i)1/1\s+.*Unequipped\s+.*'</msg>
+<msg timestamp="20190113 21:25:51.935" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:25:51.935" starttime="20190113 21:25:51.934"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:25:51.936" starttime="20190113 21:25:51.933"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:25:51.936" starttime="20190113 21:25:51.417"></status>
+</kw>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>Unequipped</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:25:56.942" level="INFO">******[eutA] check card 1/1 Unequipped, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:25:56.943" starttime="20190113 21:25:56.941"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:25:56.946" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:25:57.496" level="INFO">session_command result=show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:25:57.497" level="INFO">${res} = show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+---------------------------...</msg>
+<status status="PASS" endtime="20190113 21:25:57.497" starttime="20190113 21:25:56.944"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:25:57.500" level="INFO">${pattern} = (?i)1/1\s+.*Unequipped\s+.*</msg>
+<status status="PASS" endtime="20190113 21:25:57.500" starttime="20190113 21:25:57.499"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<msg timestamp="20190113 21:25:57.503" level="FAIL">'show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4' does not match '(?i)1/1\s+.*Unequipped\s+.*'</msg>
+<msg timestamp="20190113 21:25:57.503" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:25:57.503" starttime="20190113 21:25:57.502"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:25:57.504" starttime="20190113 21:25:57.501"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:25:57.504" starttime="20190113 21:25:56.938"></status>
+</kw>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>Unequipped</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:26:02.511" level="INFO">******[eutA] check card 1/1 Unequipped, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:26:02.511" starttime="20190113 21:26:02.510"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:26:02.514" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:26:03.045" level="INFO">session_command result=show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:26:03.045" level="INFO">${res} = show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+---------------------------...</msg>
+<status status="PASS" endtime="20190113 21:26:03.046" starttime="20190113 21:26:02.512"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:26:03.049" level="INFO">${pattern} = (?i)1/1\s+.*Unequipped\s+.*</msg>
+<status status="PASS" endtime="20190113 21:26:03.049" starttime="20190113 21:26:03.048"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<msg timestamp="20190113 21:26:03.053" level="FAIL">'show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4' does not match '(?i)1/1\s+.*Unequipped\s+.*'</msg>
+<msg timestamp="20190113 21:26:03.053" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:26:03.053" starttime="20190113 21:26:03.051"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:26:03.054" starttime="20190113 21:26:03.050"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:26:03.054" starttime="20190113 21:26:02.508"></status>
+</kw>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>Unequipped</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:26:08.060" level="INFO">******[eutA] check card 1/1 Unequipped, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:26:08.060" starttime="20190113 21:26:08.059"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:26:08.062" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:26:08.600" level="INFO">session_command result=show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   Unequipped  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:26:08.601" level="INFO">${res} = show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+---------------------------...</msg>
+<status status="PASS" endtime="20190113 21:26:08.601" starttime="20190113 21:26:08.061"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:26:08.604" level="INFO">${pattern} = (?i)1/1\s+.*Unequipped\s+.*</msg>
+<status status="PASS" endtime="20190113 21:26:08.604" starttime="20190113 21:26:08.602"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:26:08.607" starttime="20190113 21:26:08.606"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:26:08.608" starttime="20190113 21:26:08.605"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:26:08.609" starttime="20190113 21:26:08.056"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:26:08.610" starttime="20190113 21:25:32.578"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>Wait for reload ${card} finish</arg>
+</arguments>
+<msg timestamp="20190113 21:26:38.614" level="INFO">Slept 30 seconds</msg>
+<msg timestamp="20190113 21:26:38.614" level="INFO">Wait for reload 1/1 finish</msg>
+<status status="PASS" endtime="20190113 21:26:38.615" starttime="20190113 21:26:08.611"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${retry_time}</arg>
+<arg>${retry_interval}</arg>
+<arg>check_card_info</arg>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:26:38.621" level="INFO">******[eutA] check card 1/1 In Service, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:26:38.621" starttime="20190113 21:26:38.620"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:26:38.623" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:26:39.293" level="INFO">session_command result=show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   Unequipped  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:26:39.293" level="INFO">${res} = show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+---------------------------...</msg>
+<status status="PASS" endtime="20190113 21:26:39.294" starttime="20190113 21:26:38.622"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:26:39.297" level="INFO">${pattern} = (?i)1/1\s+.*In Service\s+.*</msg>
+<status status="PASS" endtime="20190113 21:26:39.297" starttime="20190113 21:26:39.296"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<msg timestamp="20190113 21:26:39.300" level="FAIL">'show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   Unequipped  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4' does not match '(?i)1/1\s+.*In Service\s+.*'</msg>
+<msg timestamp="20190113 21:26:39.300" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:26:39.301" starttime="20190113 21:26:39.299"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:26:39.301" starttime="20190113 21:26:39.298"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:26:39.301" starttime="20190113 21:26:38.618"></status>
+</kw>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:27:09.308" level="INFO">******[eutA] check card 1/1 In Service, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:27:09.309" starttime="20190113 21:27:09.307"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:27:09.312" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:27:09.948" level="INFO">session_command result=show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   Unequipped  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:27:09.949" level="INFO">${res} = show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+---------------------------...</msg>
+<status status="PASS" endtime="20190113 21:27:09.949" starttime="20190113 21:27:09.310"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:27:09.952" level="INFO">${pattern} = (?i)1/1\s+.*In Service\s+.*</msg>
+<status status="PASS" endtime="20190113 21:27:09.952" starttime="20190113 21:27:09.950"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<msg timestamp="20190113 21:27:09.955" level="FAIL">'show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   Unequipped  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4' does not match '(?i)1/1\s+.*In Service\s+.*'</msg>
+<msg timestamp="20190113 21:27:09.955" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:27:09.955" starttime="20190113 21:27:09.954"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:27:09.956" starttime="20190113 21:27:09.952"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:27:09.956" starttime="20190113 21:27:09.305"></status>
+</kw>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:27:39.963" level="INFO">******[eutA] check card 1/1 In Service, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:27:39.964" starttime="20190113 21:27:39.961"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:27:39.967" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:27:40.602" level="INFO">session_command result=show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:27:40.603" level="INFO">${res} = show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+-----------------------------...</msg>
+<status status="PASS" endtime="20190113 21:27:40.603" starttime="20190113 21:27:39.964"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:27:40.606" level="INFO">${pattern} = (?i)1/1\s+.*In Service\s+.*</msg>
+<status status="PASS" endtime="20190113 21:27:40.606" starttime="20190113 21:27:40.605"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<msg timestamp="20190113 21:27:40.609" level="FAIL">'show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4' does not match '(?i)1/1\s+.*In Service\s+.*'</msg>
+<msg timestamp="20190113 21:27:40.609" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:27:40.609" starttime="20190113 21:27:40.608"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:27:40.610" starttime="20190113 21:27:40.607"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:27:40.610" starttime="20190113 21:27:39.958"></status>
+</kw>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:28:10.617" level="INFO">******[eutA] check card 1/1 In Service, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:28:10.617" starttime="20190113 21:28:10.615"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:28:10.620" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:28:11.209" level="INFO">session_command result=show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:28:11.210" level="INFO">${res} = show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+-----------------------------...</msg>
+<status status="PASS" endtime="20190113 21:28:11.210" starttime="20190113 21:28:10.618"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:28:11.213" level="INFO">${pattern} = (?i)1/1\s+.*In Service\s+.*</msg>
+<status status="PASS" endtime="20190113 21:28:11.213" starttime="20190113 21:28:11.211"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<msg timestamp="20190113 21:28:11.216" level="FAIL">'show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4' does not match '(?i)1/1\s+.*In Service\s+.*'</msg>
+<msg timestamp="20190113 21:28:11.216" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:28:11.216" starttime="20190113 21:28:11.215"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:28:11.216" starttime="20190113 21:28:11.214"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:28:11.217" starttime="20190113 21:28:10.612"></status>
+</kw>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:28:41.222" level="INFO">******[eutA] check card 1/1 In Service, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:28:41.223" starttime="20190113 21:28:41.221"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:28:41.225" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:28:41.784" level="INFO">session_command result=show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:28:41.785" level="INFO">${res} = show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+-----------------------------...</msg>
+<status status="PASS" endtime="20190113 21:28:41.785" starttime="20190113 21:28:41.224"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:28:41.789" level="INFO">${pattern} = (?i)1/1\s+.*In Service\s+.*</msg>
+<status status="PASS" endtime="20190113 21:28:41.789" starttime="20190113 21:28:41.787"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<msg timestamp="20190113 21:28:41.793" level="FAIL">'show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4' does not match '(?i)1/1\s+.*In Service\s+.*'</msg>
+<msg timestamp="20190113 21:28:41.793" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:28:41.793" starttime="20190113 21:28:41.791"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:28:41.794" starttime="20190113 21:28:41.790"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:28:41.794" starttime="20190113 21:28:41.219"></status>
+</kw>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:29:11.807" level="INFO">******[eutA] check card 1/1 In Service, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:29:11.807" starttime="20190113 21:29:11.805"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:29:11.810" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:29:12.289" level="INFO">session_command result=show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:29:12.290" level="INFO">${res} = show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+-----------------------------...</msg>
+<status status="PASS" endtime="20190113 21:29:12.290" starttime="20190113 21:29:11.808"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:29:12.293" level="INFO">${pattern} = (?i)1/1\s+.*In Service\s+.*</msg>
+<status status="PASS" endtime="20190113 21:29:12.293" starttime="20190113 21:29:12.291"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<msg timestamp="20190113 21:29:12.296" level="FAIL">'show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4' does not match '(?i)1/1\s+.*In Service\s+.*'</msg>
+<msg timestamp="20190113 21:29:12.297" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" endtime="20190113 21:29:12.297" starttime="20190113 21:29:12.295"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:29:12.297" starttime="20190113 21:29:12.294"></status>
+</kw>
+<status status="FAIL" endtime="20190113 21:29:12.298" starttime="20190113 21:29:11.797"></status>
+</kw>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>${card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:29:42.306" level="INFO">******[eutA] check card 1/1 In Service, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:29:42.306" starttime="20190113 21:29:42.304"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:29:42.308" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:29:42.868" level="INFO">session_command result=show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:29:42.868" level="INFO">${res} = show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL    ...</msg>
+<status status="PASS" endtime="20190113 21:29:42.868" starttime="20190113 21:29:42.306"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:29:42.871" level="INFO">${pattern} = (?i)1/1\s+.*In Service\s+.*</msg>
+<status status="PASS" endtime="20190113 21:29:42.872" starttime="20190113 21:29:42.870"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:29:42.874" starttime="20190113 21:29:42.873"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:42.875" starttime="20190113 21:29:42.872"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:42.875" starttime="20190113 21:29:42.302"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:42.876" starttime="20190113 21:26:38.616"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:42.877" starttime="20190113 21:25:19.874"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>STEP:3 wait for the standby card ready connection works and has no interrupt.</arg>
+</arguments>
+<msg timestamp="20190113 21:29:43.001" level="INFO">STEP:3 wait for the standby card ready connection works and has no interrupt.</msg>
+<status status="PASS" endtime="20190113 21:29:43.001" starttime="20190113 21:29:43.000"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${retry_time}</arg>
+<arg>10s</arg>
+<arg>check_card_info</arg>
+<arg>eutA</arg>
+<arg>${old_active_Card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>eutA</arg>
+<arg>${old_active_Card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:29:43.063" level="INFO">******[eutA] check card 1/2 In Service, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:29:43.063" starttime="20190113 21:29:43.062"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:29:43.066" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:29:43.575" level="INFO">session_command result=show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:29:43.576" level="INFO">${res} = show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL    ...</msg>
+<status status="PASS" endtime="20190113 21:29:43.576" starttime="20190113 21:29:43.064"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:29:43.579" level="INFO">${pattern} = (?i)1/2\s+.*In Service\s+.*</msg>
+<status status="PASS" endtime="20190113 21:29:43.579" starttime="20190113 21:29:43.578"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:29:43.583" starttime="20190113 21:29:43.582"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:43.583" starttime="20190113 21:29:43.580"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:43.584" starttime="20190113 21:29:43.061"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:43.585" starttime="20190113 21:29:43.059"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${retry_time}</arg>
+<arg>10s</arg>
+<arg>check_card_info</arg>
+<arg>eutA</arg>
+<arg>${old_standby_Card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>eutA</arg>
+<arg>${old_standby_Card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:29:43.616" level="INFO">******[eutA] check card 1/1 In Service, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:29:43.617" starttime="20190113 21:29:43.615"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:29:43.619" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:29:44.152" level="INFO">session_command result=show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:29:44.153" level="INFO">${res} = show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL    ...</msg>
+<status status="PASS" endtime="20190113 21:29:44.153" starttime="20190113 21:29:43.617"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:29:44.163" level="INFO">${pattern} = (?i)1/1\s+.*In Service\s+.*</msg>
+<status status="PASS" endtime="20190113 21:29:44.163" starttime="20190113 21:29:44.161"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:29:44.165" starttime="20190113 21:29:44.164"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:44.166" starttime="20190113 21:29:44.163"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:44.166" starttime="20190113 21:29:43.614"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:44.175" starttime="20190113 21:29:43.613"></status>
+</kw>
+<kw name="check_system_equipment_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show system-equipment" command information</doc>
+<arguments>
+<arg>eutA</arg>
+<arg>active-controller=${old_active_Card}</arg>
+<arg>standby-controller=${old_standby_Card}</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show system-equipment</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:29:44.312" level="INFO">send session_command, cmd=show system-equipment, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:29:44.805" level="INFO">session_command result=show system-equipment
+system-equipment
+ equipment-type     "Multi Card"
+ active-controller  "card 1/2 (this card)"
+ standby-controller "card 1/1 (mate card)"
+NGPON2X4</msg>
+<msg timestamp="20190113 21:29:44.806" level="INFO">${res} = show system-equipment
+system-equipment
+ equipment-type     "Multi Card"
+ active-controller  "card 1/2 (this card)"
+ standby-controller "card 1/1 (mate card)"
+NGPON2X4</msg>
+<status status="PASS" endtime="20190113 21:29:44.806" starttime="20190113 21:29:44.310"></status>
+</kw>
+<kw type="for" name="${check_item} IN [ @{dict_check_item.keys()} ]">
+<kw type="foritem" name="${check_item} = active-controller">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>(?i)${check_item}\\s+.*${dict_check_item['${check_item}']}</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:29:44.814" level="INFO">${pattern} = (?i)active-controller\s+.*1/2</msg>
+<status status="PASS" endtime="20190113 21:29:44.814" starttime="20190113 21:29:44.812"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check system-equipment:${pattern}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:29:44.817" level="INFO">******[eutA] check system-equipment:(?i)active-controller\s+.*1/2, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:29:44.817" starttime="20190113 21:29:44.816"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>Should Match Regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>Should Not Match Regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:29:44.822" starttime="20190113 21:29:44.820"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:44.822" starttime="20190113 21:29:44.818"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:44.823" starttime="20190113 21:29:44.811"></status>
+</kw>
+<kw type="foritem" name="${check_item} = standby-controller">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>(?i)${check_item}\\s+.*${dict_check_item['${check_item}']}</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:29:44.826" level="INFO">${pattern} = (?i)standby-controller\s+.*1/1</msg>
+<status status="PASS" endtime="20190113 21:29:44.826" starttime="20190113 21:29:44.824"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check system-equipment:${pattern}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:29:44.828" level="INFO">******[eutA] check system-equipment:(?i)standby-controller\s+.*1/1, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:29:44.829" starttime="20190113 21:29:44.827"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>Should Match Regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>Should Not Match Regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:29:44.833" starttime="20190113 21:29:44.831"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:44.834" starttime="20190113 21:29:44.830"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:44.834" starttime="20190113 21:29:44.823"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:44.834" starttime="20190113 21:29:44.809"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:44.835" starttime="20190113 21:29:44.307"></status>
+</kw>
+<kw name="check_system_equipment_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show system-equipment" command information</doc>
+<arguments>
+<arg>eutA</arg>
+<arg>active-controller=${old_standby_Card}</arg>
+<arg>standby-controller=${old_active_Card}</arg>
+<arg>contain=no</arg>
+</arguments>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show system-equipment</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:29:44.911" level="INFO">send session_command, cmd=show system-equipment, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:29:45.409" level="INFO">session_command result=show system-equipment
+system-equipment
+ equipment-type     "Multi Card"
+ active-controller  "card 1/2 (this card)"
+ standby-controller "card 1/1 (mate card)"
+NGPON2X4</msg>
+<msg timestamp="20190113 21:29:45.410" level="INFO">${res} = show system-equipment
+system-equipment
+ equipment-type     "Multi Card"
+ active-controller  "card 1/2 (this card)"
+ standby-controller "card 1/1 (mate card)"
+NGPON2X4</msg>
+<status status="PASS" endtime="20190113 21:29:45.410" starttime="20190113 21:29:44.893"></status>
+</kw>
+<kw type="for" name="${check_item} IN [ @{dict_check_item.keys()} ]">
+<kw type="foritem" name="${check_item} = active-controller">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>(?i)${check_item}\\s+.*${dict_check_item['${check_item}']}</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:29:45.414" level="INFO">${pattern} = (?i)active-controller\s+.*1/1</msg>
+<status status="PASS" endtime="20190113 21:29:45.414" starttime="20190113 21:29:45.413"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check system-equipment:${pattern}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:29:45.416" level="INFO">******[eutA] check system-equipment:(?i)active-controller\s+.*1/1, contain=no******</msg>
+<status status="PASS" endtime="20190113 21:29:45.416" starttime="20190113 21:29:45.415"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>Should Match Regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>Should Not Match Regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Not Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:29:45.419" starttime="20190113 21:29:45.418"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:45.419" starttime="20190113 21:29:45.417"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:45.419" starttime="20190113 21:29:45.412"></status>
+</kw>
+<kw type="foritem" name="${check_item} = standby-controller">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>(?i)${check_item}\\s+.*${dict_check_item['${check_item}']}</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:29:45.422" level="INFO">${pattern} = (?i)standby-controller\s+.*1/2</msg>
+<status status="PASS" endtime="20190113 21:29:45.422" starttime="20190113 21:29:45.421"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check system-equipment:${pattern}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:29:45.423" level="INFO">******[eutA] check system-equipment:(?i)standby-controller\s+.*1/2, contain=no******</msg>
+<status status="PASS" endtime="20190113 21:29:45.424" starttime="20190113 21:29:45.422"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>Should Match Regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>Should Not Match Regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Not Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:29:45.427" starttime="20190113 21:29:45.425"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:45.427" starttime="20190113 21:29:45.424"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:45.427" starttime="20190113 21:29:45.420"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:45.428" starttime="20190113 21:29:45.411"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:45.428" starttime="20190113 21:29:44.890"></status>
+</kw>
+<kw type="teardown" name="case teardown">
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>wait until eutA in service</arg>
+</arguments>
+<msg timestamp="20190113 21:29:45.442" level="INFO">wait until eutA in service</msg>
+<status status="PASS" endtime="20190113 21:29:45.443" starttime="20190113 21:29:45.442"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${retry_time}</arg>
+<arg>10s</arg>
+<arg>check_card_info</arg>
+<arg>eutA</arg>
+<arg>${old_active_Card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>eutA</arg>
+<arg>${old_active_Card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:29:45.447" level="INFO">******[eutA] check card 1/2 In Service, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:29:45.447" starttime="20190113 21:29:45.446"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:29:45.449" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:29:45.960" level="INFO">session_command result=show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:29:45.961" level="INFO">${res} = show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL    ...</msg>
+<status status="PASS" endtime="20190113 21:29:45.961" starttime="20190113 21:29:45.447"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:29:45.965" level="INFO">${pattern} = (?i)1/2\s+.*In Service\s+.*</msg>
+<status status="PASS" endtime="20190113 21:29:45.965" starttime="20190113 21:29:45.963"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:29:45.968" starttime="20190113 21:29:45.967"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:45.969" starttime="20190113 21:29:45.966"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:45.969" starttime="20190113 21:29:45.444"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:45.970" starttime="20190113 21:29:45.443"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${retry_time}</arg>
+<arg>10s</arg>
+<arg>check_card_info</arg>
+<arg>eutA</arg>
+<arg>${old_standby_Card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="check_card_info" library="keyword_command">
+<tags>
+<tag>@author=CindyGao</tag>
+</tags>
+<doc>Description: check "show card" command information</doc>
+<arguments>
+<arg>eutA</arg>
+<arg>${old_standby_Card}</arg>
+<arg>In Service</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<arguments>
+<arg>******[${device}] check card ${card_num} ${check_item}, contain=${contain}******</arg>
+</arguments>
+<msg timestamp="20190113 21:29:45.976" level="INFO">******[eutA] check card 1/1 In Service, contain=yes******</msg>
+<status status="PASS" endtime="20190113 21:29:45.976" starttime="20190113 21:29:45.974"></status>
+</kw>
+<kw name="Cli" library="caferobot.command.adapter.CliAdapter">
+<doc>Execute command on the specific connection and get the output of it</doc>
+<arguments>
+<arg>${device}</arg>
+<arg>show card</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20190113 21:29:45.979" level="INFO">send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None</msg>
+<msg timestamp="20190113 21:29:46.469" level="INFO">session_command result=show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4</msg>
+<msg timestamp="20190113 21:29:46.469" level="INFO">${res} = show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL    ...</msg>
+<status status="PASS" endtime="20190113 21:29:46.469" starttime="20190113 21:29:45.977"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'Active'=='${check_item}' or 'Standby'=='${check_item}'</arg>
+<arg>(?i)${card_num}\\s+.*\\(${check_item}\\)\\s+.*</arg>
+<arg>(?i)${card_num}\\s+.*${check_item}\\s+.*</arg>
+</arguments>
+<assign>
+<var>${pattern}</var>
+</assign>
+<msg timestamp="20190113 21:29:46.480" level="INFO">${pattern} = (?i)1/1\s+.*In Service\s+.*</msg>
+<status status="PASS" endtime="20190113 21:29:46.481" starttime="20190113 21:29:46.473"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"yes"=="${contain}"</arg>
+<arg>should match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+<arg>ELSE</arg>
+<arg>should not match regexp</arg>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<kw name="Should Match Regexp" library="BuiltIn">
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>${pattern}</arg>
+</arguments>
+<status status="PASS" endtime="20190113 21:29:46.484" starttime="20190113 21:29:46.483"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:46.485" starttime="20190113 21:29:46.481"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:46.485" starttime="20190113 21:29:45.973"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:46.487" starttime="20190113 21:29:45.972"></status>
+</kw>
+<status status="PASS" endtime="20190113 21:29:46.488" starttime="20190113 21:29:45.441"></status>
+</kw>
+<doc>1 Provision ip address for craft 1 and login the device login successful
+2 reboot the standby card connection works and has no interrupt.
+3 wait for the standby card ready connection works and has no interrupt.</doc>
+<tags>
+<tag>@author=Min Gu</tag>
+<tag>@eut=10GE-12</tag>
+<tag>@eut=DualCard</tag>
+<tag>@eut=GPON-8r2</tag>
+<tag>@feature=Management</tag>
+<tag>@globalid=2509259</tag>
+<tag>@priority=P2</tag>
+<tag>@require=1eut</tag>
+<tag>@subFeature=Local Craft Interface Support</tag>
+<tag>@tcid=AXOS_E72_PARENT-TC-3749</tag>
+<tag>@user_interface=CLI</tag>
+</tags>
+<status status="PASS" endtime="20190113 21:29:46.547" critical="yes" starttime="20190113 21:25:13.079"></status>
+</test>
+<status status="PASS" endtime="20190113 21:29:46.638" starttime="20190113 21:25:12.318"></status>
+</suite>
+<doc>Initialization file of feature_x test suites
+It is for putting suite level setup and teardown keywords
+And setting the forced tags for all the test cases in "feature_x" folder and its subfolder</doc>
+<status status="PASS" endtime="20190113 21:29:46.725" starttime="20190113 21:25:12.315"></status>
+</suite>
+<status status="PASS" endtime="20190113 21:29:46.740" starttime="20190113 21:25:12.312"></status>
+</suite>
+<status status="PASS" endtime="20190113 21:29:46.747" starttime="20190113 21:25:12.309"></status>
+</suite>
+<status status="PASS" endtime="20190113 21:29:46.765" starttime="20190113 21:25:12.306"></status>
+</suite>
+<status status="PASS" endtime="20190113 21:29:46.783" starttime="20190113 21:25:12.303"></status>
+</suite>
+<status status="PASS" endtime="20190113 21:29:46.802" starttime="20190113 21:25:12.300"></status>
+</suite>
+<status status="PASS" endtime="20190113 21:29:46.808" starttime="20190113 21:25:12.296"></status>
+</suite>
+<status status="PASS" endtime="20190113 21:29:46.832" starttime="20190113 21:25:12.237"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">@author=Min Gu</stat>
+<stat fail="0" pass="1">@eut=10GE-12</stat>
+<stat fail="0" pass="1">@eut=DualCard</stat>
+<stat fail="0" pass="1">@eut=GPON-8r2</stat>
+<stat fail="0" pass="1">@feature=Management</stat>
+<stat fail="0" pass="1">@globalid=2509259</stat>
+<stat fail="0" pass="1">@priority=P2</stat>
+<stat fail="0" pass="1">@require=1eut</stat>
+<stat fail="0" pass="1">@subFeature=Local Craft Interface Support</stat>
+<stat fail="0" pass="1">@tcid=AXOS_E72_PARENT-TC-3749</stat>
+<stat fail="0" pass="1">@user_interface=CLI</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="AXOS" pass="1">AXOS</stat>
+<stat fail="0" id="s1-s1" name="AXOS-automation" pass="1">AXOS.AXOS-automation</stat>
+<stat fail="0" id="s1-s1-s1" name="Milan" pass="1">AXOS.AXOS-automation.Milan</stat>
+<stat fail="0" id="s1-s1-s1-s1" name="ST Test Cases" pass="1">AXOS.AXOS-automation.Milan.ST Test Cases</stat>
+<stat fail="0" id="s1-s1-s1-s1-s1" name="System" pass="1">AXOS.AXOS-automation.Milan.ST Test Cases.System</stat>
+<stat fail="0" id="s1-s1-s1-s1-s1-s1" name="Management" pass="1">AXOS.AXOS-automation.Milan.ST Test Cases.System.Management</stat>
+<stat fail="0" id="s1-s1-s1-s1-s1-s1-s1" name="Local Craft Interface Support" pass="1">AXOS.AXOS-automation.Milan.ST Test Cases.System.Management.Local Craft Interface Support</stat>
+<stat fail="0" id="s1-s1-s1-s1-s1-s1-s1-s1" name="Test Cases" pass="1">AXOS.AXOS-automation.Milan.ST Test Cases.System.Management.Local Craft Interface Support.Test Cases</stat>
+<stat fail="0" id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="tc Verify craft connection after reboot the standby card" pass="1">AXOS.AXOS-automation.Milan.ST Test Cases.System.Management.Local Craft Interface Support.Test Cases.tc Verify craft connection after reboot the standby card</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

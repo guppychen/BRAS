@@ -1,0 +1,24 @@
+global:
+  service_vlan: 600
+  match_vlan:   untagged
+  duration:     fifteen-minutes
+  count:        100
+  rmon_type:    bin
+  num_back:     0
+  num_show:     1
+  lost_rate:    0.01
+  
+  mac1:    00:00:00:00:00:11
+  mac2:    00:00:00:00:00:22
+  ip1:     11.0.0.1
+  ip2:     22.0.0.1
+  
+  mac3:    ff:ff:ff:ff:ff:ff     # Broadcast mac
+  ip3:     193.85.4.255          # Broadcast ip
+  
+  mac4:    01:00:5E:00:00:01     # Multicast mac
+  ip4:     224.0.0.1             # Multicast ip
+  
+  
+  send_traffic_time:   10
+  stop_traffic_time:   20

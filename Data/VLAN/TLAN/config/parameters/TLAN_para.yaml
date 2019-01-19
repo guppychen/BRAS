@@ -1,0 +1,25 @@
+global:
+  service_vlan: 520
+  subscriber_vlan: 4003    #can modify according to sub-switch
+  subscriber_vlan2: 4001    #can modify according to sub-switch
+  int_ip1: 10.10.10.1
+  int_ip2: 10.10.10.2
+  int_mac1: 00:00:00:12:12:12
+  int_mac2: 00:00:00:34:34:34
+  bcast_mac: ff:ff:ff:ff:ff:ff
+  mcast_mac1: 01:00:5e:44:55:66
+  mcast_mac2: 01:00:5e:11:22:33
+  mac1: 00:00:00:ab:ab:ab
+  mac2: 00:00:00:cd:cd:cd
+  mac3: 00:00:00:1a:2b:3c
+  mac4: 00:00:00:2a:2b:2c
+  mac5: 00:00:00:3a:3b:3c
+  mac6: 00:00:00:4a:4b:4c
+  rate_mbps1: 10
+  store_path1: /tmp/stream1.pcap
+  store_path2: /tmp/stream2.pcap
+  loss_rate1: 0.01
+  rate_pps10000: 10000
+  rate_pps50: 50
+  traffic_run_time: 30
+

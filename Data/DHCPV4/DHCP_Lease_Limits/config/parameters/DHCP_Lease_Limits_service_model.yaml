@@ -1,0 +1,41 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x1
+      attribute:
+        interface_role: inni
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port
+      name: 801/x1
+      member:
+        interface1: 801/x1
+      attribute:
+        interface_role: uni
+        ont_id: 801
+        ont_profile_id: GP1000X
+        serial_number: 3D18C5
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - 1/1/xp1
+
+    subscriber_point2:
+      device: eutA
+      type: ont_port
+      name: 3/g1
+      member:
+        interface1: 3/g1
+      attribute:
+        interface_role: uni
+        ont_id: 3
+        ont_profile_id: GPR3000X
+        serial_number: 4783A7
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/xp4

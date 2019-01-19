@@ -1,0 +1,86 @@
+*** Settings ***
+Documentation     All capabilities of this work item need to be managed using the Netconf inteface. In order to do this, the following Yang module MUST be supported.
+...               wifi-interface.yang
+...               wifi-interface-common.yang
+...               wifi-interface-std.yang
+...               The tree tables below show the resultant interface table after these changes are included. There is also a tree table that shows only the additions being made.
+...               The DPU MUST support the following set of Yang leafs organized as shown in the tree structure below:
+...               This view shows the interface table including the new additional leafs:
+...
+...               module: ietf-interfaces
+...
+...               +--rw interfaces
+...
+...               | +--rw interface* [name]
+...
+...               | +--rw name string
+...
+...               | +--rw description? string
+...
+...               | +--rw type identityref
+...
+...               | +--rw enabled? boolean
+...
+...               | +--rw link-up-down-trap-enable? enumeration {if-mib}?
+...
+...               | +--rw wifi-std:wifi
+...
+...               | +--rw wifi-std:admin-state? exa:ENABLED_DISABLED
+...
+...               | +--rw wifi-std:channel? channel_value
+...
+...               | +--rw wifi-std:ssid? exa:STRING
+...
+...               | +--rw wifi-std:ssid-broadcast? exa:ENABLED_DISABLED
+...
+...               | +--rw wifi-std:passphrase? tailf:aes-cfb-128-encrypted-string
+...
+...               | +--rw wifi-std:inactivity-timer? inactivity_timer_value
+...
+...               | +--rw wifi-std:max-clients? max_clients
+...
+...               +--ro interfaces-state
+...
+...               +--ro interface* [name]
+...
+...               +--ro name string
+...
+...               +--ro type identityref
+...
+...               +--ro admin-status enumeration {if-mib}?
+...
+...               +--ro oper-status enumeration
+...
+...               +--ro last-change? yang:date-and-time
+...
+...               +--ro if-index int32 {if-mib}?
+...
+...               +--ro phys-address?
+Force Tags    @feature=Management    @subFeature=Netconf/Yang    @author=cindy gao     @author=rakrishn
+Resource          ./base.robot
+
+*** Variables ***
+${get_interface}   <?xml version="1.0" encoding="UTF-8"?> <rpc message-id="m-4" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> <get-config> <source> <running/> </source> <filter xmlns:ns0="urn:ietf:params:xml:ns:netconf:base:1.0" ns0:type="subtree"> <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces"/> </filter> </get-config> </rpc>
+
+${get_schema}    <rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2"> <get> <filter type="subtree"> <ncm:netconf-state xmlns:ncm="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring"> <ncm:schemas/> </ncm:netconf-state> </filter> </get> </rpc>
+    
+*** Test Cases ***
+tc_CALIX_Yan_Model_Wifi_Support
+    [Documentation]    1.Show Schema version to check the yang models supported.
+    ...
+    ...    2. Perform "get" rpc to retrieve schema /interface returns "wifi-interface"
+    [Tags]    @TCID=AXOS_E72_PARENT-TC-1814    @globalid=2322345   dual_card_not_support   @jira=EXA-29537
+
+    log    STEP:1.Show Schema version to check the yang models supported.
+    cli    n1_session1    show schema-versions | include wifi
+    Result should contain    wifi-interface.yang
+    Result should contain    wifi-interface-common.yang
+    Result should contain    wifi-interface-std.yang
+
+    log    STEP:2. Perform "get" rpc to retrieve schema returns and check wifi support
+    ${step1}=    Netconf Raw    n1_session3    xml=${get_schema}
+    Should Contain    ${step1.xml}    wifi-interface-std
+
+    log    STEP:3. Perform "get" rpc to retrieve interface details and check wifi support
+    ${step2}=    Netconf Raw    n1_session3    xml=${get_interface}
+    Should Contain    ${step1.xml}    wifi-interface

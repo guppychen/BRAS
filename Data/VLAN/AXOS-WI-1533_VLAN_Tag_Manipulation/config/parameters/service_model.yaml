@@ -1,0 +1,30 @@
+### please refer to wiki: http://wiki.calix.local/display/CDCST/Milan+automation+standardized+service-model+template
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x1
+      attribute:                             # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni                # Ethernet port service role
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 10/x1                  # ont-port name {g{1-4}|G1|F1}
+      member:
+        interface1: 10/x1
+      attribute:                             # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        ont_id: 10
+        ont_profile_id: GP1000X               # use ont-profile on cli
+        serial_number: 3D15BA           #3D15A0            #3D18C5          #3D18D7
+        vendor_id: CXNK
+        pon_port:              # use list format for FFP extension
+          - 1/1/xp1
+
+
+

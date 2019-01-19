@@ -1,0 +1,20 @@
+connection:
+  n1:
+    ip: 10.245.96.71
+    type: exa
+    port: 22
+    protocol: ssh
+    connect_timeout: 20
+    user: sysadmin
+    password: sysadmin
+    user_agent: CLI
+    timeout: 10
+    prompt: "#"
+    ports:
+      p1:
+        port:  1/1/x4
+      p2:
+        port:  1/1/xp4
+          
+        
+

@@ -1,0 +1,30 @@
+global:
+    profile_name: ethernet 
+    sessionname: ethernet-10G 
+    session_number: 0
+    src_mac: 00:10:94:00:00:02
+    dst_mac: 00:00:01:00:00:01
+    vlan_mac: 00:02:5d:fc:a2:b2
+    Cmaptype_1: ethernet
+    Cmapname_1: CM1
+    Pmapname_1: PM1
+    service_vlan_1: 100
+    stc_ethernet_ip: 192.85.4.2
+    stc_ethernet_gateway: 192.85.4.1
+    stc_pon_ip: 193.85.4.2
+    stc_pon_gateway: 193.85.4.1
+    stc_filepath: /tmp/STCconfigs/pm.xml
+    bcast_mac: ff:ff:ff:ff:ff:ff 
+    bcast_ip: 193.85.4.255
+    unknown_ip: 192.85.4.20
+    mcast_mac: 01:00:5e:00:00:01
+    mcast_ip: 224.0.0.1
+#    device_ip: 10.206.10.100
+#    console_port: 10001
+    threshold: 2000
+    ont_num: 801
+    ont_desc: 801_1
+    ont_port: g1
+    prof_id: GPR3000X
+    serial_num: 478B91 #478B6B
+

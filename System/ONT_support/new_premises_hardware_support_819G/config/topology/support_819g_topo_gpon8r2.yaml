@@ -1,0 +1,34 @@
+connection:
+  eutA:
+    ip: 10.245.74.71
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: MILAN
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+    shelf1:                                # new format to describe the shelves on the EUT.
+      id: 1                                # new format to describe the shelf with shelf id on the EUT.
+      slot1:                               # new format to describe the shelf with slot id on the EUT.
+        id: 1                              # new format to describe the shelf with slot id on the EUT.
+        model: gpon                        # describe the card type.
+#        uplinkport1: 1/1/x1                # new format to describe the uplink port.
+        downlinkport1: 1/1/gp5              # new format to describe the downlink port.
+  
+ 
+  ontA:
+    ip: 10.245.96.10
+    port: 10012
+    type: ont
+    protocol: telnet
+    user: support
+    password: support
+    login_prompt: 'Login:'
+    password_prompt: 'Password:'    
+    crlf: "\r\n"
+    prompt: ['> ',' # ','omci_client:']
+    timeout: 30 
+ 
+    

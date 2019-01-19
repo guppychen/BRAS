@@ -1,0 +1,1305 @@
+[2019-01-13 21:25:08.739] - cafe                 - WARNING: File 'cafepath' not found in this project's directory tree. Cafe Path  References (such as 'project://') will not function correctly.
+[2019-01-13 21:25:08.747] - cafe                 - DEBUG: Loaded parameter file '/home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/Management/Local_Craft_Interface_Support/config/parameters/param_10ge12.yaml'
+[2019-01-13 21:25:08.752] - cafe.core.utils      - INFO: Configuration details:
+    git: {
+        test_case_repo: ,
+        test_case_branch: 
+    },
+    session_server: {
+        kill_if_exist_timeout: 300,
+        python_exe: python2,
+        filename: /home/guchen/repo/calix/src/cafe/sessions/session_srv.py,
+        host: localhost,
+        policy: SIMPLE,
+        kill_if_exist: False,
+        port: 18890
+    },
+    cafebot: {
+        enable_repeat_test_case: True,
+        write_results_to_db: True,
+        name: ,
+        topo_specific_init: True,
+        reset_tg_sessions: False,
+        enable_duplicated_keyword_check: True,
+        write_results_one_suite_name: Default Test Suite,
+        session_log_markup_level: [u'ALL'],
+        test_case_repeat_times: -1,
+        reset_sessions: False,
+        pause_on_specified_exception: None,
+        duplicated_keyword_check_level: WARNING,
+        rerun: 1,
+        enable_log_collection: False,
+        dryrun: False,
+        exit_on_specified_exception: None,
+        write_results_suite_mode: one_to_one,
+        write_results_ignore_empty_suites: True,
+        auto_save_tg_config_file_on_failed_cases: False
+    },
+    parameters: {
+        files: ['/home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/Management/Local_Craft_Interface_Support/config/parameters/param_10ge12.yaml'],
+        random_state: ,
+        random_seed: -1
+    },
+    tempfile: {
+        cleanup_temp_files: True
+    },
+    snmp: {
+        force_build_mib_sessions: ,
+        base_mib_path: /usr/share/snmp/mibs/*.txt,
+        mib_paths: None,
+        v3_security_engine_id: 8000000001020304,
+        backup_mib_sources: [u'http://mibs.snmplabs.com/asn1/@mib@'],
+        dest_dir: None
+    },
+    traffic_gen: {
+        ixia_version_file: /opt/ixia/version.txt,
+        tcl_session_timeout_relaunch: False,
+        auto_adapt_tg_arguments: False,
+        trex_client_hltapi_path: /opt/trex_client/stl
+    },
+    diagnostic_hooks: {
+        test_step_failure_kw: ,
+        log_message_patterns: None,
+        log_message_on_fail_only: False,
+        timer_kw: ,
+        enabled: False,
+        test_case_end_kw_before_teardown: ,
+        test_case_end_kw: ,
+        test_step_end_kw: ,
+        test_suite_end_kw: ,
+        test_suite_start_kw: ,
+        test_step_start_kw: ,
+        test_case_start_kw: ,
+        log_message_kw: ,
+        timer_kw_interval: 0,
+        resources: None
+    },
+    webgui: {
+        log_level: ERROR
+    },
+    random_delay: {
+        max_delay_seconds: -1
+    },
+    bugfile: {
+        path: None
+    },
+    timeout: {
+        webgui_timeout: -1,
+        cli_timeout: -1,
+        default_global_timeout: -1,
+        netconf_timeout: -1,
+        restful_timeout: -1,
+        snmp_timeout: -1,
+        trafficgen_timeout: -1
+    },
+    test_suite: {
+        parameter_files: None,
+        topology_file: None,
+        abort_on_failure: False
+    },
+    _default_report: {
+        __type__: console_report
+    },
+    disk_monitor: {
+        error_limit: 95,
+        directories: None,
+        enabled: False,
+        warning_limit: 80
+    },
+    logger: {
+        show_sessions: ['tg1'],
+        console: False,
+        level: DEBUG
+    },
+    cafe_runner: {
+        enable_cafe_tracker: False,
+        log_path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/Management/Local_Craft_Interface_Support/logs/results_01_14_2019_05_25_08/logs,
+        enable_xunit_editor: False,
+        variables: {},
+        tracker_comm_type: ASYNC,
+        renderer: <class 'cafe.runner.renderers.cliprinter.TextRenderer'>,
+        path: /home/guchen/workspace/AXOS,
+        device_monitor_host: http://cdc-cafecmdr.calix.local,
+        tc_include_list: None,
+        test_result_path_postfix: ,
+        collect_tc_id: False,
+        exclude_tags: None,
+        tc_exclude_list: None,
+        db_path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/Management/Local_Craft_Interface_Support/logs/results_01_14_2019_05_25_08/db,
+        db_echo: False,
+        tcl_interpreter: /opt/active_tcl/bin/tclsh,
+        enable_device_monitor: False,
+        enforce_documentation: False,
+        tc_exec_order: <function in_order at 0x7f8b9eaaf320>,
+        test_result_path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/Management/Local_Craft_Interface_Support/logs/results_01_14_2019_05_25_08,
+        include_tags: None,
+        db_type: sqlite,
+        reports: [u'_default_report'],
+        show_print_statements: True,
+        exit_on_error_cafe_tracker: False,
+        enable_cafe_vm_register: True,
+        runner_log_name: runner.log
+    },
+    runner_state: {
+        executing_in_runner: False,
+        timestamp: {
+            raw: 1547443508.26,
+            path_safe: 01_14_2019_05_25_08
+        },
+        path_reference_file: /cafepath,
+        callbacks: <cafe.runner.renderers.cliprinter.TextRenderer object at 0x7f8b99efed10>,
+        user: {
+            available_log_dir: .
+        },
+        path_reference: {},
+        logger: <cafe.core.logger.CLogger object at 0x7f8ba0c52a90>
+    },
+    topology: {
+        force_eut_tag: False,
+        user_interface: ,
+        logical_query: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/Management/Local_Craft_Interface_Support/config/topology/topo_10ge12.yaml,
+        eut_ua_injector_on: True,
+        session_initiation: DO_NOTHING,
+        dut_release_branch: ,
+        force_user_interface_tag: False,
+        dut_version: ,
+        file: None,
+        eut: ,
+        raise_validation_error: False,
+        aliases: {}
+    }
+[2019-01-13 21:25:08.891] - cafe.core.utils      - INFO: Configuration details:
+    connection: {
+        eutA: {
+            cli_response_error_check: {
+                regex: ,
+                enable: False
+            },
+            user_interface: CLI,
+            protocol: ssh,
+            ip: 10.245.96.74,
+            shelf1: {
+                slot1: {
+                    uplinkport1: 1/1/x7,
+                    model: 10GE-12,
+                    downlinkport1: 1/1/x8,
+                    id: 2
+                },
+                id: 1
+            },
+            meta: {
+                driver: cafe.app.driver.ssh.SSHDriver
+            },
+            user: sysadmin,
+            timeout: 30,
+            prompt: #,
+            model: MILAN,
+            password: sysadmin,
+            type: AXOS,
+            port: 22,
+            crlf: 
+
+        }
+    }
+[2019-01-13 21:25:08.898] - cafe.sessions.session_manager - DEBUG: session policy class chosen (<class 'cafe.sessions.session_manager.SimpleLocalOnlyPolicy'>)
+[2019-01-13 21:25:08.899] - cafe.sessions.session_srv - INFO: session server connected!!!
+[2019-01-13 21:25:08.900] - cafe.sessions.session_manager - DEBUG: create_session: eutA, ssh, AXOS, {'cli_response_error_check': <cafe.core.utils.Param object at 0x7f8b99ec2990>, 'user_interface': 'CLI', 'protocol': 'ssh', 'ip': '10.245.96.74', 'host': '10.245.96.74', 'shelf1': <cafe.core.utils.Param object at 0x7f8b99ec26d0>, 'meta': <cafe.core.utils.Param object at 0x7f8b99ec2a10>, 'user': 'sysadmin', 'timeout': 30, 'prompt': '#', 'model': 'MILAN', 'password': 'sysadmin', 'type': 'AXOS', 'port': 22, 'crlf': '\n'}
+[2019-01-13 21:25:08.901] - cafe.sessions.session_srv - INFO: create_session: euta, ssh, axos, {'cli_response_error_check': <cafe.core.utils.Param object at 0x7f8b99ec2990>, 'user_interface': 'CLI', 'protocol': 'ssh', 'ip': '10.245.96.74', 'host': '10.245.96.74', 'shelf1': <cafe.core.utils.Param object at 0x7f8b99ec26d0>, 'meta': <cafe.core.utils.Param object at 0x7f8b99ec2a10>, 'user': 'sysadmin', 'timeout': 30, 'prompt': '#', 'model': 'MILAN', 'password': 'sysadmin', 'type': 'AXOS', 'port': 22, 'crlf': '\n'}
+[2019-01-13 21:25:08.902] - cafe.sessions.session_srv.euta - DEBUG: session log level is: DEBUG
+[2019-01-13 21:25:08.902] - cafe.sessions.session_srv.euta - DEBUG: default prompt for this session is #
+[2019-01-13 21:25:08.913] - cafe.sessions.session_srv.euta - INFO: create folder for /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/Management/Local_Craft_Interface_Support/logs/results_01_14_2019_05_25_08/logs/euta.log successful
+[2019-01-13 21:25:08.916] - cafe                 - DEBUG: driver created: eutA
+[2019-01-13 21:25:08.917] - cafe                 - DEBUG: session initiation is DO_NOTHING
+[2019-01-13 21:25:08.917] - cafe                 - INFO: Register dynamic listener <caferobot.listener.keyword_duplicated_check.KeywordDuplicatedCheckListener object at 0x7f8b99da8d50>, version 2
+[2019-01-13 21:25:08.918] - cafe                 - INFO: Register dynamic listener <caferobot.listener.session_listener.SessionListener object at 0x7f8b99da8d90>, version 2
+[2019-01-13 21:25:08.918] - cafe                 - INFO: Register dynamic listener <caferobot.listener.log_listener.LogListener object at 0x7f8b99da8e10>, version 2
+[2019-01-13 21:25:08.919] - cafe                 - INFO: Register dynamic listener <caferobot.listener.cafe_db_writer.CafeDBWriter object at 0x7f8b99da8e50>, version 2
+[2019-01-13 21:25:08.919] - cafe                 - INFO: Register dynamic listener <caferobot.listener.eut_ua_injector.EUTUAInjector object at 0x7f8b99da8e90>, version 2
+[2019-01-13 21:25:08.923] - cafe                 - INFO: Register dynamic listener <class 'caferobot.listener.enforce_documentation.EnforceDocumentationListener'>, version 3
+[2019-01-13 21:25:08.924] - cafe                 - INFO: Register dynamic listener <caferobot.listener.scope_listener.ScopeListener object at 0x7f8b99da8f10>, version 2
+[2019-01-13 21:25:08.924] - cafe                 - INFO: Register dynamic listener <caferobot.listener.randomstate_listener.RandomStateListener object at 0x7f8b99da8f50>, version 3
+[2019-01-13 21:25:08.925] - cafe                 - INFO: App() session has built
+[2019-01-13 21:25:08.926] - cafe                 - INFO: Register Cafe Virtual Machine Information
+[2019-01-13 21:25:09.571] - cafe.core.device     - WARNING: Exception ignored: No JSON object could be decoded
+[2019-01-13 21:25:09.572] - cafe                 - INFO: Cafe Tracker Is Disabled
+[2019-01-13 21:25:12.295] - cafe.core.db         - DEBUG: db (sqlite:////home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/Management/Local_Craft_Interface_Support/logs/results_01_14_2019_05_25_08/db/20190113/20190113212512.idb) create success
+[2019-01-13 21:25:13.80] - caferobot.session.control.status - INFO: Reset flag_of_reset_session from True to False
+[2019-01-13 21:25:13.128] - cafe.util.generators.accessor - WARNING: Invalid random seed. use fractional second instead.
+[2019-01-13 21:25:13.130] - cafe.util.generators.accessor - WARNING: Invalid random state. use default state instead.
+[2019-01-13 21:25:13.169] - cafe.app.driver.ssh  - INFO: open ssh handle
+[2019-01-13 21:25:13.170] - cafe.sessions.session_srv.euta - INFO: Connection has not built
+[2019-01-13 21:25:13.170] - cafe.sessions.session_srv.euta - INFO: Try login to 10.245.96.74:22 with username=sysadmin, password=sysadmin
+[2019-01-13 21:25:14.789] - cafe.sessions.session_srv.euta - INFO: ssh session login complete (sid=euta,host=10.245.96.74)
+[2019-01-13 21:25:14.790] - cafe.sessions.ssh    - INFO: [SSH]create a channel to 10.245.96.74:22, username=sysadmin, password=sysadmin
+[2019-01-13 21:25:17.440] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'Last login: Sun Jan 13 18:58:03 2019 from 192.168.37.130
+**** ACTIVE 10GE-12 CARD  ****
+Welcome to CLI
+sysadmin connected from 10.200.201.26 using ssh on NGPON2X4
+[?7hNGPON2X4# ', match: '#'
+[2019-01-13 21:25:17.440] - caferobot.command.device.shell - INFO: Created ShellDevice(eutA)
+[2019-01-13 21:25:17.442] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=cli, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:25:17.580] - cafe.console_logger  - INFO: 
+[2019-01-13 21:25:17.589] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:17.589] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:25:17.591] - cafe.app.driver.proto.shell - DEBUG: command is cli, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:25:17.592] - cafe.sessions.session_srv.euta - DEBUG: send command: cli
+[2019-01-13 21:25:17.592] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:25:17.593] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:25:17.593] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:25:18.54] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'cli
+----------^
+syntax error: expecting 
+  abort                 - 
+  accept                - Accept config
+  apply                 - 
+  apply-dynamic-policy  - 
+  bng-state-persistence - BNG state persistence control commands
+  clear                 - Clear object data
+  clock                 - Modify clock
+  configure             - Manipulate software configuration information
+  copy                  - Copy files
+  cpe-upgrade:cpe       - CPE operation
+  debug                 - 
+  delete                - Delete files
+  devtools              - Enable/disable development tools
+  download              - Download files
+  enable                - Enable EXEC commands
+  exit                  - Exit the management session
+  folder                - 
+  generate              - Generate files
+  idle-timeout          - Configure idle timeout
+  install               - 
+  lock                  - lock a datastore
+  logout                - Logout a user
+  manual                - Manual operation with alarms
+  no                    - Negate a command or set its defaults
+  ofa-connect           - Open Flow Connect
+  ofa-listener          - Open Flow Listener
+  ofa-port              - Open Flow port
+  ont-eth               - ONT-ETH efm-loopback-status mode
+  ont-firmware-upgrade  - Start software download
+  ont-simulation        - ONT simulation commands
+  ont-upgrade           - ONT upgrade commands
+  paginate              - Paginate output from CLI commands
+  perform               - Perform an operation
+  ping                  - Ping IP address
+  ping6                 - Ping IPv6 address
+  quit                  - Exit the management session
+  redundancy            - redundancy switchover commands
+  reload                - Reboot the current card
+  remove-dynamic-policy - 
+  replay                - Replay card-config
+  restart               - Restart Diameter daemon
+  run                   - 
+  send                  - Send message to terminal of one or all users
+  session               - 
+  show                  - Show information about the system
+  ssh                   - ssh command
+  start                 - Start an operation
+  stop                  - Stop an operation
+  switch                - Switch network clock
+  tcpdump               - tcpdump command
+  telnet                - telnet command
+  templatize            - Find patterns in subtree.
+  terminal              - Set terminal type
+  timestamp             - Enable/disable the display of timestamp
+  traceroute            - Traceroute IP address
+  uninstall             - 
+  unlock                - unlock a datastore
+  upgrade               - Upgrade commands
+  upload                - Upload files
+  verify                - 
+NGPON2X4# ', match: '#'
+[2019-01-13 21:25:18.54] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:25:18.97] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:25:18.98] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:18.99] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:25:18.100] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:25:18.104] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:25:18.105] - caferobot.command.device.shell.eutA - INFO: session_command result=cli
+----------^
+syntax error: expecting 
+  abort                 - 
+  accept                - Accept config
+  apply                 - 
+  apply-dynamic-policy  - 
+  bng-state-persistence - BNG state persistence control commands
+  clear                 - Clear object data
+  clock                 - Modify clock
+  configure             - Manipulate software configuration information
+  copy                  - Copy files
+  cpe-upgrade:cpe       - CPE operation
+  debug                 - 
+  delete                - Delete files
+  devtools              - Enable/disable development tools
+  download              - Download files
+  enable                - Enable EXEC commands
+  exit                  - Exit the management session
+  folder                - 
+  generate              - Generate files
+  idle-timeout          - Configure idle timeout
+  install               - 
+  lock                  - lock a datastore
+  logout                - Logout a user
+  manual                - Manual operation with alarms
+  no                    - Negate a command or set its defaults
+  ofa-connect           - Open Flow Connect
+  ofa-listener          - Open Flow Listener
+  ofa-port              - Open Flow port
+  ont-eth               - ONT-ETH efm-loopback-status mode
+  ont-firmware-upgrade  - Start software download
+  ont-simulation        - ONT simulation commands
+  ont-upgrade           - ONT upgrade commands
+  paginate              - Paginate output from CLI commands
+  perform               - Perform an operation
+  ping                  - Ping IP address
+  ping6                 - Ping IPv6 address
+  quit                  - Exit the management session
+  redundancy            - redundancy switchover commands
+  reload                - Reboot the current card
+  remove-dynamic-policy - 
+  replay                - Replay card-config
+  restart               - Restart Diameter daemon
+  run                   - 
+  send                  - Send message to terminal of one or all users
+  session               - 
+  show                  - Show information about the system
+  ssh                   - ssh command
+  start                 - Start an operation
+  stop                  - Stop an operation
+  switch                - Switch network clock
+  tcpdump               - tcpdump command
+  telnet                - telnet command
+  templatize            - Find patterns in subtree.
+  terminal              - Set terminal type
+  timestamp             - Enable/disable the display of timestamp
+  traceroute            - Traceroute IP address
+  uninstall             - 
+  unlock                - unlock a datastore
+  upgrade               - Upgrade commands
+  upload                - Upload files
+  verify                - 
+NGPON2X4
+[2019-01-13 21:25:18.109] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show version, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:25:18.113] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:18.114] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:25:18.115] - cafe.app.driver.proto.shell - DEBUG: command is show version, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:25:18.116] - cafe.sessions.session_srv.euta - DEBUG: send command: show version
+[2019-01-13 21:25:18.116] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:25:18.117] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:25:18.117] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:25:18.578] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show version
+version 1/1
+ image-partition      imgy
+ full-release-version dirty
+ live-release-version N/A
+ image-type           FullRelease
+ patches              none
+ features             Signed-Optics-Enforcement-Disabled
+ distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+ schema               18.0.0-ib191
+ timestamp            "2019.01.12 02:16:30"
+ details              IBAXOS191-CI-330
+version 1/2
+ image-partition      imgx
+ full-release-version dirty
+ live-release-version N/A
+ image-type           FullRelease
+ patches              none
+ features             Signed-Optics-Enforcement-Disabled
+ distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+ schema               18.0.0-ib191
+ timestamp            "2019.01.12 02:16:30"
+ details              IBAXOS191-CI-330
+NGPON2X4# ', match: '#'
+[2019-01-13 21:25:18.580] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:25:18.606] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:25:18.607] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:18.608] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:25:18.608] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:25:18.609] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:25:18.610] - caferobot.command.device.shell.eutA - INFO: session_command result=show version
+version 1/1
+ image-partition      imgy
+ full-release-version dirty
+ live-release-version N/A
+ image-type           FullRelease
+ patches              none
+ features             Signed-Optics-Enforcement-Disabled
+ distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+ schema               18.0.0-ib191
+ timestamp            "2019.01.12 02:16:30"
+ details              IBAXOS191-CI-330
+version 1/2
+ image-partition      imgx
+ full-release-version dirty
+ live-release-version N/A
+ image-type           FullRelease
+ patches              none
+ features             Signed-Optics-Enforcement-Disabled
+ distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+ schema               18.0.0-ib191
+ timestamp            "2019.01.12 02:16:30"
+ details              IBAXOS191-CI-330
+NGPON2X4
+[2019-01-13 21:25:18.630] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show version, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:25:18.634] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:18.635] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:25:18.636] - cafe.app.driver.proto.shell - DEBUG: command is show version, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:25:18.637] - cafe.sessions.session_srv.euta - DEBUG: send command: show version
+[2019-01-13 21:25:18.637] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:25:18.638] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:25:18.638] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:25:19.110] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show version
+version 1/1
+ image-partition      imgy
+ full-release-version dirty
+ live-release-version N/A
+ image-type           FullRelease
+ patches              none
+ features             Signed-Optics-Enforcement-Disabled
+ distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+ schema               18.0.0-ib191
+ timestamp            "2019.01.12 02:16:30"
+ details              IBAXOS191-CI-330
+version 1/2
+ image-partition      imgx
+ full-release-version dirty
+ live-release-version N/A
+ image-type           FullRelease
+ patches              none
+ features             Signed-Optics-Enforcement-Disabled
+ distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+ schema               18.0.0-ib191
+ timestamp            "2019.01.12 02:16:30"
+ details              IBAXOS191-CI-330
+NGPON2X4# ', match: '#'
+[2019-01-13 21:25:19.111] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:25:19.130] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:25:19.130] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:19.131] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:25:19.132] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:25:19.133] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:25:19.133] - caferobot.command.device.shell.eutA - INFO: session_command result=show version
+version 1/1
+ image-partition      imgy
+ full-release-version dirty
+ live-release-version N/A
+ image-type           FullRelease
+ patches              none
+ features             Signed-Optics-Enforcement-Disabled
+ distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+ schema               18.0.0-ib191
+ timestamp            "2019.01.12 02:16:30"
+ details              IBAXOS191-CI-330
+version 1/2
+ image-partition      imgx
+ full-release-version dirty
+ live-release-version N/A
+ image-type           FullRelease
+ patches              none
+ features             Signed-Optics-Enforcement-Disabled
+ distro               "IB-AXOS-19.1 2019.01.12 02:16:30"
+ schema               18.0.0-ib191
+ timestamp            "2019.01.12 02:16:30"
+ details              IBAXOS191-CI-330
+NGPON2X4
+[2019-01-13 21:25:19.354] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show system-equipment, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:25:19.358] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:19.359] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:25:19.361] - cafe.app.driver.proto.shell - DEBUG: command is show system-equipment, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:25:19.361] - cafe.sessions.session_srv.euta - DEBUG: send command: show system-equipment
+[2019-01-13 21:25:19.362] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:25:19.362] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:25:19.363] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:25:19.771] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show system-equipment
+system-equipment
+ equipment-type     "Multi Card"
+ active-controller  "card 1/2 (this card)"
+ standby-controller "card 1/1 (mate card)"
+NGPON2X4# ', match: '#'
+[2019-01-13 21:25:19.771] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:25:19.795] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:25:19.796] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:19.797] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:25:19.797] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:25:19.798] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:25:19.799] - caferobot.command.device.shell.eutA - INFO: session_command result=show system-equipment
+system-equipment
+ equipment-type     "Multi Card"
+ active-controller  "card 1/2 (this card)"
+ standby-controller "card 1/1 (mate card)"
+NGPON2X4
+[2019-01-13 21:25:19.876] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=reload 1/1, prompt={u'Proceed with reload\\? \\[y/N\\]': None}, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:25:19.879] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:19.880] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:25:19.882] - cafe.app.driver.proto.shell - DEBUG: command is reload 1/1, prompt is ['Proceed with reload\\? \\[y/N\\]', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:25:19.882] - cafe.sessions.session_srv.euta - DEBUG: send command: reload 1/1
+[2019-01-13 21:25:19.883] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['Proceed with reload\\? \\[y/N\\]', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:25:19.883] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:25:19.883] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:25:20.325] - cafe.sessions.session_srv.euta - DEBUG: output match prompt 'Proceed with reload\? \[y/N\]', output is: 'reload 1/1
+Warning! Reloading the device will impact services.
+Running configuration has been changed
+Use 'copy running-config startup-config' to save modified configuration
+Proceed with reload? [y/N] ', match: 'Proceed with reload? [y/N]'
+[2019-01-13 21:25:20.325] - cafe.app.driver.proto.shell - DEBUG: receive prompt is 'Proceed with reload\? \[y/N\]', action is 'None'
+[2019-01-13 21:25:20.347] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:25:20.347] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:20.349] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:25:20.349] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:25:20.350] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:25:20.351] - caferobot.command.device.shell.eutA - INFO: session_command result=reload 1/1
+Warning! Reloading the device will impact services.
+Running configuration has been changed
+Use 'copy running-config startup-config' to save modified configuration
+
+[2019-01-13 21:25:20.355] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=y, prompt=None, timeout=120, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:25:20.358] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:20.358] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:25:20.360] - cafe.app.driver.proto.shell - DEBUG: command is y, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:25:20.361] - cafe.sessions.session_srv.euta - DEBUG: send command: y
+[2019-01-13 21:25:20.361] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:25:20.362] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:25:20.363] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:25:22.466] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'y
+NGPON2X4# ', match: '#'
+[2019-01-13 21:25:22.477] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:25:22.499] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:25:22.499] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:22.500] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:25:22.501] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:25:22.502] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:25:22.502] - caferobot.command.device.shell.eutA - INFO: session_command result=y
+NGPON2X4
+[2019-01-13 21:25:22.506] - cafe.app.driver.ssh  - INFO: close ssh handle
+[2019-01-13 21:25:32.584] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:25:32.588] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:32.589] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:25:32.590] - cafe.app.driver.ssh  - INFO: open ssh handle
+[2019-01-13 21:25:32.590] - cafe.sessions.session_srv.euta - INFO: Connection has not built
+[2019-01-13 21:25:32.591] - cafe.sessions.session_srv.euta - INFO: Try login to 10.245.96.74:22 with username=sysadmin, password=sysadmin
+[2019-01-13 21:25:34.180] - cafe.sessions.session_srv.euta - INFO: ssh session login complete (sid=euta,host=10.245.96.74)
+[2019-01-13 21:25:34.180] - cafe.sessions.ssh    - INFO: [SSH]create a channel to 10.245.96.74:22, username=sysadmin, password=sysadmin
+[2019-01-13 21:25:36.455] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'Last login: Sun Jan 13 21:07:27 2019 from 10.200.201.26
+**** ACTIVE 10GE-12 CARD  ****
+Welcome to CLI
+sysadmin connected from 10.200.201.26 using ssh on NGPON2X4
+[?7hNGPON2X4# ', match: '#'
+[2019-01-13 21:25:36.455] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:25:36.456] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:25:36.456] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:25:36.457] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:25:36.457] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:25:36.908] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:25:36.908] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:25:36.942] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:25:36.942] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:36.943] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:25:36.944] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:25:36.945] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:25:36.946] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:25:41.963] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:25:41.967] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:41.967] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:25:41.969] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:25:41.969] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:25:41.970] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:25:41.970] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:25:41.970] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:25:46.379] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:25:46.379] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:25:46.401] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:25:46.402] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:46.403] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:25:46.403] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:25:46.404] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:25:46.405] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:25:51.421] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:25:51.425] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:51.425] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:25:51.427] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:25:51.428] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:25:51.428] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:25:51.429] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:25:51.429] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:25:51.873] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:25:51.874] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:25:51.922] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:25:51.923] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:51.924] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:25:51.925] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:25:51.926] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:25:51.927] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:25:56.944] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:25:56.949] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:56.950] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:25:56.952] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:25:56.953] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:25:56.954] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:25:56.954] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:25:56.955] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:25:57.446] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:25:57.447] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:25:57.491] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:25:57.492] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:25:57.493] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:25:57.494] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:25:57.495] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:25:57.495] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:26:02.512] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:26:02.516] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:26:02.517] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:26:02.519] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:26:02.519] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:26:02.520] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:26:02.521] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:26:02.521] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:26:02.979] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:26:02.980] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:26:03.39] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:26:03.40] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:26:03.41] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:26:03.42] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:26:03.43] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:26:03.44] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:26:08.61] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:26:08.65] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:26:08.66] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:26:08.67] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:26:08.68] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:26:08.69] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:26:08.69] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:26:08.70] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:26:08.570] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   Unequipped  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:26:08.571] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:26:08.594] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:26:08.596] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:26:08.597] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:26:08.598] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:26:08.599] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:26:08.599] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   Unequipped  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:26:38.622] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:26:38.626] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:26:38.627] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:26:38.629] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:26:38.632] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:26:38.633] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:26:38.633] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:26:38.634] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:26:39.144] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   Unequipped  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:26:39.146] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:26:39.286] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:26:39.287] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:26:39.289] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:26:39.290] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:26:39.291] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:26:39.292] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   Unequipped  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:27:09.310] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:27:09.314] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:27:09.315] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:27:09.317] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:27:09.317] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:27:09.318] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:27:09.319] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:27:09.319] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:27:09.911] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   Unequipped  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:27:09.912] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:27:09.943] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:27:09.943] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:27:09.944] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:27:09.945] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:27:09.946] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:27:09.947] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION                                              SERIAL  SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE             MODEL     NO      VERSION   
+-------------------------------------------------------------------------------
+1/1   NGPON2-4   Unequipped  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:27:39.965] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:27:39.971] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:27:39.971] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:27:39.973] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:27:39.974] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:27:39.975] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:27:39.976] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:27:39.976] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:27:40.438] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:27:40.440] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:27:40.596] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:27:40.597] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:27:40.598] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:27:40.599] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:27:40.600] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:27:40.601] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:28:10.618] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:28:10.623] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:28:10.624] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:28:10.625] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:28:10.626] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:28:10.627] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:28:10.627] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:28:10.628] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:28:11.184] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:28:11.184] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:28:11.204] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:28:11.205] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:28:11.206] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:28:11.207] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:28:11.208] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:28:11.208] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:28:41.224] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:28:41.228] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:28:41.229] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:28:41.230] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:28:41.231] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:28:41.231] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:28:41.232] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:28:41.232] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:28:41.679] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:28:41.680] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:28:41.778] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:28:41.779] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:28:41.780] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:28:41.781] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:28:41.782] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:28:41.783] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:29:11.808] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:29:11.813] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:11.814] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:29:11.816] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:29:11.817] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:29:11.818] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:29:11.818] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:29:11.819] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:29:12.266] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:29:12.266] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:29:12.284] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:29:12.285] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:12.286] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:29:12.287] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:29:12.287] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:29:12.288] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION  CARD                                       SERIAL  SOFTWARE  
+CARD  TYPE       STATE      CARD TYPE             MODEL     NO      VERSION   
+------------------------------------------------------------------------------
+1/1   NGPON2-4   Connected  Controller (Standby)  NGPON2-4  N/A     N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:29:42.307] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:29:42.311] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:42.312] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:29:42.314] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:29:42.315] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:29:42.315] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:29:42.316] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:29:42.316] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:29:42.818] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:29:42.819] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:29:42.863] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:29:42.864] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:42.865] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:29:42.865] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:29:42.866] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:29:42.866] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:29:43.65] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:29:43.68] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:43.77] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:29:43.79] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:29:43.80] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:29:43.80] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:29:43.81] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:29:43.81] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:29:43.527] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:29:43.528] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:29:43.552] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:29:43.559] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:43.567] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:29:43.573] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:29:43.574] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:29:43.574] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:29:43.618] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:29:43.622] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:43.626] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:29:43.628] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:29:43.628] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:29:43.629] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:29:43.629] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:29:43.630] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:29:44.112] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:29:44.113] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:29:44.144] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:29:44.145] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:44.146] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:29:44.147] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:29:44.148] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:29:44.148] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:29:44.311] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show system-equipment, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:29:44.314] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:44.315] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:29:44.317] - cafe.app.driver.proto.shell - DEBUG: command is show system-equipment, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:29:44.318] - cafe.sessions.session_srv.euta - DEBUG: send command: show system-equipment
+[2019-01-13 21:29:44.318] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:29:44.320] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:29:44.320] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:29:44.731] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show system-equipment
+system-equipment
+ equipment-type     "Multi Card"
+ active-controller  "card 1/2 (this card)"
+ standby-controller "card 1/1 (mate card)"
+NGPON2X4# ', match: '#'
+[2019-01-13 21:29:44.732] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:29:44.780] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:29:44.782] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:44.783] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:29:44.794] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:29:44.803] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:29:44.804] - caferobot.command.device.shell.eutA - INFO: session_command result=show system-equipment
+system-equipment
+ equipment-type     "Multi Card"
+ active-controller  "card 1/2 (this card)"
+ standby-controller "card 1/1 (mate card)"
+NGPON2X4
+[2019-01-13 21:29:44.894] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show system-equipment, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:29:44.914] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:44.925] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:29:44.933] - cafe.app.driver.proto.shell - DEBUG: command is show system-equipment, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:29:44.933] - cafe.sessions.session_srv.euta - DEBUG: send command: show system-equipment
+[2019-01-13 21:29:44.934] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:29:44.934] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:29:44.935] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:29:45.367] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show system-equipment
+system-equipment
+ equipment-type     "Multi Card"
+ active-controller  "card 1/2 (this card)"
+ standby-controller "card 1/1 (mate card)"
+NGPON2X4# ', match: '#'
+[2019-01-13 21:29:45.368] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:29:45.404] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:29:45.405] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:45.406] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:29:45.406] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:29:45.408] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:29:45.408] - caferobot.command.device.shell.eutA - INFO: session_command result=show system-equipment
+system-equipment
+ equipment-type     "Multi Card"
+ active-controller  "card 1/2 (this card)"
+ standby-controller "card 1/1 (mate card)"
+NGPON2X4
+[2019-01-13 21:29:45.448] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:29:45.451] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:45.452] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:29:45.453] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:29:45.454] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:29:45.454] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:29:45.454] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:29:45.455] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:29:45.914] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:29:45.915] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:29:45.955] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:29:45.956] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:45.957] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:29:45.957] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:29:45.959] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:29:45.959] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:29:45.977] - caferobot.command.device.shell.eutA - INFO: send session_command, cmd=show card, prompt=None, timeout=None, newline=None, retry=1, timeout_exception=1, exclude_prompt=None
+[2019-01-13 21:29:45.981] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:45.982] - cafe                 - DEBUG: Test Step 'send ssh command' started
+[2019-01-13 21:29:45.984] - cafe.app.driver.proto.shell - DEBUG: command is show card, prompt is ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-'], action is [None, ' '], exclude_prompt is None
+[2019-01-13 21:29:45.984] - cafe.sessions.session_srv.euta - DEBUG: send command: show card
+[2019-01-13 21:29:45.985] - cafe.sessions.session_srv.euta - DEBUG: expected prompt: ['\\#', '\\-\\-[Mm][Oo][Rr][Ee]\\-\\-']
+[2019-01-13 21:29:45.985] - cafe.sessions.session_srv.euta - DEBUG: exclude prompt: None
+[2019-01-13 21:29:45.986] - cafe.sessions.session_srv.euta - DEBUG: NO shell command delay
+[2019-01-13 21:29:46.446] - cafe.sessions.session_srv.euta - DEBUG: output match prompt '\#', output is: 'show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4# ', match: '#'
+[2019-01-13 21:29:46.447] - cafe.app.driver.proto.shell - DEBUG: receive prompt is '\#', action is 'None'
+[2019-01-13 21:29:46.464] - cafe                 - DEBUG: Test Step 'send ssh command' ended
+[2019-01-13 21:29:46.465] - cafe.console_logger  - INFO:         @ 
+[2019-01-13 21:29:46.466] - cafe.console_logger  - INFO:         @ test step: send ssh command: retry=retry, exclude_prompt=exclude_prom
+[2019-01-13 21:29:46.466] - cafe.console_logger  - INFO:         @ pt)
+[2019-01-13 21:29:46.467] - cafe.console_logger  - INFO:         @ UNKNOWN: (eutA,), (eutA,)
+[2019-01-13 21:29:46.468] - caferobot.command.device.shell.eutA - INFO: session_command result=show card
+      PROVISION                                                                                 SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                                  MODEL     SERIAL NO     VERSION   
+----------------------------------------------------------------------------------------------------------
+1/1   NGPON2-4   In Service  Controller 4 10G, 4 NGPON ports (Standby)  NGPON2-4  211709602412  N/A       
+
+      PROVISION                                                                       SOFTWARE  
+CARD  TYPE       CARD STATE  CARD TYPE                         MODEL    SERIAL NO     VERSION   
+------------------------------------------------------------------------------------------------
+1/2   10GE-12    In Service  Controller 14 10G ports (Active)  10GE-12  211804602067  N/A       
+
+NGPON2X4
+[2019-01-13 21:29:46.547] - caferobot.listener.session_listener - INFO: Do not reset all sessions
+[2019-01-13 21:29:47.33] - cafe.util.tracer     - DEBUG: Enter reset_all_sessions
+[2019-01-13 21:29:47.111] - caferobot.command.device.shell - INFO: Destroy ShellDevice(eutA)
+[2019-01-13 21:29:47.112] - cafe.app.driver.ssh  - INFO: close ssh handle
+[2019-01-13 21:29:47.179] - caferobot.caseutil   - INFO: All of class <class 'caferobot.command.device.shell.ShellDevice'> instances are released
+[2019-01-13 21:29:47.180] - cafe.util.tracer     - DEBUG: Exit reset_all_sessions, takes 0.145766 secs.
+[2019-01-13 21:29:47.181] - cafe                 - INFO: App() destroy session: eutA
+[2019-01-13 21:29:47.372] - cafe.sessions.session_manager - DEBUG: closing server local_server
+[2019-01-13 21:29:47.377] - cafe.sessions.session_srv - INFO: session server (local_server) is closed
+[2019-01-13 21:29:47.404] - cafe.console_logger  - INFO:         @ *** test suite report (AXOS.AXOS-automation.Milan.ST Test Cases.System.Management.Local Craft Interface Support.Test Cases.tc Verify craft connection after reboot the standby card) ***
+[2019-01-13 21:29:47.404] - cafe.core.db         - DEBUG: get testsuite report text (1)
+[2019-01-13 21:29:47.428] - cafe.console_logger  - INFO: +----------------------------------------------------------+-------------------------+--------+----------+----------+----------------+--------------+------+------+------+------+-------+---------------+---------------+
+[2019-01-13 21:29:47.429] - cafe.console_logger  - INFO: | name                                                     |        global_id        | status | assignee |   eut    | user_interface | teststep_cnt | pass | fail | info | warn | error | start_time    | elapsed_time  |
+[2019-01-13 21:29:47.429] - cafe.console_logger  - INFO: +----------------------------------------------------------+-------------------------+--------+----------+----------+----------------+--------------+------+------+------+------+-------+---------------+---------------+
+[2019-01-13 21:29:47.430] - cafe.console_logger  - INFO: | tc_Verify_craft_connection_after_reboot_the_standby_card | AXOS_E72_PARENT-TC-3749 |  pass  |  Min Gu  | GPON-8r2 |      CLI       |      39      |  14  |  0   |  25  |  0   |   0   | 1547443513.08 | 273.534530163 |
+[2019-01-13 21:29:47.430] - cafe.console_logger  - INFO: +----------------------------------------------------------+-------------------------+--------+----------+----------+----------------+--------------+------+------+------+------+-------+---------------+---------------+
+[2019-01-13 21:29:47.434] - cafe.console_logger  - INFO: 
+[2019-01-13 21:29:47.434] - cafe.console_logger  - INFO: Result Path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/Management/Local_Craft_Interface_Support/logs/results_01_14_2019_05_25_08
+[2019-01-13 21:29:47.435] - cafe.console_logger  - INFO: Log Path: /home/guchen/AXOS-automation/Milan/ST_Test_Cases/System/Management/Local_Craft_Interface_Support/logs/results_01_14_2019_05_25_08/logs
+[2019-01-13 21:29:47.435] - cafe.console_logger  - INFO: 
+[2019-01-13 21:29:47.436] - cafe.console_logger  - INFO: Total: 1 test cases in 1 test suites.
+[2019-01-13 21:29:47.436] - cafe.console_logger  - INFO: 1 passed, 0 failed, 0 indeterminate.

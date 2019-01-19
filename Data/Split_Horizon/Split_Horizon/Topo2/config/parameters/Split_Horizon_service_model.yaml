@@ -1,0 +1,32 @@
+global:
+  service_model:
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port
+      name: 11/x1
+      member:
+        interface1: 11/x1
+      attribute:
+        interface_role: uni
+        ont_id: 11
+        ont_profile_id: GP1000X
+        serial_number: 3D18C5
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/xp1
+
+    subscriber_point2:
+      device: eutA
+      type: ont_port
+      name: 8/g1
+      member:
+        interface1: 8/g1
+      attribute:
+        interface_role: uni
+        ont_id: 8
+        ont_profile_id: GPR3000X
+        serial_number: 4783A7
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/xp4

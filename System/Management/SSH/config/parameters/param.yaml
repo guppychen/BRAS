@@ -1,0 +1,15 @@
+user1:
+    name: "monitor"
+    password: "root"
+user2:
+    name: "support"
+    password: "root"
+user3:
+    name: "tac"
+    password: "root"
+user4:
+    name: "monitor"
+    password: "root"
+user5:
+    name: "radius"
+    password: "root"

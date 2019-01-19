@@ -1,0 +1,40 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: eutA
+      type: eth  
+      member:
+        interface1: 1/1/x3
+      attribute:
+        interface_role: inni
+    subscriber_point1:
+      device: eutA
+      type: ont_port              # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 100/g4
+      member:
+        interface1: 100/g4        # Lan port g4 direct connect to STC 10/12
+      attribute:                  # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        ont_id: 100
+        ont_profile_id: 844GE_ARF       # use ont-profile on cli
+        serial_number: 3E4018
+        vendor_id: CXNK
+        pon_port:                   # use list for FFP
+          - 1/1/gp1
+    subscriber_point2:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 200/g1
+      member:
+        interface1: 200/g1
+      attribute:                  # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        ont_id: 200
+        ont_profile_id: 844GE_ARF       # use ont-profile on cli
+        serial_number: 3E401E
+        vendor_id: CXNK
+        pon_port:                     # use list for FFP
+          - 1/1/gp1
+

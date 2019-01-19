@@ -1,0 +1,35 @@
+global:
+  service_model: 
+    subscriber_point1: 
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: GH3200/g2
+      member:
+        interface1: GH3200/g2
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: GH3200
+        ont_status: 
+          vendor: CXNK
+          serial-number: 541757
+          oper-state: present
+        ont_profile_id: GH3200X
+        serial_number: 541757
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - CAFETOPO.connection.eutA.shelf1.slot1.downlinkport1 
+        ont_profile_name: local_GH3200X
+        pse: 'false'            # condition of check 'pse-mgmt-ownership' 
+        poe: 'false'            # condition of check 'poe-short-counter' 'poe-overload-counter'
+        voice: 'false'          # condition of check 'voice-policy-status' 'voice-policy-ownership'
+        port_info:
+          ge: 2
+          xe: 1
+          pots: 2
+          ua: 2
+          rf: 0
+          rg: 0
+          fb: 0
+          eth_role: uni
+          eth_alarm: ENABLED

@@ -1,0 +1,35 @@
+[2019-01-07 23:17:44.274] - cafe.sessions.session_srv.euta.session_log - DEBUG: >Enter Suite: AXOS
+[2019-01-07 23:17:44.429] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>Enter Suite: AXOS-automation
+[2019-01-07 23:17:44.432] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>Enter Suite: Milan
+[2019-01-07 23:17:44.434] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>Enter Suite: ST Test Cases
+[2019-01-07 23:17:44.437] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>Enter Suite: System
+[2019-01-07 23:17:44.442] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>Enter Suite: HW Support
+[2019-01-07 23:17:44.445] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>Enter Suite: MTU
+[2019-01-07 23:17:45.140] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>Enter Suite: Testcase
+[2019-01-07 23:17:45.667] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>Enter Teardown Keyword: test_teardown
+[2019-01-07 23:17:45.699] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>Enter Keyword: keyword_command.dprov_vlan
+[2019-01-07 23:17:45.702] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-07 23:17:47.975] - cafe.sessions.session_srv.euta.session_log - INFO: Last login: Mon Jan  7 22:53:42 2019 from 192.168.37.130
+[2019-01-07 23:17:47.976] - cafe.sessions.session_srv.euta.session_log - INFO: 
+[2019-01-07 23:17:48.592] - cafe.sessions.session_srv.euta.session_log - INFO: **** ACTIVE NGPON2-4 CARD  ****
+[2019-01-07 23:17:49.227] - cafe.sessions.session_srv.euta.session_log - INFO: Welcome to CLI
+[2019-01-07 23:17:49.230] - cafe.sessions.session_srv.euta.session_log - INFO: sysadmin connected from 10.200.201.26 using ssh on NGPON2X4
+[2019-01-07 23:17:49.634] - cafe.sessions.session_srv.euta.session_log - INFO: [?7hNGPON2X4# configure
+[2019-01-07 23:17:49.707] - cafe.sessions.session_srv.euta.session_log - INFO: Enter configuration commands, one per line. End with CNTL/Z.
+[2019-01-07 23:17:49.714] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-07 23:17:49.719] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-07 23:17:49.902] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config)# vlan 777
+[2019-01-07 23:17:50.139] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-07 23:17:50.144] - cafe.sessions.session_srv.euta.session_log - DEBUG: >>>>>>>>>>>Enter Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-07 23:17:50.320] - cafe.sessions.session_srv.euta.session_log - INFO: NGPON2X4(config-vlan-777)# end
+[2019-01-07 23:17:50.439] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<<Exit Teardown Keyword: caferobot.command.adapter.CliAdapter.Cli
+[2019-01-07 23:17:50.444] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<<Exit Keyword: keyword_command.dprov_vlan
+[2019-01-07 23:17:50.451] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<<Exit Teardown Keyword: test_teardown
+[2019-01-07 23:17:50.454] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<<Exit Suite: Testcase
+[2019-01-07 23:17:50.457] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<<Exit Suite: MTU
+[2019-01-07 23:17:50.461] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<<Exit Suite: HW Support
+[2019-01-07 23:17:50.464] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<<Exit Suite: System
+[2019-01-07 23:17:50.466] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<<Exit Suite: ST Test Cases
+[2019-01-07 23:17:50.469] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<<Exit Suite: Milan
+[2019-01-07 23:17:50.472] - cafe.sessions.session_srv.euta.session_log - DEBUG: <<Exit Suite: AXOS-automation
+[2019-01-07 23:17:50.474] - cafe.sessions.session_srv.euta.session_log - DEBUG: <Exit Suite: AXOS

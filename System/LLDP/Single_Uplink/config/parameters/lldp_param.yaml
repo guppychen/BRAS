@@ -1,0 +1,35 @@
+global:
+  wait_for_report_send: 32s
+  wait_for_config_hostname: 2s
+  interface_role: inni
+  interface_role2: uni
+  interface_role3: enni
+#  des: 1/1/x5
+  des_1: test_lldp_1
+  des_2: test_lldp_2 
+  lldp_prf: destination-agent
+  lldp_prf1: lldp_prf_1
+  lldp_prf2: lldp_prf_2
+  lldp_prf3: lldp_prf_3
+  lldp_prf4: lldp_prf_4
+  lldp_prf5: lldp_prf_5
+  lldp_prf6: lldp_prf_6
+  lldp_prf7: lldp_prf_7
+  lldp_prf8: lldp_prf_8
+  lldp_prf9: lldp_prf_9
+  sys_name1: lldp1
+  sys_name2: lldp2
+  sys_des: Calix, Inc, NGPON2X4, N/A       ### eutA type: 10GE12,If you use 10GE12
+  sys_cap: 0x03 0x04 0x03 0x04
+  sys_name: NGPON2X4        ### Terminal command prompt 10GE12,If you use 10GE12
+  sys_cap_tlv: 0x0304
+  mtu_1: 2000
+  mtu_2: 1500
+  mdi: Not supported
+  dst_mac_1: 01:80:c2:00:00:0e
+  dst_mac_2: 01:80:c2:00:00:03
+  dst_mac_3: 01:80:c2:00:00:00
+  dst_agent_1: nearest-bridge
+  dst_agent_2: nearest-non-tpmr-bridge
+  dst_agent_3: nearest-customer-bridge
+  wait_TX_TTR_to_0: 31s

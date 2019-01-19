@@ -1,0 +1,50 @@
+connection:
+
+    n1_session1:
+        ip: 10.245.96.71
+        type: AXOS
+        protocol: ssh
+        user: sysadmin
+        password: sysadmin
+        timeout: 30
+    n1_session2:
+        ip: 10.245.96.71
+        type: exa
+        protocol: ssh
+        user: root
+        password: root
+        timeout: 30
+
+    n1_session3:
+        ip: 10.245.96.71
+        password: sysadmin
+        user: sysadmin
+        type: exa
+        protocol: netconf
+        user_agent: NETCONF
+        port: 830
+        timeout: 30
+
+#    sjccafe-shchandr:
+#        ip: 10.245.249.37
+#        type: exa
+#        protocol: ssh
+#        user: stautotest
+#        password: marino13
+#        timeout: 30
+    sjccafe-shchandr:
+        ip: localhost
+        type: exa
+        protocol: ssh
+        user: stautotest
+        password: marino13
+        timeout: 30
+
+    n1_snmp_v2:
+        ip: 10.245.96.71
+        port: 161
+        redirect: 1620
+        protocol: snmp
+        version: 2c
+        community: shesha
+        timeout: 30

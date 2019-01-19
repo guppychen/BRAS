@@ -1,0 +1,40 @@
+global:
+  service_model:
+    service_point_list1:
+    - service_point1
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x1
+      attribute:
+        interface_role: inni
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port
+      name: 11/g4
+      member:
+        interface1: 11/g4
+      attribute:
+        interface_role: uni
+        ont_id: 11
+        ont_profile_id: 844G_ARF
+        serial_number: 3E4018
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/gp1
+    subscriber_point2:
+      device: eutA
+      type: ont_port
+      name: 882/g1
+      member:
+        interface1: 882/g1
+      attribute:
+        interface_role: uni
+        ont_id: 882
+        ont_profile_id: 844G_ARF
+        serial_number: 3E4021
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/gp8

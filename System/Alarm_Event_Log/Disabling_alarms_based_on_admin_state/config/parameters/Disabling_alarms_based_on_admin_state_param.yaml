@@ -1,0 +1,7 @@
+global:
+  pon_alarm_port: 1/1/gp2
+  ont_eth_alarm_port: g2
+  
+  p_match_vlan: 100
+  p_data_vlan: 400
+  

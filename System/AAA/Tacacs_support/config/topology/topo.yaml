@@ -1,0 +1,100 @@
+connection:
+  eutA:
+    ip: 10.245.96.73                           # eut IP should be add to server 10.245.251.27, detail can refer AT-5562 wiki
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: 10GE-12
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+  eutB:                                    # eut name: it could be any EUT name you want to use, e.g.: n1, node1
+    ip: 10.245.96.73                           # the same as before
+    user: sysadmin                            # the same as before
+    password: sysadmin                        # the same as before
+    timeout: 10
+    type: AXOS                             # the same as before
+    model: NGPON2-4                           # the same as before
+    protocol: ssh                       # the same as before
+  eutC:
+    ip: 10.245.96.73
+    user: test
+    password: testing123
+    type: AXOS
+    model: 10GE-12
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+  eutD:
+    ip: 10.245.96.73
+    user: test2
+    password: testing123
+    type: AXOS
+    model: 10GE-12
+    protocol: ssh
+    user_interface: CLI
+    prompt: ">"
+    timeout: 30
+  eutE:
+    ip: 10.245.96.73
+    user: test2
+    password: testing123
+    type: AXOS
+    model: 10GE-12
+    protocol: telnet
+    user_interface: CLI
+    prompt: ">"
+    timeout: 30
+  eutF:
+    ip: 10.245.96.73
+    user: test
+    password: testing123
+    type: AXOS
+    model: 10GE-12
+    protocol: telnet
+    user_interface: CLI
+    prompt: ">"
+    timeout: 30
+  eutG:
+    ip: 10.245.96.73
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: 10GE-12
+    protocol: telnet
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+  eutH:
+    ip: 10.245.96.73
+    user: support
+    password: support
+    type: AXOS
+    model: 10GE-12
+    protocol: telnet
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+  eutI:
+    ip: 10.245.96.73
+    user: root
+    password: root
+    type: AXOS
+    model: 10GE-12
+    protocol: telnet
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+#    shelves:                               # new format to describe the shelves on the EUT.
+#      - shelfid: 1                         # new format to describe the shelf with shelf id on the EUT.
+#          slots:                           # new format to describe the slots on the EUT.
+#          - slotid: 1                      # new format to describe the shelf with slot id on the EUT.
+#            model: gpon                    # describe the card type.
+#            uplinkports:                   # new format to describe the uplink ports.
+#              - ethernet : g1              # new format to describe an uplink port.
+#              - ethernet : g2              # new format to describe an uplink port.
+#              - ethernet : g3              # new format to describe an uplink port.
+#            downlinkports:                 # new format to describe the downlink ports.
+#              - pon      : p1              # new format to describe a downlink port.

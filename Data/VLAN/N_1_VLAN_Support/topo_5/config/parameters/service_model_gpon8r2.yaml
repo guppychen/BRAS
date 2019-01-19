@@ -1,0 +1,49 @@
+global:
+  service_model:
+    service_point_list1:
+    - service_point1
+    - service_point2
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x1
+      attribute:
+        interface_role: inni
+    service_point2:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x3
+      attribute:
+        interface_role: inni
+
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port
+      name: 11/g4  #11/x1
+      member:
+        interface1: 11/g4  #11/x1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        ont_id: 11
+        ont_profile_id: 844G_ARF
+        serial_number: 3E4018
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/gp1
+    subscriber_point2:
+      device: eutA
+      type: ont_port
+      name: 8/g1
+      member:
+        interface1: 8/g1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        ont_id: 8
+        ont_profile_id: 844G_ARF
+        serial_number: 3E401E
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - 1/1/gp1

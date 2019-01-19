@@ -1,0 +1,121 @@
+connection:
+  h1:
+    ip: localhost
+    type: linux
+    protocol: ssh
+    user: stautotest
+    password: marino13
+
+  n1_session1:
+    ip: 10.245.96.71
+    type: AXOS
+    prompt: "#"
+    user_interface: CLI
+    protocol: exa_ssh
+    user: sysadmin
+    password: sysadmin
+    timeout: 30
+    ports:
+      service_p1:
+        port: 1/1/x2
+        type: Ethernet
+      service_p2:
+        port: 1/1/x3
+        type: Ethernet
+      subscriber_p1:
+        port: 1/x1
+        type: ont-ethernet
+      subscriber_p2:
+        port: 1/1/xp1
+        type: pon
+      subscriber_p3:
+        port: 1/1/xp3
+        type: pon
+
+  n1_session2:
+    ip: 10.245.96.71
+    type: linux
+    user_interface: CLI
+    protocol: ssh
+    user: root
+    password: root
+    timeout: 30
+    ports:
+      service_p1:
+        port: 1/1/x1
+        type: Ethernet
+      subscriber_p1:
+        port: 1/x1
+        type: ont-ethernet
+      subscriber_p2:
+        port: 1/1/xp1
+        type: pon
+
+  n1_session3:
+    ip: 10.245.96.71
+    type: exa
+    user_interface: NETCONF
+    protocol: netconf
+    user: sysadmin
+    password: sysadmin
+    port: 830
+    timeout: 30
+    ports:
+      service_p1:
+        port: 1/1/x1
+        type: Ethernet
+      subscriber_p1:
+        port: 1/x1
+        type: ont-ethernet
+      subscriber_p2:
+        port: 1/1/xp1
+        type: pon
+
+  web:
+    type: web
+    browser: PHANTOMJS
+    execute_speed: 0.5
+    default_element_wait: 30
+
+  tg1:
+    ip: 10.245.252.60
+    type: stc
+    protocol: stc
+    ports:
+      p1:
+        port: 2/6
+        medium: fiber
+        speed: ether10000
+      p2:
+        port: 2/5
+        medium: fiber
+        speed: ether10000
+
+  n_snmp_v2:
+    ip: 10.245.96.71
+    port: 161
+    protocol: snmp
+    version: 2c
+    community: private
+    timeout: 30
+
+  n_snmp_v3:
+    ip: 10.245.96.71
+    port: 161
+    protocol: snmp
+    version: 3
+    community: private
+    username: snmptest
+    authentication_protocol: SHA
+    password: snmptest123
+    encryption_protocol: DES
+    timeout: 30
+    encryption_password: snmptest456
+
+  dynamic_password_dpu:
+    ip: 10.245.96.71
+    type: linux
+    protocol: ssh
+    user: calixsupport
+    dynamic_password: True
+    dynamic_password_host: http://ecrack:8080/ecracker.php

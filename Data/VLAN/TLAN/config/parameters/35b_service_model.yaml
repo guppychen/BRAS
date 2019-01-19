@@ -1,0 +1,34 @@
+#there need 3 onts, as I have only two, point2 and point 3 are the same, actually it's 3 different 801 onts, importantly, only 801 can be used, 811 ont have bugs, and cannot be used.
+
+global:
+  service_model:
+    subscriber_point1:
+      device: eutA
+      type: dsl             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 1/1/v1
+      member:
+        interface1: 1/1/v1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        service_type:
+        ptm_override:
+        vectoring: ""                        # join-vectoring ["yes"|"no"]
+
+
+    subscriber_point2:
+      device: eutA
+      type: dsl             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 1/1/v2
+      member:
+        interface1: 1/1/v2
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        service_type:
+        ptm_override:
+        vectoring: ""                        # join-vectoring ["yes"|"no"]
+
+
+
+
+
+

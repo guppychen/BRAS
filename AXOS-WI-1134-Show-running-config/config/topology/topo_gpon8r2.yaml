@@ -1,0 +1,19 @@
+connection:
+  n1_sysadmin:
+    ip: 10.245.74.71
+    password: sysadmin
+    user: sysadmin
+    type: AXOS
+    model: GPON-8R2
+    timeout: 20
+    protocol: ssh
+    prompt: ['# ']
+  n1_root:
+    ip: 10.245.74.71
+    password: root
+    user: root
+    type: AXOS
+    timeout: 20
+    model: MILAN
+    protocol: ssh
+    prompt: ['# ']

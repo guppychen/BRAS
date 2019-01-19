@@ -1,0 +1,21 @@
+global:
+  p_match_vlan1: 1190
+  p_match_vlan2: 1100
+#  p_match_vlan3: 1110
+  p_data_vlan: 666
+
+  subscriber_ip1: 20.20.20.20
+  subscriber_ip2: 20.20.20.30
+  subscriber_ip3: 255.255.255.255
+  subscriber_ip4: 239.1.1.1
+
+  subscriber_mac1: 00:00:00:44:55:66
+  subscriber_mac2: 00:00:00:aa:bb:dd
+  subscriber_mac3: ff:ff:ff:ff:ff:ff
+  subscriber_mac4: 01:00:5e:01:01:01
+
+  rate_pps: 10000
+  sleep_time: 10s
+  traffic_run_time: 30s
+  wait_time: 5s
+  loss_rate: 0.01

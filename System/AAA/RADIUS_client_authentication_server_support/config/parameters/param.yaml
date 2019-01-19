@@ -1,0 +1,43 @@
+global:
+  operator_usr: operator
+  operator_pwd: operator123
+  calixsupport_usr: calixsupport
+  tac_usr: tac
+  tac_role: admin
+  # IP where ecrack application is running
+  ecrack_ip: 10.1.0.8
+  device_prompt: E3-16F
+  # RADIUS TCs parameters
+  radius_server: 10.245.250.112
+  invalid_server: 192.168.37.182
+  secret: testing
+  invalid_secret: test_radius_server1
+  authentication: radius-then-local
+  invalid_port: 1645
+  default_port: 1812
+  default_timeout: 3
+  radius_timeout: 30
+  invalid_timeout: xyz
+  invalid_priority: xyz
+  invalid_range_port: 65536
+  invalid_range1_timeout: 0
+  invalid_range_timeout: 31
+  invalid_range_priority: 0
+  invalid_range_retry: 11
+  radius_admin_user: calix1
+  radius_admin_password: hello1
+  user_sysadmin: sysadmin     ##  configure both in E7 and radius service default
+  user_sys_passwd: sysadmin
+  local_user_blank: blank     ## local user, configure only in E7
+  local_blank_passwd: blanker
+  radius_retry: 3
+  radius_retry1: 6
+  role: admin
+  interface_craft: craft2
+  # Params for SNMP cases
+  admin_state: enable
+  trap_type: inform
+  retries: 6
+  timeout: 400
+  security_level: authPriv
+  

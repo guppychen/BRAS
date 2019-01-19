@@ -1,0 +1,42 @@
+global:
+  id_prf1: auto_pppoe1
+  id_prf2: auto_pppoe2
+  dhcp_prf: dhcp1
+  server_name: ps
+  server_name2: ps2
+  client_name: pc
+  client_name2: pc2
+  class_map_name: l2classmap
+  class_map_name2: l2classmap2
+  class_map_type:  ethernet
+  policy_map_name: l2policymap
+  policy_map_name2: l2policymap2
+  flow_index:  1
+  rule_index:  1
+  interface_type: ont-ethernet
+
+  p_data_vlan: 210
+  p_data_vlan2: 220
+  p_data_vlan3: 230
+  p_match_vlan: 3001
+  p_match_vlan2: 3002
+  p_match_vlan3: 3003
+
+  cvlan: 111
+  cvlan2: 222
+  match_pcp_1: 3
+  ctag_pcp: 4
+  stag_pcp: 4
+  cevlan_pcp: 3
+  server_mac: aa:bb:cd:00:00:01
+  client_mac: aa:bb:cc:00:00:01
+  client_mac2: aa:bb:cc:00:00:02
+  mac_oui: aa:bb:cc
+  rate_kbps: 200
+  pppoe_negotiated_time: 40
+  sleep_time: 10
+  traffic_run_time: 10
+  wait_time: 5
+  loss_rate: 0.005
+  sub_num: -6
+  desc: auto_Desc

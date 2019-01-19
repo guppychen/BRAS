@@ -1,0 +1,26 @@
+connection:
+    n1:
+          ip: 10.245.96.72
+          type: AXOS
+          protocol: ssh
+          user: sysadmin
+          prompt: #
+          password: sysadmin
+          timeout: 11
+
+    n1_session1:
+          ip: 10.245.96.72
+          type: AXOS
+          protocol: ssh
+          user: sysadmin
+          prompt: #
+          password: sysadmin
+          timeout: 11
+
+    n1_session2:
+         ip: 10.245.96.72
+         type: AXOS
+         protocol: ssh
+         user: root
+         password: root
+         timeout: 11
