@@ -1,0 +1,23 @@
+global:
+  user1:
+      name: "user1"
+      password: "root"
+      role: "admin"
+  user2:
+      name: "user2"
+      password: "admin"
+      role: "admin"
+  user3:
+      name: "user3"
+      password: "admin"
+      role: "admin"
+  user4:
+      name: "user4"
+      password: "admin"
+      role: "admin"
+  user5:
+      name: "radius"
+      password: "root"
+      role: "admin"
+  eutpmt: "GPON-8R2"
+

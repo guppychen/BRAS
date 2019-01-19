@@ -1,0 +1,73 @@
+global:
+  # vlan for subscriber switch
+  p_match_vlan: 4002
+  p_match_vlan_sub2: 4016
+  
+  # vlan for uplink switch
+  p_data_vlan: 400
+  p_video_vlan: 701
+  p_igmp_prf: auto_igmp_prf
+  p_mcast_prf: auto_mcast_prf
+  
+  # path to store tg file
+  p_tg_store_file_path: /tmp
+
+
+  # config param
+  p_default_igmp_ratelimit: 50
+  p_max_igmp_ratelimit: 50
+  p_default_l2cp_action: discard
+  
+  # igmp-profile param
+  p_dflt_gen_query_invl: 1250            # Query Interval (in 10ths of seconds) (range: 300-10000)
+  p_dflt_gen_query_response_invl: 100    # Query Response Interval in 10ths of seconds (range: 10-200)
+  p_dflt_startup_query_cnt: 2            # Startup Query Count - number of queries to send at startup (range: 1-10)
+  p_dflt_startup_query_invl: 313         # Startup Query Interval (in 10ths of seconds) (range: 10-2500)
+  p_dflt_last_member_query_cnt: 2        # Last Member Query Count - number of group specific queries to send after a leave (range: 1-8)
+  p_dflt_last_member_query_invl: 10      # Last Member Query Interval (in tenths of seconds) (range: 1-50)
+  p_dflt_host_aging_invl: 2600           # Learned Host aging interval (in 10ths of seconds)
+  p_dflt_router_aging_invl: 2500         # Learned Router aging interval (in 10ths of seconds)
+  p_dflt_igmp_robustness: 2
+  p_dflt_igmp_pbit: 5
+  p_dflt_immediate_leave: DISABLED
+  p_dflt_igmp_proxy_discovery: ENABLED
+  
+  p_gen_query_invl_short: 300
+
+  # tg related param
+  p_traffic_run_time: 30
+  p_traffic_stop_time: 10
+  p_traffic_loss_rate: 0.005
+  p_mc_traffic_rate_mbps: 10
+  
+  p_igmp_group_session_num: 4
+  p_mcast_start_ip: 225.0.0.1
+  p_mcast_start_ip2: 226.0.0.1
+  p_mcast_network: 225.0.0
+  p_mcast_network2: 226.0.0
+  
+  p_proxy:
+    intf_type: restricted-ip-host    # type for proxy ip interface
+    intf_name: 7                     # name for proxy ip interface
+    ip: 
+      - 77.77.77.77
+    mask: 255.255.255.0
+    gw: 77.77.77.254
+
+  p_igmp_querier:
+    mac: 00:00:70:00:00:01
+    ip: 10.10.10.10
+    gateway: 10.10.10.1
+    
+  p_igmp_host:
+    mac: 00:00:99:00:00:01
+    ip: 10.99.10.10
+    gateway: 10.10.10.1
+
+  p_igmp_host2:
+    mac: 00:00:99:00:00:02
+    ip: 10.99.10.20
+    gateway: 10.10.10.1
+  
+
+  

@@ -1,0 +1,45 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: eutA
+      type: eth
+      name: CAFETOPO.connection.eutA.shelf1.slot1.uplinkport1
+      member:
+        interface1: CAFETOPO.connection.eutA.shelf1.slot1.uplinkport1
+      attribute:
+        interface_role: inni
+        interface_type: ethernet
+
+    subscriber_point2:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: add801/x1
+      member:
+        interface1: add801/x1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: add801
+        ont_profile_id: GP1000X     # use ont-profile on cli
+        serial_number: 3D15BA
+        vendor_id: CXNK
+        pon_port:
+          - CAFETOPO.connection.eutA.shelf1.slot1.downlinkport1
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: new882/g1
+      member:
+        interface1: new882/g1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: new882
+        ont_profile_id: GPR3000X       # use ont-profile on cli
+        serial_number: 478386
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - CAFETOPO.connection.eutA.shelf1.slot1.downlinkport1

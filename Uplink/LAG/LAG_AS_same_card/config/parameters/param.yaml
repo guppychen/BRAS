@@ -1,0 +1,46 @@
+global:
+  mac1: 00:00:01:00:00:11
+  mac2: 00:00:02:00:00:12
+  mac3: 01:00:5e:01:01:02
+  mac4: ff:ff:ff:ff:ff:ff
+  ip1: 192.168.100.3
+  ip2: 192.168.100.2
+  ip3: 225.1.1.2
+  udp_port1: 63
+  udp_port2: 64
+  admin_state: enable
+  opr_state: up
+  lag_mode_active: active
+  lag_mode_passive: passive
+  lag_mode_none: none
+  hash_mode_dstip: dst-ip
+  hash_mode_dstmac: dst-mac
+  hash_mode_srcdstip: src-dst-ip
+  hash_mode_srcdstmac: src-dst-mac
+  hash_mode_srcip: src-ip
+  hash_mode_srcmac: src-mac
+  hash_mode_srcdstmacip: src-dst-mac-ip
+  max_port: 1
+  min_port: 1
+  la1: la1
+  la2: la2
+  la3: la3
+  la4: la4
+#  eth_port_1: 1/1/x1
+#  eth_port_2: 1/1/x2
+#  eth_port_3: 1/1/x3
+#  eth_port_4: 1/1/x4
+  eth_port_status: up
+  eth_port_status_down: down
+
+
+
+
+
+
+
+
+
+
+
+

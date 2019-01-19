@@ -1,0 +1,56 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x1
+      attribute:
+        interface_role: inni
+    subscriber_point1: 
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 1/g4
+      member:
+        interface1: 1/g4
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: 1
+        ont_profile_id: 844GE_ARF       # use ont-profile on cli
+        serial_number: 3E4018      #1D1D32
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - 1/1/gp1
+    subscriber_point2:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 2/g1
+      member:
+        interface1: 2/g1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: 2
+        ont_profile_id: 844GE_ARF       # use ont-profile on cli
+        serial_number: 3E401E     #1D1D49
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - 1/1/gp1
+    subscriber_point3:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 3/g1
+      member:
+        interface1: 3/g1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: 3
+        ont_profile_id: 844GE_ARF       # use ont-profile on cli
+        serial_number: 3E4021      #320FE7
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - 1/1/gp8

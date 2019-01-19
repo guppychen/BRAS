@@ -1,0 +1,154 @@
+base: &base
+  # workdir: .
+  options:
+   - [--cafe_enable_cafe_tracker, 'true']
+   - [--cafe_log_level, INFO]
+   - [--topology.eut, 'gpon-8r2']
+#   - [--pause_on_specified_exception, "<5' should be true"]
+   - [--exclude, "dual_card_not_support"]
+
+
+batch:
+
+# dual card not support
+#
+#  -
+#    <<: *base
+#    name: Alarms_and_events_support_19
+#    postfix: alarms_syslog
+#    testsuite: "../System/Alarm_Event_Log/Alarms_and_Events_Support/Management_Interfaces/"
+#    config: "../System/Alarm_Event_Log/Alarms_and_Events_Support/Management_Interfaces/config/config_gpon8r2.ini"
+#    extra_options:
+#    - [--randomize, suites]
+# traffic script start here.
+  -
+    <<: *base
+    name: SNMP
+    postfix: SNMP
+    testsuite: "../../ST_Test_Cases/System/SNMP/SNMP_Support"
+    config: "../../ST_Test_Cases/System/SNMP/SNMP_Support/config/config_gpon8r2.ini"
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: IGMPV3_ASM
+    postfix: IGMPV3_ASM
+    testsuite: ../../ST_Test_Cases/Video/IGMP/IGMPv3_ASM_Support
+    config: ../../ST_Test_Cases/Video/IGMP/IGMPv3_ASM_Support/config/config_gpon8r2.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+  -
+    <<: *base
+    name: Layer-2_Service_Classifiers
+    postfix: Layer-2_Service_Classifiers
+    testsuite: ../Data/QOS/Layer-2_Service_Classifiers
+    config: ../Data/QOS/Layer-2_Service_Classifiers/config/config_gpon8r2.ini
+  -
+    <<: *base
+    name: DHCP_Option_82
+    postfix: DHCP_Option_82
+    testsuite: ../Data/DHCPV4/DHCP_Option_82
+    config: ../Data/DHCPV4/DHCP_Option_82/config/config_gpon8r2.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: DHCP_Snoop
+    postfix: DHCP_Snoop
+    testsuite: ../Data/DHCPV4/DHCP_Snoop_IPv4
+    config: ../Data/DHCPV4/DHCP_Snoop_IPv4/config/config_gpon8r2.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+    - [--randomize, suites]
+#    - [-e, "@TCID=AXOS_E72_PARENT-TC-683"]
+  -
+    <<: *base
+    name: AXOS-WI-1533_VLAN_Tag_Manipulation
+    postfix: AXOS-WI-1533_VLAN_Tag_Manipulation
+    testsuite: ../../ST_Test_Cases/Data/VLAN/AXOS-WI-1533_VLAN_Tag_Manipulation/
+    config: ../../ST_Test_Cases/Data/VLAN/AXOS-WI-1533_VLAN_Tag_Manipulation/config/config_gpon8r2.ini
+    extra_options:
+    - [--cafe_reset_sessions, true]
+    - [--randomize, suites]
+#    - [-i,  '@run=3.1.2']
+  -
+    <<: *base
+    name: PON_PM
+    postfix: PON_PM
+    testsuite: ../System/PM/PON_PM
+    config: ../System/PM/PON_PM/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: DHCP_Lease_Limits
+    postfix: DHCP_Lease_Limits
+    testsuite: ../Data/DHCPV4/DHCP_Lease_Limits
+    config: ../Data/DHCPV4/DHCP_Lease_Limits/config/config_gpon8r2.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+    - [--randomize, suites]
+    - [--exclude, '@TCID=AXOS_E72_PARENT-TC-2097']
+  -
+    <<: *base
+    name: DHCP_Lease_Persistence
+    postfix: DHCP_Lease_Persistence
+    testsuite: ../Data/DHCPV4/DHCP_Lease_Persistence
+    config: ../Data/DHCPV4/DHCP_Lease_Persistence/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: Rouge_ONT
+    postfix: Rouge_ONT
+    testsuite: ../PON/Rogue_ONT_Detection
+    config: ../PON/Rogue_ONT_Detection/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+
+  -
+    <<: *base
+    name: Layer_2_SIP_support_default
+    postfix: Layer_2_SIP_support_default
+    testsuite: ["../Voice/Layer_2_SIP_support/testcase/SIP_Profile/default"]
+    config: ../Voice/Layer_2_SIP_support/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+    - [--exclude,"@jira=EXA-24853OR@globalid=2473145"]
+  -
+    <<: *base
+    name: Layer_2_SIP_support_deletion
+    postfix: Layer_2_SIP_support_deletion
+    testsuite: ["../Voice/Layer_2_SIP_support/testcase/SIP_Profile/deletion"]
+    config: ../Voice/Layer_2_SIP_support/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+    - [--exclude,"@jira=EXA-24853OR@globalid=2473148"]
+  -
+    <<: *base
+    name: Layer_2_SIP_support_modification
+    postfix: Layer_2_SIP_support_modification
+    testsuite: ["../Voice/Layer_2_SIP_support/testcase/SIP_Profile/modification"]
+    config: ../Voice/Layer_2_SIP_support/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+    - [--exclude,"@jira=EXA-24853OR@globalid=2473147"]
+  -
+    <<: *base
+    name: Layer_2_SIP_support_with
+    postfix: Layer_2_SIP_support_with
+    testsuite: ["../Voice/Layer_2_SIP_support/testcase/SIP_Profile/with"]
+    config: ../Voice/Layer_2_SIP_support/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+    - [--exclude,"@jira=EXA-24853OR@globalid=2473146"]
+  -
+    <<: *base
+    name: Layer_2_SIP_support_county_code
+    postfix: Layer_2_SIP_support_county_code
+    testsuite: ["../Voice/Layer_2_SIP_support/testcase/SIP_Profile"]
+    config: ../Voice/Layer_2_SIP_support/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+    - [--include,"@globalid=2473147OR@globalid=2473146OR@globalid=2473148OR@globalid=2473145"]

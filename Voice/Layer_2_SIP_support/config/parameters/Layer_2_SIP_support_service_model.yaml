@@ -1,0 +1,29 @@
+global:
+  service_model: 
+    service_point_list1:    
+      - service_point1   
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x4
+      attribute:                 
+        interface_role: inni
+        
+    subscriber_point1:
+      device: eutA
+      type: ont_port
+      name: auto838/g1
+      member:
+        interface1: auto838/g1
+      attribute:
+        interface_role: uni
+        ont_id: auto838
+        ont_profile_id: 854G_ARF
+        serial_number: 2D5640
+        vendor_id: CXNK
+        pots_id_list:
+          - auto838/p1
+          - auto838/p2
+        pon_port:
+          - 1/1/gp1

@@ -1,0 +1,144 @@
+global:
+  service_model:
+    # erps ring master node with subscriber
+    service_point_list1:
+      - service_point1
+      - service_point2
+      - service_point3
+    # uplink eth port
+    service_point_list2:
+      - service_point4
+    # erps ring transit node with subscriber
+    service_point_list3:
+      - service_point3
+      - service_point5
+      - service_point6
+    
+    service_point1:
+      device: eutA
+      type: erps
+      name: 3
+      member:
+        interface1: 1/1/x2
+        interface2: 1/1/x3
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        interface_type: ethernet
+        control_vlan: 10
+        erps_role: master             # ring domain node role {master|transit}
+        interface1_erps_role: primary
+        interface2_erps_role: secondary
+    service_point2:
+      device: eutB
+      type: erps
+      name: 3
+      member:
+        interface1: 1/1/x3
+        interface2: 1/1/x4
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        interface_type: ethernet
+        control_vlan: 10
+        erps_role: transit             # ring domain node role {master|transit}
+        interface1_erps_role: primary
+        interface2_erps_role: secondary
+    service_point3:
+      device: eutC
+      type: erps
+      name: 3
+      member:
+        interface1: 1/1/x2
+        interface2: 1/1/x4
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        interface_type: ethernet
+        control_vlan: 10
+        erps_role: transit             # ring domain node role {master|transit}
+        interface1_erps_role: primary
+        interface2_erps_role: secondary
+
+    # uplink eth node
+    service_point4:
+      device: eutB
+      type: eth                  # service_point type {eth|lag|g8032|erps}
+      member:
+        interface1: 1/1/x1
+      attribute:
+        interface_role: inni
+        interface_type: ethernet
+
+    # change master node and transit node for service_point1 and service_point2
+    service_point5:
+      device: eutA
+      type: erps
+      name: 3
+      member:
+        interface1: 1/1/x2
+        interface2: 1/1/x3
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        interface_type: ethernet
+        control_vlan: 10
+        erps_role: transit             # ring domain node role {master|transit}
+        interface1_erps_role: primary
+        interface2_erps_role: secondary
+    service_point6:
+      device: eutB
+      type: erps
+      name: 3
+      member:
+        interface1: 1/1/x3
+        interface2: 1/1/x4
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        interface_type: ethernet
+        control_vlan: 10
+        erps_role: master             # ring domain node role {master|transit}
+        interface1_erps_role: primary
+        interface2_erps_role: secondary
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: add801/g1
+      member:
+        interface1: add801/g1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: add801
+        ont_profile_id: GPR3000X     # use ont-profile on cli
+        serial_number: 4783A0
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/xp4
+    
+#    subscriber_point1:
+#      device: eutA
+#      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+#      name: auto801/x1
+#      member:
+#        interface1: auto801/x1
+#      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+#        interface_role: uni
+#        ont_id: auto801
+#        ont_profile_id: 801XGS     # use ont-profile on cli
+#        serial_number: 478429
+#        vendor_id: CXNK
+#        pon_port:
+#          - 1/1/xp1
+
+#    subscriber_point1:
+#      device: eutC
+#      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+#      name: auto/g1
+#      member:
+#        interface1: auto/g1
+#      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+#        interface_role: uni
+#        ont_id: auto
+#        ont_profile_id: 801XGS     # use ont-profile on cli
+#        serial_number: 3D15BB
+#        vendor_id: CXNK
+#        pon_port:
+#          - 1/1/xp1

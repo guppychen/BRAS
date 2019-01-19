@@ -1,0 +1,26 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    
+    service_point1: 
+      device: eutA
+      type: eth
+      name: CAFETOPO.connection.eutA.shelf1.slot1.uplinkport1
+      member:
+        interface1: CAFETOPO.connection.eutA.shelf1.slot1.uplinkport1
+      attribute:
+        interface_role: inni
+        interface_type: ethernet
+        eth_slot: CAFETOPO.connection.eutA.shelf1.slot1.id
+                
+    subscriber_point1: 
+      device: eutA
+      type: eth
+      name: CAFETOPO.connection.eutA.shelf1.slot1.downlinkport1
+      member:
+        interface1: CAFETOPO.connection.eutA.shelf1.slot1.downlinkport1
+      attribute:
+        interface_role: inni
+        interface_type: ethernet
+    

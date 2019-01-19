@@ -1,0 +1,151 @@
+base: &base
+  # workdir: .
+  options:
+   - [--cafe_enable_cafe_tracker, 'true']
+   - [--cafe_log_level, INFO]
+   - [--topology.eut, 'gpon-8r2']
+   - [--exclude, "dual_card_not_support"]
+#   - [--pause_on_specified_exception, "<5' should be true"]
+
+batch:
+  -
+    <<: *base
+    name: IGMPv2_support
+    postfix: IGMPv2_support
+    testsuite: ../Video/IGMP/IGMPv2_support/
+    config: ../Video/IGMP/IGMPv2_support/config/config_igmpv2_gpon8r2.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+#  -
+#    <<: *base
+#    name: MVR_support
+#    postfix: MVR_support
+#    testsuite: ../../ST_Test_Cases/Video/IGMP/MVR_support
+#    config: ../../ST_Test_Cases/Video/IGMP/MVR_support/config/config_gpon8r2.ini
+#    extra_options:
+#    - [--cafe_reset_sessions, 'true']
+#    - [--randomize, suites]
+  -
+    <<: *base
+    name: MAC_Forced_Forwarding
+    postfix: MAC_Forced_Forwarding
+    testsuite: ../../ST_Test_Cases/Data/MACFF/MAC_Forced_Forwarding/test_cases
+    config: ../../ST_Test_Cases/Data/MACFF/MAC_Forced_Forwarding/config/config_gpon8r2.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: MAC_Forced_Forwarding_p2
+    postfix: MAC_Forced_Forwarding_p2
+    testsuite: ../../ST_Test_Cases/Data/MACFF/MAC_Forced_Forwarding/p2
+    config: ../../ST_Test_Cases/Data/MACFF/MAC_Forced_Forwarding/config/config_gpon8r2.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+    - [--randomize, suites]      # if no this , the ARP learning will fail. comments added by llin 2018
+  -
+    <<: *base
+    name: IGMP_PROXY_Provision
+    postfix: IGMP_PROXY_Provision
+    testsuite: ../Video/IGMP/IGMP_Proxy/Provision
+    config: ../Video/IGMP/IGMP_Proxy/config/config_gpon8r2_dualcard.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: 1_1_VLAN_Support_topo2
+    postfix: 1_1_VLAN_Support_topo2
+    testsuite: ../Data/VLAN/1_1_VLAN_Support/topo_2/
+    config: ../Data/VLAN/1_1_VLAN_Support/topo_2/config/config_gpon8r2.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+    - [--randomize, suites]
+    - [--exclude, "@globalid=2318829OR@globalid=2318807"]      # @globalid=2318807 deleted on GPON8r2, checked with Lincoln
+  -
+    <<: *base
+    name: IGMP_PROXY_Function
+    postfix: IGMP_PROXY_Function
+    testsuite: ../Video/IGMP/IGMP_Proxy/Function
+    config: ../Video/IGMP/IGMP_Proxy/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: IPSV
+    postfix: IPSV
+    testsuite: ../Data/IPSV
+    config: ../Data/IPSV/config/config_gpon8r2.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: DOS
+    postfix: DOS
+    testsuite: ../System/DOS/Denial_of_Service/
+    config: ../System/DOS/Denial_of_Service/topo_1/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+
+  -
+    <<: *base
+    name: N_1_VLAN_Support_topo2
+    postfix: N_1_VLAN_Support_topo2
+    testsuite: ../Data/VLAN/N_1_VLAN_Support/topo_2
+    config: ../Data/VLAN/N_1_VLAN_Support/topo_2/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+    - [--cafe_reset_sessions, 'true']
+  -
+    <<: *base
+    name: N_1_VLAN_Support_topo4
+    postfix: N_1_VLAN_Support_topo4
+    testsuite: ../Data/VLAN/N_1_VLAN_Support/topo_4
+    config: ../Data/VLAN/N_1_VLAN_Support/topo_4/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+    - [--cafe_reset_sessions, 'true']
+  -
+    <<: *base
+    name: N_1_VLAN_Support_topo5
+    postfix: N_1_VLAN_Support_topo5
+    testsuite: ../Data/VLAN/N_1_VLAN_Support/topo_5
+    config: ../Data/VLAN/N_1_VLAN_Support/topo_5/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+    - [--exclude, "@tcid=AXOS_E72_PARENT-TC-657"]
+  -
+    <<: *base
+    name: ONT_Ethernet_Port_PM
+    postfix: ONT_Ethernet_Port_PM
+    testsuite: ../System/PM/ONT_Ethernet_Port_PM/ONT_PM_rmon_session
+    config: ../System/PM/ONT_Ethernet_Port_PM/ONT_PM_rmon_session/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: Disabling_alarms_based_on_admin_state
+    postfix: Disabling_alarms_based_on_admin_state
+    testsuite: ../System/Alarm_Event_Log/Disabling_alarms_based_on_admin_state
+    config: ../System/Alarm_Event_Log/Disabling_alarms_based_on_admin_state/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+
+  -
+    <<: *base
+    name: PPPOE_topo1
+    postfix: PPPOE_topo1
+    testsuite: ../Data/PPPoE/PPPoE/Topo1
+    config: ../Data/PPPoE/PPPoE/Topo1/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+    - [--cafe_reset_sessions, 'true']
+#  -
+#    <<: *base
+#    name: PPPOE_topo2
+#    postfix: PPPOE_topo2
+#    testsuite: ../Data/PPPoE/PPPoE/Topo2
+#    config: ../Data/PPPoE/PPPoE/Topo2/config/config_gpon8r2.ini
+#    extra_options:
+#    - [--randomize, suites]
+#    - [--cafe_reset_sessions, 'true']

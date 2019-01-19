@@ -1,0 +1,45 @@
+connection:
+  eutA:
+    ip: 10.245.21.101
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: MILAN
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+  eutB:
+    ip: 10.245.21.103
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: MILAN
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+  eutC:
+    ip: 10.245.21.102
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: MILAN
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+
+  tg1:
+    ip: 10.245.252.43
+    type: stc
+    protocol: stc
+    ports:
+      service_p1:
+        port: 5/1
+        medium: copper
+        speed: ether1000
+      subscriber_p1:
+        port: 5/2
+        medium: copper
+        speed: ether1000

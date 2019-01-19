@@ -1,0 +1,59 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+    service_point1:
+      device: eutA
+      type: eth
+      member:
+        interface1: 1/1/x1
+      attribute:
+        interface_role: inni
+
+    subscriber_point1: 
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 102/x1
+      member:
+        interface1: 102/x1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: 102
+        ont_profile_id: GP1000X       # use ont-profile on cli
+        serial_number: 3D18C5
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/xp1
+
+    subscriber_point2:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 100/g1
+      member:
+        interface1: 100/g1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: 100
+        ont_profile_id: GPR3000X       # use ont-profile on cli
+        serial_number: 4783A4
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - 1/1/xp1
+
+    subscriber_point3:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 101/g1
+      member:
+        interface1: 101/g1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: 101
+        ont_profile_id: GPR3000X       # use ont-profile on cli
+        serial_number: 4783A7
+        vendor_id: CXNK
+        pon_port:       # use list for FFP
+          - 1/1/xp4

@@ -1,0 +1,57 @@
+global:
+  service_model:
+    # g8032 ring master node with subscriber
+    service_point_list1:
+      - service_point1
+      - service_point2
+    # uplink eth port
+    service_point_list2:
+      - service_point3
+    service_point1:
+      device: eutA
+      type: g8032
+      name: 2
+      member:
+        interface1: 1/1/x2      #must connect to service_point2_interface1
+        interface2: 1/1/x3
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        control_vlan: 44
+        interface1_rpl_mode: owner
+        interface2_rpl_mode: none
+    service_point2:
+      device: eutB
+      type: g8032
+      name: 2
+      member:
+        interface1: 1/1/x2
+        interface2: 1/1/x3
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        control_vlan: 44
+        interface1_rpl_mode: none
+        interface2_rpl_mode: none
+    service_point3:
+      device: eutB
+      type: eth                  # service_point type {eth|lag|g8032|erps}
+      member:
+        interface1: 1/1/x1
+      attribute:
+        interface_role: inni
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: auto811/x1
+      member:
+        interface1: auto811/x1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        ont_id: auto811
+        ont_profile_id: GP1000X     # use ont-profile on cli
+        serial_number: 3D15BA
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/xp1
+
+

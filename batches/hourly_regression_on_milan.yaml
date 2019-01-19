@@ -1,0 +1,140 @@
+base: &base
+  # workdir: .
+  options:
+   - [--cafe_enable_cafe_tracker, 'true']
+   - [--cafe_log_level, INFO]
+#   - [--pause_on_specified_exception, "<5' should be true"]
+
+batch:
+  -
+    <<: *base
+    name: various_features_from_ROLT_46
+    postfix: management_interfaces
+    testsuite: ../../ST_Test_Cases/Management_Interfaces
+    config: ../../ST_Test_Cases/Management_Interfaces/config/config_sjc_cdc_62.ini
+    extra_options:
+    - [--exclude, "@TCID=RLT-TC-13955"]
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: AXOS_WI_297_user_support
+    postfix: 297_user_support
+    testsuite: ../../ST_Test_Cases/Security_Management/AXOS-WI-297_User-support/
+    config: ../../ST_Test_Cases/Security_Management/AXOS-WI-297_User-support/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: feature_cli_ROLT_l3
+    postfix: CLI_L3
+    testsuite: ../../ST_Test_Cases/CLI_Provisioning/FEATURE_CLI_ROLT_L3
+    config: ../../ST_Test_Cases/CLI_Provisioning/FEATURE_CLI_ROLT_L3/config/ROLT_Provisioning.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: AXOS_WI_1120_icmp
+    postfix: ICMP
+    testsuite: ../../ST_Test_Cases/AXOS-WI-1120_ICMP
+    config: ../../ST_Test_Cases/AXOS-WI-1120_ICMP/config/config.ini
+  -
+    <<: *base
+    name: AXOS-1088
+    postfix: AXOS-1088-Real_time_clock_support
+    testsuite: "../../ST_Test_Cases/AXOS-WI-1088_Real_Time_Clock_Support/AXOS-WI-1088_Real_Time_Clock_Support/"
+    config: "../../ST_Test_Cases/AXOS-WI-1088_Real_Time_Clock_Support/config/config.ini"
+  -
+    <<: *base
+    name: netconf_yang
+    postfix: netconf
+    testsuite: ../../ST_Test_Cases/System/Management/Netconf_Yang/
+    config: ../../ST_Test_Cases/System/Management/Netconf_Yang/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: ssh
+    postfix: SSH
+    testsuite: ../../ST_Test_Cases/System/Management/SSH/
+    config: ../../ST_Test_Cases/System/Management/SSH/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    name: ONT_operation_support_9
+    postfix: ONT_Provision-Profile_support
+    testsuite: "../../ST_Test_Cases/PON/ONT_Support/ONT_Profile_Support"
+    config: "../../ST_Test_Cases/PON/ONT_Support/config/config_cdc_ont_profile.ini"
+    options:
+       - [--cafe_enable_cafe_tracker, 'true']
+       - [--cafe_log_level, INFO]
+       - [--exclude, "@regidOR@EXA-17157OR@notsupport"]
+  -
+    <<: *base
+    name: AXOS-WI-1134-Show-running-config
+    postfix: AXOS-WI-1134-Show-running-config
+    testsuite: "../../ST_Test_Cases/AXOS-WI-1134-Show-running-config"
+    config: "../../ST_Test_Cases/AXOS-WI-1134-Show-running-config/config/config_WI1134.ini"
+  -
+    <<: *base
+    name: Alarms_and_events_support_15
+    postfix: alarms_syslog
+    testsuite: "../../ST_Test_Cases/System/Alarm_Event_Log/Alarms_and_Events_Support/Management_Interfaces/"
+    config: "../../ST_Test_Cases/System/Alarm_Event_Log/Alarms_and_Events_Support/Management_Interfaces/config/config_st.ini"
+  -
+    <<: *base
+    name: Alarms_and_events_support_89
+    postfix: alarms_1
+    testsuite: ../../ST_Test_Cases/System/Alarm_Event_Log/Alarms_and_Events_Support/Alarms
+    config: ../../ST_Test_Cases/System/Alarm_Event_Log/Alarms_and_Events_Support/Alarms/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: Alarms_and_events_support_54
+    postfix: alarms_events_syslog_1
+    testsuite: ../../ST_Test_Cases/Alarms-Events-Syslog
+    config: ../../ST_Test_Cases/Alarms-Events-Syslog/config/config_62.ini
+    extra_options:
+    - [--exclude, "@tcid=RLT-TC-1117"]
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: Alarms_and_events_support_40
+    postfix: alarms_2
+    testsuite: ../../ST_Test_Cases/System/Alarm_Event_Log/Alarms_and_Events_Support/Alarms-Events-Syslog
+    config: ../../ST_Test_Cases/System/Alarm_Event_Log/Alarms_and_Events_Support/Alarms-Events-Syslog/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+    - [--exclude, "@tcid=RLT-TC-1117"]
+  -
+    name: LAG
+    postfix: LAG
+    testsuite: ../../ST_Test_Cases/Uplink/LAG
+    config: ../../ST_Test_Cases/Uplink/LAG/LAG_Active_Active_Same_Card/config/config_st.ini
+    options:
+       - [--cafe_enable_cafe_tracker, 'true']
+       - [--cafe_log_level, INFO]
+  -
+    <<: *base
+    name: diagnostics
+    postfix: diagnostics
+    testsuite: "../../ST_Test_Cases/System/Diagnostics/E7-2_and_card_diagnostics/ARC_Process_Restarts"
+    config: "../../ST_Test_Cases/System/Diagnostics/E7-2_and_card_diagnostics/ARC_Process_Restarts/config/config.ini"
+  -
+    name: ONT_operation_support_18
+    postfix: ONT_Provision-Pre_provision
+    testsuite: ["../../ST_Test_Cases/PON/ONT_Support/ONT-Pre-Provisioning", "../../ST_Test_Cases/PON/ONT_Support/ONT-Provisioning"]
+    config: "../../ST_Test_Cases/PON/ONT_Support/config/config_cdc.ini"
+    options:
+       - [--cafe_enable_cafe_tracker, 'true']
+       - [--cafe_log_level, INFO]
+       - [--exclude, "@regidOR@EXA-17157OR@notsupport"]
+  -
+    name: Fan_tray_assembly_hardware_support
+    postfix: Fan_tray_assembly_hardware_support
+    testsuite: ../../ST_Test_Cases/System/HW_Support/Fan_tray_assembly_hardware_support
+    config: ../../ST_Test_Cases/System/HW_Support/Fan_tray_assembly_hardware_support/config/config.ini
+    options:
+       - [--cafe_enable_cafe_tracker, 'true']
+       - [--cafe_log_level, INFO]
+       - [--randomize, suites]

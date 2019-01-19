@@ -1,0 +1,33 @@
+connection:
+  eutA:
+    ip: 10.245.74.73
+    user: sysadmin
+    password: sysadmin
+    type: AXOS
+    model: MILAN
+    protocol: ssh
+    user_interface: CLI
+    prompt: "#"
+    timeout: 30
+    shelf1:
+      id: 1
+      slot1:
+        id: 1
+        model: ngpon
+        uplinkport1: 1/1/x1
+        downlinkport1: 1/1/gp1
+        downlinkport2: 1/1/gp8
+
+  tg1:
+    ip: 10.245.252.60
+    type: stc
+    protocol: stc
+    ports:
+      service_p1:
+        port: 11/11
+        medium: fiber
+        speed: ether10000
+      subscriber_p1:
+        port: 11/6
+        medium: fiber
+        speed: ether10000

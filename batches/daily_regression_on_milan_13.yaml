@@ -1,0 +1,57 @@
+base: &base
+  # workdir: .
+  options:
+   - [--cafe_enable_cafe_tracker, 'true']
+   - [--cafe_log_level, INFO]
+   - [--topology.eut, 'ngpon2-4']
+   - [--exclude, "dual_card_not_support"]
+
+#   - [--pause_on_specified_exception, "TclSessionException"]
+
+batch:
+  -
+    <<: *base
+    name: AA_LAG
+    postfix: AA_LAG
+    testsuite: ../../ST_Test_Cases/Uplink/LAG/LAG_Active_Active_Same_Card
+    config: ../../ST_Test_Cases/Uplink/LAG/LAG_Active_Active_Same_Card/config/config_st.ini
+  -
+    <<: *base
+    name: AS_LAG
+    postfix: AS_LAG
+    testsuite: ../../ST_Test_Cases/Uplink/LAG/LAG_AS_same_card
+    config: ../../ST_Test_Cases/Uplink/LAG/LAG_AS_same_card/config/config.ini
+  -
+    <<: *base
+    name: G8032
+    postfix: G8032
+    testsuite: "../Uplink/G8032/G8032_CCM"
+    config: "../Uplink/G8032/config/config.ini"
+    extra_options:
+    - [--randomize, suites]
+    - [--exclude, "@jira=EXA-21454"]
+
+  -
+    <<: *base
+    name: 1_1_VLAN_LAG
+    postfix: 1_1_VLAN_LAG
+    testsuite: "../Data/VLAN/1_1_VLAN_Support/topo_1/"
+    config: "../Data/VLAN/1_1_VLAN_Support/topo_1/config/config_LAG.ini"
+    extra_options:
+    - [--include, "@tcid=AXOS_E72_PARENT-TC-1134"]
+  -
+    <<: *base
+    name: 1_1_VLAN_G8032
+    postfix: 1_1_VLAN_G8032
+    testsuite: "../Data/VLAN/1_1_VLAN_Support/topo_1/"
+    config: "../Data/VLAN/1_1_VLAN_Support/topo_1/config/config_G8032.ini"
+    extra_options:
+    - [--include, "@tcid=AXOS_E72_PARENT-TC-1177"]
+  -
+    <<: *base
+    name: 1_1_VLAN_ERPS
+    postfix: 1_1_VLAN_ERPS
+    testsuite: "../Data/VLAN/1_1_VLAN_Support/topo_1/"
+    config: "../Data/VLAN/1_1_VLAN_Support/topo_1/config/config_ERPS.ini"
+    extra_options:
+    - [--include, "@tcid=AXOS_E72_PARENT-TC-1178"]

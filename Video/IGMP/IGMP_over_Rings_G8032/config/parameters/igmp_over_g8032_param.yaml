@@ -1,0 +1,78 @@
+global:
+  # vlan for subscriber switch
+  p_match_vlan: 2101
+  
+  # vlan for uplink switch
+  p_data_vlan: 400
+  p_video_vlan_list: 
+    - 701
+    - 702
+    - 703
+    - 704
+  
+  # path to store tg file
+  p_tg_store_file_path: /tmp/tg_store
+  
+  # config param
+  p_ring_type: g.8032
+  p_max_mvr_vlan_num: 4
+  p_igmp_prf: auto_igmp_prf
+  p_mcast_prf: auto_mcast_prf
+  p_mvr_prf: auto_mvr_prf
+  p_mcast_max_stream: 16
+
+  # tg related param
+  p_traffic_run_time: 30
+  p_traffic_stop_time: 10
+  p_traffic_loss_rate: 0.005
+  p_mc_traffic_rate_mbps: 10
+  p_us_data_traffic_rate_mbps: 10
+  p_ds_data_traffic_rate_mbps: 10
+  p_ring_switch_time: 10min
+  p_lease_negotiated_time: 60
+  
+  p_igmp_group_session_num: 2  
+  p_mvr_start_ip_list:
+    - 225.1.1.1
+    - 225.2.1.1
+    - 225.3.1.1
+    - 225.4.1.1
+  p_mvr_end_ip_list:
+    - 225.1.1.4
+    - 225.2.1.4
+    - 225.3.1.4
+    - 225.4.1.4
+  p_mvr_network_list:
+    - 225.1.1
+    - 225.2.1
+    - 225.3.1
+    - 225.4.1
+  
+  p_proxy:
+    intf_type: restricted-ip-host    # type for proxy ip interface
+    intf_name: 7                     # name for proxy ip interface
+    ip: 
+      - 77.77.77.71
+      - 77.77.77.72
+      - 77.77.77.73
+    mask: 255.255.255.0
+    gw: 77.77.77.254
+
+  p_igmp_querier:
+    mac: 00:00:70:00:00:01
+    ip: 10.10.10.10
+    gateway: 10.10.10.1
+    
+  p_igmp_host:
+    mac: 00:00:99:00:00:01
+    ip: 10.99.10.10
+    gateway: 10.10.10.1
+    
+  p_dhcp_server:
+    mac: 00:01:00:67:00:01
+    ip: 10.1.67.10
+    pool_start: 10.1.67.100
+    
+  p_dhcp_client:
+    mac: 00:94:00:68:00:01
+  

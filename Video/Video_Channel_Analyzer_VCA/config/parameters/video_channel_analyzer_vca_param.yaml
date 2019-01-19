@@ -1,0 +1,39 @@
+global:
+  service_vlan: 300
+  service_vlan2: 800 
+  traffic_run_time: 10
+  stc_wait_time: 5
+  dur_time: 3               # vca duration time
+  restricted_ip_host: 2
+  ip_src_addr: 10.10.10.10
+  ip_src_gate: 10.10.10.1
+  proxy_mask: 255.255.255.0 
+  vca_ip: 225.1.1.2          # Multicast IP
+  vca_ip2: 225.1.1.3
+  vca_ip3: 239.195.75.17
+  igmp_param:
+   interface: vcahost
+   version: V3
+   mgmt_status: STATIC
+   oper_state: UP
+   querier_status: Querier
+  tg_ds_param1: 
+   mac_dst: 01:00:5E:01:01:02
+   mac_src: 00:00:00:67:00:01
+   ip_dst: 225.1.1.2           # same as vca_ip
+   ip_src: 10.1.67.100
+   rate_mbps: 10
+  tg_ds_param2: 
+   mac_dst: 01:00:5E:01:01:03
+   mac_src: 00:00:00:67:00:01
+   ip_dst: 225.1.1.3           # same as vca_ip2
+   ip_src: 10.1.67.100
+   rate_mbps: 10
+  tg_ds_param3: 
+   mac_dst: 01:00:5E:43:4B:11
+   mac_src: 00:00:00:67:00:01
+   ip_dst: 239.195.75.17       # same as vca_ip3
+   ip_src: 10.1.67.100
+   rate_mbps: 10
+
+   

@@ -1,0 +1,73 @@
+connection:
+
+  n1:
+    ip: 10.245.96.74
+    password: sysadmin
+    user: sysadmin
+    type: exa
+    timeout: 30
+    protocol: ssh
+    ports:
+      p1:
+        port: x4
+        type: eth
+      p2:
+        port: x5
+        type: eth
+      p3:
+        port: x2
+        type: eth
+
+  n1_sh:
+    ip: 10.245.96.74
+    password: root
+    user: root
+    type: exa
+    timeout: 30
+    protocol: ssh
+
+  n2:
+     ip: 10.245.96.76
+     password: sysadmin
+     user: sysadmin
+     type: exa
+     timeout: 30
+     protocol: ssh
+     ports:
+      p1:
+        port: x4
+        type: eth
+      p2:
+        port: x5
+        type: eth
+      p3:
+        port: x2
+        type: eth
+
+  n2_sh:
+     ip: 10.245.96.76
+     password: root
+     user: root
+     type: exa
+     timeout: 30
+     protocol: ssh
+
+  tg1:
+     ip: 10.245.252.60
+     type: stc
+     protocol: stc
+     ports:
+        p1:
+         port: 11/9
+         medium: fiber
+         speed: ether10000
+        p2:
+         port: 11/8
+         medium: fiber
+         speed: ether10000
+
+device_links:
+  link1: {n1: p1, n2: p1}
+  link2: {n1: p2, n2: p2}
+  link3: {n1: p3, tg1: p1}
+  link4: {n2: p3, tg1: p2}

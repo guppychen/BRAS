@@ -1,0 +1,201 @@
+base: &base
+  # workdir: .
+  options:
+   - [--cafe_enable_cafe_tracker, 'true']
+   - [--cafe_log_level, INFO]
+   - [--topology.eut, 'gpon-8r2']
+#   - [--pause_on_specified_exception, "<5' should be true"]
+   - [--exclude, "dual_card_not_support"]
+
+batch:
+  -
+    <<: *base
+    name: SNMPv3
+    postfix: SNMPv3
+    testsuite: ../System/SNMP/SNMPv3_Support
+    config: ../System/SNMP/SNMPv3_Support/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: various_features_from_ROLT_47
+    postfix: management_interfaces
+    testsuite: ../Management_Interfaces
+    config: ../Management_Interfaces/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: netconf_yang
+    postfix: netconf
+    testsuite: ../../ST_Test_Cases/System/Management/Netconf_Yang/
+    config: ../../ST_Test_Cases/System/Management/Netconf_Yang/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+    - [--exclude, "@jira=EXA-25933"]
+  -
+    <<: *base
+    name: AXOS-WI-1134-Show-running-config
+    postfix: AXOS-WI-1134-Show-running-config
+    testsuite: "../../ST_Test_Cases/AXOS-WI-1134-Show-running-config"
+    config: "../../ST_Test_Cases/AXOS-WI-1134-Show-running-config/config/config_WI1134_gpon8r2.ini"
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: Fan_tray_assembly_hardware_support
+    postfix: Fan_tray_assembly_hardware_support
+    testsuite: ../../ST_Test_Cases/System/HW_Support/Fan_Tray_Assembly_hardware_support
+    config: ../../ST_Test_Cases/System/HW_Support/Fan_Tray_Assembly_hardware_support/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: AXOS_WI_297_user_support
+    postfix: 297_user_support
+    testsuite: ../../ST_Test_Cases/Security_Management/AXOS-WI-297_User-support/
+    config: ../../ST_Test_Cases/Security_Management/AXOS-WI-297_User-support/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+# dual card not support
+#  -
+#    <<: *base
+#    name: feature_cli_ROLT_l3
+#    postfix: CLI_L3
+#    testsuite: ../../ST_Test_Cases/CLI_Provisioning/FEATURE_CLI_ROLT_L3
+#    config: ../../ST_Test_Cases/CLI_Provisioning/FEATURE_CLI_ROLT_L3/config/config_gpon8r2.ini
+#    extra_options:
+#    - [--randomize, suites]
+  -
+    <<: *base
+    name: L2_Service_Classifiers_BW_provision
+    postfix: L2_Service_Classifiers_BW_provision
+    testsuite: ../../ST_Test_Cases/Data/QOS/Provisioning_of_BW_Parameters
+    config: ../../ST_Test_Cases/Data/QOS/Provisioning_of_BW_Parameters/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: AXOS_WI_1120_icmp
+    postfix: ICMP
+    testsuite: ../AXOS-WI-1120_ICMP
+    config: ../AXOS-WI-1120_ICMP/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: AXOS-1088
+    postfix: AXOS-1088-Real_time_clock_support
+    testsuite: "../AXOS-WI-1088_Real_Time_Clock_Support/AXOS-WI-1088_Real_Time_Clock_Support/"
+    config: "../AXOS-WI-1088_Real_Time_Clock_Support/config/config_gpon8r2.ini"
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: Timing_ntp
+    postfix: Timing_ntp
+    testsuite: ../System/Timing/NTP
+    config: ../System/Timing/NTP/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+
+  -
+    <<: *base
+    name: Inband_Management_Support
+    postfix: Inband_Management_Support
+    testsuite: ../System/Management/Inband_Management_Support
+    config: ../System/Management/Inband_Management_Support/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: ssh
+    postfix: SSH
+    testsuite: ../../ST_Test_Cases/System/Management/SSH/
+    config: ../../ST_Test_Cases/System/Management/SSH/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+# dual card not support
+#  -
+#    <<: *base
+#    name: Alarms_and_events_support_89
+#    postfix: alarms_1
+#    testsuite: ../System/Alarm_Event_Log/Alarms_and_Events_Support/Alarms
+#    config: ../System/Alarm_Event_Log/Alarms_and_Events_Support/Alarms/config/config_gpon8r2.ini
+#    extra_options:
+#    - [--randomize, suites]
+#    - [--exclude, '@jira=AT-4212']
+  -
+    <<: *base
+    name: Environmental_Alarm_Support
+    postfix: Environmental_Alarm_Support
+    testsuite: ../System/Alarm_Event_Log/Environmental_Alarm_Support
+    config: ../System/Alarm_Event_Log/Environmental_Alarm_Support/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: ONT_Support_814G
+    postfix: ONT_Support_814G
+    testsuite: ../System/ONT_support/new_premises_hardware_support_814G
+    config: ../System/ONT_support/new_premises_hardware_support_814G/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: ONT_Support_819G
+    postfix: ONT_Support_819G
+    testsuite: ../System/ONT_support/new_premises_hardware_support_819G
+    config: ../System/ONT_support/new_premises_hardware_support_819G/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: ONT_Support_822G
+    postfix: ONT_Support_822G
+    testsuite: ../System/ONT_support/new_premises_hardware_support_822G
+    config: ../System/ONT_support/new_premises_hardware_support_822G/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: Syslog_Support
+    postfix: Syslog_Support
+    testsuite: ../System/Alarm_Event_Log/Syslog_Support
+    config: ../System/Alarm_Event_Log/Syslog_Support/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+# dual card not support
+#  -
+#    <<: *base
+#    name: Alarms_and_events_support_47
+#    postfix: alarms_events_syslog_1
+#    testsuite: ../../ST_Test_Cases/Alarms-Events-Syslog
+#    config: ../../ST_Test_Cases/Alarms-Events-Syslog/config/config_gpon8r2.ini
+#    extra_options:
+#    - [--randomize, suites]
+#  -
+#    <<: *base
+#    name: Alarms_and_events_support_40
+#    postfix: alarms_2
+#    testsuite: ../../ST_Test_Cases/System/Alarm_Event_Log/Alarms_and_Events_Support/Alarms-Events-Syslog
+#    config: ../../ST_Test_Cases/System/Alarm_Event_Log/Alarms_and_Events_Support/Alarms-Events-Syslog/config/config_gpon8r2.ini
+#    extra_options:
+#    - [--randomize, suites]
+#    - [--exclude,"@skip=step_skipped"]
+  -
+    <<: *base
+    name: Local_Craft
+    postfix: Local_Craft
+    testsuite: ../../ST_Test_Cases/System/Management/Local_Craft_Interface_Support
+    config: ../../ST_Test_Cases/System/Management/Local_Craft_Interface_Support/config/config_gpon8r2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: diagnostics
+    postfix: diagnostics
+    testsuite: "../System/Diagnostics/E7-2_and_card_diagnostics/ARC_Process_Restarts"
+    config: "../System/Diagnostics/E7-2_and_card_diagnostics/ARC_Process_Restarts/config/config_gpon8r2.ini"
+    extra_options:
+    - [--randomize, suites]    

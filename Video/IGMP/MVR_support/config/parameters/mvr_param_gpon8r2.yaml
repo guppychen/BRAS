@@ -1,0 +1,101 @@
+global:
+  ###########################parameter for igmp template###########################
+  # vlan for subscriber switch
+  p_match_vlan: 4003
+  p_match_vlan_sub2: 4002
+  p_match_vlan_sub3: 4001    # change to vlan for ont3
+  
+  # vlan for uplink switch
+  p_data_vlan: 400
+  # video vlan list number should be the same with p_max_mvr_vlan_num
+  p_video_vlan_list: 
+    - 701
+    - 702
+    - 703
+    - 704
+    - 705
+    - 706
+    - 707
+    - 708 
+  
+  # path to store tg file
+  p_tg_store_file_path: /tmp
+  
+  # config param
+  p_max_mvr_vlan_num: 4    # multiple mvr vlan config on one mvr-profile, not actually max mvr vlan limit
+  p_igmp_prf: auto_igmp_prf
+  p_mcast_prf: auto_mcast_prf_mvr
+  p_mvr_prf: auto_mvr_prf
+  p_dhcp_prf: auto_dhcp_prf
+  p_mcast_max_stream: 16
+  
+  # tg related param
+  p_traffic_run_time: 30
+  p_traffic_stop_time: 10
+  p_traffic_loss_rate: 0.005
+  p_mc_traffic_rate_mbps: 5
+  p_us_data_traffic_rate_mbps: 10
+  p_ds_data_traffic_rate_mbps: 10
+  p_lease_negotiated_time: 60
+  
+  p_igmp_group_session_num: 4    # igmp group session number config on tg
+  p_mc_grp_start_idx: 1    # need to create p_mvr_start_ip_list，p_mvr_end_ip_list，p_mvr_network_list in _init_.robot
+  p_mc_grp_end_idx: 16
+  
+  p_proxy:
+    intf_type: restricted-ip-host    # type for proxy ip interface
+    intf_name: 7                     # name for proxy ip interface
+    ip: 
+      - 77.77.77.77
+    mask: 255.255.255.0
+    gw: 77.77.77.254
+
+  p_igmp_querier:
+    mac: 00:00:70:00:00:01
+    ip: 10.10.10.10
+    gateway: 10.10.10.1
+    
+  p_igmp_host:
+    mac: 00:00:99:00:00:01
+    ip: 10.99.10.10
+    gateway: 10.10.10.1
+    
+  p_dhcp_server:
+    mac: 00:01:00:67:00:01
+    ip: 10.1.67.10
+    pool_start: 10.1.67.100
+    
+  p_dhcp_client:
+    mac: 00:94:00:68:00:01
+  
+  ###########################parameter except for igmp template list below###########################
+  p_igmp_version: v2
+#  p_no_host_igmp_version: v3
+  p_default_startup_query_invl: 313    # Startup Query Interval (in 10ths of seconds) (range: 10-2500)
+  p_default_startup_query_cnt: 2    # Startup Query Count - number of queries to send at startup (range: 1-10)
+  p_default_gen_query_invl: 1250    # Query Interval (in 10ths of seconds) (range: 300-10000)
+  p_startup_query_invl: 10    # (in 10ths of seconds) (range: 10-2500)
+  p_startup_query_cnt: 1
+  p_gen_query_invl1: 300    # (in 10ths of seconds) (range: 300-10000)
+  p_gen_query_invl2: 400    # (in 10ths of seconds) (range: 300-10000)
+  p_default_igmp_pbit: 5
+  p_new_igmp_pbit: 4
+  p_new_svlan_pbit: 3
+  
+  p_igmp_host2:
+    mac: 00:00:99:00:00:02
+    ip: 10.99.10.20
+    gateway: 10.10.10.1
+
+  p_new_mc_ip: 226.0.0.1    # this mcast ip should be out of mvr mcast range
+  p_igmp_recover_time: 2min
+  p_max_mvr_prf_num: 8
+  p_max_mvr_vlan_prov_limit: 8
+  p_max_mvr_range_per_prf: 8
+  # because the device has default profile "no_mvr", so the max should be 31
+  p_max_mcast_prf_num: 31
+  # because the device has default profile "no_mvr", so the max should be 31
+  ####################vlan param####################
+  p_prov_vlan: 777    # this vlan is only used for provision case, no need to add to any switch, can't be same with service vlan
+  p_reserved_vlan: 1002    # device reserved vlan
+  p_prov_vlan_prefix: 37    # this is vlan prefix for batch create vlan as ${p_prov_vlan_prefix}xx, should be in (1-40), and not same with service vlan

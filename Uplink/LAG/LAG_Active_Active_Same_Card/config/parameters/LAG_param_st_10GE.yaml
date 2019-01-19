@@ -1,0 +1,63 @@
+global:
+    #ip_address_1: 100.1.1.1    #interface IP address for device1 port1
+    #ip_address_2: 100.1.1.2    #interface IP address for device2 port1
+    lag_group: la1
+    lag_group2: la2
+    lag_group3: la3
+    lag_group4: la4
+    slot: 2
+    lacp_mode: none
+    lacp_mode1: active
+    lacp_mode2: passive
+    packet_type1: unicast
+    packet_type2: multicast
+    packet_type3: broadcast
+    x1: 25
+    oper_state1: up
+    oper_state2: down
+    lacp_status1: active
+    lacp_status2: standby
+    lacp_priority_number: 1
+    lacp_port_timeout: 5
+    min_port_1: 1
+    min_port_2: 2
+    max_port_1: 1
+    max_port_2: 2
+    str1: 'Maximum port count must be greater than or equal to minimum port count'
+    stc_device1_mac: 00:00:00:00:00:aa
+    stc_device2_mac: 00:00:00:00:00:bb
+    # duplicated, comment by llin 2017.7.18
+    #frame_size: 1500
+    ether_type: 0x8100
+    tsp_profile: LAG_TSP
+    # duplicated, comment by llin 2017.7.18
+    #vlan_id: 500
+    shelf: 1
+    src_mac1:  00:00:01:00:00:01
+    dest_mac1: 00:00:02:00:00:01
+    src_count_mac: 100
+    vlan_id: 500
+    frame_size: 1024
+    lacp_stat1:  active
+    lacp_stat2:  standby
+    Alarm1:          lag-group-down-alarm
+    Alarm2:          loss-of-signal-alarm
+    Alarm_stat1:     set
+    Alarm_stat2:     clear
+    max_port_id:     1
+    start:           1
+    stop:            3
+    system_prority:  1234
+    port_priority:   1
+    invalid_lag_group:  laaaaaaaaaa
+    max_Lag_value:   Abcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefghiabcdefgabcdefghiabcdefghiabcde
+    admin_state1:   enable
+    admin_state2:   disable
+    max_speed1:     20Gbs
+    oper_speed1:    20Gbs
+    oper_speed:     0Bps
+    value:   1
+    lacp_priority:         1000
+    lacp_status_on_port1:  lacp-fault-on-port
+    rate_percent_p1:   50
+    rate_percent_p2:   5

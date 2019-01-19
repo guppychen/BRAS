@@ -1,0 +1,119 @@
+global:
+  p_match_vlan_ont: untagged
+  p_match_vlan_switch1: 1010         # subscriber side switch
+  p_match_vlan_switch2: 1008         # subscriber side switch
+  p_match_vlan_switch3: 1009         # subscriber side switch
+  src_mac_prefix: 00:02:5d
+  p_data_vlan: 900
+  p_video_vlan_list:
+    - 901
+    - 902
+  p_mvr_vlan_list:
+    - 1101
+    - 1102
+    - 1103
+    - 1104
+    - 1105
+    - 1106
+    - 1107
+    - 1108
+
+  p_tg_store_file_path: /tmp/tg_store
+
+  p_max_mvr_vlan_num: 8
+  p_igmp_prf: auto_igmp_v2
+  p_igmp_version: v2
+
+  p_igmp_profile1: test1
+  p_igmp_profile2: test2
+  p_igmp_profile3: test3
+  p_igmp_profile4: test4
+  p_igmp_profile_test: test
+  p_igmp_vlan: 100
+
+  p_mcast_prf1: auto_mcast_prf1
+  p_mvr_prf1: auto_mvr_prf1
+  p_mcast_prf2: auto_mcast_prf2
+  p_mvr_prf2: auto_mvr_prf2
+  p_mcast_prf3: auto_mcast_prf3
+  p_mvr_prf3: auto_mvr_prf3
+
+  p_mcast_max_stream: 16
+  p_igmp_group_session_num: 1
+  p_mvr_start_ip_list:
+    - 225.1.1.1
+    - 225.2.1.1
+    - 225.3.1.1
+    - 225.4.1.1
+    - 225.5.1.1
+    - 225.6.1.1
+    - 225.7.1.1
+    - 225.8.1.1
+
+  p_mvr_end_ip_list:
+    - 225.1.1.10
+    - 225.2.1.10
+    - 225.3.1.10
+    - 225.4.1.10
+    - 225.5.1.10
+    - 225.6.1.10
+    - 225.7.1.10
+    - 225.8.1.10
+
+  p_mvr_network_list:
+    - 225.1.1
+    - 225.2.1
+    - 225.3.1
+    - 225.4.1
+
+  p_ssm_range:
+    - 232.0.0.0
+    - 232.255.255.255
+
+  p_proxy_1:
+    intf_type: restricted-ip-host    # type for proxy ip interface
+    intf_name: 1                     # name for proxy ip interface
+    ip:
+     - 10.10.10.1
+    mask: 255.255.255.0
+    gw: 0.0.0.0
+
+  p_proxy_2:
+    intf_type: restricted-ip-host    # type for proxy ip interface
+    intf_name: 2                     # name for proxy ip interface
+    ip:
+     - 10.10.10.2
+    mask: 255.255.255.0
+    gw: 0.0.0.0
+
+  p_igmp_querier1:
+    mac: 00:10:90:00:00:01
+    ip: 192.91.1.2
+    gateway: 192.91.1.1
+
+  p_igmp_querier2:
+    mac: 00:10:90:00:00:02
+    ip: 192.92.1.2
+    gateway: 192.92.1.1
+
+  p_igmp_host1:
+    mac: 00:10:91:00:00:01
+    ip: 192.85.1.2
+    gateway: 192.85.1.1
+
+  p_igmp_host2:
+    mac: 00:10:91:00:00:02
+    ip: 192.85.1.3
+    gateway: 192.85.1.1
+
+  p_igmp_host3:
+    mac: 00:10:91:00:00:03
+    ip: 192.85.1.4
+    gateway: 192.85.1.1
+
+  wait_to_save_file: 10s
+  wait_uplink_port_up: 5s
+  wait_igmp_client_join_leave: 5s
+  run_traffic_time: 30s
+  general_query_timeout: 125s
+    

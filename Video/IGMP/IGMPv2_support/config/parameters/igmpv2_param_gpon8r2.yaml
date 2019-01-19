@@ -1,0 +1,111 @@
+global:
+  olt_mac_address: 00:02:5d:15:8f:e3
+#  olt_mac_address: 00:02:5d:fd:9d:9f
+  p_match_vlan: 4004   #subscriber vlan1
+  p_data_vlan: 666
+
+  p_match_vlan1: 4005   #vlan for mvr service, should not same as p_match_vlan
+  p_data_vlan1: 667   #vlan for mvr service, should not same as p_data_vlan
+  p_mvr_vlan:   557   #mvr vlan
+
+  p_igmp_prf: auto_igmpv2_spt
+
+  p_mcast_prf: auto_multicast_prf_spt
+  p_mcast_max_stream: 16
+
+  p_mcast_prf_mvr: auto_multicast_prf_spt_mvr
+  p_mvr_prf: auto_mvr_profile
+
+  p_igmp_group_session_num: 1
+
+  p_general_query_interval: 300
+
+  p_igmp_version:
+    - auto
+    - v2
+    - v3
+
+  p_groups_list:
+    - 225.1.1.1
+    - 225.1.1.2
+    - 225.1.1.3
+    - 225.1.1.4
+
+  p_groups_mac_list:
+    - 01:00:5e:01:01:01
+    - 01:00:5e:01:01:02
+    - 01:00:5e:01:01:03
+    - 01:00:5e:01:01:04
+
+  p_groups_list1:
+    - 225.2.1.1
+    - 225.3.1.2
+    - 225.4.1.3
+    - 225.5.1.4
+
+  p_groups_mac_list1:
+    - 01:00:5e:02:01:01
+    - 01:00:5e:03:01:02
+    - 01:00:5e:04:01:03
+    - 01:00:5e:05:01:04
+
+  p_mvr_start_ip_list:
+    - 225.7.1.1
+    - 225.7.1.2
+
+  p_mvr_mac_list:
+    - 01:00:5e:07:01:01
+    - 01:00:5e:07:01:02
+
+  p_tg_store_file_path: /tmp/tg_store
+  p_tg_capture_file: /tmp/
+  
+  p_proxy:
+    intf_type: restricted-ip-host    # type for proxy ip interface
+    intf_name: 4                     # name for proxy ip interface
+    ip:
+      - 66.66.66.66
+    mask: 255.255.255.0
+    gw: 66.66.66.254
+
+  p_igmp_querier:
+    mac: 00:00:32:2e:34:01
+    ip: 12.1.1.253
+    gateway: 12.1.1.1
+
+  p_igmp_host:
+    mac: 00:00:23:53:d1:02
+    ip: 12.1.1.1
+    gateway: 12.1.1.253
+
+  p_igmp_host1:
+    mac: 00:00:23:52:d1:04
+    ip: 12.1.1.2
+    gateway: 12.1.1.253
+
+  p_igmp_querier1:
+    mac: 00:00:32:24:34:03
+    ip: 13.1.1.253
+    gateway: 13.1.1.1
+
+  p_igmp_host2:
+    mac: 00:00:25:53:d1:31
+    ip: 13.1.1.1
+    gateway: 13.1.1.253
+
+  p_host_oui: 00:00:23
+
+  p_dhcp_server:     #same as p_igmp_querier
+    mac: 00:00:32:2e:34:01
+    ip: 12.1.1.253
+    pool_start: 12.1.1.1
+    
+  p_dhcp_client:  #same as p_igmp_host
+    mac: 00:00:23:53:d1:02
+  
+  p_lease_negotiated_time: 60
+
+  rate_mbps1: 1
+  loss_rate: 0.01
+  traffic_run_time: 30s
+  time_before_verify_traffic: 5s

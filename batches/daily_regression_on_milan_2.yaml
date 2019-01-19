@@ -1,0 +1,208 @@
+base: &base
+  # workdir: .
+  options:
+   - [--cafe_enable_cafe_tracker, 'true']
+   - [--cafe_log_level, INFO]
+   - [--topology.eut, 'ngpon2-4']
+   - [--exclude, "dual_card_not_support"]
+
+#   - [--pause_on_specified_exception, "TclSessionException"]
+
+batch:
+  -
+    <<: *base
+    name: IGMPV3_ASM
+    postfix: IGMPV3_ASM
+    testsuite: ../../ST_Test_Cases/Video/IGMP/IGMPv3_ASM_Support
+    config: ../../ST_Test_Cases/Video/IGMP/IGMPv3_ASM_Support/config/config.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+  -
+    <<: *base
+    name: IGMPv2_support
+    postfix: IGMPv2_support
+    testsuite: ../Video/IGMP/IGMPv2_support/
+    config: ../Video/IGMP/IGMPv2_support/config/config_igmpv2.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+#    - [--randomize, suites]
+  -
+    <<: *base
+    name: ONT_operation_support_9
+    postfix: ONT_Provision-Profile_support
+    testsuite: "../../ST_Test_Cases/PON/ONT_Support/ONT_Profile_Support"
+    config: "../../ST_Test_Cases/PON/ONT_Support/config/config_cdc_ont_profile.ini"
+    extra_options:
+       - [--cafe_enable_cafe_tracker, 'true']
+       - [--cafe_log_level, INFO]
+       - [--exclude, "@regidOR@EXA-17157OR@notsupport"]
+  -
+    <<: *base
+    name: ONT_operation_support_18
+    postfix: ONT_Provision-Pre_provision
+    testsuite: ["../../ST_Test_Cases/PON/ONT_Support/ONT-Pre-Provisioning", "../../ST_Test_Cases/PON/ONT_Support/ONT-Provisioning"]
+    config: "../../ST_Test_Cases/PON/ONT_Support/config/config_cdc.ini"
+    extra_options:
+    - [--exclude, "@regidOR@EXA-17157OR@notsupport"]
+  -
+    <<: *base
+    name: Fan_tray_assembly_hardware_support
+    postfix: Fan_tray_assembly_hardware_support
+    testsuite: ../../ST_Test_Cases/System/HW_Support/Fan_Tray_Assembly_hardware_support
+    config: ../../ST_Test_Cases/System/HW_Support/Fan_Tray_Assembly_hardware_support/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: split_horizon_topo1
+    postfix: split_horizon_topo1
+    testsuite: ../../ST_Test_Cases/Data/Split_Horizon/Split_Horizon/Topo1
+    config: ../../ST_Test_Cases/Data/Split_Horizon/Split_Horizon/Topo1/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: split_horizon_topo3
+    postfix: split_horizon_topo3
+    testsuite: ../../ST_Test_Cases/Data/Split_Horizon/Split_Horizon/Topo3
+    config: ../../ST_Test_Cases/Data/Split_Horizon/Split_Horizon/Topo3/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: split_horizon_topo2
+    postfix: split_horizon_topo2
+    testsuite: ../../ST_Test_Cases/Data/Split_Horizon/Split_Horizon/Topo2
+    config: ../../ST_Test_Cases/Data/Split_Horizon/Split_Horizon/Topo2/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: MAC_Forced_Forwarding
+    postfix: MAC_Forced_Forwarding
+    testsuite: ../../ST_Test_Cases/Data/MACFF/MAC_Forced_Forwarding/test_cases
+    config: ../../ST_Test_Cases/Data/MACFF/MAC_Forced_Forwarding/config/config.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: N_1_VLAN_Support_topo2
+    postfix: N_1_VLAN_Support_topo2
+    testsuite: ../Data/VLAN/N_1_VLAN_Support/topo_2
+    config: ../Data/VLAN/N_1_VLAN_Support/topo_2/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: N_1_VLAN_Support_topo4
+    postfix: N_1_VLAN_Support_topo4
+    testsuite: ../Data/VLAN/N_1_VLAN_Support/topo_4
+    config: ../Data/VLAN/N_1_VLAN_Support/topo_4/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: N_1_VLAN_Support_topo5
+    postfix: N_1_VLAN_Support_topo5
+    testsuite: ../Data/VLAN/N_1_VLAN_Support/topo_5
+    config: ../Data/VLAN/N_1_VLAN_Support/topo_5/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: IPSV
+    postfix: IPSV
+    testsuite: ../Data/IPSV
+    config: ../Data/IPSV/config/config.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: DOS
+    postfix: DOS
+    testsuite: ../System/DOS/Denial_of_Service/
+    config: ../System/DOS/Denial_of_Service/topo_1/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: DHCP_Lease_Limits
+    postfix: DHCP_Lease_Limits
+    testsuite: ../Data/DHCPV4/DHCP_Lease_Limits
+    config: ../Data/DHCPV4/DHCP_Lease_Limits/config/config.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+#    - [--randomize, suites]
+#  -
+#    <<: *base
+#    name: AXOS-WI-1112_PM
+#    postfix: AXOS-WI-1112_PM
+#    testsuite: ../../ST_Test_Cases/PM
+#    config: ../../ST_Test_Cases/PM/PM_Sessions/config/config.ini
+#    extra_options:
+#    - [--exclude, '@jira=EXA-17078OR@jira=EXA-17082OR@jira=EXA-17081']
+  -
+    <<: *base
+    name: MAC_Forced_Forwarding_p2
+    postfix: MAC_Forced_Forwarding_p2
+    testsuite: ../../ST_Test_Cases/Data/MACFF/MAC_Forced_Forwarding/p2
+    config: ../../ST_Test_Cases/Data/MACFF/MAC_Forced_Forwarding/config/config.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+    - [--randomize, suites]      # if no this , the ARP learning will fail. comments added by llin 2018
+  -
+    <<: *base
+    name: MVR_support
+    postfix: MVR_support
+    testsuite: ../Video/IGMP/MVR_support
+    config: ../Video/IGMP/MVR_support/config/config.ini
+    extra_options:
+    - [--randomize, 'suites:168778265345507945']
+    - [--cafe_reset_sessions, 'true']
+  -
+    <<: *base
+    name: ONT_Etherent_port_pm
+    postfix: ONT_Etherent_port_pm
+    testsuite: ../System/PM/ONT_Ethernet_Port_PM/
+    config: ../System/PM/ONT_Ethernet_Port_PM/ONT_PM_rmon_session/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+#    - [--cafe_reset_sessions, 'true']
+  -
+    <<: *base
+    name: TLAN_diff_pon_5_cases
+    postfix: TLAN_diff_pon_5_cases
+    testsuite: ../Data/VLAN/TLAN/test_cases/differentpon
+    config: ../Data/VLAN/TLAN/config/config_diff_pon.ini
+    extra_options:
+    - [--randomize, suites]
+#    - [--cafe_reset_sessions, 'true']
+  -
+    <<: *base
+    name: TLAN_same_pon_5_cases
+    postfix: TLAN_same_pon_5_cases
+    testsuite: ../Data/VLAN/TLAN/test_cases/samepon
+    config: ../Data/VLAN/TLAN/config/config_same_pon.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: 1_1_VLAN_Support_topo2
+    postfix: 1_1_VLAN_Support_topo2
+    testsuite: ../Data/VLAN/1_1_VLAN_Support/topo_2/
+    config: ../Data/VLAN/1_1_VLAN_Support/topo_2/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+    - [--exclude, "@globalid=2318829"]      # modify for AT-4245 by llin
+
+  -
+    <<: *base
+    name: PPPOE_topo1
+    postfix: PPPOE_topo1
+    testsuite: ../Data/PPPoE/PPPoE/Topo1
+    config: ../Data/PPPoE/PPPoE/Topo1/config/config.ini
+    extra_options:
+    - [--cafe_reset_sessions, true]
+#    - [--randomize, suites]

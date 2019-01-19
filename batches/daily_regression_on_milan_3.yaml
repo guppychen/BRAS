@@ -1,0 +1,149 @@
+base: &base
+  # workdir: .
+  options:
+   - [--cafe_enable_cafe_tracker, 'true']
+   - [--cafe_log_level, INFO]
+   - [--topology.eut, 'ngpon2-4']
+   - [--exclude, "dual_card_not_support"]
+
+#   - [--pause_on_specified_exception, "TclSessionException"]
+
+batch:
+# traffic script start here.
+#  -
+#    <<: *base
+#    name: Alarms_and_events_support_19
+#    postfix: alarms_syslog
+#    testsuite: "../../ST_Test_Cases/System/Alarm_Event_Log/Alarms_and_Events_Support/Management_Interfaces/"
+#    config: "../../ST_Test_Cases/System/Alarm_Event_Log/Alarms_and_Events_Support/Management_Interfaces/config/config_st.ini"
+#    extra_options:
+#    - [--randomize, suites]
+  -
+    <<: *base
+    name: SNMP
+    postfix: SNMP
+    testsuite: "../../ST_Test_Cases/System/SNMP/SNMP_Support"
+    config: "../../ST_Test_Cases/System/SNMP/SNMP_Support/config/config.ini"
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: Discovery_and_Inventory_of_XFP_and_PON_OIMs
+    postfix: Discovery_and_Inventory_of_XFP_and_PON_OIMs
+    testsuite: ../System/HW_Support/Discovery_and_Inventory_of_XFP_and_PON_OIMs
+    config: ../System/HW_Support/Discovery_and_Inventory_of_XFP_and_PON_OIMs/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: Rogue_ONT_Detection
+    postfix: Rogue_ONT_Detection
+    testsuite: "../PON/Rogue_ONT_Detection/testcase"
+    config: "../PON/Rogue_ONT_Detection/config/config_ngpon2_4.ini"
+    extra_options:
+       - [--cafe_enable_cafe_tracker, 'true']
+       - [--cafe_log_level, INFO]
+       - [--exclude, "@regidOR@EXA-17157OR@notsupport"]
+  -
+    <<: *base
+    name: DHCP_Lease_Persistence
+    postfix: DHCP_Lease_Persistence
+    testsuite: ../Data/DHCPV4/DHCP_Lease_Persistence
+    config: ../Data/DHCPV4/DHCP_Lease_Persistence/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: PON_PM
+    postfix: PON_PM
+    testsuite: ../System/PM/PON_PM
+    config: ../System/PM/PON_PM/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: Layer-2_Service_Classifiers
+    postfix: Layer-2_Service_Classifiers
+    testsuite: ../Data/QOS/Layer-2_Service_Classifiers
+    config: ../Data/QOS/Layer-2_Service_Classifiers/config/config.ini
+  -
+    <<: *base
+    name: Encryption_for_NG-PON2_OIMs_XGS-PON_OIMs
+    postfix: Encryption_for_NG-PON2_OIMs_XGS-PON_OIMs 
+    testsuite: ../System/HW_Support/Encryption_for_NG-PON2_OIMs_XGS-PON_OIMs
+    config: ../System/HW_Support/Encryption_for_NG-PON2_OIMs_XGS-PON_OIMs/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: IGMP_PROXY_Provision
+    postfix: IGMP_PROXY_Provision
+    testsuite: ../Video/IGMP/IGMP_Proxy/Provision
+    config: ../Video/IGMP/IGMP_Proxy/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: ONT_Support_GH3200X
+    postfix: ONT_Support_GH3200X
+    testsuite: ../System/ONT_support/new_premises_hardware_support_GH3200X
+    config: ../System/ONT_support/new_premises_hardware_support_GH3200X/config/config_ngpon2.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: IGMP_PROXY_Function
+    postfix: IGMP_PROXY_Function
+    testsuite: ../Video/IGMP/IGMP_Proxy/Function
+    config: ../Video/IGMP/IGMP_Proxy/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: AXOS-WI-1533_VLAN_Tag_Manipulation
+    postfix: AXOS-WI-1533_VLAN_Tag_Manipulation
+    testsuite: ../../ST_Test_Cases/Data/VLAN/AXOS-WI-1533_VLAN_Tag_Manipulation/
+    config: ../../ST_Test_Cases/Data/VLAN/AXOS-WI-1533_VLAN_Tag_Manipulation/config/config.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+    - [--randomize, suites]
+#    - [-i,  '@run=3.1.2']
+  -
+    <<: *base
+    name: DHCP_Snoop
+    postfix: DHCP_Snoop
+    testsuite: ../Data/DHCPV4/DHCP_Snoop_IPv4
+    config: ../Data/DHCPV4/DHCP_Snoop_IPv4/config/config.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+    - [--randomize, suites]
+#    - [-e, "@TCID=AXOS_E72_PARENT-TC-683"]
+  -
+    <<: *base
+    name: DHCP_Option_82
+    postfix: DHCP_Option_82
+    testsuite: ../Data/DHCPV4/DHCP_Option_82
+    config: ../Data/DHCPV4/DHCP_Option_82/config/config.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+    - [--randomize, suites]
+
+#  -
+#    <<: *base
+#    name: PPPOE_topo1
+#    postfix: PPPOE_topo1
+#    testsuite: ../Data/PPPoE/PPPoE/Topo1
+#    config: ../Data/PPPoE/PPPoE/Topo1/config/config.ini
+#    extra_options:
+#    - [--cafe_reset_sessions, true]
+#    - [--randomize, suites]
+
+  ##################################plese put this as the last suite##################################
+  -
+    <<: *base           
+    name: BAR
+    postfix: BAR
+    testsuite: ../System/BAR/Database_Backup_Restore
+    config: ../System/BAR/Database_Backup_Restore/config/config.ini
+
+

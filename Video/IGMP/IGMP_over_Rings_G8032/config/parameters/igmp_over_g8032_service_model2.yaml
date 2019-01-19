@@ -1,0 +1,73 @@
+global:
+  service_model:
+    # g8032 ring master node with subscriber
+    service_point_list1:
+      - service_point3
+      - service_point4
+    # uplink eth port
+    service_point_list2:
+      - service_point5
+    service_point3:
+      device: eutC
+      type: g8032
+      name: 2
+      member:
+        interface1: 1/1/x1
+        interface2: 1/1/x4
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        control_vlan: 44
+        interface1_rpl_mode: owner
+        interface2_rpl_mode: none
+    service_point4:
+      device: eutB
+      type: g8032
+      name: 2
+      member:
+        interface1: 1/1/x2
+        interface2: 1/1/x4
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        control_vlan: 44
+        interface1_rpl_mode: neighbor
+        interface2_rpl_mode: none
+    service_point5:
+      device: eutB
+      type: eth                  # service_point type {eth|lag|g8032|erps}
+      member:
+        interface1: 1/1/x1
+      attribute:
+        interface_role: inni
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: add801/g1
+      member:
+        interface1: add801/g1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: add801
+        ont_profile_id: GPR3000X     # use ont-profile on cli
+        serial_number: 4783A0
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/xp4
+
+
+
+#    subscriber_point1:
+#      device: eutA
+#      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+#      name: auto811/x1
+#      member:
+#        interface1: auto811/x1
+#      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+#        interface_role: uni
+#        ont_id: auto811
+#        ont_profile_id: 811NG     # use ont-profile on cli
+#        serial_number: 384AE2
+#        vendor_id: CXNK
+#        pon_port:
+#          - 1/1/xp1

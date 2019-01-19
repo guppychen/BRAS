@@ -1,0 +1,122 @@
+connection:
+
+  n1:
+    ip: 10.243.8.207
+    password: sysadmin
+    user: sysadmin
+    type: exa
+    timeout: 30
+    protocol: ssh
+    ports:
+      p1:
+        port: x2
+        type: eth
+      p2:
+        port: x3
+        type: eth
+      p3:
+        port: x4
+        type: eth
+  
+  n1_sh:
+    ip: 10.243.8.207
+    password: root
+    user: root
+    type: exa
+    timeout: 30
+    protocol: ssh
+  
+  n2:
+     ip: 10.243.92.10
+     password: sysadmin
+     user: sysadmin
+     type: exa
+     timeout: 30
+     protocol: ssh
+     ports:
+      p1:
+        port: x1
+        type: eth
+      p2:
+        port: x2
+        type: eth
+      p3:
+        port: g20
+        type: eth
+  
+  n2_sh:
+     ip: 10.243.92.10
+     password: root
+     user: root
+     type: exa
+     timeout: 30
+     protocol: ssh
+
+  n3:
+     ip: 10.243.8.218
+     password: sysadmin
+     user: sysadmin
+     type: exa
+     protocol: ssh
+     timeout: 30
+     ports:
+      p1:
+        port: x2
+        type: eth
+      p2:
+        port: x3
+        type: eth
+      p3:
+        port: x1
+        type: eth
+  
+  s1:
+     ip: 10.243.44.3
+     type: cisco
+     protocol: ssh
+     user: root
+     password: root
+     timeout: 30
+     ports:
+        p1:
+          port: TenGigE0/1/0/3
+          type: TenGigE
+        p2:
+          port: TenGigE0/1/1/0
+          type: TenGigE
+        p3:
+         port: GigabitEthernet0/7/0/1
+         type: GigabitEthernet
+
+  tg1:
+     ip: 10.243.90.10
+     type: stc
+     protocol: stc
+     ports:
+        p1:
+         port: 3/7
+         medium: fiber
+         speed: ether1000
+        p2:
+         port: 10/12
+         medium: fiber
+         speed: ether1000
+        p3:
+         port: 11/3
+         medium: fiber
+         speed: ether1000
+        p4:
+         port: 12/4
+         medium: fiber
+         speed: ether1000
+
+device_links:
+  link1: {n1: p1, n2: p1}
+  link2: {n1: p2, n2: p2}
+  link3: {n1: p3, tg1: p1}
+  link4: {n2: p3, tg1: p2}
+  link5: {n3: p1, s1: p1}
+  link6: {n3: p2, s2: p2}
+  link7: {n3: p3, tg1: p3}
+  link8: {s1: p3, tg1: p4}
+

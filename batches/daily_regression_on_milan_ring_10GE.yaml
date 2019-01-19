@@ -1,0 +1,121 @@
+base: &base
+  # workdir: .
+  options:
+   - [--cafe_enable_cafe_tracker, 'true']
+   - [--cafe_log_level, INFO]
+   - [--topology.eut, 'ngpon2-4']
+   - [--exclude, "dual_card_not_support"]
+#   - [--pause_on_specified_exception, "TclSessionException"]
+
+batch:
+  -
+    <<: *base
+    name: ERPS_topo1
+    postfix: ERPS_topo1
+    testsuite: ["../../ST_Test_Cases/Uplink/ERPS/ERPS/topo1_case_p1","../../ST_Test_Cases/Uplink/ERPS/ERPS/topo1_case_p2"]
+    config: "../../ST_Test_Cases/Uplink/ERPS/ERPS/config/config.ini"
+  -
+    <<: *base
+    name: ERPS_topo2
+    postfix: ERPS_topo2
+    testsuite: ["../../ST_Test_Cases/Uplink/ERPS/ERPS/topo2_case_p1","../../ST_Test_Cases/Uplink/ERPS/ERPS/topo2_case_p2"]
+    config: "../../ST_Test_Cases/Uplink/ERPS/ERPS/config/config2.ini"
+  -
+    <<: *base
+    name: RADIUS_client_authentication_server_support
+    postfix: RADIUS_client_authentication_server_support
+    testsuite: ["../../ST_Test_Cases/System/AAA/RADIUS_client_authentication_server_support/testcase"]
+    config: "../../ST_Test_Cases/System/AAA/RADIUS_client_authentication_server_support/config/config.ini"
+  -
+    <<: *base
+    name: Syslog_Support_10GE12
+    postfix: Syslog_Support_10GE12
+    testsuite: ["../../ST_Test_Cases/System/Alarm_Event_Log/Syslog_Support/testcase"]
+    config: "../../ST_Test_Cases/System/Alarm_Event_Log/Syslog_Support/config/config_10GE-12.ini"
+  -
+    <<: *base
+    name: LLDP_10GE12
+    postfix: LLDP_10GE12
+    testsuite: ["../../ST_Test_Cases/System/LLDP/Single_Uplink/testcase"]
+    config: "../../ST_Test_Cases/System/LLDP/Single_Uplink/config/config_10GE.ini"
+  -
+    <<: *base   #AT-5563
+    name: MTU
+    postfix: MTU
+    testsuite: ["../../ST_Test_Cases/System/HW_Support/MTU/testcase"]
+    config: "../../ST_Test_Cases/System/HW_Support/MTU/config/config_10GE.ini"
+  -
+    <<: *base   #AT-5583
+    name: Local_Craft_Interface_Support_10GE
+    postfix: Local_Craft_Interface_Support_10GE
+    testsuite: ["../../ST_Test_Cases/System/Management/Local_Craft_Interface_Support/test_cases_10ge"]
+    config: "../../ST_Test_Cases/System/Management/Local_Craft_Interface_Support/config/config_10ge12.ini"
+  -
+    <<: *base   #AT-5553
+    name: Policy_Map_support_10GE
+    postfix: Policy_Map_support_10GE
+    testsuite: ["../../ST_Test_Cases/Data/Policy_Map/testcase"]
+    config: "../../ST_Test_Cases/Data/Policy_Map/config/config_10ge.ini"
+  -
+    <<: *base   #AT-5574 top1
+    name: VLAN_mapping_change_C-Tag_to_an_S-Tag
+    postfix: VLAN_mapping_change_C-Tag_to_an_S-Tag
+    testsuite: ["../../ST_Test_Cases/Data/VLAN/10GE-12_VLAN_mapping_change_C-Tag_to_an_S-Tag/topo1/testcase"]
+    config: "../../ST_Test_Cases/Data/VLAN/10GE-12_VLAN_mapping_change_C-Tag_to_an_S-Tag/topo1/config/config.ini"
+  -
+    <<: *base   #AT-5574 top2
+    name: VLAN_mapping_change_C-Tag_to_an_S-Tag
+    postfix: VLAN_mapping_change_C-Tag_to_an_S-Tag
+    testsuite: ["../../ST_Test_Cases/Data/VLAN/10GE-12_VLAN_mapping_change_C-Tag_to_an_S-Tag/topo2/testcase"]
+    config: "../../ST_Test_Cases/Data/VLAN/10GE-12_VLAN_mapping_change_C-Tag_to_an_S-Tag/topo2/config/config.ini"
+  -
+    <<: *base   #AT-5528 
+    name: IPv4_HSI_data_10GE 
+    postfix: IPv4_HSI_data_10GE
+    testsuite: ["../../ST_Test_Cases/Data/IPv4/10GE-12_IPv4_HSI_data/testcase"]
+    config: "../../ST_Test_Cases/Data/IPv4/10GE-12_IPv4_HSI_data/config/config.ini"
+  -
+    <<: *base
+    name: Video_Channel_Analyzer_VCA/testcase
+    postfix: Video_Channel_Analyzer_VCA/testcase
+    testsuite: ["../../ST_Test_Cases/Video/Video_Channel_Analyzer_VCA/testcase"]
+    config: "../../ST_Test_Cases/Video/Video_Channel_Analyzer_VCA/config/config.ini"
+  -
+    <<: *base
+    name: LAG_AS_Same_Card_10GE
+    postfix: LAG_AS_Same_Card_10GE
+    testsuite: ["../../ST_Test_Cases/Uplink/LAG/LAG_AS_same_card/test_cases"]
+    config: "../../ST_Test_Cases/Uplink/LAG/LAG_AS_same_card/config/config_10GE.ini"
+  -
+    <<: *base
+    name: packet_capture_support
+    postfix: packet_capture_support
+    testsuite: ["../../ST_Test_Cases/System/Diagnostics/Packet_Capture_Support/testcase"]
+    config: "../../ST_Test_Cases/System/Diagnostics/Packet_Capture_Support/config/config.ini"
+  -
+    <<: *base
+    name: IGMP_over_ERPS
+    postfix: IGMP_over_ERPS
+    testsuite: ../../ST_Test_Cases/Video/IGMP/IGMP_over_Rings_ERPS
+    config: ../../ST_Test_Cases/Video/IGMP/IGMP_over_Rings_ERPS/config/config.ini
+    extra_options:
+    - [--randomize, suites]
+  -
+    <<: *base
+    name: IGMP_over_G8032
+    postfix: IGMP_over_G8032
+    testsuite: ../../ST_Test_Cases/Video/IGMP/IGMP_over_Rings_G8032
+    config: ../../ST_Test_Cases/Video/IGMP/IGMP_over_Rings_G8032/config/config.ini
+    extra_options:
+    - [--cafe_reset_sessions, 'true']
+    - [--randomize, 'suites:799267133963726769']
+    - [--pause_on_specified_exception, "Keyword 'service_point_g8032_check' failed after retrying for 5 minutes."]
+
+  -
+    <<: *base
+    name: AXOS-WI-1112_PM
+    postfix: AXOS-WI-1112_PM
+    testsuite: ../../ST_Test_Cases/PM
+    config: ../../ST_Test_Cases/PM/PM_Sessions/config/config_ring.ini
+    extra_options:
+    - [--exclude, '@jira=EXA-17078OR@jira=EXA-17082OR@jira=EXA-17081']

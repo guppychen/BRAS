@@ -1,0 +1,157 @@
+global:
+  service_model:
+    service_point_list1:
+      - service_point1
+      - service_point2
+      - service_point3
+    service_point_list2:
+      - service_point4
+
+    # erps ring transit node with subscriber
+    service_point_list3:
+      - service_point3
+      - service_point5
+      - service_point6
+
+    service_point_list4:
+      - service_point9
+      - service_point8
+      - service_point7
+      
+    service_point1:
+      device: eutA
+      type: g8032
+      name: 6
+      member:
+        interface1: 1/1/x1
+        interface2: 1/1/x3
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        interface_type: ethernet
+        control_vlan: 44
+        interface1_rpl_mode: owner
+        interface2_rpl_mode: none
+    
+    service_point2:
+      device: eutB
+      type: g8032
+      name: 6
+      member:
+        interface1: 1/1/x3
+        interface2: 1/1/x2
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        interface_type: ethernet
+        control_vlan: 44
+        interface1_rpl_mode: neighbor
+        interface2_rpl_mode: none
+        
+    service_point3:
+      device: eutC
+      type: g8032
+      name: 6
+      member:
+        interface1: 1/1/x2
+        interface2: 1/1/x3
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        interface_type: ethernet
+        control_vlan: 44
+        interface1_rpl_mode: none
+        interface2_rpl_mode: none
+
+    service_point4:
+      device: eutB
+      type: eth
+      member:
+        interface1: 1/1/x4
+      attribute:
+        interface_role: inni
+        interface_type: ethernet
+    
+    service_point5:
+      device: eutA
+      type: g8032
+      name: 6
+      member:
+        interface1: 1/1/x1
+        interface2: 1/1/x3
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        interface_type: ethernet
+        control_vlan: 44
+        interface1_rpl_mode: neighbor
+        interface2_rpl_mode: none
+    service_point6:
+      device: eutB
+      type: g8032
+      name: 6
+      member:
+        interface1: 1/1/x3
+        interface2: 1/1/x2
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        interface_type: ethernet
+        control_vlan: 44
+        interface1_rpl_mode: owner
+        interface2_rpl_mode: none
+
+    # change none node for eutA (connected with subscriber_point1)
+    service_point7:
+      device: eutA
+      type: g8032
+      name: 6
+      member:
+        interface1: 1/1/x1
+        interface2: 1/1/x3
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        interface_type: ethernet
+        control_vlan: 44
+        interface1_rpl_mode: none
+        interface2_rpl_mode: none
+   
+    service_point8:
+      device: eutB
+      type: g8032
+      name: 6
+      member:
+        interface1: 1/1/x3
+        interface2: 1/1/x2
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        interface_type: ethernet
+        control_vlan: 44
+        interface1_rpl_mode: none
+        interface2_rpl_mode: neighbor
+    service_point9:
+      device: eutC
+      type: g8032
+      name: 6
+      member:
+        interface1: 1/1/x3
+        interface2: 1/1/x2
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: inni
+        interface_type: ethernet
+        control_vlan: 44
+        interface1_rpl_mode: none
+        interface2_rpl_mode: owner
+
+
+    subscriber_point1:
+      device: eutA
+      type: ont_port             # subscriber port type {ont_port|dsl|dsl_bond|eth}
+      name: 854/g1
+      member:
+        interface1: 854/g1
+      attribute:                 # all mandatory parameter should set to "" if you don't want to use it
+        interface_role: uni
+        interface_type: ont-ethernet
+        ont_id: 854
+        ont_profile_id: 844G_ARF     # use ont-profile on cli
+        serial_number: 1D1D43
+        vendor_id: CXNK
+        pon_port:
+          - 1/1/gp1
+          
